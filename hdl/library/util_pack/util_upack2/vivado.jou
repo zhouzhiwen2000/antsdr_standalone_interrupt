@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 14 03:40:55 2022
+# Process ID: 10560
+# Current directory: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_pack/util_upack2
+# Command line: vivado.exe -mode batch -source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_pack/util_upack2/util_upack2_ip.tcl
+# Log file: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_pack/util_upack2/vivado.log
+# Journal file: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_pack/util_upack2\vivado.jou
+#-----------------------------------------------------------
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_pack/util_upack2/util_upack2_ip.tcl

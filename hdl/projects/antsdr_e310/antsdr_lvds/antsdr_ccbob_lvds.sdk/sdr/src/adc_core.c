@@ -186,6 +186,8 @@ void adc_dma_isr(void *instance)
 	if(reg_val & IRQ_TRANSFER_COMPLETED)
 	{
 		dma_transfered_address += ADC_DMA_TRANSFER_SIZE;
+		if(dma_transfered_address >= dma_end_address)
+			adc_dma_write(ADC_REG_DMA_CNTRL, 0x0);//turn off adc when transfer is done
 	}
 }
 #endif
@@ -193,7 +195,7 @@ void adc_dma_isr(void *instance)
 /***************************************************************************//**
  * @brief adc_capture
 *******************************************************************************/
-int32_t adc_capture(uint32_t size, uint32_t start_address)
+int32_t adc_capture(uint32_t size, uint32_t start_address)//note that it is NOT blocking.
 {
 	uint32_t reg_val;
 	uint32_t transfer_id;
@@ -240,8 +242,8 @@ int32_t adc_capture(uint32_t size, uint32_t start_address)
 	dma_end_address=dma_start_address+length;
 	dma_transfered_address=dma_start_address;
 	adc_dma_write(AXI_DMAC_REG_START_TRANSFER, 0x1);
-	while(dma_transfered_address < dma_end_address);
-	adc_dma_write(ADC_REG_DMA_CNTRL, 0x0);
+//	while(dma_transfered_address < dma_end_address);
+//	adc_dma_write(ADC_REG_DMA_CNTRL, 0x0);
 #else
 	adc_dma_write(AXI_DMAC_REG_DEST_ADDRESS, start_address);
 	adc_dma_write(AXI_DMAC_REG_DEST_STRIDE, 0x0);

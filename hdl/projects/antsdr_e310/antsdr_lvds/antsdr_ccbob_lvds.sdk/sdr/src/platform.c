@@ -328,7 +328,7 @@ unsigned long msleep_interruptible(unsigned int msecs)
 void axiadc_init(struct ad9361_rf_phy *phy)
 {
 	adc_init(phy);
-	dac_init(phy, DATA_SEL_DDS, 0);
+	dac_init(phy);
 }
 
 /***************************************************************************//**

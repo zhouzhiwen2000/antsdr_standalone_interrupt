@@ -55,8 +55,15 @@
 /************************ Variables Definitions *******************************/
 /******************************************************************************/
 struct dds_state dds_st[2];
+#define DAC_DMA_TRANSFER_SIZE	32768
+uint8_t  dac_dma_transfer_queued_flag		= 0;
+uint8_t  dac_dma_transfer_completed_flag	= 0;
+uint32_t dac_dma_start_address				= 0;
+uint32_t dac_dma_end_address				= 0;
+volatile uint32_t dac_dma_transfered_address			= 0;
 void dac_dma_isr(void *instance);
 extern XScuGic	gic;
+struct ad9361_rf_phy *phy_reg;
 /******************************************************************************/
 /********************** Macros and Constants Definitions **********************/
 /******************************************************************************/
@@ -191,20 +198,8 @@ void init_dac_irq()
 /***************************************************************************//**
  * @brief dac_init
 *******************************************************************************/
-void dac_init(struct ad9361_rf_phy *phy, uint8_t data_sel, uint8_t config_dma)
+void dac_init(struct ad9361_rf_phy *phy)
 {
-	uint32_t tx_count;
-	uint32_t index;
-	uint32_t index_i1;
-	uint32_t index_q1;
-	uint32_t index_i2;
-	uint32_t index_q2;
-	uint32_t index_mem;
-	uint32_t data_i1;
-	uint32_t data_q1;
-	uint32_t data_i2;
-	uint32_t data_q2;
-	uint32_t length;
 	uint32_t reg_ctrl_2;
 
 	dac_write(phy, DAC_REG_RSTN, 0x0);
@@ -237,102 +232,42 @@ void dac_init(struct ad9361_rf_phy *phy, uint8_t data_sel, uint8_t config_dma)
 
 	dac_stop(phy);
 	init_dac_irq();
-
-
-	switch (data_sel) {
-	case DATA_SEL_DDS:
-		dds_default_setup(phy, DDS_CHAN_TX1_I_F1, 90000, 1000000, 250000);
-		dds_default_setup(phy, DDS_CHAN_TX1_I_F2, 90000, 1000000, 250000);
-		dds_default_setup(phy, DDS_CHAN_TX1_Q_F1, 0, 1000000, 250000);
-		dds_default_setup(phy, DDS_CHAN_TX1_Q_F2, 0, 1000000, 250000);
-		if(dds_st[phy->id_no].rx2tx2)
-		{
-			dds_default_setup(phy, DDS_CHAN_TX2_I_F1, 90000, 1000000, 250000);
-			dds_default_setup(phy, DDS_CHAN_TX2_I_F2, 90000, 1000000, 250000);
-			dds_default_setup(phy, DDS_CHAN_TX2_Q_F1, 0, 1000000, 250000);
-			dds_default_setup(phy, DDS_CHAN_TX2_Q_F2, 0, 1000000, 250000);
-		}
-		dac_datasel(phy, -1, DATA_SEL_DDS);
-		break;
-	case DATA_SEL_DMA:
-		if(config_dma)
-		{
-			tx_count = sizeof(sine_lut) / sizeof(uint16_t);
-			if(dds_st[phy->id_no].rx2tx2)
-			{
-#ifdef FMCOMMS5
-				for(index = 0, index_mem = 0; index < (tx_count * 2); index += 2, index_mem += 4)
-#else
-				for(index = 0, index_mem = 0; index < (tx_count * 2); index += 2, index_mem += 2)
-#endif
-				{
-					index_i1 = index;
-					index_q1 = index + (tx_count / 2);
-					if(index_q1 >= (tx_count * 2))
-						index_q1 -= (tx_count * 2);
-					data_i1 = (sine_lut[index_i1 / 2] << 20);
-					data_q1 = (sine_lut[index_q1 / 2] << 4);
-					Xil_Out32(DAC_DDR_BASEADDR + index_mem * 4, data_i1 | data_q1);
-
-					index_i2 = index_i1;
-					index_q2 = index_q1;
-					if(index_i2 >= (tx_count * 2))
-						index_i2 -= (tx_count * 2);
-					if(index_q2 >= (tx_count * 2))
-						index_q2 -= (tx_count * 2);
-					data_i2 = 0x05<< 20;//(sine_lut[index_i2 / 2] << 20);
-					data_q2 = 0x06<< 4;//(sine_lut[index_q2 / 2] << 4);
-					Xil_Out32(DAC_DDR_BASEADDR + (index_mem + 1) * 4, data_i2 | data_q2);
-#ifdef FMCOMMS5
-					Xil_Out32(DAC_DDR_BASEADDR + (index_mem + 2) * 4, data_i1 | data_q1);
-					Xil_Out32(DAC_DDR_BASEADDR + (index_mem + 3) * 4, data_i2 | data_q2);
-#endif
-				}
-			}
-			else
-			{
-				for(index = 0; index < tx_count; index += 1)
-				{
-					index_i1 = index;
-					index_q1 = index + (tx_count / 4);
-					if(index_q1 >= tx_count)
-						index_q1 -= tx_count;
-					data_i1 = (sine_lut[index_i1] << 20);
-					data_q1 = (sine_lut[index_q1] << 4);
-					Xil_Out32(DAC_DDR_BASEADDR + index * 4, data_i1 | data_q1);
-				}
-			}
-			Xil_DCacheFlush();
-			if(dds_st[phy->id_no].rx2tx2)
-			{
-				length = (tx_count * 8);
-			}
-			else
-			{
-				length = (tx_count * 4);
-			}
-#ifdef FMCOMMS5
-			length = (tx_count * 16);
-#endif
-			dac_dma_write(AXI_DMAC_REG_CTRL, 0);
-			dac_dma_write(AXI_DMAC_REG_CTRL, AXI_DMAC_CTRL_ENABLE);
-			dac_dma_write(AXI_DMAC_REG_FLAGS, DMAC_FLAGS_TLAST);
-			dac_dma_write(AXI_DMAC_REG_SRC_ADDRESS, DAC_DDR_BASEADDR);
-			dac_dma_write(AXI_DMAC_REG_SRC_STRIDE, 0x0);
-			dac_dma_write(AXI_DMAC_REG_X_LENGTH, length - 1);
-			dac_dma_write(AXI_DMAC_REG_Y_LENGTH, 0x0);
-			dac_dma_write(AXI_DMAC_REG_IRQ_MASK, 0);//masks no IRQs(all IRQs are avaliable)
-			dac_dma_write(AXI_DMAC_REG_START_TRANSFER, 0x1);
-		}
-		dac_datasel(phy, -1, DATA_SEL_DMA);
-		break;
-	default:
-		break;
-	}
-	dds_st[phy->id_no].enable = true;
-	dac_start_sync(phy, 0);
+	phy_reg = phy;
 }
 
+void dac_transmit(struct ad9361_rf_phy *phy, uint32_t* buffer,uint32_t tx_count)
+{
+	/*structure of DAC DMA BUFFER:(address from low to high)
+	 *q1a,i1a,q2a,i2a
+	 *q1b,i1b,q2b,i2b
+	 *q1c,i1c,q2c,i2c
+	 *(1/2 stands for channel 1/2) and a/b/c stands for time point a/b/c */
+	uint32_t length;
+	if(dds_st[phy->id_no].rx2tx2)
+	{
+		length = (tx_count * 8);
+	}
+	else
+	{
+		length = (tx_count * 4);
+	}
+	dac_dma_start_address = (uint32_t)buffer;
+
+	dac_dma_write(AXI_DMAC_REG_CTRL, 0);
+	dac_dma_write(AXI_DMAC_REG_CTRL, AXI_DMAC_CTRL_ENABLE);
+	dac_dma_write(AXI_DMAC_REG_FLAGS, DMAC_FLAGS_TLAST);
+	dac_dma_write(AXI_DMAC_REG_SRC_ADDRESS, (uint32_t)buffer);
+	dac_dma_write(AXI_DMAC_REG_SRC_STRIDE, 0x0);
+	dac_dma_write(AXI_DMAC_REG_X_LENGTH, DAC_DMA_TRANSFER_SIZE - 1);
+	dac_dma_write(AXI_DMAC_REG_Y_LENGTH, 0x0);
+	dac_dma_write(AXI_DMAC_REG_IRQ_MASK, 0);//masks no IRQs(all IRQs are enabled)
+	dac_dma_end_address=dac_dma_start_address+length;
+	dac_dma_transfered_address=dac_dma_start_address;
+	dac_dma_write(AXI_DMAC_REG_START_TRANSFER, 0x1);
+	dac_datasel(phy, -1, DATA_SEL_DMA);
+	dds_st[phy->id_no].enable = true;
+	dac_start_sync(phy, 0);//start dac
+}
 /***************************************************************************//**
  * @brief dds_set_frequency
 *******************************************************************************/
@@ -706,10 +641,18 @@ void dac_dma_isr(void *instance)
 	dac_dma_write(AXI_DMAC_REG_IRQ_PENDING, reg_val);
 	if(reg_val & IRQ_TRANSFER_QUEUED)
 	{
-
+		dac_dma_start_address += DAC_DMA_TRANSFER_SIZE;//next to queue
+		if(dac_dma_start_address < dac_dma_end_address)
+		{
+			dac_dma_write(AXI_DMAC_REG_SRC_ADDRESS, dac_dma_start_address);
+			/* The current transfer was started and a new one is queued. */
+			dac_dma_write(AXI_DMAC_REG_START_TRANSFER, 0x1);
+		}
 	}
 	if(reg_val & IRQ_TRANSFER_COMPLETED)
 	{
-
+		dac_dma_transfered_address += DAC_DMA_TRANSFER_SIZE;
+		if(dac_dma_transfered_address >= dac_dma_end_address)
+			dac_stop(phy_reg);//turn off dac when transfer is done
 	}
 }

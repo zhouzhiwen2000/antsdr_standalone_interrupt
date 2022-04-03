@@ -180,7 +180,7 @@ struct dds_state
 /******************************************************************************/
 /************************ Functions Declarations ******************************/
 /******************************************************************************/
-void dac_init(struct ad9361_rf_phy *phy, uint8_t data_sel, uint8_t config_dma);
+void dac_init(struct ad9361_rf_phy *phy);
 void dds_set_frequency(struct ad9361_rf_phy *phy, uint32_t chan, uint32_t freq);
 void dds_get_frequency(struct ad9361_rf_phy *phy, uint32_t chan, uint32_t *freq);
 void dds_set_phase(struct ad9361_rf_phy *phy, uint32_t chan, uint32_t phase);
@@ -188,6 +188,7 @@ void dds_get_phase(struct ad9361_rf_phy *phy, uint32_t chan, uint32_t *phase);
 void dds_set_scale(struct ad9361_rf_phy *phy, uint32_t chan, int32_t scale_micro_units);
 void dds_get_scale(struct ad9361_rf_phy *phy, uint32_t chan, int32_t *scale_micro_units);
 void dds_update(struct ad9361_rf_phy *phy);
+void dac_transmit(struct ad9361_rf_phy *phy, uint32_t* buffer,uint32_t tx_count);
 int32_t dac_datasel(struct ad9361_rf_phy *phy, int32_t chan, enum dds_data_select sel);
 void dac_get_datasel(struct ad9361_rf_phy *phy, int32_t chan, enum dds_data_select *sel);
 int32_t dds_set_calib_scale(struct ad9361_rf_phy *phy,

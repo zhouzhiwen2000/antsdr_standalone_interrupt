@@ -1,8 +1,8 @@
-00:42:31 **** Incremental Build of configuration Debug for project sdr ****
+17:43:31 **** Incremental Build of configuration Debug for project sdr ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
 
-00:42:31 Build Finished (took 284ms)
+17:43:32 Build Finished (took 291ms)
 

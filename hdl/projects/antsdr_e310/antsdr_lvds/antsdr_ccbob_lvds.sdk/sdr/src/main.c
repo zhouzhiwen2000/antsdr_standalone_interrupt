@@ -365,10 +365,69 @@ AD9361_TXFIRConfig tx_fir_config = {	// BPF PASSBAND 3/20 fs to 1/4 fs
 };
 struct ad9361_rf_phy *ad9361_phy;
 uint32_t __attribute__((aligned(32))) adc_buffer[16384*4+32768]={0};//32768 for guard(EXTRA DMA DATA)
+uint32_t __attribute__((aligned(32))) dac_buffer[128+32768]={0};//32768 for guard(EXTRA DMA DATA)
 XScuGic	gic;
+const extern uint16_t sine_lut[128];
 /***************************************************************************//**
  * @brief main
 *******************************************************************************/
+void write_sample_data(uint32_t* buffer,bool rx2tx2)
+{
+	/*the following loads sample data*/
+	uint32_t tx_count;
+	uint32_t index;
+	uint32_t index_i1;
+	uint32_t index_q1;
+	uint32_t index_i2;
+	uint32_t index_q2;
+	uint32_t index_mem;
+	uint32_t data_i1;
+	uint32_t data_q1;
+	uint32_t data_i2;
+	uint32_t data_q2;
+
+	tx_count = sizeof(sine_lut) / sizeof(uint16_t);//number of samples per channel
+	if(rx2tx2)//(dds_st[phy->id_no].rx2tx2)
+	{
+		for(index = 0, index_mem = 0; index < (tx_count * 2); index += 2, index_mem += 2)
+		{
+			index_i1 = index;
+			index_q1 = index + (tx_count / 2);
+			if(index_q1 >= (tx_count * 2))
+				index_q1 -= (tx_count * 2);
+			data_i1 = (sine_lut[index_i1 / 2] << 20);
+			data_q1 = (sine_lut[index_q1 / 2] << 4);
+			//Xil_Out32(DAC_DDR_BASEADDR + index_mem * 4, data_i1 | data_q1);
+			buffer[index_mem]=data_i1 | data_q1;
+			index_i2 = index_i1;
+			index_q2 = index_q1;
+			if(index_i2 >= (tx_count * 2))
+				index_i2 -= (tx_count * 2);
+			if(index_q2 >= (tx_count * 2))
+				index_q2 -= (tx_count * 2);
+			data_i2 = 0x05<< 20;//(sine_lut[index_i2 / 2] << 20);
+			data_q2 = 0x06<< 4;//(sine_lut[index_q2 / 2] << 4);
+			//Xil_Out32(DAC_DDR_BASEADDR + (index_mem + 1) * 4, data_i2 | data_q2);
+			buffer[index_mem + 1] = data_i2 | data_q2;
+		}
+	}
+	else
+	{
+		for(index = 0; index < tx_count; index += 1)
+		{
+			index_i1 = index;
+			index_q1 = index + (tx_count / 4);
+			if(index_q1 >= tx_count)
+				index_q1 -= tx_count;
+			data_i1 = (sine_lut[index_i1] << 20);
+			data_q1 = (sine_lut[index_q1] << 4);
+			//Xil_Out32(DAC_DDR_BASEADDR + index * 4, data_i1 | data_q1);
+			buffer[index] = data_i1 | data_q1;
+		}
+	}
+	/*sample data loaded*/
+	Xil_DCacheFlush();//write to memory
+}
 void irq_init()
 {
 	XScuGic_Config	*gic_config;
@@ -428,7 +487,9 @@ int main(void)
 #ifndef AXI_ADC_NOT_PRESENT
 #if defined XILINX_PLATFORM || defined LINUX_PLATFORM || defined ALTERA_PLATFORM
 #ifdef DAC_DMA_EXAMPLE
-	dac_init(ad9361_phy, DATA_SEL_DMA, 1);
+	dac_init(ad9361_phy);
+	write_sample_data(dac_buffer,0);
+	dac_transmit(ad9361_phy,dac_buffer,128);
 #else
 	dac_init(ad9361_phy, DATA_SEL_DDS, 1);
 #endif

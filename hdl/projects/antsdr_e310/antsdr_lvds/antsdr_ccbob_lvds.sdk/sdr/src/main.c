@@ -486,8 +486,7 @@ int main(void)
 #if defined XILINX_PLATFORM || defined LINUX_PLATFORM || defined ALTERA_PLATFORM
 #ifdef DAC_DMA_EXAMPLE
 //	dac_init(ad9361_phy);
-	write_sample_data(dac_buffer,1);
-	dac_transmit(ad9361_phy,dac_buffer,128);
+	write_sample_data(dac_buffer,0);
 #else
 	dac_init(ad9361_phy, DATA_SEL_DDS, 1);
 #endif
@@ -503,7 +502,7 @@ int main(void)
     // of the cache line(32 BYTES).
 	mdelay(1000);
 	adc_capture(16384, (uint32_t)adc_buffer);
-
+	dac_transmit(ad9361_phy,dac_buffer,128);
 
 #ifdef XILINX_PLATFORM
 	Xil_DCacheInvalidateRange((uint32_t)adc_buffer,

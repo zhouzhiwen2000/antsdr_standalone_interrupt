@@ -4815,3 +4815,97 @@ con
 13:52:39 INFO  : Clearing existing target manager status.
 13:52:39 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
 13:52:44 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:55:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:55:13 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+13:55:13 INFO  : 'jtag frequency' command is executed.
+13:55:13 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+13:55:13 INFO  : Context for 'APU' is selected.
+13:55:13 INFO  : System reset is completed.
+13:55:16 INFO  : 'after 3000' command is executed.
+13:55:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+13:55:18 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+13:55:18 INFO  : Context for 'APU' is selected.
+13:55:18 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+13:55:18 INFO  : 'configparams force-mem-access 1' command is executed.
+13:55:18 INFO  : Context for 'APU' is selected.
+13:55:18 INFO  : 'ps7_init' command is executed.
+13:55:18 INFO  : 'ps7_post_config' command is executed.
+13:55:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:55:19 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/sdr/Debug/sdr.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:55:19 INFO  : 'configparams force-mem-access 0' command is executed.
+13:55:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/sdr/Debug/sdr.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:55:19 INFO  : Memory regions updated for context APU
+13:55:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:55:19 INFO  : 'con' command is executed.
+13:55:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+13:55:19 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sdr.elf_on_local.tcl'
+13:56:33 INFO  : Disconnected from the channel tcfchan#1.
+13:56:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:56:34 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+13:56:34 INFO  : 'jtag frequency' command is executed.
+13:56:34 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+13:56:34 INFO  : Context for 'APU' is selected.
+13:56:34 INFO  : System reset is completed.
+13:56:37 INFO  : 'after 3000' command is executed.
+13:56:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+13:56:39 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+13:56:39 INFO  : Context for 'APU' is selected.
+13:56:40 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+13:56:40 INFO  : 'configparams force-mem-access 1' command is executed.
+13:56:40 INFO  : Context for 'APU' is selected.
+13:56:40 INFO  : 'ps7_init' command is executed.
+13:56:40 INFO  : 'ps7_post_config' command is executed.
+13:56:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:56:41 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/sdr/Debug/sdr.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:56:41 INFO  : 'configparams force-mem-access 0' command is executed.
+13:56:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/sdr/Debug/sdr.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:56:41 INFO  : Memory regions updated for context APU
+13:56:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:56:41 INFO  : 'con' command is executed.
+13:56:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+13:56:41 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sdr.elf_on_local.tcl'
+13:58:15 INFO  : Disconnected from the channel tcfchan#2.

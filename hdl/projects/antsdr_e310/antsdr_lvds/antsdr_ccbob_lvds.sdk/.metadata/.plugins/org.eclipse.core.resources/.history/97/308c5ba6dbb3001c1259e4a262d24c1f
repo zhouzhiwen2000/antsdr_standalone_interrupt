@@ -80,7 +80,7 @@ AD9361_InitParam default_init_param = {
 	/* Reference Clock */
 	40000000UL,	//reference_clk_rate
 	/* Base Configuration */
-	0,		//two_rx_two_tx_mode_enable *** adi,2rx-2tx-mode-enable
+	1,		//two_rx_two_tx_mode_enable *** adi,2rx-2tx-mode-enable
 	1,		//one_rx_one_tx_mode_use_rx_num *** adi,1rx-1tx-mode-use-rx-num
 	1,		//one_rx_one_tx_mode_use_tx_num *** adi,1rx-1tx-mode-use-tx-num
 	1,		//frequency_division_duplex_mode_enable *** adi,frequency-division-duplex-mode-enable
@@ -236,7 +236,7 @@ AD9361_InitParam default_init_param = {
 	0,		//elna_rx2_gpo1_control_enable *** adi,elna-rx2-gpo1-control-enable
 	0,		//elna_gaintable_all_index_enable *** adi,elna-gaintable-all-index-enable
 	/* Digital Interface Control */
-	0,		//digital_interface_tune_skip_mode *** adi,digital-interface-tune-skip-mode
+	2,		//digital_interface_tune_skip_mode *** adi,digital-interface-tune-skip-mode
 	0,		//digital_interface_tune_fir_disable *** adi,digital-interface-tune-fir-disable
 	1,		//pp_tx_swap_enable *** adi,pp-tx-swap-enable
 	1,		//pp_rx_swap_enable *** adi,pp-rx-swap-enable

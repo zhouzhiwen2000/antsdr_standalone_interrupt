@@ -228,7 +228,7 @@ proc create_root_design { parentCell } {
    CONFIG.DAC_IQCORRECTION_DISABLE {0} \
    CONFIG.DAC_USERPORTS_DISABLE {0} \
    CONFIG.ID {0} \
-   CONFIG.MODE_1R1T {1} \
+   CONFIG.MODE_1R1T {0} \
    CONFIG.TDD_DISABLE {0} \
  ] $axi_ad9361
 
@@ -308,7 +308,7 @@ proc create_root_design { parentCell } {
   # Create instance: rom_sys_0, and set properties
   set rom_sys_0 [ create_bd_cell -type ip -vlnv analog.com:user:sysid_rom:1.0 rom_sys_0 ]
   set_property -dict [ list \
-   CONFIG.PATH_TO_FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/mem_init_sys.txt} \
+   CONFIG.PATH_TO_FILE {c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/mem_init_sys.txt} \
    CONFIG.ROM_ADDR_BITS {9} \
  ] $rom_sys_0
 

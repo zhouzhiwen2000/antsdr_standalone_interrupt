@@ -72,7 +72,6 @@ char				received_cmd[30] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 										0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 										0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 #endif
-
 AD9361_InitParam default_init_param = {
 	/* Device selection */
 	ID_AD9361,	// dev_sel
@@ -110,8 +109,10 @@ AD9361_InitParam default_init_param = {
 	2400000000UL,	//tx_synthesizer_frequency_hz *** adi,tx-synthesizer-frequency-hz
 	1,				//tx_lo_powerdown_managed_enable *** adi,tx-lo-powerdown-managed-enable
 	/* Rate & BW Control */
-	{983040000, 245760000, 122880000, 61440000, 30720000, 30720000},// rx_path_clock_frequencies[6] *** adi,rx-path-clock-frequencies
-	{983040000, 122880000, 122880000, 61440000, 30720000, 30720000},// tx_path_clock_frequencies[6] *** adi,tx-path-clock-frequencies
+	//{983040000, 245760000, 122880000, 61440000, 30720000, 30720000},// rx_path_clock_frequencies[6] *** adi,rx-path-clock-frequencies
+	//{983040000, 122880000, 122880000, 61440000, 30720000, 30720000},// tx_path_clock_frequencies[6] *** adi,tx-path-clock-frequencies
+	{160000000, 80000000, 40000000, 20000000, 10000000, 10000000},// rx_path_clock_frequencies[6] *** adi,rx-path-clock-frequencies
+	{160000000, 40000000, 40000000, 20000000, 10000000, 10000000},// tx_path_clock_frequencies[6] *** adi,tx-path-clock-frequencies
 	18000000,//rf_rx_bandwidth_hz *** adi,rf-rx-bandwidth-hz
 	18000000,//rf_tx_bandwidth_hz *** adi,rf-tx-bandwidth-hz
 	/* RF Port Control */
@@ -235,7 +236,7 @@ AD9361_InitParam default_init_param = {
 	0,		//elna_rx2_gpo1_control_enable *** adi,elna-rx2-gpo1-control-enable
 	0,		//elna_gaintable_all_index_enable *** adi,elna-gaintable-all-index-enable
 	/* Digital Interface Control */
-	0,		//digital_interface_tune_skip_mode *** adi,digital-interface-tune-skip-mode
+	2,		//digital_interface_tune_skip_mode *** adi,digital-interface-tune-skip-mode
 	0,		//digital_interface_tune_fir_disable *** adi,digital-interface-tune-fir-disable
 	1,		//pp_tx_swap_enable *** adi,pp-tx-swap-enable
 	1,		//pp_rx_swap_enable *** adi,pp-rx-swap-enable
@@ -364,7 +365,7 @@ AD9361_TXFIRConfig tx_fir_config = {	// BPF PASSBAND 3/20 fs to 1/4 fs
 	 0 // tx_bandwidth
 };
 struct ad9361_rf_phy *ad9361_phy;
-uint32_t __attribute__((aligned(32))) adc_buffer[16384*4+32768]={0};//32768 for guard(EXTRA DMA DATA)
+uint32_t __attribute__((aligned(32))) adc_buffer[16384*8+32768]={0};//32768 for guard(EXTRA DMA DATA)
 uint32_t __attribute__((aligned(32))) dac_buffer[128+32768]={0};//32768 for guard(EXTRA DMA DATA)
 XScuGic	gic;
 const extern uint16_t sine_lut[128];
@@ -455,7 +456,6 @@ int main(void)
 	Xil_DCacheEnable();
 #endif
 	irq_init();
-
 	// NOTE: The user has to choose the GPIO numbers according to desired
 	// carrier board.
 	default_init_param.gpio_resetb = GPIO_RESET_PIN;
@@ -480,15 +480,13 @@ int main(void)
 
 
 	ad9361_init(&ad9361_phy, &default_init_param);
-
 	ad9361_set_tx_fir_config(ad9361_phy, tx_fir_config);
 	ad9361_set_rx_fir_config(ad9361_phy, rx_fir_config);
-
 #ifndef AXI_ADC_NOT_PRESENT
 #if defined XILINX_PLATFORM || defined LINUX_PLATFORM || defined ALTERA_PLATFORM
 #ifdef DAC_DMA_EXAMPLE
-	dac_init(ad9361_phy);
-	write_sample_data(dac_buffer,0);
+//	dac_init(ad9361_phy);
+	write_sample_data(dac_buffer,1);
 	dac_transmit(ad9361_phy,dac_buffer,128);
 #else
 	dac_init(ad9361_phy, DATA_SEL_DDS, 1);
@@ -505,6 +503,8 @@ int main(void)
     // of the cache line(32 BYTES).
 	mdelay(1000);
 	adc_capture(16384, (uint32_t)adc_buffer);
+
+
 #ifdef XILINX_PLATFORM
 	Xil_DCacheInvalidateRange((uint32_t)adc_buffer,
 			ad9361_phy->pdata->rx2tx2 ? 16384 * 8 : 16384 * 4);

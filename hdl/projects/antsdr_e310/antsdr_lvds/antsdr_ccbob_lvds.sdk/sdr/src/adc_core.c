@@ -78,8 +78,8 @@ struct adc_state adc_st;
 #ifdef ADC_DMA_IRQ_EXAMPLE
 uint8_t  dma_transfer_queued_flag		= 0;
 uint8_t  dma_transfer_completed_flag	= 0;
-uint32_t dma_start_address				= 0;
-uint32_t dma_end_address				= 0;//address of first byte after actual dma buffer
+volatile uint32_t dma_start_address				= 0;
+volatile uint32_t dma_end_address				= 0;//address of first byte after actual dma buffer
 volatile uint32_t dma_transfered_address			= 0;
 #endif
 extern XScuGic	gic;
@@ -242,8 +242,8 @@ int32_t adc_capture(uint32_t size, uint32_t start_address)//note that it is NOT 
 	dma_end_address=dma_start_address+length;
 	dma_transfered_address=dma_start_address;
 	adc_dma_write(AXI_DMAC_REG_START_TRANSFER, 0x1);
-//	while(dma_transfered_address < dma_end_address);
-//	adc_dma_write(ADC_REG_DMA_CNTRL, 0x0);
+	while(dma_transfered_address < dma_end_address);
+	adc_dma_write(ADC_REG_DMA_CNTRL, 0x0);
 #else
 	adc_dma_write(AXI_DMAC_REG_DEST_ADDRESS, start_address);
 	adc_dma_write(AXI_DMAC_REG_DEST_STRIDE, 0x0);

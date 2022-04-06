@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="tune" key="selection"/>
+		<item value="IRQ_TRANSFER_QUEUED" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="IRQ_TRANSFER_QUEUED"/>
+			<item value="gic"/>
 			<item value="tune"/>
 			<item value="ad9361_dig_tune_verbose_print"/>
 			<item value="fine"/>
 			<item value="dig_interface"/>
 			<item value="digital_interface_tune_skip_mode"/>
 			<item value="dig_interface_tune_skipmode"/>
-			<item value="adc_init"/>
-			<item value="dac_dma_isr"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -154,6 +154,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_hp2_
 # IP: bd/system/ip/system_axi_gpreg_0/system_axi_gpreg_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_gpreg_0 || ORIG_REF_NAME==system_axi_gpreg_0} -quiet] -quiet
 
+# IP: bd/system/ip/system_util_vector_logic_0_0/system_util_vector_logic_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_vector_logic_0_0 || ORIG_REF_NAME==system_util_vector_logic_0_0} -quiet] -quiet
+
 # IP: bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_0 || ORIG_REF_NAME==system_auto_pc_0} -quiet] -quiet
 

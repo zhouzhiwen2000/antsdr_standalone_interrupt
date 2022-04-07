@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr  4 12:39:10 2022" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr  7 16:50:07 2022" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="system" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -1167,12 +1167,12 @@
             <CONNECTION INSTANCE="util_ad9361_divclk" PORT="clk_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="fifo_wr_en" SIGIS="undef" SIGNAME="axi_ad9361_adc_dma_fifo_wr_en">
+        <PORT DIR="I" NAME="fifo_wr_en" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="packed_fifo_wr_en"/>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="63" NAME="fifo_wr_din" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_dma_fifo_wr_din">
+        <PORT DIR="I" LEFT="63" NAME="fifo_wr_din" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_adc_pack_packed_fifo_wr_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="packed_fifo_wr_data"/>
           </CONNECTIONS>
@@ -1182,7 +1182,7 @@
             <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="packed_fifo_wr_overflow"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="fifo_wr_sync" SIGIS="undef" SIGNAME="axi_ad9361_adc_dma_fifo_wr_sync">
+        <PORT DIR="I" NAME="fifo_wr_sync" SIGIS="undef" SIGNAME="util_ad9361_adc_pack_packed_fifo_wr_sync">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="packed_fifo_wr_sync"/>
           </CONNECTIONS>
@@ -1295,7 +1295,7 @@
             <PORTMAP LOGICAL="BREADY" PHYSICAL="m_dest_axi_bready"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="util_ad9361_adc_pack_packed_fifo_wr" NAME="fifo_wr" TYPE="TARGET" VLNV="analog.com:interface:fifo_wr:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="fifo_wr" TYPE="TARGET" VLNV="analog.com:interface:fifo_wr:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EN" PHYSICAL="fifo_wr_en"/>
             <PORTMAP LOGICAL="DATA" PHYSICAL="fifo_wr_din"/>
@@ -2280,188 +2280,6 @@
             <CONNECTION INSTANCE="sys_rstgen" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M05_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M05_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_awprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_awprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_awvalid" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_awready" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M05_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M05_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_wvalid" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_wready" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M05_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_bvalid" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_bready" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M05_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M05_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_arprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_arvalid" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_arready" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M05_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M05_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_rvalid" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_rready" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M01_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M01_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M01_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M01_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M01_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M01_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M01_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M01_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M01_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M01_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="11" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_S00_AXI_awid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="sys_ps7" PORT="M_AXI_GP0_AWID"/>
@@ -2747,6 +2565,93 @@
             <CONNECTION INSTANCE="axi_sysid_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M01_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M01_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M01_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_ad9361" PORT="s_axi_awaddr"/>
@@ -2842,101 +2747,6 @@
             <CONNECTION INSTANCE="axi_ad9361" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M04_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_awprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_awprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M04_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M04_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M04_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_arprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M04_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M04_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M03_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_dma_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_ad9361_adc_dma" PORT="s_axi_awaddr"/>
@@ -3030,6 +2840,196 @@
         <PORT DIR="O" NAME="M03_AXI_rready" SIGIS="undef" SIGNAME="axi_ad9361_adc_dma_s_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_ad9361_adc_dma" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M05_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M05_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_awvalid" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_awready" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M05_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M05_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_wvalid" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_wready" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M05_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_bvalid" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_bready" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M05_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M05_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_arvalid" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_arready" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M05_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M05_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_rvalid" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_rready" SIGIS="undef" SIGNAME="axi_cpu_interconnect_M05_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpreg" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M04_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M04_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M04_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M04_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M04_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M04_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -7635,9 +7635,9 @@
             <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_data_3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="packed_fifo_wr_en" SIGIS="undef" SIGNAME="axi_ad9361_adc_dma_fifo_wr_en">
+        <PORT DIR="O" NAME="packed_fifo_wr_en" SIGIS="undef" SIGNAME="util_ad9361_adc_pack_packed_fifo_wr_en">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_adc_dma" PORT="fifo_wr_en"/>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="packed_fifo_wr_overflow" SIGIS="undef" SIGNAME="axi_ad9361_adc_dma_fifo_wr_overflow">
@@ -7645,19 +7645,19 @@
             <CONNECTION INSTANCE="axi_ad9361_adc_dma" PORT="fifo_wr_overflow"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="packed_fifo_wr_sync" SIGIS="undef" SIGNAME="axi_ad9361_adc_dma_fifo_wr_sync">
+        <PORT DIR="O" NAME="packed_fifo_wr_sync" SIGIS="undef" SIGNAME="util_ad9361_adc_pack_packed_fifo_wr_sync">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_ad9361_adc_dma" PORT="fifo_wr_sync"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="63" NAME="packed_fifo_wr_data" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_dma_fifo_wr_din">
+        <PORT DIR="O" LEFT="63" NAME="packed_fifo_wr_data" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_adc_pack_packed_fifo_wr_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_ad9361_adc_dma" PORT="fifo_wr_din"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="util_ad9361_adc_pack_packed_fifo_wr" NAME="packed_fifo_wr" TYPE="INITIATOR" VLNV="analog.com:interface:fifo_wr:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="packed_fifo_wr" TYPE="INITIATOR" VLNV="analog.com:interface:fifo_wr:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EN" PHYSICAL="packed_fifo_wr_en"/>
             <PORTMAP LOGICAL="DATA" PHYSICAL="packed_fifo_wr_data"/>
@@ -7750,9 +7750,10 @@
             <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="m_axis_valid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axis_ready" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_m_axis_ready">
+        <PORT DIR="O" NAME="s_axis_ready" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_s_axis_ready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="m_axis_ready"/>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="63" NAME="s_axis_data" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_m_axis_data">
@@ -7983,6 +7984,34 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_ad9361" PORT="tdd_sync"/>
             <CONNECTION INSTANCE="External_Ports" PORT="tdd_sync_o"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/util_vector_logic_0" HWVERSION="2.0" INSTANCE="util_vector_logic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="and"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="system_util_vector_logic_0_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_andgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_adc_pack_packed_fifo_wr_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="packed_fifo_wr_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="Op2" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_s_axis_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="s_axis_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ad9361_adc_dma" PORT="fifo_wr_en"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -2,10 +2,10 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Apr  6 21:51:10 2022
-# Process ID: 27308
+# Start of session at: Sat Apr  9 00:06:15 2022
+# Process ID: 33188
 # Current directory: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27056 C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20260 C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.xpr
 # Log file: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/vivado.log
 # Journal file: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds\vivado.jou
 #-----------------------------------------------------------
@@ -21,7 +21,7 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/zhouzhiwen/Desktop/a
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/ghdl/library'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 787.375 ; gain = 126.918
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 804.598 ; gain = 160.777
 update_compile_order -fileset sources_1
 open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
 Adding cell -- xilinx.com:ip:processing_system7:5.5 - sys_ps7
@@ -51,10 +51,817 @@ Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_hp1_interconnect
 Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_hp2_interconnect
 Adding cell -- analog.com:user:axi_gpreg:1.0 - axi_gpreg
 Successfully read diagram <system> from BD file <C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd>
-WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+ipx::edit_ip_in_project -upgrade true -name util_wfifo_v1_0_project -directory C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.tmp/util_wfifo_v1_0_project c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_wfifo/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/zhouzhiwen/desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.tmp/util_wfifo_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/ghdl/library'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/common/ad_mem.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_wfifo/util_wfifo.v:]
+update_compile_order -fileset sources_1
+ipx::unload_core c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_wfifo/component.xml
+current_project antsdr_ccbob_lvds
+current_project util_wfifo_v1_0_project
+close_project
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 1835 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1968.641 ; gain = 12.840
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1968.641 ; gain = 12.840
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1968.641 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 92 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 29 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 6 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 57 instances
+
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Common 17-14] Message 'Designutils 20-3303' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+open_run: Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 2153.730 ; gain = 1244.801
+open_report: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 2245.332 ; gain = 86.980
+open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
+open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
+set_property mark_debug true [get_nets [list i_system_wrapper/system_i/axi_ad9361_adc_dma/fifo_wr_en]]
+set_property mark_debug true [get_nets [list i_system_wrapper/system_i/axi_ad9361_adc_dma/fifo_wr_sync]]
+open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
+open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
+set_property mark_debug true [get_nets [list i_system_wrapper/system_i/axi_ad9361_dac_dma/m_axis_ready]]
+set_property mark_debug true [get_nets [list i_system_wrapper/system_i/axi_ad9361_dac_dma/m_axis_valid]]
+open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
+open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
+set_property mark_debug false [get_nets [list i_system_wrapper/system_i/axi_ad9361_dac_dma/m_axis_ready]]
+set_property mark_debug false [get_nets [list i_system_wrapper/system_i/axi_ad9361_dac_dma/m_axis_valid]]
+set_property mark_debug false [get_nets [list i_system_wrapper/system_i/axi_ad9361_adc_dma/fifo_wr_sync]]
+set_property mark_debug false [get_nets [list i_system_wrapper/system_i/axi_ad9361_adc_dma/fifo_wr_en]]
+close_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+endgroup
+set_property location {8.5 3265 1970} [get_bd_cells ila_0]
+set_property location {8 3187 1944} [get_bd_cells ila_0]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+set_property -dict [list CONFIG.C_DATA_DEPTH {16384} CONFIG.C_NUM_OF_PROBES {4} CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_ADV_TRIGGER {true} CONFIG.C_PROBE3_MU_CNT {2} CONFIG.C_PROBE2_MU_CNT {2} CONFIG.C_PROBE1_MU_CNT {2} CONFIG.C_PROBE0_MU_CNT {2} CONFIG.ALL_PROBE_SAME_MU_CNT {2} CONFIG.C_ENABLE_ILA_AXI_MON {false} CONFIG.C_MONITOR_TYPE {Native}] [get_bd_cells ila_0]
+connect_bd_net [get_bd_pins ila_0/clk] [get_bd_pins util_ad9361_divclk/clk_out]
+connect_bd_net [get_bd_pins axi_ad9361_dac_dma/m_axis_ready] [get_bd_pins ila_0/probe0]
+WARNING: [BD 41-1306] The connection to interface pin /axi_ad9361_dac_dma/m_axis_ready is being overridden by the user. This pin will not be connected as a part of interface connection m_axis
+connect_bd_net [get_bd_pins ila_0/probe1] [get_bd_pins axi_ad9361_dac_dma/m_axis_valid]
+WARNING: [BD 41-1306] The connection to interface pin /axi_ad9361_dac_dma/m_axis_valid is being overridden by the user. This pin will not be connected as a part of interface connection m_axis
+connect_bd_net [get_bd_pins axi_ad9361_dac_dma/m_axis_xfer_req] [get_bd_pins ila_0/probe2]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+startgroup
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {5}] [get_bd_cells ila_0]
+endgroup
+connect_bd_net [get_bd_pins ila_0/probe3] [get_bd_pins axi_ad9361_adc_dma/fifo_wr_sync]
+WARNING: [BD 41-1306] The connection to interface pin /axi_ad9361_adc_dma/fifo_wr_sync is being overridden by the user. This pin will not be connected as a part of interface connection fifo_wr
+connect_bd_net [get_bd_pins axi_ad9361_adc_dma/fifo_wr_xfer_req] [get_bd_pins ila_0/probe4]
+WARNING: [BD 41-1306] The connection to interface pin /axi_ad9361_adc_dma/fifo_wr_xfer_req is being overridden by the user. This pin will not be connected as a part of interface connection fifo_wr
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+startgroup
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {6}] [get_bd_cells ila_0]
+endgroup
+connect_bd_net [get_bd_pins ila_0/probe5] [get_bd_pins axi_ad9361_adc_dma/fifo_wr_en]
+WARNING: [BD 41-1306] The connection to interface pin /axi_ad9361_adc_dma/fifo_wr_en is being overridden by the user. This pin will not be connected as a part of interface connection fifo_wr
+save_bd_design
+WARNING: [BD 41-597] NET <Net> has no source
+WARNING: [BD 41-597] NET <Net1> has no source
+WARNING: [BD 41-597] NET <Net2> has no source
+Wrote  : <C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [#UNDEF] When using EMIO pins for SPI_0 tie SSIN High in the PL bitstream
+WARNING: [#UNDEF] When using EMIO pins for SPI_1 tie SSIN High in the PL bitstream
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [#UNDEF] When using EMIO pins for SPI_0 tie SSIN High in the PL bitstream
+WARNING: [#UNDEF] When using EMIO pins for SPI_1 tie SSIN High in the PL bitstream
+WARNING: [BD 41-927] Following properties on pin /axi_sysid_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /rom_sys_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/delay_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK1 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/l_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_tdd_sync/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_divclk/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_divclk/clk_out have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_fifo/din_rst have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	POLARITY=ACTIVE_HIGH 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_fifo/din_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_fifo/dout_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_pack/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361_dac_fifo/din_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361_dac_fifo/dout_rst have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	POLARITY=ACTIVE_HIGH 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361_dac_fifo/dout_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_dac_upack/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /axi_gpreg/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ad9361_dac_dma/m_axis_ready has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_ad9361_dac_dma_m_axis 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ad9361_dac_dma/m_axis_valid has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_ad9361_dac_dma_m_axis 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ad9361_adc_dma/fifo_wr_en has been overridden by the user. This pin will not be connected as a part of the interface connection: util_ad9361_adc_pack_packed_fifo_wr 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ad9361_adc_dma/fifo_wr_sync has been overridden by the user. This pin will not be connected as a part of the interface connection: util_ad9361_adc_pack_packed_fifo_wr 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/axi_ad9361_adc_dma/fifo_wr_en
+/axi_ad9361_adc_dma/fifo_wr_sync
+/util_ad9361_dac_upack/s_axis_valid
+/axi_ad9361_dac_dma/m_axis_ready
+/ila_0/probe0
+/ila_0/probe3
+/ila_0/probe5
+
+WARNING: [BD 41-597] NET <Net> has no source
+WARNING: [BD 41-597] NET <Net1> has no source
+WARNING: [BD 41-597] NET <Net2> has no source
+Wrote  : <C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.srcs\sources_1\bd\system\system.bd> 
+WARNING: [BD 41-166] The net:Net is not connected to a valid source.
+WARNING: [BD 41-166] The net:Net1 is not connected to a valid source.
+WARNING: [BD 41-166] The net:Net2 is not connected to a valid source.
+VHDL Output written to : C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v
+WARNING: [BD 41-166] The net:Net is not connected to a valid source.
+WARNING: [BD 41-166] The net:Net1 is not connected to a valid source.
+WARNING: [BD 41-166] The net:Net2 is not connected to a valid source.
+VHDL Output written to : C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_ps7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_iic_main .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_concat_intc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_rstgen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_logic_inv .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_sysid_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rom_sys_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block GND_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_cpu_interconnect/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_tdd_sync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk_sel_concat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk_sel .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk_reset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_adc_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_adc_pack .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361_adc_dma .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361_dac_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_dac_upack .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361_dac_dma .
+Exporting to file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/hw_handoff/system_axi_hp1_interconnect_0.hwh
+Generated Block Design Tcl file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/hw_handoff/system_axi_hp1_interconnect_0_bd.tcl
+Generated Hardware Definition File c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/synth/system_axi_hp1_interconnect_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_hp1_interconnect .
+Exporting to file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/hw_handoff/system_axi_hp2_interconnect_0.hwh
+Generated Block Design Tcl file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/hw_handoff/system_axi_hp2_interconnect_0_bd.tcl
+Generated Hardware Definition File c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/synth/system_axi_hp2_interconnect_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_hp2_interconnect .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpreg .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_cpu_interconnect/s00_couplers/auto_pc .
+Exporting to file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.hwdef
+[Sat Apr  9 00:33:11 2022] Launched synth_1...
+Run output will be captured here: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/runme.log
+[Sat Apr  9 00:33:11 2022] Launched impl_1...
+Run output will be captured here: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 2433.785 ; gain = 0.000
+reset_run synth_1
+delete_bd_objs [get_bd_nets Net2] [get_bd_nets Net] [get_bd_nets axi_ad9361_dac_dma_m_axis_valid] [get_bd_nets Net1] [get_bd_nets axi_ad9361_adc_dma_fifo_wr_xfer_req] [get_bd_nets axi_ad9361_dac_dma_m_axis_xfer_req] [get_bd_cells ila_0]
+save_bd_design
+Wrote  : <C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [#UNDEF] When using EMIO pins for SPI_0 tie SSIN High in the PL bitstream
+WARNING: [#UNDEF] When using EMIO pins for SPI_1 tie SSIN High in the PL bitstream
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [#UNDEF] When using EMIO pins for SPI_0 tie SSIN High in the PL bitstream
+WARNING: [#UNDEF] When using EMIO pins for SPI_1 tie SSIN High in the PL bitstream
+WARNING: [BD 41-927] Following properties on pin /axi_sysid_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /rom_sys_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/delay_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK1 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/l_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_tdd_sync/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_divclk/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_divclk/clk_out have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_fifo/din_rst have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	POLARITY=ACTIVE_HIGH 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_fifo/din_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_fifo/dout_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_pack/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361_dac_fifo/din_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361_dac_fifo/dout_rst have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	POLARITY=ACTIVE_HIGH 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361_dac_fifo/dout_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_dac_upack/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /axi_gpreg/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+Wrote  : <C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.srcs\sources_1\bd\system\system.bd> 
+VHDL Output written to : C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v
+VHDL Output written to : C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_ps7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_iic_main .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_concat_intc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_rstgen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_logic_inv .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_sysid_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rom_sys_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block GND_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_cpu_interconnect/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_tdd_sync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk_sel_concat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk_sel .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk_reset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_adc_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_adc_pack .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361_adc_dma .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361_dac_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_dac_upack .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361_dac_dma .
+Exporting to file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/hw_handoff/system_axi_hp1_interconnect_0.hwh
+Generated Block Design Tcl file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/hw_handoff/system_axi_hp1_interconnect_0_bd.tcl
+Generated Hardware Definition File c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/synth/system_axi_hp1_interconnect_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_hp1_interconnect .
+Exporting to file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/hw_handoff/system_axi_hp2_interconnect_0.hwh
+Generated Block Design Tcl file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/hw_handoff/system_axi_hp2_interconnect_0_bd.tcl
+Generated Hardware Definition File c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/synth/system_axi_hp2_interconnect_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_hp2_interconnect .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpreg .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_cpu_interconnect/s00_couplers/auto_pc .
+Exporting to file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.hwdef
+[Sat Apr  9 00:38:23 2022] Launched synth_1...
+Run output will be captured here: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/runme.log
+[Sat Apr  9 00:38:23 2022] Launched impl_1...
+Run output will be captured here: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 2433.785 ; gain = 0.000
+ipx::edit_ip_in_project -upgrade true -name util_cpack2_v1_0_project -directory C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.tmp/util_cpack2_v1_0_project c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_pack/util_cpack2/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/zhouzhiwen/desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.tmp/util_cpack2_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/ghdl/library'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/common/ad_perfect_shuffle.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_pack/util_pack_common/pack_ctrl.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_pack/util_pack_common/pack_interconnect.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_pack/util_pack_common/pack_network.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_pack/util_pack_common/pack_shell.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_pack/util_cpack2/util_cpack2_impl.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/util_pack/util_cpack2/util_cpack2.v:]
+update_compile_order -fileset sources_1
+close_project
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+endgroup
+set_property location {7.5 2983 1907} [get_bd_cells ila_0]
+set_property location {8 2944 1915} [get_bd_cells ila_0]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+set_property -dict [list CONFIG.C_DATA_DEPTH {32768} CONFIG.C_NUM_OF_PROBES {1} CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_ADV_TRIGGER {true} CONFIG.C_PROBE0_MU_CNT {2} CONFIG.ALL_PROBE_SAME_MU_CNT {2} CONFIG.C_ENABLE_ILA_AXI_MON {false} CONFIG.C_MONITOR_TYPE {Native}] [get_bd_cells ila_0]
+connect_bd_net [get_bd_pins ila_0/clk] [get_bd_pins util_ad9361_divclk/clk_out]
+connect_bd_net [get_bd_pins ila_0/probe0] [get_bd_pins axi_ad9361_dac_dma/m_axis_user]
+WARNING: [BD 41-1306] The connection to interface pin /axi_ad9361_dac_dma/m_axis_user is being overridden by the user. This pin will not be connected as a part of interface connection m_axis
+save_bd_design
+Wrote  : <C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [#UNDEF] When using EMIO pins for SPI_0 tie SSIN High in the PL bitstream
+WARNING: [#UNDEF] When using EMIO pins for SPI_1 tie SSIN High in the PL bitstream
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [#UNDEF] When using EMIO pins for SPI_0 tie SSIN High in the PL bitstream
+WARNING: [#UNDEF] When using EMIO pins for SPI_1 tie SSIN High in the PL bitstream
+WARNING: [BD 41-927] Following properties on pin /axi_sysid_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /rom_sys_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/delay_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK1 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/l_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_tdd_sync/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_divclk/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_divclk/clk_out have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_fifo/din_rst have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	POLARITY=ACTIVE_HIGH 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_fifo/din_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_fifo/dout_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_pack/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361_dac_fifo/din_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361_dac_fifo/dout_rst have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	POLARITY=ACTIVE_HIGH 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361_dac_fifo/dout_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_dac_upack/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /axi_gpreg/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+Wrote  : <C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.srcs\sources_1\bd\system\system.bd> 
+VHDL Output written to : C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v
+VHDL Output written to : C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_ps7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_iic_main .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_concat_intc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_rstgen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_logic_inv .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_sysid_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rom_sys_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block GND_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_cpu_interconnect/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_tdd_sync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk_sel_concat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk_sel .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk_reset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_adc_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_adc_pack .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361_adc_dma .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361_dac_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_dac_upack .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361_dac_dma .
+Exporting to file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/hw_handoff/system_axi_hp1_interconnect_0.hwh
+Generated Block Design Tcl file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/hw_handoff/system_axi_hp1_interconnect_0_bd.tcl
+Generated Hardware Definition File c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/synth/system_axi_hp1_interconnect_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_hp1_interconnect .
+Exporting to file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/hw_handoff/system_axi_hp2_interconnect_0.hwh
+Generated Block Design Tcl file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/hw_handoff/system_axi_hp2_interconnect_0_bd.tcl
+Generated Hardware Definition File c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/synth/system_axi_hp2_interconnect_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_hp2_interconnect .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpreg .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_cpu_interconnect/s00_couplers/auto_pc .
+Exporting to file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.hwdef
+[Sat Apr  9 00:53:36 2022] Launched synth_1...
+Run output will be captured here: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/runme.log
+[Sat Apr  9 00:53:36 2022] Launched impl_1...
+Run output will be captured here: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 2582.340 ; gain = 118.508
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+reset_run synth_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+startgroup
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {2}] [get_bd_cells ila_0]
+endgroup
+connect_bd_net [get_bd_pins util_ad9361_adc_pack/packed_fifo_wr_sync] [get_bd_pins ila_0/probe1]
+WARNING: [BD 41-1306] The connection to interface pin /util_ad9361_adc_pack/packed_fifo_wr_sync is being overridden by the user. This pin will not be connected as a part of interface connection packed_fifo_wr
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins util_ad9361_adc_pack/packed_fifo_wr_sync] [get_bd_pins ila_0/probe1]'
+connect_bd_net [get_bd_pins util_ad9361_adc_pack/packed_fifo_wr_sync] [get_bd_pins ila_0/probe1]
+WARNING: [BD 41-1306] The connection to interface pin /util_ad9361_adc_pack/packed_fifo_wr_sync is being overridden by the user. This pin will not be connected as a part of interface connection packed_fifo_wr
+connect_bd_net [get_bd_pins axi_ad9361_adc_dma/fifo_wr_sync] [get_bd_pins util_ad9361_adc_pack/packed_fifo_wr_sync]
+WARNING: [BD 41-1306] The connection to interface pin /axi_ad9361_adc_dma/fifo_wr_sync is being overridden by the user. This pin will not be connected as a part of interface connection fifo_wr
+save_bd_design
+Wrote  : <C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [#UNDEF] When using EMIO pins for SPI_0 tie SSIN High in the PL bitstream
+WARNING: [#UNDEF] When using EMIO pins for SPI_1 tie SSIN High in the PL bitstream
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /sys_ps7/IRQ_F2P
+WARNING: [#UNDEF] When using EMIO pins for SPI_0 tie SSIN High in the PL bitstream
+WARNING: [#UNDEF] When using EMIO pins for SPI_1 tie SSIN High in the PL bitstream
+WARNING: [BD 41-927] Following properties on pin /axi_sysid_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /rom_sys_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/delay_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK1 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/l_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_tdd_sync/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_divclk/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_divclk/clk_out have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_fifo/din_rst have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	POLARITY=ACTIVE_HIGH 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_fifo/din_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_fifo/dout_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_adc_pack/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361_dac_fifo/din_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361_dac_fifo/dout_rst have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	POLARITY=ACTIVE_HIGH 
+WARNING: [BD 41-927] Following properties on pin /axi_ad9361_dac_fifo/dout_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_axi_ad9361_0_l_clk 
+WARNING: [BD 41-927] Following properties on pin /util_ad9361_dac_upack/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_util_ad9361_divclk_0_clk_out 
+WARNING: [BD 41-927] Following properties on pin /axi_gpreg/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_sys_ps7_0_FCLK_CLK0 
+WARNING: [BD 41-1271] The connection to the pin: /util_ad9361_adc_pack/packed_fifo_wr_sync has been overridden by the user. This pin will not be connected as a part of the interface connection: util_ad9361_adc_pack_packed_fifo_wr 
+Wrote  : <C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.srcs\sources_1\bd\system\system.bd> 
+VHDL Output written to : C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v
+VHDL Output written to : C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_ps7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_iic_main .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_concat_intc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_rstgen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sys_logic_inv .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_sysid_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rom_sys_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block GND_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_cpu_interconnect/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_tdd_sync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk_sel_concat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk_sel .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_divclk_reset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_adc_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_adc_pack .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361_adc_dma .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361_dac_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ad9361_dac_upack .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ad9361_dac_dma .
+Exporting to file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/hw_handoff/system_axi_hp1_interconnect_0.hwh
+Generated Block Design Tcl file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/hw_handoff/system_axi_hp1_interconnect_0_bd.tcl
+Generated Hardware Definition File c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/synth/system_axi_hp1_interconnect_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_hp1_interconnect .
+Exporting to file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/hw_handoff/system_axi_hp2_interconnect_0.hwh
+Generated Block Design Tcl file c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/hw_handoff/system_axi_hp2_interconnect_0_bd.tcl
+Generated Hardware Definition File c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/synth/system_axi_hp2_interconnect_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_hp2_interconnect .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpreg .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_cpu_interconnect/s00_couplers/auto_pc .
+Exporting to file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.hwdef
+[Sat Apr  9 00:55:27 2022] Launched synth_1...
+Run output will be captured here: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/runme.log
+[Sat Apr  9 00:55:27 2022] Launched impl_1...
+Run output will be captured here: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2744.180 ; gain = 134.762
+file copy -force C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.sysdef C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf
+
 launch_sdk -workspace C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf
 INFO: [Vivado 12-393] Launching SDK...
 INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/201706300081
+set_property PROGRAM.FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bF [get_hw_probes i_system_wrapper/system_i/util_ad9361_adc_pack_packed_fifo_wr_sync -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes i_system_wrapper/system_i/util_ad9361_adc_pack_packed_fifo_wr_sync -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:00:46
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]]
+ERROR: [Labtools 27-3312] Data read from hw_ila [hw_ila_1] is corrupted. Unable to upload waveform.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:01:26
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]]
+ERROR: [Labtools 27-3312] Data read from hw_ila [hw_ila_1] is corrupted. Unable to upload waveform.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:01:27
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:01:28
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:01:29
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:01:30
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:01:30
+save_wave_config {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:01:48
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes i_system_wrapper/system_i/util_ad9361_adc_pack_packed_fifo_wr_sync -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:01:57
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:01:58
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:01:59
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:01:59
+save_wave_config {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/201706300081
+set_property PROGRAM.FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/vivado_pid33188.debug)
+ERROR: [Common 17-39] 'refresh_hw_device' failed due to earlier errors.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"i_system_wrapper/system_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Apr-09 02:02:25
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/201706300081
+set_property PROGRAM.FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/vivado_pid33188.debug)
+ERROR: [Common 17-39] 'refresh_hw_device' failed due to earlier errors.
 exit
-INFO: [Common 17-206] Exiting Vivado at Wed Apr  6 22:24:23 2022...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  9 02:02:45 2022...

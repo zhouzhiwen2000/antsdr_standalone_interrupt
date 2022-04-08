@@ -48,7 +48,12 @@ src/main.o src/main.o: ../src/main.c \
  ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/init.h \
  ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/inet.h \
  ../../lwip_enabled_bsp/ps7_cortexa9_0/include/xil_cache.h ../src/sdr.h \
- ../src/ad9361_api.h ../src/parameters.h \
+ ../src/ad9361_api.h ../src/parameters.h ../src/dac_core.h \
+ ../../lwip_enabled_bsp/ps7_cortexa9_0/include/xscugic.h \
+ ../../lwip_enabled_bsp/ps7_cortexa9_0/include/xstatus.h \
+ ../../lwip_enabled_bsp/ps7_cortexa9_0/include/xil_assert.h \
+ ../../lwip_enabled_bsp/ps7_cortexa9_0/include/xscugic_hw.h \
+ ../../lwip_enabled_bsp/ps7_cortexa9_0/include/xil_exception.h \
  ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/dhcp.h \
  ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/udp.h \
  ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/prot/udp.h
@@ -162,6 +167,18 @@ src/main.o src/main.o: ../src/main.c \
 ../src/ad9361_api.h:
 
 ../src/parameters.h:
+
+../src/dac_core.h:
+
+../../lwip_enabled_bsp/ps7_cortexa9_0/include/xscugic.h:
+
+../../lwip_enabled_bsp/ps7_cortexa9_0/include/xstatus.h:
+
+../../lwip_enabled_bsp/ps7_cortexa9_0/include/xil_assert.h:
+
+../../lwip_enabled_bsp/ps7_cortexa9_0/include/xscugic_hw.h:
+
+../../lwip_enabled_bsp/ps7_cortexa9_0/include/xil_exception.h:
 
 ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/dhcp.h:
 

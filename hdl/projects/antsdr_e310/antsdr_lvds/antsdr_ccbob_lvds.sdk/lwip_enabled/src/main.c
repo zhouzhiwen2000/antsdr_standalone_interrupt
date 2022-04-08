@@ -39,6 +39,7 @@
 #include "lwip/inet.h"
 #include "xil_cache.h"
 #include "sdr.h"
+#include "dac_core.h"
 
 #if LWIP_DHCP==1
 #include "lwip/dhcp.h"

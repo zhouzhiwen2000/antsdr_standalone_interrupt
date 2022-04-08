@@ -272,10 +272,9 @@ void dac_transmit_presetup(struct ad9361_rf_phy *phy, uint32_t* buffer,uint32_t 
 	dac_dma_write(AXI_DMAC_REG_Y_LENGTH, 0x0);
 	dac_dma_end_address=dac_dma_start_address+length;
 	dac_dma_transfered_address=dac_dma_start_address;
-	dac_dma_write(AXI_DMAC_REG_START_TRANSFER, 0x1);
 	dac_datasel(phy, -1, DATA_SEL_DMA);
 	dds_st[phy->id_no].enable = true;
-//	dac_start_sync(phy, 0);//start dac
+	dac_start_sync(phy, 0);//start dac
 }
 /***************************************************************************//**
  * @brief dds_set_frequency
@@ -668,5 +667,6 @@ void dac_dma_isr(void *instance)
 
 void start_dac_transfer()
 {
-	dac_start_sync(phy_reg, 0);
+	//dac_start_sync(phy_reg, 0);
+	dac_dma_write(AXI_DMAC_REG_START_TRANSFER, 0x1);
 }

@@ -146,7 +146,7 @@ output wire dout_unf;
     .NUM_OF_CHANNELS(4),
     .DIN_DATA_WIDTH(16),
     .DOUT_DATA_WIDTH(16),
-    .DIN_ADDRESS_WIDTH(4)
+    .DIN_ADDRESS_WIDTH(1)
   ) inst (
     .din_rstn(din_rstn),
     .din_clk(din_clk),

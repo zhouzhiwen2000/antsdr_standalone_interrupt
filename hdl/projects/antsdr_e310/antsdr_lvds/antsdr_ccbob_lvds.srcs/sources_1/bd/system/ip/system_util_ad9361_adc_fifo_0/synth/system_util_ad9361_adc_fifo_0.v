@@ -130,7 +130,7 @@ input wire dout_ovf;
     .NUM_OF_CHANNELS(4),
     .DIN_DATA_WIDTH(16),
     .DOUT_DATA_WIDTH(16),
-    .DIN_ADDRESS_WIDTH(4)
+    .DIN_ADDRESS_WIDTH(1)
   ) inst (
     .din_rst(din_rst),
     .din_clk(din_clk),

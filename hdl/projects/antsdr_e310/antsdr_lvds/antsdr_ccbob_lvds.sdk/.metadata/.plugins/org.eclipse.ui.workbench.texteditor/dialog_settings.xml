@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="IRQ_TRANSFER_QUEUED" key="selection"/>
+		<item value="AGC" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="agc"/>
 			<item value="IRQ_TRANSFER_QUEUED"/>
 			<item value="gic"/>
 			<item value="tune"/>
@@ -15,7 +16,6 @@
 			<item value="fine"/>
 			<item value="dig_interface"/>
 			<item value="digital_interface_tune_skip_mode"/>
-			<item value="dig_interface_tune_skipmode"/>
 		</list>
 		<list key="replacehistory">
 		</list>

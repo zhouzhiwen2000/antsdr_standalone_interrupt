@@ -260,7 +260,7 @@ proc create_root_design { parentCell } {
   # Create instance: axi_ad9361_dac_fifo, and set properties
   set axi_ad9361_dac_fifo [ create_bd_cell -type ip -vlnv analog.com:user:util_rfifo:1.0 axi_ad9361_dac_fifo ]
   set_property -dict [ list \
-   CONFIG.DIN_ADDRESS_WIDTH {4} \
+   CONFIG.DIN_ADDRESS_WIDTH {1} \
    CONFIG.DIN_DATA_WIDTH {16} \
    CONFIG.DOUT_DATA_WIDTH {16} \
  ] $axi_ad9361_dac_fifo
@@ -783,7 +783,7 @@ proc create_root_design { parentCell } {
   # Create instance: util_ad9361_adc_fifo, and set properties
   set util_ad9361_adc_fifo [ create_bd_cell -type ip -vlnv analog.com:user:util_wfifo:1.0 util_ad9361_adc_fifo ]
   set_property -dict [ list \
-   CONFIG.DIN_ADDRESS_WIDTH {4} \
+   CONFIG.DIN_ADDRESS_WIDTH {1} \
    CONFIG.DIN_DATA_WIDTH {16} \
    CONFIG.DOUT_DATA_WIDTH {16} \
    CONFIG.NUM_OF_CHANNELS {4} \

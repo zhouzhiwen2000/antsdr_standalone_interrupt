@@ -11177,3 +11177,9 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-3
 
 !ENTRY com.xilinx.sdk.utils 0 0 2022-04-10 01:52:13.394
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-10 02:11:19.448
+!MESSAGE XSCT Command: [disconnect tcfchan#1], Thread: Thread-106
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-04-10 02:11:19.450
+!MESSAGE XSCT command with result: [disconnect tcfchan#1], Result: [null, ]. Thread: Thread-106

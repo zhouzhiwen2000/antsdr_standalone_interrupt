@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sun Apr 10 01:56:32 2022
+//Date        : Sun Apr 10 05:40:45 2022
 //Host        : Home-PC running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -1176,7 +1176,7 @@ module s00_couplers_imp_WZLZH6
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=31,numReposBlks=23,numNonXlnxBlks=9,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=Global}" *) (* HW_HANDOFF = "system.hwdef" *) 
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=30,numReposBlks=22,numNonXlnxBlks=9,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=Global}" *) (* HW_HANDOFF = "system.hwdef" *) 
 module system
    (ddr_addr,
     ddr_ba,
@@ -2178,11 +2178,6 @@ module system
         .s_axi_wstrb(axi_cpu_interconnect_M00_AXI_WSTRB),
         .s_axi_wvalid(axi_cpu_interconnect_M00_AXI_WVALID),
         .sys_rom_data(rom_sys_0_rom_data));
-  system_ila_0_0 ila_0
-       (.clk(axi_ad9361_l_clk),
-        .probe0(util_ad9361_dac_upack_s_axis_ready),
-        .probe1(util_ad9361_adc_pack_packed_fifo_wr_sync),
-        .probe2(Net));
   system_rom_sys_0_0 rom_sys_0
        (.clk(sys_cpu_clk),
         .rom_addr(axi_sysid_0_rom_addr),

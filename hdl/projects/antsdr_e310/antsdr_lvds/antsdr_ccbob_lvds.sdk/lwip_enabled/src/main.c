@@ -207,7 +207,7 @@ int main(void)
 	write_sample_data(dac_buffer,0);
 	mdelay(1000);
 	sdr_receive(16384, (uint32_t)adc_buffer);//prepare to receive
-	sdr_transmit(dac_buffer,16384,0);//prepare to transmit
+	sdr_transmit(dac_buffer,16384,1);//prepare to transmit
 	start_adc_transfer();//actually start transfer
 	start_dac_transfer();//actually start transfer
 	last_transmit=get_time_ms();
@@ -236,11 +236,11 @@ int main(void)
 		transfer_data();
 		if(get_time_ms()-last_transmit>=1000)
 		{
-			sdr_receive(16384, (uint32_t)adc_buffer);//prepare to receive
-			sdr_transmit(dac_buffer,16384,0);//prepare to transmit
-			start_adc_transfer();//actually start transfer
-			start_dac_transfer();//actually start transfer
-			last_transmit=get_time_ms();
+//			sdr_receive(16384, (uint32_t)adc_buffer);//prepare to receive
+//			sdr_transmit(dac_buffer,16384,0);//prepare to transmit
+//			start_adc_transfer();//actually start transfer
+//			start_dac_transfer();//actually start transfer
+//			last_transmit=get_time_ms();
 		}
 	}
 	/* never reached */

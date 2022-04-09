@@ -142,9 +142,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_hp2_
 # IP: bd/system/ip/system_axi_gpreg_0/system_axi_gpreg_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_gpreg_0 || ORIG_REF_NAME==system_axi_gpreg_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_ila_0_0/system_ila_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_ila_0_0 || ORIG_REF_NAME==system_ila_0_0} -quiet] -quiet
-
 # IP: bd/system/ip/system_util_vector_logic_0_1/system_util_vector_logic_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_vector_logic_0_1 || ORIG_REF_NAME==system_util_vector_logic_0_1} -quiet] -quiet
 
@@ -228,14 +225,6 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/system/ip/xilinx/common/ad_rst_constr.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ad_rst || ORIG_REF_NAME==ad_rst} -quiet] -quiet
-
-# XDC: bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila_impl.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_ila_0_0 || ORIG_REF_NAME==system_ila_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_ila_0_0 || ORIG_REF_NAME==system_ila_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: bd/system/ip/system_ila_0_0/system_ila_0_0_ooc.xdc
 
 # XDC: bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc
 

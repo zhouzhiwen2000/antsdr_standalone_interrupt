@@ -10,32 +10,111 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="13328100fs"></ZoomEndTime>
+      <ZoomEndTime time="9015322fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="316"></NameColumnWidth>
-      <ValueColumnWidth column_width="94"></ValueColumnWidth>
+      <ValueColumnWidth column_width="78"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="3" />
-   <wvobject fp_name="i_system_wrapper/system_i/util_ad9361_dac_upack_s_axis_ready" type="logic">
+   <WVObjectSize size="13" />
+   <wvobject fp_name="i_system_wrapper/system_i/util_ad9361_adc_pack/packed_fifo_wr_data" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">i_system_wrapper/system_i/util_ad9361_dac_upack_s_axis_ready</obj_property>
-      <obj_property name="ObjectShortName">util_ad9361_dac_upack_s_axis_ready</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/util_ad9361_adc_pack/packed_fifo_wr_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">packed_fifo_wr_data[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="i_system_wrapper/system_i/util_ad9361_adc_pack_packed_fifo_wr_sync" type="logic">
+   <wvobject fp_name="i_system_wrapper/system_i/util_ad9361_adc_pack/packed_fifo_wr_en" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">i_system_wrapper/system_i/util_ad9361_adc_pack_packed_fifo_wr_sync</obj_property>
-      <obj_property name="ObjectShortName">util_ad9361_adc_pack_packed_fifo_wr_sync</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/util_ad9361_adc_pack/packed_fifo_wr_en</obj_property>
+      <obj_property name="ObjectShortName">packed_fifo_wr_en</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="i_system_wrapper/system_i/Net" type="logic">
+   <wvobject fp_name="i_system_wrapper/system_i/util_ad9361_adc_pack/packed_fifo_wr_sync" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">i_system_wrapper/system_i/Net</obj_property>
-      <obj_property name="ObjectShortName">Net</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/util_ad9361_adc_pack/packed_fifo_wr_sync</obj_property>
+      <obj_property name="ObjectShortName">packed_fifo_wr_sync</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="i_system_wrapper/system_i/util_ad9361_dac_upack/s_axis_data" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/util_ad9361_dac_upack/s_axis_data[63:52]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data[63:52]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="i_system_wrapper/system_i/util_ad9361_dac_upack/s_axis_data_1" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/util_ad9361_dac_upack/s_axis_data_1[15:4]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_1[15:4]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="i_system_wrapper/system_i/util_ad9361_dac_upack/s_axis_data_2" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/util_ad9361_dac_upack/s_axis_data_2[31:20]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_2[31:20]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="i_system_wrapper/system_i/util_ad9361_dac_upack/s_axis_data_3" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">i_system_wrapper/system_i/util_ad9361_dac_upack/s_axis_data_3[47:36]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_3[47:36]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_s_axis_data" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_s_axis_data[3:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_s_axis_data[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_s_axis_data" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_s_axis_data[3:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_s_axis_data[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_s_axis_data" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_s_axis_data[3:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_s_axis_data[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_s_axis_data" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_s_axis_data[3:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_s_axis_data[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_s_axis_ready" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_s_axis_ready</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_s_axis_ready</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_s_axis_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_s_axis_valid</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_s_axis_valid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

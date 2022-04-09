@@ -52,23 +52,11 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ad9
 # IP: bd/system/ip/system_util_ad9361_divclk_sel_0/system_util_ad9361_divclk_sel_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ad9361_divclk_sel_0 || ORIG_REF_NAME==system_util_ad9361_divclk_sel_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_util_ad9361_divclk_0/system_util_ad9361_divclk_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ad9361_divclk_0 || ORIG_REF_NAME==system_util_ad9361_divclk_0} -quiet] -quiet
-
-# IP: bd/system/ip/system_util_ad9361_divclk_reset_0/system_util_ad9361_divclk_reset_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ad9361_divclk_reset_0 || ORIG_REF_NAME==system_util_ad9361_divclk_reset_0} -quiet] -quiet
-
-# IP: bd/system/ip/system_util_ad9361_adc_fifo_0/system_util_ad9361_adc_fifo_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ad9361_adc_fifo_0 || ORIG_REF_NAME==system_util_ad9361_adc_fifo_0} -quiet] -quiet
-
 # IP: bd/system/ip/system_util_ad9361_adc_pack_0/system_util_ad9361_adc_pack_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ad9361_adc_pack_0 || ORIG_REF_NAME==system_util_ad9361_adc_pack_0} -quiet] -quiet
 
 # IP: bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_ad9361_adc_dma_0 || ORIG_REF_NAME==system_axi_ad9361_adc_dma_0} -quiet] -quiet
-
-# IP: bd/system/ip/system_axi_ad9361_dac_fifo_0/system_axi_ad9361_dac_fifo_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_ad9361_dac_fifo_0 || ORIG_REF_NAME==system_axi_ad9361_dac_fifo_0} -quiet] -quiet
 
 # IP: bd/system/ip/system_util_ad9361_dac_upack_0/system_util_ad9361_dac_upack_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ad9361_dac_upack_0 || ORIG_REF_NAME==system_util_ad9361_dac_upack_0} -quiet] -quiet
@@ -198,25 +186,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==up_xfer_cntrl |
 # XDC: bd/system/ip/system_util_ad9361_tdd_sync_0/util_tdd_sync_constr.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_util_ad9361_tdd_sync_0 || ORIG_REF_NAME==system_util_ad9361_tdd_sync_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: bd/system/ip/system_util_ad9361_divclk_0/system_util_ad9361_divclk_0_ooc.xdc
-
-# XDC: bd/system/ip/system_util_ad9361_divclk_0/util_clkdiv_constr.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_util_ad9361_divclk_0 || ORIG_REF_NAME==system_util_ad9361_divclk_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: bd/system/ip/system_util_ad9361_divclk_reset_0/system_util_ad9361_divclk_reset_0_board.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_util_ad9361_divclk_reset_0 || ORIG_REF_NAME==system_util_ad9361_divclk_reset_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: bd/system/ip/system_util_ad9361_divclk_reset_0/system_util_ad9361_divclk_reset_0.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_util_ad9361_divclk_reset_0 || ORIG_REF_NAME==system_util_ad9361_divclk_reset_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: bd/system/ip/system_util_ad9361_adc_fifo_0/util_wfifo_constr.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_util_ad9361_adc_fifo_0 || ORIG_REF_NAME==system_util_ad9361_adc_fifo_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
 # XDC: bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_ad9361_adc_dma_0 || ORIG_REF_NAME==system_axi_ad9361_adc_dma_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: bd/system/ip/system_axi_ad9361_dac_fifo_0/util_rfifo_constr.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_ad9361_dac_fifo_0 || ORIG_REF_NAME==system_axi_ad9361_dac_fifo_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
 # XDC: bd/system/ip/system_axi_ad9361_dac_dma_0/system_axi_ad9361_dac_dma_0_constr.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_ad9361_dac_dma_0 || ORIG_REF_NAME==system_axi_ad9361_dac_dma_0} -quiet] {/inst } ]/inst ] -quiet] -quiet

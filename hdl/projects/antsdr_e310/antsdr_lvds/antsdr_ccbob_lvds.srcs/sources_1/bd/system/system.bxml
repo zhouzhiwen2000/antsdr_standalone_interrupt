@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="system" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1649522042"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1649522042"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1649522042"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1649522042"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1649526998"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1649526998"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1649526998"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1649526998"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\system_sys_ps7_0\system_sys_ps7_0.xci" Type="IP">
         <Instance HierarchyPath="sys_ps7"/>
@@ -119,30 +119,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\system_util_ad9361_divclk_0\system_util_ad9361_divclk_0.xci" Type="IP">
-        <Instance HierarchyPath="util_ad9361_divclk"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\system_util_ad9361_divclk_reset_0\system_util_ad9361_divclk_reset_0.xci" Type="IP">
-        <Instance HierarchyPath="util_ad9361_divclk_reset"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\system_util_ad9361_adc_fifo_0\system_util_ad9361_adc_fifo_0.xci" Type="IP">
-        <Instance HierarchyPath="util_ad9361_adc_fifo"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\system_util_ad9361_adc_pack_0\system_util_ad9361_adc_pack_0.xci" Type="IP">
         <Instance HierarchyPath="util_ad9361_adc_pack"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -153,14 +129,6 @@
       </File>
       <File Name="ip\system_axi_ad9361_adc_dma_0\system_axi_ad9361_adc_dma_0.xci" Type="IP">
         <Instance HierarchyPath="axi_ad9361_adc_dma"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\system_axi_ad9361_dac_fifo_0\system_axi_ad9361_dac_fifo_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_ad9361_dac_fifo"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

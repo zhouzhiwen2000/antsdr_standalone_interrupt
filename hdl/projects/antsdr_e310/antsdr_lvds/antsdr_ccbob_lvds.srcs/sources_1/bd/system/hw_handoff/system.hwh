@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr 10 00:34:02 2022" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr 10 01:56:37 2022" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="system" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -224,66 +224,6 @@
         <CONNECTION INSTANCE="axi_ad9361" PORT="tx_data_out_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="iic_main_scl_i" SIGIS="undef" SIGNAME="axi_iic_main_scl_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_iic_main" PORT="scl_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="iic_main_scl_o" SIGIS="undef" SIGNAME="axi_iic_main_scl_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_iic_main" PORT="scl_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="iic_main_scl_t" SIGIS="undef" SIGNAME="axi_iic_main_scl_t">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_iic_main" PORT="scl_t"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="iic_main_sda_i" SIGIS="undef" SIGNAME="axi_iic_main_sda_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_iic_main" PORT="sda_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="iic_main_sda_o" SIGIS="undef" SIGNAME="axi_iic_main_sda_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_iic_main" PORT="sda_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="iic_main_sda_t" SIGIS="undef" SIGNAME="axi_iic_main_sda_t">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_iic_main" PORT="sda_t"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" LEFT="53" NAME="fixed_io_mio" RIGHT="0" SIGIS="undef" SIGNAME="sys_ps7_MIO">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="sys_ps7" PORT="MIO"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="fixed_io_ddr_vrn" SIGIS="undef" SIGNAME="sys_ps7_DDR_VRN">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="sys_ps7" PORT="DDR_VRN"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="fixed_io_ddr_vrp" SIGIS="undef" SIGNAME="sys_ps7_DDR_VRP">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="sys_ps7" PORT="DDR_VRP"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="fixed_io_ps_srstb" SIGIS="undef" SIGNAME="sys_ps7_PS_SRSTB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="sys_ps7" PORT="PS_SRSTB"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="fixed_io_ps_clk" SIGIS="undef" SIGNAME="sys_ps7_PS_CLK">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="sys_ps7" PORT="PS_CLK"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="fixed_io_ps_porb" SIGIS="undef" SIGNAME="sys_ps7_PS_PORB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="sys_ps7" PORT="PS_PORB"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="IO" NAME="ddr_cas_n" SIGIS="undef" SIGNAME="sys_ps7_DDR_CAS_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sys_ps7" PORT="DDR_CAS_n"/>
@@ -357,6 +297,66 @@
     <PORT DIR="IO" LEFT="3" NAME="ddr_dqs_p" RIGHT="0" SIGIS="undef" SIGNAME="sys_ps7_DDR_DQS">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sys_ps7" PORT="DDR_DQS"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" LEFT="53" NAME="fixed_io_mio" RIGHT="0" SIGIS="undef" SIGNAME="sys_ps7_MIO">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sys_ps7" PORT="MIO"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="fixed_io_ddr_vrn" SIGIS="undef" SIGNAME="sys_ps7_DDR_VRN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sys_ps7" PORT="DDR_VRN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="fixed_io_ddr_vrp" SIGIS="undef" SIGNAME="sys_ps7_DDR_VRP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sys_ps7" PORT="DDR_VRP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="fixed_io_ps_srstb" SIGIS="undef" SIGNAME="sys_ps7_PS_SRSTB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sys_ps7" PORT="PS_SRSTB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="fixed_io_ps_clk" SIGIS="undef" SIGNAME="sys_ps7_PS_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sys_ps7" PORT="PS_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="fixed_io_ps_porb" SIGIS="undef" SIGNAME="sys_ps7_PS_PORB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sys_ps7" PORT="PS_PORB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="iic_main_scl_i" SIGIS="undef" SIGNAME="axi_iic_main_scl_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_iic_main" PORT="scl_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="iic_main_scl_o" SIGIS="undef" SIGNAME="axi_iic_main_scl_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_iic_main" PORT="scl_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="iic_main_scl_t" SIGIS="undef" SIGNAME="axi_iic_main_scl_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_iic_main" PORT="scl_t"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="iic_main_sda_i" SIGIS="undef" SIGNAME="axi_iic_main_sda_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_iic_main" PORT="sda_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="iic_main_sda_o" SIGIS="undef" SIGNAME="axi_iic_main_sda_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_iic_main" PORT="sda_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="iic_main_sda_t" SIGIS="undef" SIGNAME="axi_iic_main_sda_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_iic_main" PORT="sda_t"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -591,9 +591,11 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="l_clk" SIGIS="clk" SIGNAME="axi_ad9361_l_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_ad9361" PORT="clk"/>
-            <CONNECTION INSTANCE="util_ad9361_divclk" PORT="clk"/>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_clk"/>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_clk"/>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="clk"/>
+            <CONNECTION INSTANCE="axi_ad9361_adc_dma" PORT="fifo_wr_clk"/>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="clk"/>
+            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="m_axis_aclk"/>
+            <CONNECTION INSTANCE="ila_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="axi_ad9361_l_clk">
@@ -603,73 +605,61 @@
         </PORT>
         <PORT DIR="O" NAME="rst" SIGIS="rst" SIGNAME="axi_ad9361_rst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_rst"/>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_rst"/>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="reset"/>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="adc_enable_i0" SIGIS="undef" SIGNAME="axi_ad9361_adc_enable_i0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_enable_0"/>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="enable_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="adc_valid_i0" SIGIS="undef" SIGNAME="axi_ad9361_adc_valid_i0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_valid_0"/>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="fifo_wr_en"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="adc_data_i0" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_data_i0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_data_0"/>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="fifo_wr_data_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="adc_enable_q0" SIGIS="undef" SIGNAME="axi_ad9361_adc_enable_q0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_enable_1"/>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="enable_1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="adc_valid_q0" SIGIS="undef" SIGNAME="axi_ad9361_adc_valid_q0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_valid_1"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" NAME="adc_valid_q0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="15" NAME="adc_data_q0" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_data_q0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_data_1"/>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="fifo_wr_data_1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="adc_enable_i1" SIGIS="undef" SIGNAME="axi_ad9361_adc_enable_i1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_enable_2"/>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="enable_2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="adc_valid_i1" SIGIS="undef" SIGNAME="axi_ad9361_adc_valid_i1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_valid_2"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" NAME="adc_valid_i1" SIGIS="undef"/>
         <PORT DIR="O" LEFT="15" NAME="adc_data_i1" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_data_i1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_data_2"/>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="fifo_wr_data_2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="adc_enable_q1" SIGIS="undef" SIGNAME="axi_ad9361_adc_enable_q1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_enable_3"/>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="enable_3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="adc_valid_q1" SIGIS="undef" SIGNAME="axi_ad9361_adc_valid_q1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_valid_3"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" NAME="adc_valid_q1" SIGIS="undef"/>
         <PORT DIR="O" LEFT="15" NAME="adc_data_q1" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_data_q1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_data_3"/>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="fifo_wr_data_3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="adc_dovf" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_din_ovf">
+        <PORT DIR="I" NAME="adc_dovf" SIGIS="undef" SIGNAME="util_ad9361_adc_pack_fifo_wr_overflow">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="din_ovf"/>
+            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="fifo_wr_overflow"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="adc_r1_mode" SIGIS="undef" SIGNAME="axi_ad9361_adc_r1_mode">
@@ -679,67 +669,55 @@
         </PORT>
         <PORT DIR="O" NAME="dac_enable_i0" SIGIS="undef" SIGNAME="axi_ad9361_dac_enable_i0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_enable_0"/>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="enable_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dac_valid_i0" SIGIS="undef" SIGNAME="axi_ad9361_dac_valid_i0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_valid_0"/>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_en"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="dac_data_i0" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_dout_data_0">
+        <PORT DIR="I" LEFT="15" NAME="dac_data_i0" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_data_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_data_0"/>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_data_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dac_enable_q0" SIGIS="undef" SIGNAME="axi_ad9361_dac_enable_q0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_enable_1"/>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="enable_1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="dac_valid_q0" SIGIS="undef" SIGNAME="axi_ad9361_dac_valid_q0">
+        <PORT DIR="O" NAME="dac_valid_q0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="dac_data_q0" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_data_1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_valid_1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="dac_data_q0" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_dout_data_1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_data_1"/>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_data_1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dac_enable_i1" SIGIS="undef" SIGNAME="axi_ad9361_dac_enable_i1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_enable_2"/>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="enable_2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="dac_valid_i1" SIGIS="undef" SIGNAME="axi_ad9361_dac_valid_i1">
+        <PORT DIR="O" NAME="dac_valid_i1" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="dac_data_i1" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_data_2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_valid_2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="dac_data_i1" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_dout_data_2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_data_2"/>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_data_2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dac_enable_q1" SIGIS="undef" SIGNAME="axi_ad9361_dac_enable_q1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_enable_3"/>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="enable_3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="dac_valid_q1" SIGIS="undef" SIGNAME="axi_ad9361_dac_valid_q1">
+        <PORT DIR="O" NAME="dac_valid_q1" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="dac_data_q1" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_data_3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_valid_3"/>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_data_3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="dac_data_q1" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_dout_data_3">
+        <PORT DIR="I" NAME="dac_dunf" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_underflow">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_data_3"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dac_dunf" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_dout_unf">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="dout_unf"/>
+            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_underflow"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dac_r1_mode" SIGIS="undef" SIGNAME="axi_ad9361_dac_r1_mode">
@@ -1162,9 +1140,9 @@
             <CONNECTION INSTANCE="axi_hp1_interconnect" PORT="S00_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="fifo_wr_clk" SIGIS="clk" SIGNAME="util_ad9361_divclk_clk_out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="fifo_wr_clk" SIGIS="clk" SIGNAME="axi_ad9361_l_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk" PORT="clk_out"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="l_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="fifo_wr_en" SIGIS="undef" SIGNAME="axi_ad9361_adc_dma_fifo_wr_en">
@@ -1536,9 +1514,9 @@
             <CONNECTION INSTANCE="axi_hp2_interconnect" PORT="S00_AXI_rlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="util_ad9361_divclk_clk_out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="axi_ad9361_l_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk" PORT="clk_out"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="l_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m_axis_ready" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_s_axis_ready">
@@ -1684,7 +1662,7 @@
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_util_ad9361_divclk_0_clk_out"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_axi_ad9361_0_l_clk"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
@@ -1707,182 +1685,6 @@
         <PERIPHERAL INSTANCE="sys_ps7"/>
         <PERIPHERAL INSTANCE="util_ad9361_dac_upack"/>
       </PERIPHERALS>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/axi_ad9361_dac_fifo" HWVERSION="1.0" INSTANCE="axi_ad9361_dac_fifo" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_rfifo" VLNV="analog.com:user:util_rfifo:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="NUM_OF_CHANNELS" VALUE="4"/>
-        <PARAMETER NAME="DIN_DATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="DOUT_DATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="DIN_ADDRESS_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="system_axi_ad9361_dac_fifo_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="din_rstn" SIGIS="rst" SIGNAME="util_ad9361_divclk_reset_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk_reset" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="din_clk" SIGIS="clk" SIGNAME="util_ad9361_divclk_clk_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk" PORT="clk_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="din_enable_0" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_din_enable_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="enable_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="din_valid_0" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_din_valid_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_en"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="din_valid_in_0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_valid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_valid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="din_data_0" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_data_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_data_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="din_enable_1" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_din_enable_1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="enable_1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="din_valid_1" SIGIS="undef"/>
-        <PORT DIR="I" NAME="din_valid_in_1" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_valid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_valid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="din_data_1" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_data_1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_data_1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="din_enable_2" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_din_enable_2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="enable_2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="din_valid_2" SIGIS="undef"/>
-        <PORT DIR="I" NAME="din_valid_in_2" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_valid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_valid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="din_data_2" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_data_2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_data_2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="din_enable_3" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_din_enable_3">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="enable_3"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="din_valid_3" SIGIS="undef"/>
-        <PORT DIR="I" NAME="din_valid_in_3" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_valid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_valid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="din_data_3" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_data_3">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_data_3"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="din_unf" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_underflow">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="fifo_rd_underflow"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dout_rst" SIGIS="rst" SIGNAME="axi_ad9361_rst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="rst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dout_clk" SIGIS="clk" SIGNAME="axi_ad9361_l_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="l_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dout_enable_0" SIGIS="undef" SIGNAME="axi_ad9361_dac_enable_i0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_enable_i0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dout_valid_0" SIGIS="undef" SIGNAME="axi_ad9361_dac_valid_i0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_valid_i0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_valid_out_0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="dout_data_0" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_dout_data_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_data_i0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dout_enable_1" SIGIS="undef" SIGNAME="axi_ad9361_dac_enable_q0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_enable_q0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dout_valid_1" SIGIS="undef" SIGNAME="axi_ad9361_dac_valid_q0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_valid_q0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_valid_out_1" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="dout_data_1" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_dout_data_1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_data_q0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dout_enable_2" SIGIS="undef" SIGNAME="axi_ad9361_dac_enable_i1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_enable_i1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dout_valid_2" SIGIS="undef" SIGNAME="axi_ad9361_dac_valid_i1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_valid_i1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_valid_out_2" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="dout_data_2" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_dout_data_2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_data_i1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dout_enable_3" SIGIS="undef" SIGNAME="axi_ad9361_dac_enable_q1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_enable_q1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dout_valid_3" SIGIS="undef" SIGNAME="axi_ad9361_dac_valid_q1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_valid_q1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_valid_out_3" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="dout_data_3" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_dout_data_3">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_data_q1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_unf" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_dout_unf">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_dunf"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
     </MODULE>
     <MODULE COREREVISION="19" FULLNAME="/axi_cpu_interconnect" HWVERSION="2.1" INSTANCE="axi_cpu_interconnect" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_interconnect" VLNV="xilinx.com:ip:axi_interconnect:2.1">
       <DOCUMENTS>
@@ -8285,9 +8087,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="util_ad9361_divclk_clk_out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="axi_ad9361_l_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk" PORT="clk_out"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="l_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_s_axis_ready">
@@ -10565,7 +10367,6 @@
             <CONNECTION INSTANCE="axi_cpu_interconnect" PORT="M01_ARESETN"/>
             <CONNECTION INSTANCE="axi_iic_main" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="util_ad9361_tdd_sync" PORT="rstn"/>
-            <CONNECTION INSTANCE="util_ad9361_divclk_reset" PORT="ext_reset_in"/>
             <CONNECTION INSTANCE="axi_ad9361_adc_dma" PORT="m_dest_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="m_src_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_cpu_interconnect" PORT="M02_ARESETN"/>
@@ -10583,158 +10384,6 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/util_ad9361_adc_fifo" HWVERSION="1.0" INSTANCE="util_ad9361_adc_fifo" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_wfifo" VLNV="analog.com:user:util_wfifo:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="NUM_OF_CHANNELS" VALUE="4"/>
-        <PARAMETER NAME="DIN_DATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="DOUT_DATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="DIN_ADDRESS_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="system_util_ad9361_adc_fifo_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="din_rst" SIGIS="rst" SIGNAME="axi_ad9361_rst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="rst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="din_clk" SIGIS="clk" SIGNAME="axi_ad9361_l_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="l_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="din_enable_0" SIGIS="undef" SIGNAME="axi_ad9361_adc_enable_i0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_enable_i0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="din_valid_0" SIGIS="undef" SIGNAME="axi_ad9361_adc_valid_i0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_valid_i0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="din_data_0" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_data_i0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_data_i0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="din_enable_1" SIGIS="undef" SIGNAME="axi_ad9361_adc_enable_q0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_enable_q0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="din_valid_1" SIGIS="undef" SIGNAME="axi_ad9361_adc_valid_q0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_valid_q0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="din_data_1" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_data_q0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_data_q0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="din_enable_2" SIGIS="undef" SIGNAME="axi_ad9361_adc_enable_i1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_enable_i1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="din_valid_2" SIGIS="undef" SIGNAME="axi_ad9361_adc_valid_i1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_valid_i1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="din_data_2" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_data_i1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_data_i1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="din_enable_3" SIGIS="undef" SIGNAME="axi_ad9361_adc_enable_q1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_enable_q1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="din_valid_3" SIGIS="undef" SIGNAME="axi_ad9361_adc_valid_q1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_valid_q1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="din_data_3" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_data_q1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_data_q1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="din_ovf" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_din_ovf">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_dovf"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dout_rstn" SIGIS="rst" SIGNAME="util_ad9361_divclk_reset_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk_reset" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dout_clk" SIGIS="clk" SIGNAME="util_ad9361_divclk_clk_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk" PORT="clk_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_enable_0" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_enable_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="enable_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_valid_0" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_valid_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="fifo_wr_en"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="15" NAME="dout_data_0" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_data_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="fifo_wr_data_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_enable_1" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_enable_1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="enable_1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_valid_1" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="dout_data_1" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_data_1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="fifo_wr_data_1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_enable_2" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_enable_2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="enable_2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_valid_2" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="dout_data_2" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_data_2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="fifo_wr_data_2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_enable_3" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_enable_3">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="enable_3"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="dout_valid_3" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="dout_data_3" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_data_3">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="fifo_wr_data_3"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dout_ovf" SIGIS="undef" SIGNAME="util_ad9361_adc_pack_fifo_wr_overflow">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="fifo_wr_overflow"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/util_ad9361_adc_pack" HWVERSION="1.0" INSTANCE="util_ad9361_adc_pack" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_cpack2" VLNV="analog.com:user:util_cpack2:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -10745,64 +10394,64 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="util_ad9361_divclk_clk_out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="axi_ad9361_l_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk" PORT="clk_out"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="l_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="util_ad9361_divclk_reset_peripheral_reset">
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="axi_ad9361_rst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk_reset" PORT="peripheral_reset"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="rst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable_0" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_enable_0">
+        <PORT DIR="I" NAME="enable_0" SIGIS="undef" SIGNAME="axi_ad9361_adc_enable_i0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_enable_0"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_enable_i0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable_1" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_enable_1">
+        <PORT DIR="I" NAME="enable_1" SIGIS="undef" SIGNAME="axi_ad9361_adc_enable_q0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_enable_1"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_enable_q0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable_2" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_enable_2">
+        <PORT DIR="I" NAME="enable_2" SIGIS="undef" SIGNAME="axi_ad9361_adc_enable_i1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_enable_2"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_enable_i1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable_3" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_enable_3">
+        <PORT DIR="I" NAME="enable_3" SIGIS="undef" SIGNAME="axi_ad9361_adc_enable_q1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_enable_3"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_enable_q1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="fifo_wr_en" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_valid_0">
+        <PORT DIR="I" NAME="fifo_wr_en" SIGIS="undef" SIGNAME="axi_ad9361_adc_valid_i0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_valid_0"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_valid_i0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="fifo_wr_overflow" SIGIS="undef" SIGNAME="util_ad9361_adc_pack_fifo_wr_overflow">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_ovf"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_dovf"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="fifo_wr_data_0" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_data_0">
+        <PORT DIR="I" LEFT="15" NAME="fifo_wr_data_0" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_data_i0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_data_0"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_data_i0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="fifo_wr_data_1" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_data_1">
+        <PORT DIR="I" LEFT="15" NAME="fifo_wr_data_1" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_data_q0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_data_1"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_data_q0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="fifo_wr_data_2" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_data_2">
+        <PORT DIR="I" LEFT="15" NAME="fifo_wr_data_2" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_data_i1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_data_2"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_data_i1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="fifo_wr_data_3" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_adc_fifo_dout_data_3">
+        <PORT DIR="I" LEFT="15" NAME="fifo_wr_data_3" RIGHT="0" SIGIS="undef" SIGNAME="axi_ad9361_adc_data_q1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_data_3"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="adc_data_q1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="packed_fifo_wr_en" SIGIS="undef" SIGNAME="axi_ad9361_adc_dma_fifo_wr_en">
@@ -10849,72 +10498,65 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="util_ad9361_divclk_clk_out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="axi_ad9361_l_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk" PORT="clk_out"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="l_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="util_ad9361_divclk_reset_peripheral_reset">
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="axi_ad9361_rst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk_reset" PORT="peripheral_reset"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="rst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable_0" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_din_enable_0">
+        <PORT DIR="I" NAME="enable_0" SIGIS="undef" SIGNAME="axi_ad9361_dac_enable_i0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_enable_0"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_enable_i0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable_1" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_din_enable_1">
+        <PORT DIR="I" NAME="enable_1" SIGIS="undef" SIGNAME="axi_ad9361_dac_enable_q0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_enable_1"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_enable_q0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable_2" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_din_enable_2">
+        <PORT DIR="I" NAME="enable_2" SIGIS="undef" SIGNAME="axi_ad9361_dac_enable_i1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_enable_2"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_enable_i1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable_3" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_din_enable_3">
+        <PORT DIR="I" NAME="enable_3" SIGIS="undef" SIGNAME="axi_ad9361_dac_enable_q1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_enable_3"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_enable_q1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="fifo_rd_en" SIGIS="undef" SIGNAME="axi_ad9361_dac_fifo_din_valid_0">
+        <PORT DIR="I" NAME="fifo_rd_en" SIGIS="undef" SIGNAME="axi_ad9361_dac_valid_i0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_valid_0"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_valid_i0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="fifo_rd_valid" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_valid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_valid_in_0"/>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_valid_in_1"/>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_valid_in_2"/>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_valid_in_3"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" NAME="fifo_rd_valid" SIGIS="undef"/>
         <PORT DIR="O" NAME="fifo_rd_underflow" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_underflow">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_unf"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_dunf"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="fifo_rd_data_0" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_data_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_data_0"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_data_i0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="fifo_rd_data_1" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_data_1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_data_1"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_data_q0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="fifo_rd_data_2" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_data_2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_data_2"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_data_i1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="fifo_rd_data_3" RIGHT="0" SIGIS="undef" SIGNAME="util_ad9361_dac_upack_fifo_rd_data_3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_data_3"/>
+            <CONNECTION INSTANCE="axi_ad9361" PORT="dac_data_q1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_valid" SIGIS="undef" SIGNAME="axi_ad9361_dac_dma_m_axis_valid">
@@ -10950,7 +10592,7 @@
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_util_ad9361_divclk_0_clk_out"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_axi_ad9361_0_l_clk"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
@@ -10960,92 +10602,6 @@
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/util_ad9361_divclk" HWVERSION="1.0" INSTANCE="util_ad9361_divclk" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_clkdiv" VLNV="analog.com:user:util_clkdiv:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="SIM_DEVICE" VALUE="7SERIES"/>
-        <PARAMETER NAME="SEL_0_DIV" VALUE="4"/>
-        <PARAMETER NAME="SEL_1_DIV" VALUE="2"/>
-        <PARAMETER NAME="Component_Name" VALUE="system_util_ad9361_divclk_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="axi_ad9361_l_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_ad9361" PORT="l_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="clk_sel" SIGIS="undef" SIGNAME="util_ad9361_divclk_sel_Res">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk_sel" PORT="Res"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out" SIGIS="clk" SIGNAME="util_ad9361_divclk_clk_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk_reset" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_clk"/>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="clk"/>
-            <CONNECTION INSTANCE="axi_ad9361_adc_dma" PORT="fifo_wr_clk"/>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_clk"/>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="clk"/>
-            <CONNECTION INSTANCE="axi_ad9361_dac_dma" PORT="m_axis_aclk"/>
-            <CONNECTION INSTANCE="ila_0" PORT="clk"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="13" FULLNAME="/util_ad9361_divclk_reset" HWVERSION="5.0" INSTANCE="util_ad9361_divclk_reset" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
-      <DOCUMENTS>
-        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
-      </DOCUMENTS>
-      <PARAMETERS>
-        <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
-        <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="0"/>
-        <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
-        <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
-        <PARAMETER NAME="C_NUM_INTERCONNECT_ARESETN" VALUE="1"/>
-        <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="system_util_ad9361_divclk_reset_0"/>
-        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
-        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="util_ad9361_divclk_clk_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk" PORT="clk_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="sys_rstgen_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="sys_rstgen" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst"/>
-        <PORT DIR="I" NAME="mb_debug_sys_rst" SIGIS="rst"/>
-        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
-        <PORT DIR="O" NAME="mb_reset" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst" SIGNAME="util_ad9361_divclk_reset_peripheral_reset">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_pack" PORT="reset"/>
-            <CONNECTION INSTANCE="util_ad9361_dac_upack" PORT="reset"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="util_ad9361_divclk_reset_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_adc_fifo" PORT="dout_rstn"/>
-            <CONNECTION INSTANCE="axi_ad9361_dac_fifo" PORT="din_rstn"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
     </MODULE>
     <MODULE COREREVISION="4" FULLNAME="/util_ad9361_divclk_sel" HWVERSION="2.0" INSTANCE="util_ad9361_divclk_sel" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_reduced_logic" VLNV="xilinx.com:ip:util_reduced_logic:2.0">
       <DOCUMENTS/>
@@ -11062,11 +10618,7 @@
             <CONNECTION INSTANCE="util_ad9361_divclk_sel_concat" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="Res" SIGIS="undef" SIGNAME="util_ad9361_divclk_sel_Res">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ad9361_divclk" PORT="clk_sel"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" NAME="Res" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>

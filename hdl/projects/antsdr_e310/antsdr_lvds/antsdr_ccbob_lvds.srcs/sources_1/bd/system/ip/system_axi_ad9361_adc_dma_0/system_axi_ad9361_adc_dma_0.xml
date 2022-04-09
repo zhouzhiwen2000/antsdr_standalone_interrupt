@@ -2821,7 +2821,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.FIFO_WR_SIGNAL_CLOCK.CLK_DOMAIN">system_util_ad9361_divclk_0_clk_out</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.FIFO_WR_SIGNAL_CLOCK.CLK_DOMAIN">system_axi_ad9361_0_l_clk</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>

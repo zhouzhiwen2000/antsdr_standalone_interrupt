@@ -89,8 +89,8 @@ static void udp_packet_send(u8_t finished, uint32_t* start_address,size_t size)
 			udp_remove(pcb[i]);
 			pcb[i] = NULL;
 		}
-		if (finished == FINISH)
-			pcb[i] = NULL;
+//		if (finished == FINISH)
+//			pcb[i] = NULL;
 
 		pbuf_free(packet);
 //		mdelay(20);
@@ -128,7 +128,7 @@ int8_t transfer_data(void)
 	return finished;
 }
 
-void start_application(uint32_t* buffer,uint32_t size)//size is in words(32bit)
+void start_application()//size is in words(32bit)
 {
 	err_t err;
 	ip_addr_t remote_addr;
@@ -157,7 +157,10 @@ void start_application(uint32_t* buffer,uint32_t size)//size is in words(32bit)
 	}
 	/* Wait for successful connection */
 	usleep(10);
-	/* initialize data buffer being sent with same as used in iperf */
+	finished=1;
+}
+void prepare_udp_data(uint32_t* buffer,uint32_t size)//size is in words(32bit)
+{
 	send_buf = buffer;
 	buf_size = size;
 	packet_id = 0;

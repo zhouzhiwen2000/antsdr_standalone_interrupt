@@ -16828,3 +16828,1162 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
+03:21:28 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:229:2: error: expected expression before '}' token
+  }
+  ^
+make: *** [src/subdir.mk:77: src/main.o] Error 1
+03:22:34 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:229:2: error: expected expression before '}' token
+  }
+  ^
+make: *** [src/subdir.mk:77: src/main.o] Error 1
+03:22:38 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348720	   5796	31578400	31932916	1e741f4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:23:03 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:25:28 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:26:41 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:30:22 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/adc_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+'Finished building: ../src/adc_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348720	   5796	31578400	31932916	1e741f4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:30:48 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/dac_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dac_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dac_core.d" -MT"src/dac_core.o" -o "src/dac_core.o" "../src/dac_core.c"
+'Finished building: ../src/dac_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348656	   5796	31578400	31932852	1e741b4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:30:59 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348656	   5796	31578400	31932852	1e741b4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:32:31 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/adc_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+../src/adc_core.c: In function 'get_adc_completed':
+../src/adc_core.c:420:5: error: expected expression before ')' token
+  if()
+     ^
+../src/adc_core.c:419:7: warning: unused variable 'ret' [-Wunused-variable]
+  bool ret=dma_transfer_completed_flag;
+       ^~~
+../src/adc_core.c:422:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:77: src/adc_core.o] Error 1
+03:32:45 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/adc_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+'Finished building: ../src/adc_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348720	   5796	31578400	31932916	1e741f4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:32:51 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/adc_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+'Finished building: ../src/adc_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348720	   5796	31578400	31932916	1e741f4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:33:38 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:33:59 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/udp_perf_client.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/udp_perf_client.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/udp_perf_client.d" -MT"src/udp_perf_client.o" -o "src/udp_perf_client.o" "../src/udp_perf_client.c"
+'Finished building: ../src/udp_perf_client.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:34:02 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/udp_perf_client.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/udp_perf_client.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/udp_perf_client.d" -MT"src/udp_perf_client.o" -o "src/udp_perf_client.o" "../src/udp_perf_client.c"
+../src/udp_perf_client.c: In function 'prepare_udp_data':
+../src/udp_perf_client.c:169:13: error: 'buffer' undeclared (first use in this function); did you mean 'setbuffer'?
+  send_buf = buffer;
+             ^~~~~~
+             setbuffer
+../src/udp_perf_client.c:169:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/udp_perf_client.c:170:13: error: 'size' undeclared (first use in this function); did you mean 'time'?
+  buf_size = size;
+             ^~~~
+             time
+make: *** [src/subdir.mk:77: src/udp_perf_client.o] Error 1
+03:34:09 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/udp_perf_client.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/udp_perf_client.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/udp_perf_client.d" -MT"src/udp_perf_client.o" -o "src/udp_perf_client.o" "../src/udp_perf_client.c"
+'Finished building: ../src/udp_perf_client.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348848	   5796	31578400	31933044	1e74274	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:34:16 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/udp_perf_client.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/udp_perf_client.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/udp_perf_client.d" -MT"src/udp_perf_client.o" -o "src/udp_perf_client.o" "../src/udp_perf_client.c"
+'Finished building: ../src/udp_perf_client.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348848	   5796	31578400	31933044	1e74274	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:34:25 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/udp_perf_client.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/udp_perf_client.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/udp_perf_client.d" -MT"src/udp_perf_client.o" -o "src/udp_perf_client.o" "../src/udp_perf_client.c"
+'Finished building: ../src/udp_perf_client.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:34:33 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:34:42 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:34:52 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:35:12 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:35:18 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:36:10 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:37:42 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:40:21 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/adc_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+'Finished building: ../src/adc_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:40:28 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/adc_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+'Finished building: ../src/adc_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:40:41 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/adc_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+../src/adc_core.c: In function 'clear_adc_completed':
+../src/adc_core.c:429:9: warning: 'return' with a value, in function returning void
+  return dma_transfer_completed_flag;
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/adc_core.c:427:6: note: declared here
+ void clear_adc_completed()
+      ^~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/adc_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:40:46 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/adc_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+'Finished building: ../src/adc_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:40:58 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:41:06 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:219:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:41:08 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:42:58 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/udp_perf_client.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/udp_perf_client.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/udp_perf_client.d" -MT"src/udp_perf_client.o" -o "src/udp_perf_client.o" "../src/udp_perf_client.c"
+'Finished building: ../src/udp_perf_client.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:43:04 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:45:58 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:47:34 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:219:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:47:36 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:49:05 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:53:02 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:220:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348720	   5796	31578400	31932916	1e741f4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:53:09 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:220:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:53:40 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:54:09 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:55:52 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+03:59:29 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/udp_perf_client.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/udp_perf_client.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/udp_perf_client.d" -MT"src/udp_perf_client.o" -o "src/udp_perf_client.o" "../src/udp_perf_client.c"
+'Finished building: ../src/udp_perf_client.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348720	   5796	31578400	31932916	1e741f4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+03:59:34 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+04:00:35 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:220:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348720	   5796	31578400	31932916	1e741f4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:00:54 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:221:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348720	   5796	31578400	31932916	1e741f4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:01:07 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:221:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+../src/main.c:238:2: error: expected expression before '}' token
+  }
+  ^
+make: *** [src/subdir.mk:77: src/main.o] Error 1
+04:01:33 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:221:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+../src/main.c:246:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [src/subdir.mk:77: src/main.o] Error 1
+04:01:48 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:221:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:02:01 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:221:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:02:03 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+04:03:35 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:221:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348784	   5796	31578400	31932980	1e74234	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:03:38 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+04:07:34 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/adc_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+'Finished building: ../src/adc_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348848	   5796	31578400	31933044	1e74274	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:07:57 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:221:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348848	   5796	31578400	31933044	1e74274	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:08:05 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/dac_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dac_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dac_core.d" -MT"src/dac_core.o" -o "src/dac_core.o" "../src/dac_core.c"
+'Finished building: ../src/dac_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348912	   5796	31578400	31933108	1e742b4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:08:08 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/dac_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dac_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dac_core.d" -MT"src/dac_core.o" -o "src/dac_core.o" "../src/dac_core.c"
+'Finished building: ../src/dac_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348848	   5796	31578400	31933044	1e74274	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:08:12 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/dac_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dac_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dac_core.d" -MT"src/dac_core.o" -o "src/dac_core.o" "../src/dac_core.c"
+'Finished building: ../src/dac_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348912	   5796	31578400	31933108	1e742b4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:09:35 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/dac_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dac_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dac_core.d" -MT"src/dac_core.o" -o "src/dac_core.o" "../src/dac_core.c"
+'Finished building: ../src/dac_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348912	   5796	31578400	31933108	1e742b4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:09:38 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+04:12:30 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:221:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348912	   5796	31578400	31933108	1e742b4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:13:04 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/adc_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+'Finished building: ../src/adc_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348848	   5796	31578400	31933044	1e74274	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:13:13 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/dac_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dac_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dac_core.d" -MT"src/dac_core.o" -o "src/dac_core.o" "../src/dac_core.c"
+'Finished building: ../src/dac_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348848	   5796	31578400	31933044	1e74274	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:13:38 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+04:17:13 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/adc_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
+'Finished building: ../src/adc_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348848	   5796	31578400	31933044	1e74274	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:17:16 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:221:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348912	   5796	31578400	31933108	1e742b4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:17:22 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/dac_core.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dac_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dac_core.d" -MT"src/dac_core.o" -o "src/dac_core.o" "../src/dac_core.c"
+'Finished building: ../src/dac_core.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348912	   5796	31578400	31933108	1e742b4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:35:48 **** Auto Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lwip_enabled_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:221:4: warning: implicit declaration of function 'clear_adc_completed'; did you mean 'get_adc_completed'? [-Wimplicit-function-declaration]
+    clear_adc_completed();
+    ^~~~~~~~~~~~~~~~~~~
+    get_adc_completed
+'Finished building: ../src/main.c'
+' '
+'Building target: lwip_enabled.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lwip_enabled_bsp/ps7_cortexa9_0/lib -o "lwip_enabled.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sdr.o ./src/sfp.o ./src/si5324.o ./src/udp_perf_client.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: lwip_enabled.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lwip_enabled.elf  |tee "lwip_enabled.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 348912	   5796	31578400	31933108	1e742b4	lwip_enabled.elf
+'Finished building: lwip_enabled.elf.size'
+' '
+04:35:54 **** Incremental Build of configuration Debug for project lwip_enabled ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

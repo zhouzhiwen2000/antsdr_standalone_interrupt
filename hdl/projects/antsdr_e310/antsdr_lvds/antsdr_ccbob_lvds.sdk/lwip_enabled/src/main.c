@@ -48,13 +48,14 @@ extern volatile int dhcp_timoutcntr;
 
 extern volatile int TcpFastTmrFlag;
 extern volatile int TcpSlowTmrFlag;
-
+u64_t last_transmit=0;
 #define DEFAULT_IP_ADDRESS	"192.168.1.10"
 #define DEFAULT_IP_MASK		"255.255.255.0"
 #define DEFAULT_GW_ADDRESS	"192.168.1.1"
 
 void platform_enable_interrupts(void);
-void start_application(uint32_t* buffer,uint32_t size);
+void start_application();
+void prepare_udp_data(uint32_t* buffer,uint32_t size);
 int8_t transfer_data(void);
 void print_app_header(void);
 bool get_adc_completed();
@@ -184,7 +185,8 @@ int main(void)
 
 	/* print app header */
 	print_app_header();
-	start_application(adc_buffer,1);
+	start_application();
+	prepare_udp_data(adc_buffer,1);
 	/*send something to train the router to prepare for fast transmission,
 	  avoids packet drops*/
 	mdelay(100);
@@ -205,16 +207,23 @@ int main(void)
 	write_sample_data(dac_buffer,0);
 	mdelay(1000);
 	sdr_receive(16384, (uint32_t)adc_buffer);//prepare to receive
-	sdr_transmit(dac_buffer,16384,1);//prepare to transmit
+	sdr_transmit(dac_buffer,16384,0);//prepare to transmit
 	start_adc_transfer();//actually start transfer
 	start_dac_transfer();//actually start transfer
+	last_transmit=get_time_ms();
 	/*The above is used to guarantee constant system induced delay*/
-	while(!get_adc_completed());
-	Xil_DCacheInvalidateRange((uint32_t)adc_buffer,
-			16384 * 4);
 	/* start the application(udp connect)*/
-	start_application(adc_buffer,16384);
+//	start_application();
+//	prepare_udp_data(adc_buffer,16384);
 	while (1) {
+		if(get_adc_completed())
+		{
+			clear_adc_completed();
+			Xil_DCacheInvalidateRange((uint32_t)adc_buffer,
+					16384 * 4);
+			/* start the application(udp connect)*/
+			prepare_udp_data(adc_buffer,16384);
+		}
 		if (TcpFastTmrFlag) {
 			tcp_fasttmr();
 			TcpFastTmrFlag = 0;
@@ -225,8 +234,15 @@ int main(void)
 		}
 		xemacif_input(netif);
 		transfer_data();
+		if(get_time_ms()-last_transmit>=1000)
+		{
+			sdr_receive(16384, (uint32_t)adc_buffer);//prepare to receive
+			sdr_transmit(dac_buffer,16384,0);//prepare to transmit
+			start_adc_transfer();//actually start transfer
+			start_dac_transfer();//actually start transfer
+			last_transmit=get_time_ms();
+		}
 	}
-
 	/* never reached */
 	cleanup_platform();
 

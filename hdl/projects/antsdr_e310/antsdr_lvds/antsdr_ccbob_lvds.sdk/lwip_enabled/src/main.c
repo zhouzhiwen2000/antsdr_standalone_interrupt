@@ -75,8 +75,8 @@ int IicPhyReset(void);
 #endif
 
 struct netif server_netif;
-uint32_t __attribute__((aligned(32))) adc_buffer[16384*8+32768]={0};//32768 for guard(EXTRA DMA DATA)
-uint32_t __attribute__((aligned(32))) dac_buffer[128+32768]={0};//32768 for guard(EXTRA DMA DATA)
+uint32_t __attribute__((aligned(32))) adc_buffer[16384+32768]={0};//32768 for guard(EXTRA DMA DATA)
+uint32_t __attribute__((aligned(32))) dac_buffer[16384+32768]={0};//32768 for guard(EXTRA DMA DATA)
 static void print_ip(char *msg, ip_addr_t *ip)
 {
 	print(msg);
@@ -205,12 +205,12 @@ int main(void)
 	write_sample_data(dac_buffer,0);
 	mdelay(1000);
 	sdr_receive(16384, (uint32_t)adc_buffer);//prepare to receive
-	sdr_transmit(dac_buffer,128,1);//prepare to transmit
+	sdr_transmit(dac_buffer,16384,1);//prepare to transmit
 	start_adc_transfer();//actually start transfer
 	start_dac_transfer();//actually start transfer
 	/*The above is used to guarantee constant system induced delay*/
 	while(!get_adc_completed());
-	Xil_DCacheInvalidateRange((uint32_t)dac_buffer,
+	Xil_DCacheInvalidateRange((uint32_t)adc_buffer,
 			16384 * 4);
 	/* start the application(udp connect)*/
 	start_application(adc_buffer,16384);

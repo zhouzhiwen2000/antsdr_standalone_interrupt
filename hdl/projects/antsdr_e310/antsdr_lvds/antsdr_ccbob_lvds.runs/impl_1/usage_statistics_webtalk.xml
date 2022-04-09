@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Sun Apr 10 02:05:12 2022'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Sun Apr 10 02:25:07 2022'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="2405991" description="" />
-  <keyValuePair key="date_generated" value="Sun Apr 10 02:05:11 2022" description="" />
+  <keyValuePair key="date_generated" value="Sun Apr 10 02:25:06 2022" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2018.3 (64-bit)" description="" />
   <keyValuePair key="project_id" value="0992606c416c4d26bcb0dc7c81a61bb8" description="" />
-  <keyValuePair key="project_iteration" value="14" description="" />
+  <keyValuePair key="project_iteration" value="15" description="" />
   <keyValuePair key="random_id" value="0e9adb2d4aea5332aa3316d8383b72a1" description="" />
   <keyValuePair key="registration_id" value="0e9adb2d4aea5332aa3316d8383b72a1" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
@@ -4938,10 +4938,10 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:04:31s" description="" />
+   <keyValuePair key="elapsed" value="00:04:21s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="1569.332MB" description="" />
-   <keyValuePair key="memory_peak" value="1925.078MB" description="" />
+   <keyValuePair key="memory_gain" value="1569.605MB" description="" />
+   <keyValuePair key="memory_peak" value="1925.129MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="10" description="">
@@ -5024,9 +5024,9 @@
  <section name="vivado_usage" level="1" order="11" description="">
   <section name="gui_handlers" level="2" order="1" description="">
    <keyValuePair key="addilaprobespopup_ok" value="4" description="" />
-   <keyValuePair key="basedialog_cancel" value="27" description="" />
-   <keyValuePair key="basedialog_ok" value="93" description="" />
-   <keyValuePair key="basedialog_yes" value="16" description="" />
+   <keyValuePair key="basedialog_cancel" value="29" description="" />
+   <keyValuePair key="basedialog_ok" value="94" description="" />
+   <keyValuePair key="basedialog_yes" value="17" description="" />
    <keyValuePair key="cmdmsgdialog_ok" value="15" description="" />
    <keyValuePair key="commandsinput_type_tcl_command_here" value="4" description="" />
    <keyValuePair key="coretreetablepanel_core_tree_table" value="12" description="" />
@@ -5043,7 +5043,7 @@
    <keyValuePair key="expruntreepanel_exp_run_tree_table" value="2" description="" />
    <keyValuePair key="filesetpanel_file_set_panel_tree" value="23" description="" />
    <keyValuePair key="filtertoolbar_show_all" value="1" description="" />
-   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="106" description="" />
+   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="108" description="" />
    <keyValuePair key="graphicalview_zoom_fit" value="1" description="" />
    <keyValuePair key="graphicalview_zoom_in" value="4" description="" />
    <keyValuePair key="hardwareilawaveformview_run_trigger_for_this_ila_core" value="86" description="" />
@@ -5054,7 +5054,7 @@
    <keyValuePair key="hexceptiondialog_exit" value="1" description="" />
    <keyValuePair key="ilaprobetablepanel_add_probe" value="6" description="" />
    <keyValuePair key="ilaprobetablepanel_remove_selected_probe" value="5" description="" />
-   <keyValuePair key="launchpanel_dont_show_this_dialog_again" value="2" description="" />
+   <keyValuePair key="launchpanel_dont_show_this_dialog_again" value="3" description="" />
    <keyValuePair key="launchrunmsgdialog_cancel_run" value="1" description="" />
    <keyValuePair key="mainmenumgr_checkpoint" value="27" description="" />
    <keyValuePair key="mainmenumgr_constraints" value="2" description="" />
@@ -5090,7 +5090,7 @@
    <keyValuePair key="paviews_dashboard" value="18" description="" />
    <keyValuePair key="paviews_device" value="1" description="" />
    <keyValuePair key="paviews_par_report" value="1" description="" />
-   <keyValuePair key="paviews_project_summary" value="21" description="" />
+   <keyValuePair key="paviews_project_summary" value="22" description="" />
    <keyValuePair key="pickclockdomainnetdialog_clock_domain_nets_tree" value="5" description="" />
    <keyValuePair key="probesview_probes_tree" value="16" description="" />
    <keyValuePair key="programdebugtab_available_targets_on_server" value="4" description="" />
@@ -5103,7 +5103,7 @@
    <keyValuePair key="rdiviews_waveform_viewer" value="28" description="" />
    <keyValuePair key="rungadget_show_error_and_critical_warning_messages" value="1" description="" />
    <keyValuePair key="selectmenu_highlight" value="2" description="" />
-   <keyValuePair key="syntheticagettingstartedview_recent_projects" value="5" description="" />
+   <keyValuePair key="syntheticagettingstartedview_recent_projects" value="6" description="" />
    <keyValuePair key="syntheticastatemonitor_cancel" value="1" description="" />
    <keyValuePair key="systembuildermenu_add_ip" value="1" description="" />
    <keyValuePair key="systembuilderview_add_ip" value="3" description="" />
@@ -5118,7 +5118,7 @@
   <section name="java_command_handlers" level="2" order="2" description="">
    <keyValuePair key="autoconnecttarget" value="18" description="" />
    <keyValuePair key="closetarget" value="1" description="" />
-   <keyValuePair key="customizersbblock" value="39" description="" />
+   <keyValuePair key="customizersbblock" value="40" description="" />
    <keyValuePair key="debugwizardcmdhandler" value="3" description="" />
    <keyValuePair key="disconnectrsbpin" value="1" description="" />
    <keyValuePair key="editdelete" value="5" description="" />
@@ -5129,14 +5129,14 @@
    <keyValuePair key="newexporthardware" value="10" description="" />
    <keyValuePair key="newhardwaredashboard" value="3" description="" />
    <keyValuePair key="newlaunchhardware" value="19" description="" />
-   <keyValuePair key="openblockdesign" value="20" description="" />
+   <keyValuePair key="openblockdesign" value="21" description="" />
    <keyValuePair key="openhardwaredashboard" value="11" description="" />
    <keyValuePair key="openhardwaremanager" value="28" description="" />
    <keyValuePair key="openrecenttarget" value="15" description="" />
    <keyValuePair key="programdevice" value="8" description="" />
    <keyValuePair key="refreshdevice" value="4" description="" />
    <keyValuePair key="refreshtarget" value="1" description="" />
-   <keyValuePair key="runbitgen" value="15" description="" />
+   <keyValuePair key="runbitgen" value="16" description="" />
    <keyValuePair key="runtrigger" value="85" description="" />
    <keyValuePair key="runtriggerimmediate" value="6" description="" />
    <keyValuePair key="savedesign" value="2" description="" />
@@ -5152,7 +5152,7 @@
    <keyValuePair key="zoomin" value="1" description="" />
   </section>
   <section name="other_data" level="2" order="3" description="">
-   <keyValuePair key="guimode" value="18" description="" />
+   <keyValuePair key="guimode" value="19" description="" />
   </section>
   <section name="project_data" level="2" order="4" description="">
    <keyValuePair key="constraintsetcount" value="3" description="" />

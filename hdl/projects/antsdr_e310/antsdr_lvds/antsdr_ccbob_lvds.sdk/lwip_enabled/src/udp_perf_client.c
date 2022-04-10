@@ -31,14 +31,34 @@
 #include "udp_perf_client.h"
 
 extern struct netif server_netif;
-static struct udp_pcb *pcb[NUM_OF_PARALLEL_CLIENTS];
+struct udp_pcb *pcb[NUM_OF_PARALLEL_CLIENTS];
+static struct udp_pcb *pcb_server;
 uint32_t *send_buf = NULL;
 uint32_t buf_size = 0;
 uint32_t transfered_size = 0;
 static int packet_id = 0;
-bool finished = 0;
+volatile bool finished = 0;
 #define FINISH	1
-
+static uint32_t packets_arrived=0;
+bool dac_buffer_complete=0;
+volatile ip_addr_t computer_addr;
+volatile u16_t computer_port;
+extern uint32_t __attribute__((aligned(32))) dac_buffer[128000+32768];
+static void udp_recv_perf_traffic(void *arg, struct udp_pcb *tpcb,
+		struct pbuf *p, const ip_addr_t *addr, u16_t port)
+{
+	int32_t recv_id=*((int32_t *)(p->payload));
+	packets_arrived+=1;
+	memcpy(&dac_buffer[recv_id*320],p->payload+4,1280);
+	if(packets_arrived==400)
+	{
+		dac_buffer_complete=1;
+		packets_arrived=0;
+		computer_addr=*addr;
+		computer_port=port;
+	}
+	pbuf_free(p);
+}
 
 void print_app_header(void)
 {
@@ -148,12 +168,29 @@ void start_application()//size is in words(32bit)
 			return;
 		}
 
-		err = udp_connect(pcb[i], &remote_addr, UDP_CONN_PORT);
+		err = udp_connect(pcb[i], &remote_addr, UDP_CONN_PORT);//udp for sending data
 		if (err != ERR_OK) {
 			xil_printf("udp_client: Error on udp_connect: %d\r\n", err);
 			udp_remove(pcb[i]);
 			return;
 		}
+
+		pcb_server = udp_new();
+		if (!pcb_server) {
+			xil_printf("UDP server: Error creating PCB. Out of Memory\r\n");
+			return;
+		}
+
+		err = udp_bind(pcb_server, IP_ADDR_ANY, 6001);
+		if (err != ERR_OK) {
+			xil_printf("UDP server: Unable to bind to port");
+			xil_printf(" %d: err = %d\r\n", UDP_CONN_PORT, err);
+			udp_remove(pcb_server);
+			return;
+		}
+		udp_recv(pcb_server, udp_recv_perf_traffic, NULL);
+
+
 	}
 	/* Wait for successful connection */
 	usleep(10);

@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="set_rx1_rf_gain" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="stop"/>
-			<item value="adc_stop"/>
-			<item value="lo"/>
-			<item value="agc"/>
-			<item value="IRQ_TRANSFER_QUEUED"/>
-			<item value="gic"/>
-			<item value="tune"/>
-			<item value="ad9361_dig_tune_verbose_print"/>
+			<item value="set_rx1_rf_gain"/>
+			<item value="manual"/>
+			<item value="gain"/>
+			<item value="one_rx_one_tx_mode_use_rx_num"/>
+			<item value="sdr_transmit"/>
+			<item value="UDP_SERVER_IP_ADDRESS"/>
+			<item value="bypass"/>
+			<item value="pcb"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -24,7 +24,7 @@
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="8" key="DIALOG_X_ORIGIN"/>
-		<item value="238" key="DIALOG_Y_ORIGIN"/>
+		<item value="-76" key="DIALOG_X_ORIGIN"/>
+		<item value="341" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

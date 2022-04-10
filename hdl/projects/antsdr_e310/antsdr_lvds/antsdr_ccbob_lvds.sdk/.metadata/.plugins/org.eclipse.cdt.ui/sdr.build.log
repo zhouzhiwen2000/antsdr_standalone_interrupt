@@ -1,4 +1,4 @@
-06:14:14 **** Auto Build of configuration Debug for project sdr ****
+08:50:24 **** Auto Build of configuration Debug for project sdr ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -39,5 +39,5 @@ arm-none-eabi-size sdr.elf  |tee "sdr.elf.size"
 'Finished building: sdr.elf.size'
 ' '
 
-06:14:15 Build Finished (took 1s.599ms)
+08:50:26 Build Finished (took 1s.656ms)
 

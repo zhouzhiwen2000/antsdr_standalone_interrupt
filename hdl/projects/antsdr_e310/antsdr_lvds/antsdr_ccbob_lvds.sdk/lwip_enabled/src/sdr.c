@@ -45,7 +45,7 @@ AD9361_InitParam default_init_param = {
 	40000000UL,	//reference_clk_rate
 	/* Base Configuration */
 	0,		//two_rx_two_tx_mode_enable *** adi,2rx-2tx-mode-enable
-	1,		//one_rx_one_tx_mode_use_rx_num *** adi,1rx-1tx-mode-use-rx-num
+	2,		//one_rx_one_tx_mode_use_rx_num *** adi,1rx-1tx-mode-use-rx-num
 	1,		//one_rx_one_tx_mode_use_tx_num *** adi,1rx-1tx-mode-use-tx-num
 	1,		//frequency_division_duplex_mode_enable *** adi,frequency-division-duplex-mode-enable
 	0,		//frequency_division_duplex_independent_mode_enable *** adi,frequency-division-duplex-independent-mode-enable
@@ -69,21 +69,21 @@ AD9361_InitParam default_init_param = {
 	0,		//ensm_enable_pin_pulse_mode_enable *** adi,ensm-enable-pin-pulse-mode-enable
 	0,		//ensm_enable_txnrx_control_enable *** adi,ensm-enable-txnrx-control-enable
 	/* LO Control */
-	2000000000UL,	//rx_synthesizer_frequency_hz *** adi,rx-synthesizer-frequency-hz
-	2000000000UL,	//tx_synthesizer_frequency_hz *** adi,tx-synthesizer-frequency-hz
+	2300000000UL,	//rx_synthesizer_frequency_hz *** adi,rx-synthesizer-frequency-hz
+	2300000000UL,	//tx_synthesizer_frequency_hz *** adi,tx-synthesizer-frequency-hz
 	1,				//tx_lo_powerdown_managed_enable *** adi,tx-lo-powerdown-managed-enable
 	/* Rate & BW Control */
-	//{983040000, 245760000, 122880000, 61440000, 30720000, 30720000},// rx_path_clock_frequencies[6] *** adi,rx-path-clock-frequencies
-	//{983040000, 122880000, 122880000, 61440000, 30720000, 30720000},// tx_path_clock_frequencies[6] *** adi,tx-path-clock-frequencies
-	{160000000, 80000000, 40000000, 20000000, 10000000, 10000000},// rx_path_clock_frequencies[6] *** adi,rx-path-clock-frequencies
-	{160000000, 40000000, 40000000, 20000000, 10000000, 10000000},// tx_path_clock_frequencies[6] *** adi,tx-path-clock-frequencies
-	18000000,//rf_rx_bandwidth_hz *** adi,rf-rx-bandwidth-hz
-	18000000,//rf_tx_bandwidth_hz *** adi,rf-tx-bandwidth-hz
+	{983040000, 245760000, 122880000, 61440000, 61440000, 61440000},// rx_path_clock_frequencies[6] *** adi,rx-path-clock-frequencies
+	{983040000, 245760000, 122880000, 61440000, 61440000, 61440000},// tx_path_clock_frequencies[6] *** adi,tx-path-clock-frequencies
+	//{160000000, 80000000, 40000000, 20000000, 10000000, 10000000},// rx_path_clock_frequencies[6] *** adi,rx-path-clock-frequencies
+	//{160000000, 40000000, 40000000, 20000000, 10000000, 10000000},// tx_path_clock_frequencies[6] *** adi,tx-path-clock-frequencies
+	61440000,//rf_rx_bandwidth_hz *** adi,rf-rx-bandwidth-hz
+	61440000,//rf_tx_bandwidth_hz *** adi,rf-tx-bandwidth-hz
 	/* RF Port Control */
 	0,		//rx_rf_port_input_select *** adi,rx-rf-port-input-select
 	0,		//tx_rf_port_input_select *** adi,tx-rf-port-input-select
 	/* TX Attenuation Control */
-	45000,	//tx_attenuation_mdB *** adi,tx-attenuation-mdB
+	0,	//tx_attenuation_mdB *** adi,tx-attenuation-mdB
 	0,		//update_tx_gain_in_alert_enable *** adi,update-tx-gain-in-alert-enable
 	/* Reference Clock Control */
 	0,		//xo_disable_use_ext_refclk_enable *** adi,xo-disable-use-ext-refclk-enable
@@ -283,48 +283,18 @@ AD9361_RXFIRConfig rx_fir_config = {	// BPF PASSBAND 3/20 fs to 1/4 fs
 	3, // rx
 	0, // rx_gain
 	1, // rx_dec
-	{-4, -6, -37, 35, 186, 86, -284, -315,
-	 107, 219, -4, 271, 558, -307, -1182, -356,
-	 658, 157, 207, 1648, 790, -2525, -2553, 748,
-	 865, -476, 3737, 6560, -3583, -14731, -5278, 14819,
-	 14819, -5278, -14731, -3583, 6560, 3737, -476, 865,
-	 748, -2553, -2525, 790, 1648, 207, 157, 658,
-	 -356, -1182, -307, 558, 271, -4, 219, 107,
-	 -315, -284, 86, 186, 35, -37, -6, -4,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0}, // rx_coef[128]
-	 64, // rx_coef_size
+	{-559,491,-426,213,172,-714,1343,-1934,2313,-2275,1600,-62,-2565,6584,-12111,24001,24001,-12111,6584,-2565,-62,1600,-2275,2313,-1934,1343,-714,172,213,-426,491,-559,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}, // rx_coef[128]
+	 32, // rx_coef_size
 	 {0, 0, 0, 0, 0, 0}, //rx_path_clks[6]
 	 0 // rx_bandwidth
 };
 
 AD9361_TXFIRConfig tx_fir_config = {	// BPF PASSBAND 3/20 fs to 1/4 fs
 	3, // tx
-	-6, // tx_gain
+	0, // tx_gain
 	1, // tx_int
-	{-4, -6, -37, 35, 186, 86, -284, -315,
-	 107, 219, -4, 271, 558, -307, -1182, -356,
-	 658, 157, 207, 1648, 790, -2525, -2553, 748,
-	 865, -476, 3737, 6560, -3583, -14731, -5278, 14819,
-	 14819, -5278, -14731, -3583, 6560, 3737, -476, 865,
-	 748, -2553, -2525, 790, 1648, 207, 157, 658,
-	 -356, -1182, -307, 558, 271, -4, 219, 107,
-	 -315, -284, 86, 186, 35, -37, -6, -4,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0}, // tx_coef[128]
-	 64, // tx_coef_size
+	{404,644,-621,-50,1019,-1393,499,1400,-2917,2312,1027,-5279,6317,-778,-9056,23513,23513,-9056,-778,6317,-5279,1027,2312,-2917,1400,499,-1393,1019,-50,-621,644,404,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}, // tx_coef[128]
+	 32, // tx_coef_size
 	 {0, 0, 0, 0, 0, 0}, // tx_path_clks[6]
 	 0 // tx_bandwidth
 };
@@ -394,7 +364,7 @@ void write_sample_data(uint32_t* buffer,bool rx2tx2)
 
 int sdr_init(void)
 {
-
+	int32_t gain_rx=40;
 	// NOTE: The user has to choose the GPIO numbers according to desired
 	// carrier board.
 	default_init_param.gpio_resetb = GPIO_RESET_PIN;
@@ -418,6 +388,10 @@ int sdr_init(void)
 	ad9361_init(&ad9361_phy, &default_init_param);
 	ad9361_set_tx_fir_config(ad9361_phy, tx_fir_config);
 	ad9361_set_rx_fir_config(ad9361_phy, rx_fir_config);
+	ad9361_get_rx_rf_gain (ad9361_phy, 1, &gain_rx);
+//	ad9361_set_tx_fir_en_dis(ad9361_phy,0);
+//	ad9361_set_rx_fir_en_dis(ad9361_phy,0);
+
 /*AD9361 INIT DONE*/
 
 	return 0;

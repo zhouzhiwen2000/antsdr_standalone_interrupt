@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\fsbl\Debug\fsbl.elf
+	C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\system_top_hw_platform_0\system_top.bit
+	C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\lwip_enabled\Debug\lwip_enabled.elf
+}

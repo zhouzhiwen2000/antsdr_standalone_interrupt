@@ -59,6 +59,7 @@ void prepare_udp_data(uint32_t* buffer,uint32_t size);
 int8_t transfer_data(void);
 void print_app_header(void);
 bool get_adc_completed();
+void clear_adc_completed();
 void start_adc_transfer();
 void start_dac_transfer();
 #if defined (__arm__) && !defined (ARMR5)
@@ -236,11 +237,11 @@ int main(void)
 		transfer_data();
 		if(get_time_ms()-last_transmit>=1000)
 		{
-//			sdr_receive(16384, (uint32_t)adc_buffer);//prepare to receive
-//			sdr_transmit(dac_buffer,16384,0);//prepare to transmit
-//			start_adc_transfer();//actually start transfer
-//			start_dac_transfer();//actually start transfer
-//			last_transmit=get_time_ms();
+			sdr_receive(16384, (uint32_t)adc_buffer);//prepare to receive
+			sdr_transmit(dac_buffer,16384,0);//prepare to transmit
+			start_adc_transfer();//actually start transfer
+			start_dac_transfer();//actually start transfer
+			last_transmit=get_time_ms();
 		}
 	}
 	/* never reached */

@@ -10,6 +10,7 @@
 
 source system_top.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/ip_repo/sync_generator_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library'.
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/ghdl/library'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
@@ -21,9 +22,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1384 
+INFO: Helper process launched with PID 22220 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 460.137 ; gain = 133.340
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 459.184 ; gain = 131.512
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-2048] function gpo_bit_used does not always return a value [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:1139]
 INFO: [Synth 8-6157] synthesizing module 'system_top' [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:38]
@@ -3159,7 +3160,7 @@ INFO: [Synth 8-3876] $readmem data file 'c:/Users/zhouzhiwen/Desktop/antsdr_stan
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_sys_ps7_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1348]
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_sys_ps7_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1349]
 WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_sys_ps7_0/synth/system_sys_ps7_0.v:746]
-WARNING: [Synth 8-350] instance 'sys_ps7' of module 'system_sys_ps7_0' requires 202 connections, but only 163 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2206]
+WARNING: [Synth 8-350] instance 'sys_ps7' of module 'system_sys_ps7_0' requires 202 connections, but only 163 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2211]
 INFO: [Synth 8-638] synthesizing module 'system_sys_rstgen_0' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_sys_rstgen_0/synth/system_sys_rstgen_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 1 - type: integer 
@@ -3212,10 +3213,10 @@ INFO: [Synth 8-638] synthesizing module 'lpf__parameterized0' [c:/Users/zhouzhiw
 	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
 INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51683' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
-INFO: [Synth 8-256] done synthesizing module 'lpf__parameterized0' (224#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset__parameterized2' (224#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'system_sys_rstgen_0' (225#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_sys_rstgen_0/synth/system_sys_rstgen_0.vhd:74]
-WARNING: [Synth 8-350] instance 'sys_rstgen' of module 'system_sys_rstgen_0' requires 10 connections, but only 7 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2370]
+INFO: [Synth 8-256] done synthesizing module 'lpf__parameterized0' (226#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset__parameterized2' (226#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'system_sys_rstgen_0' (227#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_sys_rstgen_0/synth/system_sys_rstgen_0.vhd:74]
+WARNING: [Synth 8-350] instance 'sys_rstgen' of module 'system_sys_rstgen_0' requires 10 connections, but only 7 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2375]
 	Parameter NUM_OF_CHANNELS bound to: 4 - type: integer 
 	Parameter SAMPLES_PER_CHANNEL bound to: 1 - type: integer 
 	Parameter SAMPLE_DATA_WIDTH bound to: 16 - type: integer 
@@ -3259,6 +3260,7 @@ WARNING: [Synth 8-350] instance 'sys_rstgen' of module 'system_sys_rstgen_0' req
 	Parameter NUM_GROUPS bound to: 1 - type: integer 
 	Parameter WORDS_PER_GROUP bound to: 4 - type: integer 
 	Parameter WORD_WIDTH bound to: 16 - type: integer 
+WARNING: [Synth 8-350] instance 'util_ad9361_adc_pack' of module 'system_util_ad9361_adc_pack_0' requires 16 connections, but only 15 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2383]
 	Parameter NUM_OF_CHANNELS bound to: 4 - type: integer 
 	Parameter SAMPLES_PER_CHANNEL bound to: 1 - type: integer 
 	Parameter SAMPLE_DATA_WIDTH bound to: 16 - type: integer 
@@ -3324,11 +3326,11 @@ WARNING: [Synth 8-350] instance 'sys_rstgen' of module 'system_sys_rstgen_0' req
 	Parameter NUM_GROUPS bound to: 2 - type: integer 
 	Parameter WORDS_PER_GROUP bound to: 2 - type: integer 
 	Parameter WORD_WIDTH bound to: 16 - type: integer 
-WARNING: [Synth 8-350] instance 'util_ad9361_dac_upack' of module 'system_util_ad9361_dac_upack_0' requires 16 connections, but only 15 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2395]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2411]
+WARNING: [Synth 8-350] instance 'util_ad9361_dac_upack' of module 'system_util_ad9361_dac_upack_0' requires 16 connections, but only 15 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2399]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2415]
 	Parameter C_OPERATION bound to: and - type: string 
 	Parameter C_SIZE bound to: 2 - type: integer 
-WARNING: [Synth 8-350] instance 'util_ad9361_divclk_sel' of module 'system_util_ad9361_divclk_sel_0' requires 2 connections, but only 1 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2411]
+WARNING: [Synth 8-350] instance 'util_ad9361_divclk_sel' of module 'system_util_ad9361_divclk_sel_0' requires 2 connections, but only 1 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2415]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
 	Parameter IN1_WIDTH bound to: 1 - type: integer 
 	Parameter IN2_WIDTH bound to: 1 - type: integer 
@@ -3487,7 +3489,7 @@ INFO: [Synth 8-3331] design util_cpack2 has unconnected port enable_19
 INFO: [Synth 8-3331] design util_cpack2 has unconnected port enable_20
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 855.406 ; gain = 528.609
+Finished RTL Elaboration : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 858.395 ; gain = 530.723
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3528,13 +3530,13 @@ WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[0] to consta
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 855.406 ; gain = 528.609
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 858.395 ; gain = 530.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 855.406 ; gain = 528.609
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 858.395 ; gain = 530.723
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 153 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -3644,7 +3646,7 @@ Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/ant
 Finished Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/xilinx/common/ad_rst_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_core_rst_reg'
 Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/xilinx/common/ad_rst_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_delay_cntrl/i_delay_rst_reg'
 Finished Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/xilinx/common/ad_rst_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_delay_cntrl/i_delay_rst_reg'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1791.340 ; gain = 0.961
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1790.441 ; gain = 0.961
 Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/antsdr_constr.xdc]
 Finished Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/antsdr_constr.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/antsdr_constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
@@ -3661,7 +3663,7 @@ Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/ant
 Finished Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1794.766 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1793.859 ; gain = 0.000
 Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_0/system_axi_ad9361_0_pps_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst'
 Finished Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_0/system_axi_ad9361_0_pps_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst'
 Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361_adc_dma/inst'
@@ -3689,10 +3691,10 @@ WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SU
 Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'i_system_wrapper/system_i/axi_hp2_interconnect/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1794.766 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1793.859 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1797.668 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1798.738 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 106 instances were transformed.
   DSP48E => DSP48E1: 24 instances
@@ -3704,17 +3706,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 8 instances
   SRL16 => SRL16E: 3 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1797.668 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.271 . Memory (MB): peak = 1797.668 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1798.738 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.282 . Memory (MB): peak = 1798.738 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished Constraint Validation : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -3934,39 +3936,45 @@ Applied set_property ASYNC_REG = true for i_system_wrapper/system_i/axi_ad9361/i
 Applied set_property ASYNC_REG = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_delay_cntrl/i_delay_rst_reg/rst_async_d1_reg. (constraint file  c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/xilinx/common/ad_rst_constr.xdc, line 2).
 Applied set_property ASYNC_REG = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_delay_cntrl/i_delay_rst_reg/rst_async_d2_reg. (constraint file  c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/xilinx/common/ad_rst_constr.xdc, line 2).
 Applied set_property ASYNC_REG = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_delay_cntrl/i_delay_rst_reg/rst_sync_reg. (constraint file  c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/xilinx/common/ad_rst_constr.xdc, line 3).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/sys_ps7/inst. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 152).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_iic_main/U0. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 155).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/sys_rstgen/U0. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 160).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 166).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_clock_mon. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 172).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_up_dac_common/i_clock_mon. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 172).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_0/i_up_adc_channel/i_xfer_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 175).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_1/i_up_adc_channel/i_xfer_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 175).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_2/i_up_adc_channel/i_xfer_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 175).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_3/i_up_adc_channel/i_xfer_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 175).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_xfer_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 175).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tdd/i_up_tdd_cntrl/i_xfer_tdd_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 175).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_up_dac_common/i_xfer_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 175).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_delay_cntrl/i_delay_rst_reg. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 178).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_core_rst_reg. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 178).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_mmcm_rst_reg. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 178).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_up_dac_common/i_core_rst_reg. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 178).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_up_dac_common/i_mmcm_rst_reg. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 178).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_0/i_up_adc_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_1/i_up_adc_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_2/i_up_adc_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_3/i_up_adc_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tdd/i_up_tdd_cntrl/i_xfer_tdd_control. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tdd/i_up_tdd_cntrl/i_xfer_tdd_counter_values. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_up_dac_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_up_dac_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_up_dac_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_up_dac_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_up_dac_common/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/util_ad9361_tdd_sync/inst. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361_adc_dma/inst. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 187).
-Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361_dac_dma/inst. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 190).
+Applied set_property MARK_DEBUG = true for i_system_wrapper/system_i/util_ad9361_adc_pack/packed_fifo_wr_data[48]. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/ccbob_constr.xdc, line 26).
+Applied set_property MARK_DEBUG = true for i_system_wrapper/system_i/util_ad9361_adc_pack/packed_fifo_wr_en. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/ccbob_constr.xdc, line 91).
+Applied set_property MARK_DEBUG = true for i_system_wrapper/system_i/util_ad9361_adc_pack/packed_fifo_wr_sync. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/ccbob_constr.xdc, line 92).
+Applied set_property MARK_DEBUG = true for i_system_wrapper/system_i/util_ad9361_dac_upack/s_axis_data[9]. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/ccbob_constr.xdc, line 93).
+Applied set_property MARK_DEBUG = true for i_system_wrapper/system_i/util_ad9361_dac_upack/s_axis_ready. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/ccbob_constr.xdc, line 157).
+Applied set_property MARK_DEBUG = true for i_system_wrapper/system_i/util_ad9361_dac_upack/s_axis_valid. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/ccbob_constr.xdc, line 158).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/sys_ps7/inst. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 155).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_iic_main/U0. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 158).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/sys_rstgen/U0. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 163).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 169).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_clock_mon. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 175).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_up_dac_common/i_clock_mon. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 175).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_0/i_up_adc_channel/i_xfer_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 178).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_1/i_up_adc_channel/i_xfer_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 178).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_2/i_up_adc_channel/i_xfer_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 178).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_3/i_up_adc_channel/i_xfer_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 178).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_xfer_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 178).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tdd/i_up_tdd_cntrl/i_xfer_tdd_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 178).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_up_dac_common/i_xfer_status. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 178).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_delay_cntrl/i_delay_rst_reg. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_core_rst_reg. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_mmcm_rst_reg. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_up_dac_common/i_core_rst_reg. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_up_dac_common/i_mmcm_rst_reg. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 181).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_0/i_up_adc_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_1/i_up_adc_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_2/i_up_adc_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_rx_channel_3/i_up_adc_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tdd/i_up_tdd_cntrl/i_xfer_tdd_control. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tdd/i_up_tdd_cntrl/i_xfer_tdd_counter_values. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_0/i_up_dac_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_1/i_up_dac_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_2/i_up_dac_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_tx_channel_3/i_up_dac_channel/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361/inst/i_tx/i_up_dac_common/i_xfer_cntrl. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 184).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/util_ad9361_tdd_sync/inst. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 187).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361_adc_dma/inst. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 190).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361_dac_dma/inst. (constraint file  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc, line 193).
 Applied set_property ASYNC_REG = true for i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_transfer/i_request_arb/i_dest_req_fifo/i_raddr_sync/\cdc_sync_stage1_reg[0] . (constraint file  c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc, line 6).
 Applied set_property ASYNC_REG = true for i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_transfer/i_request_arb/i_dest_req_fifo/i_waddr_sync/\cdc_sync_stage1_reg[0] . (constraint file  c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc, line 6).
 Applied set_property ASYNC_REG = true for i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_transfer/i_request_arb/i_src_dest_bl_fifo/i_raddr_sync/\cdc_sync_stage1_reg[0] . (constraint file  c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc, line 6).
@@ -4129,6 +4137,7 @@ Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_ad9361_
 Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_hp1_interconnect. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_hp2_interconnect. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_gpreg. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/sync_gen_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/util_vector_logic_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_cpu_interconnect/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_hp1_interconnect/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
@@ -4137,7 +4146,7 @@ Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_hp1_int
 Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_hp1_interconnect/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_hp2_interconnect/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "adc_valid_p" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "adc_data_p" won't be mapped to RAM because it is too sparse
@@ -4303,6 +4312,10 @@ INFO: [Synth 8-5544] ROM "buffer_Empty" won't be mapped to Block RAM because add
 INFO: [Synth 8-5544] ROM "buffer_Full" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "lut_rom" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "gen_pack.gen_output_buffer.sync" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'inst'. This will prevent further optimization [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_util_ad9361_adc_pack_0/synth/system_util_ad9361_adc_pack_0.v:105]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'util_ad9361_adc_pack'. This will prevent further optimization [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2383]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'util_ad9361_dac_upack'. This will prevent further optimization [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2399]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'inst'. This will prevent further optimization [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_util_ad9361_dac_upack_0/synth/system_util_ad9361_dac_upack_0.v:105]
 INFO: [Synth 8-5545] ROM "end_of_period_s" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -4380,7 +4393,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'scl_state_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'iic_control'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:20 ; elapsed = 00:01:21 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:21 ; elapsed = 00:01:21 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4408,7 +4421,7 @@ Report RTL Partitions:
 |19    |sc_mmu_v1_0_7_top__parameterized0__GC0     |           1|      1745|
 |20    |s00_entry_pipeline_imp_A6NOOV__GC0         |           1|       202|
 |21    |bd_c0fd__GC0                               |           1|      1230|
-|22    |system__GC0                                |           1|     19748|
+|22    |system__GC0                                |           1|     19845|
 |23    |system_top__GC0                            |           1|        54|
 +------+-------------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -4422,7 +4435,7 @@ Detailed RTL Component Info :
 	   2 Input     24 Bit       Adders := 22    
 	   3 Input     24 Bit       Adders := 2     
 	   2 Input     17 Bit       Adders := 2     
-	   2 Input     16 Bit       Adders := 28    
+	   2 Input     16 Bit       Adders := 29    
 	   3 Input     16 Bit       Adders := 4     
 	   3 Input     14 Bit       Adders := 192   
 	   2 Input     14 Bit       Adders := 8     
@@ -4480,7 +4493,7 @@ Detailed RTL Component Info :
 	               24 Bit    Registers := 171   
 	               23 Bit    Registers := 3     
 	               17 Bit    Registers := 28    
-	               16 Bit    Registers := 218   
+	               16 Bit    Registers := 219   
 	               15 Bit    Registers := 2     
 	               14 Bit    Registers := 248   
 	               13 Bit    Registers := 105   
@@ -4523,7 +4536,7 @@ Detailed RTL Component Info :
 	   2 Input     20 Bit        Muxes := 1     
 	   3 Input     17 Bit        Muxes := 2     
 	   2 Input     17 Bit        Muxes := 2     
-	   2 Input     16 Bit        Muxes := 50    
+	   2 Input     16 Bit        Muxes := 51    
 	   4 Input     16 Bit        Muxes := 12    
 	   2 Input     15 Bit        Muxes := 1     
 	   3 Input     14 Bit        Muxes := 8     
@@ -4558,7 +4571,7 @@ Detailed RTL Component Info :
 	   7 Input      2 Bit        Muxes := 1     
 	   5 Input      2 Bit        Muxes := 4     
 	   4 Input      1 Bit        Muxes := 66    
-	   2 Input      1 Bit        Muxes := 672   
+	   2 Input      1 Bit        Muxes := 673   
 	   7 Input      1 Bit        Muxes := 56    
 	   3 Input      1 Bit        Muxes := 30    
 	   6 Input      1 Bit        Muxes := 188   
@@ -7816,6 +7829,15 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 1     
 +---Muxes : 
 	 513 Input     32 Bit        Muxes := 1     
+Module sync_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module processing_system7_v5_5_processing_system7 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -8038,8 +8060,8 @@ INFO: [Synth 8-5546] ROM "i_regmap/up_scratch" won't be mapped to RAM because it
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:642]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:642]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:642]
-INFO: [Synth 8-5544] ROM "inst/i_cpack/i_pack_shell/gen_pack.gen_output_buffer.sync" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/i_upack/i_pack_shell/gen_prefix_count[3].prefix_count_reg' and it is trimmed from '2' to '1' bits. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/util_pack_common/pack_shell.v:217]
+INFO: [Synth 8-5544] ROM "i_cpack/i_pack_shell/gen_pack.gen_output_buffer.sync" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-3936] Found unconnected internal register 'i_upack/i_pack_shell/gen_prefix_count[3].prefix_count_reg' and it is trimmed from '2' to '1' bits. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/util_pack_common/pack_shell.v:217]
 INFO: [Synth 8-5545] ROM "i_tdd_sync/end_of_period_s" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-3332] Sequential element (i_transfer/i_request_arb/i_src_dma_mm/id_reg_rep[3]) is unused and will be removed from module axi_dmac__parameterized0.
 WARNING: [Synth 8-3332] Sequential element (i_transfer/i_request_arb/i_src_dma_mm/id_reg_rep[2]) is unused and will be removed from module axi_dmac__parameterized0.
@@ -8256,7 +8278,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_system
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_system_wrapper/system_i /axi_hp2_interconnect/\inst/m00_exit_pipeline/m00_exit/inst /\gen_axi3.splitter_insti_1 /\gen_wsplitter.s_awroute_d_reg[43] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:13 ; elapsed = 00:02:15 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:02:10 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -8324,7 +8346,7 @@ Report RTL Partitions:
 |19    |sc_mmu_v1_0_7_top__parameterized0__GC0     |           1|       156|
 |20    |s00_entry_pipeline_imp_A6NOOV__GC0         |           1|        18|
 |21    |bd_c0fd__GC0                               |           1|      1000|
-|22    |system__GC0                                |           1|     12835|
+|22    |system__GC0                                |           1|     12902|
 |23    |system_top__GC0                            |           1|        54|
 |24    |sc_exit_v1_0_8_axi3_conv__GC0__1           |           1|       558|
 |25    |sc_util_v1_0_4_axi_reg_stall__1            |           1|       377|
@@ -8351,13 +8373,13 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 69 of c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc:69]
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 74 of c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc:74]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:22 ; elapsed = 00:02:24 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:18 ; elapsed = 00:02:20 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:27 ; elapsed = 00:02:29 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished Timing Optimization : Time (s): cpu = 00:02:22 ; elapsed = 00:02:24 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -8421,7 +8443,7 @@ Report RTL Partitions:
 |19    |sc_mmu_v1_0_7_top__parameterized0__GC0     |           1|       156|
 |20    |s00_entry_pipeline_imp_A6NOOV__GC0         |           1|        18|
 |21    |bd_c0fd__GC0                               |           1|      1000|
-|22    |system__GC0                                |           1|     12835|
+|22    |system__GC0                                |           1|     12902|
 |23    |system_top__GC0                            |           1|        54|
 |24    |sc_exit_v1_0_8_axi3_conv__GC0__1           |           1|       558|
 |25    |sc_util_v1_0_4_axi_reg_stall__1            |           1|       377|
@@ -8451,7 +8473,7 @@ INFO: [Synth 8-3332] Sequential element (gen_endpoint.decerr_slave_inst/FSM_oneh
 INFO: [Synth 8-6837] The timing for the instance i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_transfer/i_request_arb/i_store_and_forward/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_transfer/i_request_arb/i_store_and_forward/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:37 ; elapsed = 00:02:40 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished Technology Mapping : Time (s): cpu = 00:02:32 ; elapsed = 00:02:34 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -8481,7 +8503,7 @@ INFO: [Synth 8-5365] Flop inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:39 ; elapsed = 00:02:41 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished IO Insertion : Time (s): cpu = 00:02:34 ; elapsed = 00:02:36 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -8494,7 +8516,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:39 ; elapsed = 00:02:41 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:34 ; elapsed = 00:02:36 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -8506,25 +8528,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:42 ; elapsed = 00:02:45 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:37 ; elapsed = 00:02:40 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:42 ; elapsed = 00:02:45 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:38 ; elapsed = 00:02:40 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:43 ; elapsed = 00:02:45 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:38 ; elapsed = 00:02:40 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:43 ; elapsed = 00:02:46 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:38 ; elapsed = 00:02:40 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -8626,17 +8648,17 @@ Report Cell Usage:
 |24    |DSP48E__9  |     1|
 |25    |BIBUF      |   130|
 |26    |BUFG       |     4|
-|27    |CARRY4     |  1621|
+|27    |CARRY4     |  1625|
 |28    |DSP48E1    |     4|
 |29    |IDDR       |     7|
 |30    |IDELAYCTRL |     1|
 |31    |IDELAYE2   |     7|
-|32    |LUT1       |  2110|
-|33    |LUT2       |  1894|
+|32    |LUT1       |  2125|
+|33    |LUT2       |  1910|
 |34    |LUT3       |  6016|
-|35    |LUT4       |  1046|
+|35    |LUT4       |  1048|
 |36    |LUT5       |  1121|
-|37    |LUT6       |  2926|
+|37    |LUT6       |  2928|
 |38    |MUXCY_L    |     9|
 |39    |MUXF7      |   105|
 |40    |MUXF8      |     4|
@@ -8649,7 +8671,7 @@ Report Cell Usage:
 |47    |SRL16E     |   711|
 |48    |SRLC32E    |    47|
 |49    |XORCY      |    12|
-|50    |FDCE       |  4074|
+|50    |FDCE       |  4090|
 |51    |FDPE       |    74|
 |52    |FDR        |    27|
 |53    |FDRE       | 15868|
@@ -8666,9 +8688,9 @@ Report Instance Areas:
 +------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
 |      |Instance                                                                                              |Module                                                         |Cells |
 +------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
-|1     |top                                                                                                   |                                                               | 41991|
-|2     |  i_system_wrapper                                                                                    |system_wrapper                                                 | 41958|
-|3     |    system_i                                                                                          |system                                                         | 41956|
+|1     |top                                                                                                   |                                                               | 42046|
+|2     |  i_system_wrapper                                                                                    |system_wrapper                                                 | 42013|
+|3     |    system_i                                                                                          |system                                                         | 42011|
 |4     |      axi_ad9361                                                                                      |system_axi_ad9361_0                                            | 31407|
 |5     |        inst                                                                                          |axi_ad9361                                                     | 31407|
 |6     |          i_dev_if                                                                                    |axi_ad9361_lvds_if                                             |   295|
@@ -9246,47 +9268,49 @@ Report Instance Areas:
 |578   |          i_up_axi                                                                                    |up_axi__parameterized1                                         |   261|
 |579   |      rom_sys_0                                                                                       |system_rom_sys_0_0                                             |   117|
 |580   |        inst                                                                                          |sysid_rom                                                      |   117|
-|581   |      sys_concat_intc                                                                                 |system_sys_concat_intc_0                                       |     0|
-|582   |      sys_logic_inv                                                                                   |system_sys_logic_inv_0                                         |     1|
-|583   |      sys_ps7                                                                                         |system_sys_ps7_0                                               |   268|
-|584   |        inst                                                                                          |processing_system7_v5_5_processing_system7                     |   268|
-|585   |      sys_rstgen                                                                                      |system_sys_rstgen_0                                            |    62|
-|586   |        U0                                                                                            |proc_sys_reset__parameterized2                                 |    62|
-|587   |          EXT_LPF                                                                                     |lpf__parameterized0                                            |    19|
-|588   |            \ACTIVE_LOW_AUX.ACT_LO_AUX                                                                |cdc_sync                                                       |     6|
-|589   |            \ACTIVE_LOW_EXT.ACT_LO_EXT                                                                |cdc_sync_0                                                     |     5|
-|590   |          SEQ                                                                                         |sequence_psr                                                   |    38|
-|591   |            SEQ_COUNTER                                                                               |proc_sys_reset_v5_0_13_upcnt_n                                 |    13|
-|592   |      util_ad9361_adc_pack                                                                            |system_util_ad9361_adc_pack_0                                  |   272|
-|593   |        inst                                                                                          |util_cpack2                                                    |   272|
-|594   |          i_cpack                                                                                     |util_cpack2_impl                                               |   272|
-|595   |            i_pack_shell                                                                              |pack_shell                                                     |   206|
-|596   |              \gen_network[0].i_ctrl_interconnect                                                     |pack_network                                                   |   117|
-|597   |      util_ad9361_dac_upack                                                                           |system_util_ad9361_dac_upack_0                                 |   286|
-|598   |        inst                                                                                          |util_upack2                                                    |   286|
-|599   |          i_upack                                                                                     |util_upack2_impl                                               |   286|
-|600   |            i_pack_shell                                                                              |pack_shell__parameterized0                                     |   220|
-|601   |              \gen_input_buffer.i_ext_ctrl_interconnect                                               |pack_network__parameterized0                                   |   143|
-|602   |              \gen_network[1].i_ctrl_interconnect                                                     |pack_network__parameterized1                                   |     4|
-|603   |      util_ad9361_divclk_sel                                                                          |system_util_ad9361_divclk_sel_0                                |     1|
-|604   |      util_ad9361_divclk_sel_concat                                                                   |system_util_ad9361_divclk_sel_concat_0                         |     0|
-|605   |      util_ad9361_tdd_sync                                                                            |system_util_ad9361_tdd_sync_0                                  |   113|
-|606   |        inst                                                                                          |util_tdd_sync                                                  |   113|
-|607   |          i_tdd_sync                                                                                  |util_pulse_gen                                                 |   110|
-|608   |      util_vector_logic_0                                                                             |system_util_vector_logic_0_1                                   |     1|
+|581   |      sync_gen_0                                                                                      |system_sync_gen_0_0                                            |    55|
+|582   |        inst                                                                                          |sync_gen                                                       |    55|
+|583   |      sys_concat_intc                                                                                 |system_sys_concat_intc_0                                       |     0|
+|584   |      sys_logic_inv                                                                                   |system_sys_logic_inv_0                                         |     1|
+|585   |      sys_ps7                                                                                         |system_sys_ps7_0                                               |   268|
+|586   |        inst                                                                                          |processing_system7_v5_5_processing_system7                     |   268|
+|587   |      sys_rstgen                                                                                      |system_sys_rstgen_0                                            |    62|
+|588   |        U0                                                                                            |proc_sys_reset__parameterized2                                 |    62|
+|589   |          EXT_LPF                                                                                     |lpf__parameterized0                                            |    19|
+|590   |            \ACTIVE_LOW_AUX.ACT_LO_AUX                                                                |cdc_sync                                                       |     6|
+|591   |            \ACTIVE_LOW_EXT.ACT_LO_EXT                                                                |cdc_sync_0                                                     |     5|
+|592   |          SEQ                                                                                         |sequence_psr                                                   |    38|
+|593   |            SEQ_COUNTER                                                                               |proc_sys_reset_v5_0_13_upcnt_n                                 |    13|
+|594   |      util_ad9361_adc_pack                                                                            |system_util_ad9361_adc_pack_0                                  |   272|
+|595   |        inst                                                                                          |util_cpack2                                                    |   272|
+|596   |          i_cpack                                                                                     |util_cpack2_impl                                               |   272|
+|597   |            i_pack_shell                                                                              |pack_shell                                                     |   206|
+|598   |              \gen_network[0].i_ctrl_interconnect                                                     |pack_network                                                   |   117|
+|599   |      util_ad9361_dac_upack                                                                           |system_util_ad9361_dac_upack_0                                 |   286|
+|600   |        inst                                                                                          |util_upack2                                                    |   286|
+|601   |          i_upack                                                                                     |util_upack2_impl                                               |   286|
+|602   |            i_pack_shell                                                                              |pack_shell__parameterized0                                     |   220|
+|603   |              \gen_input_buffer.i_ext_ctrl_interconnect                                               |pack_network__parameterized0                                   |   143|
+|604   |              \gen_network[1].i_ctrl_interconnect                                                     |pack_network__parameterized1                                   |     4|
+|605   |      util_ad9361_divclk_sel                                                                          |system_util_ad9361_divclk_sel_0                                |     1|
+|606   |      util_ad9361_divclk_sel_concat                                                                   |system_util_ad9361_divclk_sel_concat_0                         |     0|
+|607   |      util_ad9361_tdd_sync                                                                            |system_util_ad9361_tdd_sync_0                                  |   113|
+|608   |        inst                                                                                          |util_tdd_sync                                                  |   113|
+|609   |          i_tdd_sync                                                                                  |util_pulse_gen                                                 |   110|
+|610   |      util_vector_logic_0                                                                             |system_util_vector_logic_0_0                                   |     1|
 +------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:43 ; elapsed = 00:02:46 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:38 ; elapsed = 00:02:40 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6326 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:34 ; elapsed = 00:02:13 . Memory (MB): peak = 1798.938 ; gain = 528.609
-Synthesis Optimization Complete : Time (s): cpu = 00:02:43 ; elapsed = 00:02:46 . Memory (MB): peak = 1798.938 ; gain = 1472.141
+Synthesis finished with 0 errors, 0 critical warnings and 6327 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:29 ; elapsed = 00:02:07 . Memory (MB): peak = 1800.031 ; gain = 530.723
+Synthesis Optimization Complete : Time (s): cpu = 00:02:38 ; elapsed = 00:02:40 . Memory (MB): peak = 1800.031 ; gain = 1472.359
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1986 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1990 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1798.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1800.031 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 201 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 3 instances
@@ -9300,12 +9324,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1086 Infos, 87 Warnings, 0 Critical Warnings and 0 Errors encountered.
+1090 Infos, 89 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 1798.938 ; gain = 1484.152
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1798.938 ; gain = 0.000
+synth_design: Time (s): cpu = 00:02:47 ; elapsed = 00:02:50 . Memory (MB): peak = 1800.031 ; gain = 1485.160
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1800.031 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/system_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_top_utilization_synth.rpt -pb system_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 10 05:44:01 2022...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 10 07:56:15 2022...

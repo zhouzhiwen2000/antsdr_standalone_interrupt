@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog   \
+"../../../../../../../ip_repo/sync_generator_1.0/hdl/sync_generator_v1_0_S00_AXI.v" \
+
+verilog xil_defaultlib  \
+"../../../../../../../ip_repo/sync_generator_1.0/src/sync_generator_v1_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

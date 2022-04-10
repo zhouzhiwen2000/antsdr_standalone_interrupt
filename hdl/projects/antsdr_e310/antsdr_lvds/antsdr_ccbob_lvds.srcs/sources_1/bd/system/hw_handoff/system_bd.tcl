@@ -37,6 +37,13 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # To test this script, run the following commands from Vivado Tcl console:
 # source system_script.tcl
 
+
+# The design that will be created by this Tcl script contains the following 
+# module references:
+# sync_gen
+
+# Please add the sources of those modules before sourcing this Tcl script.
+
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
 # <./myproj/project_1.xpr> in the current working folder.
@@ -304,6 +311,17 @@ proc create_root_design { parentCell } {
    CONFIG.ROM_ADDR_BITS {9} \
  ] $rom_sys_0
 
+  # Create instance: sync_gen_0, and set properties
+  set block_name sync_gen
+  set block_cell_name sync_gen_0
+  if { [catch {set sync_gen_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $sync_gen_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: sys_concat_intc, and set properties
   set sys_concat_intc [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 sys_concat_intc ]
   set_property -dict [ list \
@@ -817,7 +835,6 @@ proc create_root_design { parentCell } {
 
   # Create port connections
   connect_bd_net -net GND_1_dout [get_bd_pins GND_1/dout] [get_bd_pins sys_concat_intc/In0] [get_bd_pins sys_concat_intc/In1] [get_bd_pins sys_concat_intc/In2] [get_bd_pins sys_concat_intc/In3] [get_bd_pins sys_concat_intc/In4] [get_bd_pins sys_concat_intc/In5] [get_bd_pins sys_concat_intc/In6] [get_bd_pins sys_concat_intc/In7] [get_bd_pins sys_concat_intc/In8] [get_bd_pins sys_concat_intc/In9] [get_bd_pins sys_concat_intc/In10] [get_bd_pins sys_concat_intc/In15] [get_bd_pins sys_ps7/ENET1_GMII_RX_CLK] [get_bd_pins sys_ps7/ENET1_GMII_TX_CLK]
-  connect_bd_net -net Net [get_bd_pins axi_ad9361_dac_dma/m_axis_valid] [get_bd_pins util_ad9361_dac_upack/s_axis_valid] [get_bd_pins util_vector_logic_0/Op2]
   connect_bd_net -net axi_ad9361_adc_data_i0 [get_bd_pins axi_ad9361/adc_data_i0] [get_bd_pins util_ad9361_adc_pack/fifo_wr_data_0]
   connect_bd_net -net axi_ad9361_adc_data_i1 [get_bd_pins axi_ad9361/adc_data_i1] [get_bd_pins util_ad9361_adc_pack/fifo_wr_data_2]
   connect_bd_net -net axi_ad9361_adc_data_q0 [get_bd_pins axi_ad9361/adc_data_q0] [get_bd_pins util_ad9361_adc_pack/fifo_wr_data_1]
@@ -830,6 +847,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_ad9361_adc_r1_mode [get_bd_pins axi_ad9361/adc_r1_mode] [get_bd_pins util_ad9361_divclk_sel_concat/In0]
   connect_bd_net -net axi_ad9361_adc_valid_i0 [get_bd_pins axi_ad9361/adc_valid_i0] [get_bd_pins util_ad9361_adc_pack/fifo_wr_en]
   connect_bd_net -net axi_ad9361_dac_dma_irq [get_bd_pins axi_ad9361_dac_dma/irq] [get_bd_pins sys_concat_intc/In12]
+  connect_bd_net -net axi_ad9361_dac_dma_m_axis_valid [get_bd_pins axi_ad9361_dac_dma/m_axis_valid] [get_bd_pins util_ad9361_dac_upack/s_axis_valid] [get_bd_pins util_vector_logic_0/Op2]
   connect_bd_net -net axi_ad9361_dac_enable_i0 [get_bd_pins axi_ad9361/dac_enable_i0] [get_bd_pins util_ad9361_dac_upack/enable_0]
   connect_bd_net -net axi_ad9361_dac_enable_i1 [get_bd_pins axi_ad9361/dac_enable_i1] [get_bd_pins util_ad9361_dac_upack/enable_2]
   connect_bd_net -net axi_ad9361_dac_enable_q0 [get_bd_pins axi_ad9361/dac_enable_q0] [get_bd_pins util_ad9361_dac_upack/enable_1]
@@ -838,7 +856,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_ad9361_dac_valid_i0 [get_bd_pins axi_ad9361/dac_valid_i0] [get_bd_pins util_ad9361_dac_upack/fifo_rd_en]
   connect_bd_net -net axi_ad9361_enable [get_bd_ports enable] [get_bd_pins axi_ad9361/enable]
   connect_bd_net -net axi_ad9361_gps_pps_irq [get_bd_pins axi_ad9361/gps_pps_irq] [get_bd_pins sys_concat_intc/In11]
-  connect_bd_net -net axi_ad9361_l_clk [get_bd_pins axi_ad9361/clk] [get_bd_pins axi_ad9361/l_clk] [get_bd_pins axi_ad9361_adc_dma/fifo_wr_clk] [get_bd_pins axi_ad9361_dac_dma/m_axis_aclk] [get_bd_pins util_ad9361_adc_pack/clk] [get_bd_pins util_ad9361_dac_upack/clk]
+  connect_bd_net -net axi_ad9361_l_clk [get_bd_pins axi_ad9361/clk] [get_bd_pins axi_ad9361/l_clk] [get_bd_pins axi_ad9361_adc_dma/fifo_wr_clk] [get_bd_pins axi_ad9361_dac_dma/m_axis_aclk] [get_bd_pins sync_gen_0/clk] [get_bd_pins util_ad9361_adc_pack/clk] [get_bd_pins util_ad9361_dac_upack/clk]
   connect_bd_net -net axi_ad9361_tdd_sync_cntr [get_bd_ports tdd_sync_t] [get_bd_pins axi_ad9361/tdd_sync_cntr] [get_bd_pins util_ad9361_tdd_sync/sync_mode]
   connect_bd_net -net axi_ad9361_tx_clk_out_n [get_bd_ports tx_clk_out_n] [get_bd_pins axi_ad9361/tx_clk_out_n]
   connect_bd_net -net axi_ad9361_tx_clk_out_p [get_bd_ports tx_clk_out_p] [get_bd_pins axi_ad9361/tx_clk_out_p]
@@ -869,6 +887,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net spi1_csn_i_1 [get_bd_ports spi1_csn_i] [get_bd_pins sys_ps7/SPI1_SS_I]
   connect_bd_net -net spi1_sdi_i_1 [get_bd_ports spi1_sdi_i] [get_bd_pins sys_ps7/SPI1_MISO_I]
   connect_bd_net -net spi1_sdo_i_1 [get_bd_ports spi1_sdo_i] [get_bd_pins sys_ps7/SPI1_MOSI_I]
+  connect_bd_net -net sync_gen_0_sync_out [get_bd_pins axi_ad9361_adc_dma/fifo_wr_sync] [get_bd_pins sync_gen_0/sync_out]
   connect_bd_net -net sys_200m_clk [get_bd_pins axi_ad9361/delay_clk] [get_bd_pins sys_ps7/FCLK_CLK1]
   connect_bd_net -net sys_concat_intc_dout [get_bd_pins sys_concat_intc/dout] [get_bd_pins sys_ps7/IRQ_F2P]
   connect_bd_net -net sys_cpu_clk [get_bd_pins axi_ad9361/s_axi_aclk] [get_bd_pins axi_ad9361_adc_dma/m_dest_axi_aclk] [get_bd_pins axi_ad9361_adc_dma/s_axi_aclk] [get_bd_pins axi_ad9361_dac_dma/m_src_axi_aclk] [get_bd_pins axi_ad9361_dac_dma/s_axi_aclk] [get_bd_pins axi_cpu_interconnect/ACLK] [get_bd_pins axi_cpu_interconnect/M00_ACLK] [get_bd_pins axi_cpu_interconnect/M01_ACLK] [get_bd_pins axi_cpu_interconnect/M02_ACLK] [get_bd_pins axi_cpu_interconnect/M03_ACLK] [get_bd_pins axi_cpu_interconnect/M04_ACLK] [get_bd_pins axi_cpu_interconnect/M05_ACLK] [get_bd_pins axi_cpu_interconnect/S00_ACLK] [get_bd_pins axi_gpreg/s_axi_aclk] [get_bd_pins axi_hp1_interconnect/aclk] [get_bd_pins axi_hp2_interconnect/aclk] [get_bd_pins axi_iic_main/s_axi_aclk] [get_bd_pins axi_sysid_0/s_axi_aclk] [get_bd_pins rom_sys_0/clk] [get_bd_pins sys_ps7/FCLK_CLK0] [get_bd_pins sys_ps7/M_AXI_GP0_ACLK] [get_bd_pins sys_ps7/S_AXI_HP1_ACLK] [get_bd_pins sys_ps7/S_AXI_HP2_ACLK] [get_bd_pins sys_rstgen/slowest_sync_clk] [get_bd_pins util_ad9361_tdd_sync/clk]
@@ -892,17 +911,16 @@ proc create_root_design { parentCell } {
   connect_bd_net -net up_enable_1 [get_bd_ports up_enable] [get_bd_pins axi_ad9361/up_enable]
   connect_bd_net -net up_txnrx_1 [get_bd_ports up_txnrx] [get_bd_pins axi_ad9361/up_txnrx]
   connect_bd_net -net util_ad9361_adc_pack_fifo_wr_overflow [get_bd_pins axi_ad9361/adc_dovf] [get_bd_pins util_ad9361_adc_pack/fifo_wr_overflow]
-  connect_bd_net -net util_ad9361_adc_pack_packed_fifo_wr_sync [get_bd_pins util_ad9361_adc_pack/packed_fifo_wr_sync] [get_bd_pins util_vector_logic_0/Op1]
   connect_bd_net -net util_ad9361_dac_upack_fifo_rd_data_0 [get_bd_pins axi_ad9361/dac_data_i0] [get_bd_pins util_ad9361_dac_upack/fifo_rd_data_0]
   connect_bd_net -net util_ad9361_dac_upack_fifo_rd_data_1 [get_bd_pins axi_ad9361/dac_data_q0] [get_bd_pins util_ad9361_dac_upack/fifo_rd_data_1]
   connect_bd_net -net util_ad9361_dac_upack_fifo_rd_data_2 [get_bd_pins axi_ad9361/dac_data_i1] [get_bd_pins util_ad9361_dac_upack/fifo_rd_data_2]
   connect_bd_net -net util_ad9361_dac_upack_fifo_rd_data_3 [get_bd_pins axi_ad9361/dac_data_q1] [get_bd_pins util_ad9361_dac_upack/fifo_rd_data_3]
   connect_bd_net -net util_ad9361_dac_upack_fifo_rd_underflow [get_bd_pins axi_ad9361/dac_dunf] [get_bd_pins util_ad9361_dac_upack/fifo_rd_underflow]
-  connect_bd_net -net util_ad9361_dac_upack_s_axis_ready [get_bd_pins axi_ad9361_dac_dma/m_axis_ready] [get_bd_pins util_ad9361_dac_upack/s_axis_ready]
-  connect_bd_net -net util_ad9361_divclk_reset_peripheral_reset [get_bd_pins axi_ad9361/rst] [get_bd_pins util_ad9361_adc_pack/reset] [get_bd_pins util_ad9361_dac_upack/reset]
+  connect_bd_net -net util_ad9361_dac_upack_s_axis_ready [get_bd_pins axi_ad9361_dac_dma/m_axis_ready] [get_bd_pins util_ad9361_dac_upack/s_axis_ready] [get_bd_pins util_vector_logic_0/Op1]
+  connect_bd_net -net util_ad9361_divclk_reset_peripheral_reset [get_bd_pins axi_ad9361/rst] [get_bd_pins sync_gen_0/reset] [get_bd_pins util_ad9361_adc_pack/reset] [get_bd_pins util_ad9361_dac_upack/reset]
   connect_bd_net -net util_ad9361_divclk_sel_concat_dout [get_bd_pins util_ad9361_divclk_sel/Op1] [get_bd_pins util_ad9361_divclk_sel_concat/dout]
   connect_bd_net -net util_ad9361_tdd_sync_sync_out [get_bd_ports tdd_sync_o] [get_bd_pins axi_ad9361/tdd_sync] [get_bd_pins util_ad9361_tdd_sync/sync_out]
-  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins axi_ad9361_adc_dma/fifo_wr_sync] [get_bd_pins util_vector_logic_0/Res]
+  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins sync_gen_0/dac_sot] [get_bd_pins util_vector_logic_0/Res]
 
   # Create address segments
   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces axi_ad9361_adc_dma/m_dest_axi] [get_bd_addr_segs sys_ps7/S_AXI_HP1/HP1_DDR_LOWOCM] SEG_sys_ps7_HP1_DDR_LOWOCM

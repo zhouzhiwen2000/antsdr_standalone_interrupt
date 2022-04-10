@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sun Apr 10 05:40:45 2022
+//Date        : Sun Apr 10 07:53:03 2022
 //Host        : Home-PC running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -1176,7 +1176,7 @@ module s00_couplers_imp_WZLZH6
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=30,numReposBlks=22,numNonXlnxBlks=9,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=Global}" *) (* HW_HANDOFF = "system.hwdef" *) 
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=31,numReposBlks=23,numNonXlnxBlks=9,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=Global}" *) (* HW_HANDOFF = "system.hwdef" *) 
 module system
    (ddr_addr,
     ddr_ba,
@@ -1322,7 +1322,6 @@ module system
   input up_txnrx;
 
   wire [0:0]GND_1_dout;
-  wire Net;
   wire [31:0]S00_AXI_1_ARADDR;
   wire [1:0]S00_AXI_1_ARBURST;
   wire [3:0]S00_AXI_1_ARCACHE;
@@ -1390,6 +1389,7 @@ module system
   wire axi_ad9361_adc_valid_i0;
   wire axi_ad9361_dac_dma_irq;
   wire [63:0]axi_ad9361_dac_dma_m_axis_TDATA;
+  wire axi_ad9361_dac_dma_m_axis_valid;
   wire [29:0]axi_ad9361_dac_dma_m_src_axi_ARADDR;
   wire [1:0]axi_ad9361_dac_dma_m_src_axi_ARBURST;
   wire [3:0]axi_ad9361_dac_dma_m_src_axi_ARCACHE;
@@ -1593,6 +1593,7 @@ module system
   wire spi1_csn_i_1;
   wire spi1_sdi_i_1;
   wire spi1_sdo_i_1;
+  wire sync_gen_0_sync_out;
   wire sys_200m_clk;
   wire [15:0]sys_concat_intc_dout;
   wire sys_cpu_clk;
@@ -1640,7 +1641,6 @@ module system
   wire [63:0]util_ad9361_adc_pack_packed_fifo_wr_DATA;
   wire util_ad9361_adc_pack_packed_fifo_wr_EN;
   wire util_ad9361_adc_pack_packed_fifo_wr_OVERFLOW;
-  wire util_ad9361_adc_pack_packed_fifo_wr_sync;
   wire [15:0]util_ad9361_dac_upack_fifo_rd_data_0;
   wire [15:0]util_ad9361_dac_upack_fifo_rd_data_1;
   wire [15:0]util_ad9361_dac_upack_fifo_rd_data_2;
@@ -1780,7 +1780,7 @@ module system
         .fifo_wr_din(util_ad9361_adc_pack_packed_fifo_wr_DATA),
         .fifo_wr_en(util_ad9361_adc_pack_packed_fifo_wr_EN),
         .fifo_wr_overflow(util_ad9361_adc_pack_packed_fifo_wr_OVERFLOW),
-        .fifo_wr_sync(util_vector_logic_0_Res),
+        .fifo_wr_sync(sync_gen_0_sync_out),
         .irq(axi_ad9361_adc_dma_irq),
         .m_dest_axi_aclk(sys_cpu_clk),
         .m_dest_axi_aresetn(sys_cpu_resetn),
@@ -1826,7 +1826,7 @@ module system
         .m_axis_aclk(axi_ad9361_l_clk),
         .m_axis_data(axi_ad9361_dac_dma_m_axis_TDATA),
         .m_axis_ready(util_ad9361_dac_upack_s_axis_ready),
-        .m_axis_valid(Net),
+        .m_axis_valid(axi_ad9361_dac_dma_m_axis_valid),
         .m_src_axi_aclk(sys_cpu_clk),
         .m_src_axi_araddr(axi_ad9361_dac_dma_m_src_axi_ARADDR),
         .m_src_axi_arburst(axi_ad9361_dac_dma_m_src_axi_ARBURST),
@@ -2182,6 +2182,11 @@ module system
        (.clk(sys_cpu_clk),
         .rom_addr(axi_sysid_0_rom_addr),
         .rom_data(rom_sys_0_rom_data));
+  system_sync_gen_0_0 sync_gen_0
+       (.clk(axi_ad9361_l_clk),
+        .dac_sot(util_vector_logic_0_Res),
+        .reset(util_ad9361_divclk_reset_peripheral_reset),
+        .sync_out(sync_gen_0_sync_out));
   system_sys_concat_intc_0 sys_concat_intc
        (.In0(GND_1_dout),
         .In1(GND_1_dout),
@@ -2390,7 +2395,6 @@ module system
         .packed_fifo_wr_data(util_ad9361_adc_pack_packed_fifo_wr_DATA),
         .packed_fifo_wr_en(util_ad9361_adc_pack_packed_fifo_wr_EN),
         .packed_fifo_wr_overflow(util_ad9361_adc_pack_packed_fifo_wr_OVERFLOW),
-        .packed_fifo_wr_sync(util_ad9361_adc_pack_packed_fifo_wr_sync),
         .reset(util_ad9361_divclk_reset_peripheral_reset));
   system_util_ad9361_dac_upack_0 util_ad9361_dac_upack
        (.clk(axi_ad9361_l_clk),
@@ -2407,7 +2411,7 @@ module system
         .reset(util_ad9361_divclk_reset_peripheral_reset),
         .s_axis_data(axi_ad9361_dac_dma_m_axis_TDATA),
         .s_axis_ready(util_ad9361_dac_upack_s_axis_ready),
-        .s_axis_valid(Net));
+        .s_axis_valid(axi_ad9361_dac_dma_m_axis_valid));
   system_util_ad9361_divclk_sel_0 util_ad9361_divclk_sel
        (.Op1(util_ad9361_divclk_sel_concat_dout));
   system_util_ad9361_divclk_sel_concat_0 util_ad9361_divclk_sel_concat
@@ -2420,9 +2424,9 @@ module system
         .sync_in(tdd_sync_i_1),
         .sync_mode(axi_ad9361_tdd_sync_cntr),
         .sync_out(util_ad9361_tdd_sync_sync_out));
-  system_util_vector_logic_0_1 util_vector_logic_0
-       (.Op1(util_ad9361_adc_pack_packed_fifo_wr_sync),
-        .Op2(Net),
+  system_util_vector_logic_0_0 util_vector_logic_0
+       (.Op1(util_ad9361_dac_upack_s_axis_ready),
+        .Op2(axi_ad9361_dac_dma_m_axis_valid),
         .Res(util_vector_logic_0_Res));
 endmodule
 

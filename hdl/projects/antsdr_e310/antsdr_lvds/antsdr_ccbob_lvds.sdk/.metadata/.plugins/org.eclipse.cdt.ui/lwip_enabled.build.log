@@ -1,8 +1,8 @@
-06:01:16 **** Incremental Build of configuration Debug for project lwip_enabled ****
+08:05:58 **** Incremental Build of configuration Debug for project lwip_enabled ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
 
-06:01:16 Build Finished (took 345ms)
+08:05:58 Build Finished (took 218ms)
 

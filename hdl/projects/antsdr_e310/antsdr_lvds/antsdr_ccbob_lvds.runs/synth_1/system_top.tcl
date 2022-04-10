@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Vivado 12-1790}  -string {{Evaluation} {features} {should} {NOT} {be} {used} {in} {production} {systems.}}  -new_severity {WARNING} 
 set_msg_config  -id {Place 30-73}  -string {{axi_spi}}  -new_severity {WARNING} 
 set_msg_config  -string {{PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY}}  -new_severity {WARNING} 
@@ -40,6 +42,7 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
+  c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/ip_repo/sync_generator_1.0
   c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library
   c:/Users/zhouzhiwen/Desktop/antsdr_standalone/ghdl/library
 } [current_project]
@@ -47,6 +50,7 @@ update_ip_catalog
 set_property ip_output_repo c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
+  C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/new/sync_gen.v
   C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/xilinx/common/ad_iobuf.v
   C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/imports/hdl/system_wrapper.v
   C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v

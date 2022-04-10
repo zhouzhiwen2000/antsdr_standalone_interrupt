@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1649541000">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1649548391">
   <File Type="BITSTR-BMM" Name="system_top_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="system_top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="system_top_timing_summary_init.rpt"/>
@@ -71,6 +71,13 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/sync_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/system/system.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>

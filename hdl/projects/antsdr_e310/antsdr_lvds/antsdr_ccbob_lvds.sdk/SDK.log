@@ -12273,3 +12273,10 @@ con
 07:18:01 INFO  : Invoking Bootgen: bootgen -image lwip_enabled.bif -arch zynq -o C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\lwip_enabled\bootimage\BOOT.bin -w on
 07:18:02 INFO  : Bootgen command execution is done.
 07:20:34 INFO  : Disconnected from the channel tcfchan#7.
+08:06:34 INFO  : Registering command handlers for SDK TCF services
+08:06:35 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\temp_xsdb_launch_script.tcl
+08:06:37 INFO  : XSCT server has started successfully.
+08:06:37 INFO  : Successfully done setting XSCT server connection channel  
+08:06:38 INFO  : Successfully done setting SDK workspace  
+08:06:38 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+08:06:38 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.

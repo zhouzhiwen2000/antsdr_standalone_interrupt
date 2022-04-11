@@ -6,7 +6,7 @@
 <Project Version="7" Minor="39" Path="c:/users/zhouzhiwen/desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.tmp/axi_dmac_v1_0_project/axi_dmac_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="6c0796467beb450e9c3be2040b285a17"/>
+    <Option Name="Id" Val="27061f231731460ba12197125c0972e9"/>
     <Option Name="Part" Val="xc7z020clg400-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

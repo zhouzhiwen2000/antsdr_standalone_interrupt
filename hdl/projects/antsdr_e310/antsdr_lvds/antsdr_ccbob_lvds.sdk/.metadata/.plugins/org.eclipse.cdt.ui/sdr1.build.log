@@ -1,43 +1,8 @@
-08:50:08 **** Auto Build of configuration Debug for project sdr1 ****
+04:39:44 **** Auto Build of configuration Debug for project sdr1 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/adc_core.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adc_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sdr1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/adc_core.d" -MT"src/adc_core.o" -o "src/adc_core.o" "../src/adc_core.c"
-'Finished building: ../src/adc_core.c'
-' '
-'Building file: ../src/command.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/command.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sdr1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/command.d" -MT"src/command.o" -o "src/command.o" "../src/command.c"
-'Finished building: ../src/command.c'
-' '
-'Building file: ../src/dac_core.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dac_core.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sdr1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dac_core.d" -MT"src/dac_core.o" -o "src/dac_core.o" "../src/dac_core.c"
-'Finished building: ../src/dac_core.c'
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sdr1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sdr1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: sdr1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sdr1_bsp/ps7_cortexa9_0/lib -o "sdr1.elf"  ./src/ad9361.o ./src/ad9361_api.o ./src/ad9361_conv.o ./src/adc_core.o ./src/command.o ./src/console.o ./src/dac_core.o ./src/main.o ./src/platform.o ./src/util.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: sdr1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size sdr1.elf  |tee "sdr1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 274696	   5692	  23776	 304164	  4a424	sdr1.elf
-'Finished building: sdr1.elf.size'
-' '
+make: Nothing to be done for 'main-build'.
 
-08:50:09 Build Finished (took 1s.672ms)
+04:39:44 Build Finished (took 204ms)
 

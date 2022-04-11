@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="c_pcb" key="selection"/>
+		<item value="sync" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="sync"/>
+			<item value="dac_sync"/>
+			<item value="dac_start_sync"/>
+			<item value="dac_stop"/>
 			<item value="c_pcb"/>
 			<item value="apiflags"/>
 			<item value="start_application"/>
 			<item value="unable to alloc pbuf in init_dma"/>
-			<item value="in"/>
-			<item value="init_dma"/>
-			<item value="netif_init"/>
-			<item value="Unknown Rx path"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -23,8 +23,8 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
-		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="626" key="DIALOG_X_ORIGIN"/>
-		<item value="182" key="DIALOG_Y_ORIGIN"/>
+		<item value="382" key="DIALOG_HEIGHT"/>
+		<item value="1127" key="DIALOG_X_ORIGIN"/>
+		<item value="154" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

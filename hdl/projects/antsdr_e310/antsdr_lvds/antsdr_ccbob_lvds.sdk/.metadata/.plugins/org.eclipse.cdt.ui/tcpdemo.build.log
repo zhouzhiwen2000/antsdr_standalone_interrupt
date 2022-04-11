@@ -1,4 +1,4 @@
-23:33:25 **** Build of configuration Debug for project tcpdemo ****
+04:39:35 **** Build of configuration Debug for project tcpdemo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -69,5 +69,5 @@ arm-none-eabi-size tcpdemo.elf  |tee "tcpdemo.elf.size"
 'Finished building: tcpdemo.elf.size'
 ' '
 
-23:33:27 Build Finished (took 2s.36ms)
+04:39:37 Build Finished (took 2s.198ms)
 

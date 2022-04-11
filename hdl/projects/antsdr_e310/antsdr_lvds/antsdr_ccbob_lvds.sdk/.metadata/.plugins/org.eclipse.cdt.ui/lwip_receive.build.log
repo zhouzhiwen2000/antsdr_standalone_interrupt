@@ -1,4 +1,4 @@
-22:44:51 **** Build of configuration Debug for project lwip_receive ****
+04:38:36 **** Build of configuration Debug for project lwip_receive ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -68,5 +68,5 @@ arm-none-eabi-size lwip_receive.elf  |tee "lwip_receive.elf.size"
 'Finished building: lwip_receive.elf.size'
 ' '
 
-22:44:54 Build Finished (took 2s.757ms)
+04:38:38 Build Finished (took 2s.73ms)
 

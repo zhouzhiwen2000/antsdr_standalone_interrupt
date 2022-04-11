@@ -54,7 +54,7 @@ u64_t last_transmit=0;
 #define DEFAULT_IP_ADDRESS	"192.168.1.136"
 #define DEFAULT_IP_MASK		"255.255.255.0"
 #define DEFAULT_GW_ADDRESS	"192.168.1.1"
-
+uint8_t first=1;
 void platform_enable_interrupts(void);
 void start_application();
 void prepare_tcp_data(uint32_t* buffer,uint32_t size);
@@ -139,7 +139,7 @@ int main(void)
 #endif
 
 	init_platform();
-
+	sdr_init();
 	xil_printf("\r\n\r\n");
 	xil_printf("-----lwIP RAW Mode UDP Client Application-----\r\n");
 
@@ -189,9 +189,10 @@ int main(void)
 	/* print app header */
 	start_application();
 	xil_printf("\r\n");
-	sdr_init();
 //	write_sample_data(dac_buffer,0);
 	mdelay(1000);
+	xil_printf("System Ready!\r\n");
+
 //	sdr_receive(16384, (uint32_t)adc_buffer);//prepare to receive
 //	sdr_transmit(dac_buffer,16384,1);//prepare to transmit
 //	start_adc_transfer();//actually start transfer
@@ -223,11 +224,22 @@ int main(void)
 		transfer_data();
 		if(dac_buffer_complete)
 		{
+			if(first)
+			{
+				sdr_receive(128000+1280, (uint32_t)adc_buffer);//prepare to receive
+				sdr_transmit(dac_buffer,128000+1280,0);//prepare to transmit
+				start_adc_transfer();//actually start transfer
+				start_dac_transfer();//actually start transfer
+				first=0;
+			}
+			else
+			{
+				sdr_receive_2(128000+1280, (uint32_t)adc_buffer);//prepare to receive
+				sdr_transmit_2(dac_buffer,128000+1280);//prepare to transmit
+				start_adc_transfer();//actually start transfer
+				start_dac_transfer();//actually start transfer
+			}
 
-			sdr_receive(128000+1280, (uint32_t)adc_buffer);//prepare to receive
-			sdr_transmit(dac_buffer,128000+1280,0);//prepare to transmit
-			start_adc_transfer();//actually start transfer
-			start_dac_transfer();//actually start transfer
 			dac_buffer_complete=0;
 		}
 	}

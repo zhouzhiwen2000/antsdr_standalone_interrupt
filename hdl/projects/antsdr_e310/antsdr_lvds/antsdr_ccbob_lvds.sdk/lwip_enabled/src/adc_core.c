@@ -186,7 +186,7 @@ void adc_dma_isr(void *instance)
 		dma_transfered_address += ADC_DMA_TRANSFER_SIZE;
 		if(dma_transfered_address >= dma_end_address)
 		{
-			adc_dma_write(ADC_REG_DMA_CNTRL, 0x0);//turn off adc when transfer is done
+//			adc_dma_write(ADC_REG_DMA_CNTRL, 0x0);//turn off adc when transfer is done
 			dma_transfer_completed_flag=1;
 		}
 	}
@@ -272,6 +272,27 @@ int32_t adc_capture_presetup(uint32_t size, uint32_t start_address)//note that i
 	}
 	while((reg_val & (1 << transfer_id)) != (1 << transfer_id));
 #endif
+	return 0;
+}
+
+int32_t adc_capture_presetup_2(uint32_t size, uint32_t start_address)//note that it is NOT blocking.
+{
+	uint32_t length;
+
+	if(adc_st.rx2tx2)
+	{
+		length = (size * 8);
+	}
+	else
+	{
+		length = (size * 4);
+	}
+	dma_start_address = start_address;
+
+	adc_dma_write(AXI_DMAC_REG_DEST_ADDRESS, dma_start_address);
+	dma_end_address=dma_start_address+length;
+	dma_transfered_address=dma_start_address;
+	dma_transfer_completed_flag=0;
 	return 0;
 }
 

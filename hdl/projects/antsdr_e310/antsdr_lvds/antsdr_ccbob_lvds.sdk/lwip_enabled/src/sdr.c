@@ -90,8 +90,8 @@ AD9361_InitParam default_init_param = {
 	{8, 5920},	//dcxo_coarse_and_fine_tune[2] *** adi,dcxo-coarse-and-fine-tune
 	CLKOUT_DISABLE,	//clk_output_mode_select *** adi,clk-output-mode-select
 	/* Gain Control */
-	0,		//gc_rx1_mode *** adi,gc-rx1-mode
-	0,		//gc_rx2_mode *** adi,gc-rx2-mode
+	1,		//gc_rx1_mode *** adi,gc-rx1-mode
+	1,		//gc_rx2_mode *** adi,gc-rx2-mode
 	58,		//gc_adc_large_overload_thresh *** adi,gc-adc-large-overload-thresh
 	4,		//gc_adc_ovr_sample_size *** adi,gc-adc-ovr-sample-size
 	47,		//gc_adc_small_overload_thresh *** adi,gc-adc-small-overload-thresh
@@ -278,7 +278,7 @@ AD9361_InitParam default_init_param = {
 	NULL,	//(*ad9361_rfpll_ext_round_rate)()
 	NULL	//(*ad9361_rfpll_ext_set_rate)()
 };
-
+int32_t gain_rx=0;
 AD9361_RXFIRConfig rx_fir_config = {	// BPF PASSBAND 3/20 fs to 1/4 fs
 	3, // rx
 	0, // rx_gain
@@ -364,7 +364,7 @@ void write_sample_data(uint32_t* buffer,bool rx2tx2)
 
 int sdr_init(void)
 {
-	int32_t gain_rx=40;
+
 	// NOTE: The user has to choose the GPIO numbers according to desired
 	// carrier board.
 	default_init_param.gpio_resetb = GPIO_RESET_PIN;
@@ -388,7 +388,7 @@ int sdr_init(void)
 	ad9361_init(&ad9361_phy, &default_init_param);
 	ad9361_set_tx_fir_config(ad9361_phy, tx_fir_config);
 	ad9361_set_rx_fir_config(ad9361_phy, rx_fir_config);
-	ad9361_get_rx_rf_gain (ad9361_phy, 0, &gain_rx);
+//	ad9361_get_rx_rf_gain (ad9361_phy, 1, &gain_rx);
 //	ad9361_set_tx_fir_en_dis(ad9361_phy,0);
 //	ad9361_set_rx_fir_en_dis(ad9361_phy,0);
 
@@ -408,5 +408,19 @@ void sdr_transmit(uint32_t* buffer,uint32_t tx_count,bool cyclic)
 int32_t sdr_receive(uint32_t size, uint32_t start_address)
 {
 	int32_t ret=adc_capture_presetup(size,start_address);
+	return ret;
+}
+void sdr_transmit_2(uint32_t* buffer,uint32_t tx_count)
+{
+	dac_transmit_presetup_2(ad9361_phy,buffer,tx_count);
+}
+
+// NOTE: To prevent unwanted data loss, it's recommended to invalidate
+// cache after each adc_capture() call, keeping in mind that the
+// size of the invalidated area and the start address must be aligned to the size
+// of the cache line(32 BYTES).
+int32_t sdr_receive_2(uint32_t size, uint32_t start_address)
+{
+	int32_t ret=adc_capture_presetup_2(size,start_address);
 	return ret;
 }

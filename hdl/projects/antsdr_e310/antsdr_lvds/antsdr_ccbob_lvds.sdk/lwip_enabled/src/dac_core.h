@@ -189,6 +189,7 @@ void dds_set_scale(struct ad9361_rf_phy *phy, uint32_t chan, int32_t scale_micro
 void dds_get_scale(struct ad9361_rf_phy *phy, uint32_t chan, int32_t *scale_micro_units);
 void dds_update(struct ad9361_rf_phy *phy);
 void dac_transmit_presetup(struct ad9361_rf_phy *phy, uint32_t* buffer,uint32_t tx_count, bool cyclic);
+void dac_transmit_presetup_2(struct ad9361_rf_phy *phy, uint32_t* buffer,uint32_t tx_count);
 int32_t dac_datasel(struct ad9361_rf_phy *phy, int32_t chan, enum dds_data_select sel);
 void dac_get_datasel(struct ad9361_rf_phy *phy, int32_t chan, enum dds_data_select *sel);
 int32_t dds_set_calib_scale(struct ad9361_rf_phy *phy,

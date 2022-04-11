@@ -276,6 +276,31 @@ void dac_transmit_presetup(struct ad9361_rf_phy *phy, uint32_t* buffer,uint32_t 
 	dds_st[phy->id_no].enable = true;
 	dac_start_sync(phy, 0);//start dac
 }
+
+void dac_transmit_presetup_2(struct ad9361_rf_phy *phy, uint32_t* buffer,uint32_t tx_count)
+{
+	/*structure of DAC DMA BUFFER:(address from low to high)
+	 *q1a,i1a,q2a,i2a
+	 *q1b,i1b,q2b,i2b
+	 *q1c,i1c,q2c,i2c
+	 *(1/2 stands for channel 1/2) and a/b/c stands for time point a/b/c */
+	uint32_t length;
+	if(dds_st[phy->id_no].rx2tx2)
+	{
+		length = (tx_count * 8);
+	}
+	else
+	{
+		length = (tx_count * 4);
+	}
+	dac_dma_start_address = (uint32_t)buffer;
+	dac_dma_write(AXI_DMAC_REG_SRC_ADDRESS, (uint32_t)buffer);
+	dac_dma_end_address=dac_dma_start_address+length;
+	dac_dma_transfered_address=dac_dma_start_address;
+//	dac_datasel(phy, -1, DATA_SEL_DMA);
+//	dds_st[phy->id_no].enable = true;
+//	dac_start_sync(phy, 0);//start dac
+}
 /***************************************************************************//**
  * @brief dds_set_frequency
 *******************************************************************************/
@@ -662,14 +687,14 @@ void dac_dma_isr(void *instance)
 		dac_dma_transfered_address += DAC_DMA_TRANSFER_SIZE;
 		if(dac_dma_transfered_address >= dac_dma_end_address)
 		{
-			dac_stop(phy_reg);//turn off dac when transfer is done
-			dac_dma_write(AXI_DMAC_REG_CTRL, 0);
+//			dac_stop(phy_reg);//turn off dac when transfer is done
+//			dac_dma_write(AXI_DMAC_REG_CTRL, 0);
 		}
 	}
 }
 
 void start_dac_transfer()
 {
-	//dac_start_sync(phy_reg, 0);
+//	dac_start_sync(phy_reg, 0);
 	dac_dma_write(AXI_DMAC_REG_START_TRANSFER, 0x1);
 }

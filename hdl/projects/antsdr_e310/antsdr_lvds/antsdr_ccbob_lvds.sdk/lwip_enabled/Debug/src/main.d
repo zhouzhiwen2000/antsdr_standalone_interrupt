@@ -54,9 +54,11 @@ src/main.o src/main.o: ../src/main.c \
  ../../lwip_enabled_bsp/ps7_cortexa9_0/include/xil_assert.h \
  ../../lwip_enabled_bsp/ps7_cortexa9_0/include/xscugic_hw.h \
  ../../lwip_enabled_bsp/ps7_cortexa9_0/include/xil_exception.h \
- ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/dhcp.h \
+ ../src/udp_perf_client.h \
+ ../../lwip_enabled_bsp/ps7_cortexa9_0/include/xlwipconfig.h \
  ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/udp.h \
- ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/prot/udp.h
+ ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/prot/udp.h \
+ ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/dhcp.h
 
 ../../lwip_enabled_bsp/ps7_cortexa9_0/include/xparameters.h:
 
@@ -180,8 +182,12 @@ src/main.o src/main.o: ../src/main.c \
 
 ../../lwip_enabled_bsp/ps7_cortexa9_0/include/xil_exception.h:
 
-../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/dhcp.h:
+../src/udp_perf_client.h:
+
+../../lwip_enabled_bsp/ps7_cortexa9_0/include/xlwipconfig.h:
 
 ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/udp.h:
 
 ../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/prot/udp.h:
+
+../../lwip_enabled_bsp/ps7_cortexa9_0/include/lwip/dhcp.h:

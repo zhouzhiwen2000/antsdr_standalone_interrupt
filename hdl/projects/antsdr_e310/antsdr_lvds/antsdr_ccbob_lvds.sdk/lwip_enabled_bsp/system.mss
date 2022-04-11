@@ -279,8 +279,11 @@ BEGIN LIBRARY
  PARAMETER lwip_dhcp = true
  PARAMETER mem_size = 524288
  PARAMETER memp_n_pbuf = 1024
+ PARAMETER memp_n_tcp_seg = 1024
+ PARAMETER n_rx_descriptors = 512
  PARAMETER n_tx_descriptors = 512
  PARAMETER pbuf_pool_size = 16384
+ PARAMETER tcp_snd_buf = 32768
 END
 
 

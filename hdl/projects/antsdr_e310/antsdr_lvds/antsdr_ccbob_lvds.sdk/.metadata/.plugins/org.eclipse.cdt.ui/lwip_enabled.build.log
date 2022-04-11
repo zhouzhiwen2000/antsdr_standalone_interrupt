@@ -1,8 +1,8 @@
-07:18:02 **** Auto Build of configuration Debug for project lwip_enabled ****
+01:11:00 **** Auto Build of configuration Debug for project lwip_enabled ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
 
-07:18:03 Build Finished (took 349ms)
+01:11:00 Build Finished (took 340ms)
 

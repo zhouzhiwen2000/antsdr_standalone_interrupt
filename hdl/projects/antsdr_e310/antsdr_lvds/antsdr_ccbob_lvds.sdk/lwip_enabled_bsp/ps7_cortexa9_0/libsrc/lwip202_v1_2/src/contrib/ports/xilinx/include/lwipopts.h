@@ -54,7 +54,7 @@
 #define MEMP_NUM_UDP_PCB 4
 #define MEMP_NUM_TCP_PCB 32
 #define MEMP_NUM_TCP_PCB_LISTEN 8
-#define MEMP_NUM_TCP_SEG 256
+#define MEMP_NUM_TCP_SEG 1024
 #define MEMP_NUM_SYS_TIMEOUT 8
 #define MEMP_NUM_NETBUF 8
 #define MEMP_NUM_NETCONN 16
@@ -85,7 +85,7 @@
 
 #define LWIP_TCP 1
 #define TCP_MSS 1460
-#define TCP_SND_BUF 8192
+#define TCP_SND_BUF 32768
 #define TCP_WND 2048
 #define TCP_TTL 255
 #define TCP_MAXRTX 12

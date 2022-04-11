@@ -38,24 +38,9 @@
 #include "xil_printf.h"
 #include "platform.h"
 #include <sleep.h>
-
+#include "lwip/tcp.h"
 
 /* Client port to connect */
-#define UDP_CONN_PORT 8001
-
-/* time in seconds to transmit packets */
-#define UDP_TIME_INTERVAL 300
-
-/* Server to connect with */
-#define UDP_SERVER_IP_ADDRESS "192.168.1.110"
-
-/* UDP buffer length in bytes */
-#define UDP_SEND_BUFSIZE 1284
-
-/* MAX UDP send retries */
-#define MAX_SEND_RETRY 10
-
-/* Number of parallel UDP clients */
-#define NUM_OF_PARALLEL_CLIENTS 1
-
+#define CONN_PORT 8001
+void tcp_server_close(struct tcp_pcb *pcb);
 #endif /* __UDP_PERF_CLIENT_H_ */

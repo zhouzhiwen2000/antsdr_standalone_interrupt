@@ -40,6 +40,8 @@
 #include "xil_cache.h"
 #include "sdr.h"
 #include "dac_core.h"
+#include "lwip/tcp.h"
+#include "udp_perf_client.h"
 
 #if LWIP_DHCP==1
 #include "lwip/dhcp.h"
@@ -55,9 +57,8 @@ u64_t last_transmit=0;
 
 void platform_enable_interrupts(void);
 void start_application();
-void prepare_udp_data(uint32_t* buffer,uint32_t size);
+void prepare_tcp_data(uint32_t* buffer,uint32_t size);
 int8_t transfer_data(void);
-void print_app_header(void);
 bool get_adc_completed();
 void clear_adc_completed();
 void start_adc_transfer();
@@ -76,10 +77,7 @@ int IicPhyReset(void);
 #endif
 #endif
 extern volatile bool dac_buffer_complete;
-extern volatile ip_addr_t computer_addr;
-extern volatile u16_t computer_port;
-extern struct udp_pcb *pcb[1];
-
+extern volatile struct tcp_pcb *c_pcb;
 struct netif server_netif;
 uint32_t __attribute__((aligned(32))) adc_buffer[128000+32768]={0};//32768 for guard(EXTRA DMA DATA)
 uint32_t __attribute__((aligned(32))) dac_buffer[128000+32768]={0};//32768 for guard(EXTRA DMA DATA)
@@ -189,24 +187,7 @@ int main(void)
 	xil_printf("\r\n");
 
 	/* print app header */
-	print_app_header();
 	start_application();
-	prepare_udp_data(adc_buffer,1);
-	/*send something to train the router to prepare for fast transmission,
-	  avoids packet drops*/
-	mdelay(100);
-	while (!ret) {
-		if (TcpFastTmrFlag) {
-			tcp_fasttmr();
-			TcpFastTmrFlag = 0;
-		}
-		if (TcpSlowTmrFlag) {
-			tcp_slowtmr();
-			TcpSlowTmrFlag = 0;
-		}
-		xemacif_input(netif);
-		ret=transfer_data();
-	}
 	xil_printf("\r\n");
 	sdr_init();
 //	write_sample_data(dac_buffer,0);
@@ -227,7 +208,8 @@ int main(void)
 			Xil_DCacheInvalidateRange((uint32_t)adc_buffer,
 					(128000+1280) * 4);
 			/* start the application(udp connect)*/
-			prepare_udp_data(adc_buffer,128000+1280);
+			prepare_tcp_data(adc_buffer,128000+1280);
+			//send tcp here.
 		}
 		if (TcpFastTmrFlag) {
 			tcp_fasttmr();
@@ -241,15 +223,7 @@ int main(void)
 		transfer_data();
 		if(dac_buffer_complete)
 		{
-			err_t err;
-			udp_remove(pcb[0]);
-			pcb[0]=udp_new();
-			err = udp_connect(pcb[0], &computer_addr, computer_port);//udp for sending data
-			if (err != ERR_OK) {
-				xil_printf("udp_client: Error on udp_connect: %d\r\n", err);
-				udp_remove(pcb[0]);
-				break;
-			}
+
 			sdr_receive(128000+1280, (uint32_t)adc_buffer);//prepare to receive
 			sdr_transmit(dac_buffer,128000+1280,0);//prepare to transmit
 			start_adc_transfer();//actually start transfer

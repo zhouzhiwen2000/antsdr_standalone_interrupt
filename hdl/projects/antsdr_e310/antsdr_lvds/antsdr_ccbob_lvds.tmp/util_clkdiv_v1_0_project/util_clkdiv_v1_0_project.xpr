@@ -6,7 +6,7 @@
 <Project Version="7" Minor="39" Path="c:/users/zhouzhiwen/desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.tmp/util_clkdiv_v1_0_project/util_clkdiv_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="4c84db1d239448b6b2f010e151167be6"/>
+    <Option Name="Id" Val="d4234cf6b9f0457cb4500eb4c0145024"/>
     <Option Name="Part" Val="xc7z020clg400-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -21,6 +21,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../../../Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/ip_repo/sync_generator_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../../../Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../../../Users/zhouzhiwen/Desktop/antsdr_standalone/ghdl/library"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>

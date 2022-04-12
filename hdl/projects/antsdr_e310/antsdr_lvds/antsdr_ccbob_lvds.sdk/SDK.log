@@ -16463,3 +16463,1942 @@ con
 
 07:24:36 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
 07:33:02 INFO  : Disconnected from the channel tcfchan#2.
+09:19:11 INFO  : Registering command handlers for SDK TCF services
+09:19:11 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\temp_xsdb_launch_script.tcl
+09:19:13 INFO  : XSCT server has started successfully.
+09:19:13 INFO  : Successfully done setting XSCT server connection channel  
+09:19:13 INFO  : Successfully done setting SDK workspace  
+09:19:13 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+09:19:13 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.
+09:19:15 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1649726126962,  Project:1649709307691
+09:19:15 INFO  : The hardware specification for project 'system_top_hw_platform_0' is different from C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+09:19:15 INFO  : Copied contents of C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf into \system_top_hw_platform_0\system.hdf.
+09:19:31 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:19:34 INFO  : 
+09:19:37 INFO  : 
+09:19:39 INFO  : 
+09:20:01 INFO  : Updating hardware inferred compiler options for fsbl.
+09:20:02 INFO  : Updating hardware inferred compiler options for lwip_enabled.
+09:20:02 INFO  : Updating hardware inferred compiler options for tcpdemo.
+09:20:02 INFO  : Clearing existing target manager status.
+09:53:20 INFO  : Registering command handlers for SDK TCF services
+09:53:20 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\temp_xsdb_launch_script.tcl
+09:53:22 INFO  : XSCT server has started successfully.
+09:53:23 INFO  : Successfully done setting XSCT server connection channel  
+09:53:23 INFO  : Successfully done setting SDK workspace  
+09:53:23 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+09:53:23 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.
+09:54:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:54:17 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+09:54:17 INFO  : 'jtag frequency' command is executed.
+09:54:17 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+09:54:17 INFO  : Context for 'APU' is selected.
+09:54:17 INFO  : System reset is completed.
+09:54:20 INFO  : 'after 3000' command is executed.
+09:54:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+09:54:22 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+09:54:22 INFO  : Context for 'APU' is selected.
+09:54:23 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+09:54:23 INFO  : 'configparams force-mem-access 1' command is executed.
+09:54:23 INFO  : Context for 'APU' is selected.
+09:54:23 INFO  : 'ps7_init' command is executed.
+09:54:23 INFO  : 'ps7_post_config' command is executed.
+09:54:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:54:24 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:54:24 INFO  : 'configparams force-mem-access 0' command is executed.
+09:54:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:54:24 INFO  : Memory regions updated for context APU
+09:54:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:54:24 INFO  : 'con' command is executed.
+09:54:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+09:54:24 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+09:56:19 INFO  : Disconnected from the channel tcfchan#1.
+09:56:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:56:21 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+09:56:21 INFO  : 'jtag frequency' command is executed.
+09:56:21 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+09:56:21 INFO  : Context for 'APU' is selected.
+09:56:21 INFO  : System reset is completed.
+09:56:24 INFO  : 'after 3000' command is executed.
+09:56:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+09:56:26 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+09:56:26 INFO  : Context for 'APU' is selected.
+09:56:27 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+09:56:27 INFO  : 'configparams force-mem-access 1' command is executed.
+09:56:27 INFO  : Context for 'APU' is selected.
+09:56:27 INFO  : 'ps7_init' command is executed.
+09:56:27 INFO  : 'ps7_post_config' command is executed.
+09:56:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:56:28 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:56:28 INFO  : 'configparams force-mem-access 0' command is executed.
+09:56:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:56:28 INFO  : Memory regions updated for context APU
+09:56:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:56:28 INFO  : 'con' command is executed.
+09:56:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+09:56:28 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+09:59:15 INFO  : Disconnected from the channel tcfchan#2.
+09:59:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:59:16 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+09:59:16 INFO  : 'jtag frequency' command is executed.
+09:59:16 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+09:59:16 INFO  : Context for 'APU' is selected.
+09:59:17 INFO  : System reset is completed.
+09:59:20 INFO  : 'after 3000' command is executed.
+09:59:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+09:59:22 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+09:59:22 INFO  : Context for 'APU' is selected.
+09:59:23 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+09:59:23 INFO  : 'configparams force-mem-access 1' command is executed.
+09:59:23 INFO  : Context for 'APU' is selected.
+09:59:23 INFO  : 'ps7_init' command is executed.
+09:59:23 INFO  : 'ps7_post_config' command is executed.
+09:59:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:59:24 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:59:24 INFO  : 'configparams force-mem-access 0' command is executed.
+09:59:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:59:24 INFO  : Memory regions updated for context APU
+09:59:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:59:24 INFO  : 'con' command is executed.
+09:59:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+09:59:24 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+10:01:02 INFO  : Disconnected from the channel tcfchan#3.
+10:01:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:01:03 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+10:01:03 INFO  : 'jtag frequency' command is executed.
+10:01:03 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+10:01:03 INFO  : Context for 'APU' is selected.
+10:01:03 INFO  : System reset is completed.
+10:01:06 INFO  : 'after 3000' command is executed.
+10:01:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+10:01:08 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+10:01:08 INFO  : Context for 'APU' is selected.
+10:01:09 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+10:01:09 INFO  : 'configparams force-mem-access 1' command is executed.
+10:01:09 INFO  : Context for 'APU' is selected.
+10:01:10 INFO  : 'ps7_init' command is executed.
+10:01:10 INFO  : 'ps7_post_config' command is executed.
+10:01:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:01:10 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:01:10 INFO  : 'configparams force-mem-access 0' command is executed.
+10:01:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:01:10 INFO  : Memory regions updated for context APU
+10:01:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:01:11 INFO  : 'con' command is executed.
+10:01:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+10:01:11 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+10:02:12 INFO  : Disconnected from the channel tcfchan#4.
+10:02:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:02:13 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+10:02:13 INFO  : 'jtag frequency' command is executed.
+10:02:13 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+10:02:13 INFO  : Context for 'APU' is selected.
+10:02:14 INFO  : System reset is completed.
+10:02:17 INFO  : 'after 3000' command is executed.
+10:02:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+10:02:19 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+10:02:19 INFO  : Context for 'APU' is selected.
+10:02:20 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+10:02:20 INFO  : 'configparams force-mem-access 1' command is executed.
+10:02:20 INFO  : Context for 'APU' is selected.
+10:02:20 INFO  : 'ps7_init' command is executed.
+10:02:20 INFO  : 'ps7_post_config' command is executed.
+10:02:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:02:21 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:02:21 INFO  : 'configparams force-mem-access 0' command is executed.
+10:02:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:02:21 INFO  : Memory regions updated for context APU
+10:02:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:02:21 INFO  : 'con' command is executed.
+10:02:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+10:02:21 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+10:03:11 INFO  : Disconnected from the channel tcfchan#5.
+10:03:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:03:12 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+10:03:12 INFO  : 'jtag frequency' command is executed.
+10:03:12 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+10:03:12 INFO  : Context for 'APU' is selected.
+10:03:12 INFO  : System reset is completed.
+10:03:15 INFO  : 'after 3000' command is executed.
+10:03:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+10:03:17 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+10:03:17 INFO  : Context for 'APU' is selected.
+10:03:19 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+10:03:19 INFO  : 'configparams force-mem-access 1' command is executed.
+10:03:19 INFO  : Context for 'APU' is selected.
+10:03:19 INFO  : 'ps7_init' command is executed.
+10:03:19 INFO  : 'ps7_post_config' command is executed.
+10:03:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:03:20 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:03:20 INFO  : 'configparams force-mem-access 0' command is executed.
+10:03:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:03:20 INFO  : Memory regions updated for context APU
+10:03:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:03:20 INFO  : 'con' command is executed.
+10:03:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+10:03:20 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+10:04:48 INFO  : Disconnected from the channel tcfchan#6.
+10:04:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:04:49 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+10:04:49 INFO  : 'jtag frequency' command is executed.
+10:04:49 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+10:04:49 INFO  : Context for 'APU' is selected.
+10:04:49 INFO  : System reset is completed.
+10:04:52 INFO  : 'after 3000' command is executed.
+10:04:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+10:04:54 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+10:04:54 INFO  : Context for 'APU' is selected.
+10:04:55 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+10:04:55 INFO  : 'configparams force-mem-access 1' command is executed.
+10:04:55 INFO  : Context for 'APU' is selected.
+10:04:56 INFO  : 'ps7_init' command is executed.
+10:04:56 INFO  : 'ps7_post_config' command is executed.
+10:04:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:04:57 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:04:57 INFO  : 'configparams force-mem-access 0' command is executed.
+10:04:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:04:57 INFO  : Memory regions updated for context APU
+10:04:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:04:57 INFO  : 'con' command is executed.
+10:04:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+10:04:57 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+10:23:30 INFO  : Disconnected from the channel tcfchan#7.
+18:33:32 INFO  : Registering command handlers for SDK TCF services
+18:33:33 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\temp_xsdb_launch_script.tcl
+18:33:35 INFO  : XSCT server has started successfully.
+18:33:35 INFO  : Successfully done setting XSCT server connection channel  
+18:33:37 INFO  : Successfully done setting SDK workspace  
+18:33:37 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+18:33:37 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.
+18:41:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:41:23 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+18:41:23 INFO  : 'jtag frequency' command is executed.
+18:41:23 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+18:41:23 INFO  : Context for 'APU' is selected.
+18:41:24 INFO  : System reset is completed.
+18:41:27 INFO  : 'after 3000' command is executed.
+18:41:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+18:41:29 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+18:41:29 INFO  : Context for 'APU' is selected.
+18:41:29 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+18:41:29 INFO  : 'configparams force-mem-access 1' command is executed.
+18:41:29 INFO  : Context for 'APU' is selected.
+18:41:29 INFO  : 'ps7_init' command is executed.
+18:41:29 INFO  : 'ps7_post_config' command is executed.
+18:41:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:41:30 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:41:30 INFO  : 'configparams force-mem-access 0' command is executed.
+18:41:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:41:30 INFO  : Memory regions updated for context APU
+18:41:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:41:30 INFO  : 'con' command is executed.
+18:41:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+18:41:30 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+18:43:27 INFO  : Disconnected from the channel tcfchan#1.
+18:43:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:43:28 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+18:43:28 INFO  : 'jtag frequency' command is executed.
+18:43:28 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+18:43:28 INFO  : Context for 'APU' is selected.
+18:43:28 INFO  : System reset is completed.
+18:43:31 INFO  : 'after 3000' command is executed.
+18:43:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+18:43:33 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+18:43:33 INFO  : Context for 'APU' is selected.
+18:43:35 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+18:43:35 INFO  : 'configparams force-mem-access 1' command is executed.
+18:43:35 INFO  : Context for 'APU' is selected.
+18:43:35 INFO  : 'ps7_init' command is executed.
+18:43:35 INFO  : 'ps7_post_config' command is executed.
+18:43:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:43:36 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:43:36 INFO  : 'configparams force-mem-access 0' command is executed.
+18:43:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:43:36 INFO  : Memory regions updated for context APU
+18:43:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:43:36 INFO  : 'con' command is executed.
+18:43:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+18:43:36 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+18:46:20 INFO  : Disconnected from the channel tcfchan#2.
+18:46:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:46:22 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+18:46:22 INFO  : 'jtag frequency' command is executed.
+18:46:22 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+18:46:22 INFO  : Context for 'APU' is selected.
+18:46:22 INFO  : System reset is completed.
+18:46:25 INFO  : 'after 3000' command is executed.
+18:46:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+18:46:27 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+18:46:27 INFO  : Context for 'APU' is selected.
+18:46:28 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+18:46:28 INFO  : 'configparams force-mem-access 1' command is executed.
+18:46:28 INFO  : Context for 'APU' is selected.
+18:46:28 INFO  : 'ps7_init' command is executed.
+18:46:28 INFO  : 'ps7_post_config' command is executed.
+18:46:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:46:29 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:46:29 INFO  : 'configparams force-mem-access 0' command is executed.
+18:46:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:46:29 INFO  : Memory regions updated for context APU
+18:46:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:46:29 INFO  : 'con' command is executed.
+18:46:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+18:46:29 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+18:50:43 INFO  : Disconnected from the channel tcfchan#3.
+18:50:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:50:44 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+18:50:44 INFO  : 'jtag frequency' command is executed.
+18:50:44 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+18:50:44 INFO  : Context for 'APU' is selected.
+18:50:45 INFO  : System reset is completed.
+18:50:48 INFO  : 'after 3000' command is executed.
+18:50:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+18:50:50 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+18:50:50 INFO  : Context for 'APU' is selected.
+18:50:51 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+18:50:51 INFO  : 'configparams force-mem-access 1' command is executed.
+18:50:51 INFO  : Context for 'APU' is selected.
+18:50:51 INFO  : 'ps7_init' command is executed.
+18:50:51 INFO  : 'ps7_post_config' command is executed.
+18:50:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:50:52 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:50:52 INFO  : 'configparams force-mem-access 0' command is executed.
+18:50:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:50:52 INFO  : Memory regions updated for context APU
+18:50:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:50:52 INFO  : 'con' command is executed.
+18:50:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+18:50:52 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+18:59:12 INFO  : Disconnected from the channel tcfchan#4.
+18:59:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:59:13 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+18:59:13 INFO  : 'jtag frequency' command is executed.
+18:59:13 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+18:59:13 INFO  : Context for 'APU' is selected.
+18:59:13 INFO  : System reset is completed.
+18:59:17 INFO  : 'after 3000' command is executed.
+18:59:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+18:59:19 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+18:59:19 INFO  : Context for 'APU' is selected.
+18:59:20 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+18:59:20 INFO  : 'configparams force-mem-access 1' command is executed.
+18:59:20 INFO  : Context for 'APU' is selected.
+18:59:20 INFO  : 'ps7_init' command is executed.
+18:59:20 INFO  : 'ps7_post_config' command is executed.
+18:59:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:59:21 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:59:21 INFO  : 'configparams force-mem-access 0' command is executed.
+18:59:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:59:21 INFO  : Memory regions updated for context APU
+18:59:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:59:21 INFO  : 'con' command is executed.
+18:59:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+18:59:21 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+19:03:54 INFO  : Disconnected from the channel tcfchan#5.
+19:03:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:03:55 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+19:03:55 INFO  : 'jtag frequency' command is executed.
+19:03:55 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+19:03:55 INFO  : Context for 'APU' is selected.
+19:03:56 INFO  : System reset is completed.
+19:03:59 INFO  : 'after 3000' command is executed.
+19:03:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+19:04:01 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+19:04:01 INFO  : Context for 'APU' is selected.
+19:04:02 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+19:04:02 INFO  : 'configparams force-mem-access 1' command is executed.
+19:04:02 INFO  : Context for 'APU' is selected.
+19:04:02 INFO  : 'ps7_init' command is executed.
+19:04:02 INFO  : 'ps7_post_config' command is executed.
+19:04:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:04:03 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:04:03 INFO  : 'configparams force-mem-access 0' command is executed.
+19:04:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:04:03 INFO  : Memory regions updated for context APU
+19:04:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:04:03 INFO  : 'con' command is executed.
+19:04:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+19:04:03 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+19:06:24 INFO  : Disconnected from the channel tcfchan#6.
+19:06:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:06:26 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+19:06:26 INFO  : 'jtag frequency' command is executed.
+19:06:26 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+19:06:26 INFO  : Context for 'APU' is selected.
+19:06:26 INFO  : System reset is completed.
+19:06:29 INFO  : 'after 3000' command is executed.
+19:06:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+19:06:31 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+19:06:31 INFO  : Context for 'APU' is selected.
+19:06:32 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+19:06:32 INFO  : 'configparams force-mem-access 1' command is executed.
+19:06:32 INFO  : Context for 'APU' is selected.
+19:06:33 INFO  : 'ps7_init' command is executed.
+19:06:33 INFO  : 'ps7_post_config' command is executed.
+19:06:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:06:33 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:06:33 INFO  : 'configparams force-mem-access 0' command is executed.
+19:06:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:06:33 INFO  : Memory regions updated for context APU
+19:06:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:06:33 INFO  : 'con' command is executed.
+19:06:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+19:06:33 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+19:09:11 INFO  : Disconnected from the channel tcfchan#7.
+19:09:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:09:13 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+19:09:13 INFO  : 'jtag frequency' command is executed.
+19:09:13 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+19:09:13 INFO  : Context for 'APU' is selected.
+19:09:13 INFO  : System reset is completed.
+19:09:16 INFO  : 'after 3000' command is executed.
+19:09:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+19:09:18 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+19:09:18 INFO  : Context for 'APU' is selected.
+19:09:19 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+19:09:19 INFO  : 'configparams force-mem-access 1' command is executed.
+19:09:19 INFO  : Context for 'APU' is selected.
+19:09:20 INFO  : 'ps7_init' command is executed.
+19:09:20 INFO  : 'ps7_post_config' command is executed.
+19:09:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:09:20 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:09:20 INFO  : 'configparams force-mem-access 0' command is executed.
+19:09:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:09:20 INFO  : Memory regions updated for context APU
+19:09:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:09:21 INFO  : 'con' command is executed.
+19:09:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+19:09:21 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+19:13:23 INFO  : Disconnected from the channel tcfchan#8.
+19:13:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:13:24 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+19:13:24 INFO  : 'jtag frequency' command is executed.
+19:13:24 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+19:13:24 INFO  : Context for 'APU' is selected.
+19:13:24 INFO  : System reset is completed.
+19:13:27 INFO  : 'after 3000' command is executed.
+19:13:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+19:13:29 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+19:13:29 INFO  : Context for 'APU' is selected.
+19:13:31 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+19:13:31 INFO  : 'configparams force-mem-access 1' command is executed.
+19:13:31 INFO  : Context for 'APU' is selected.
+19:13:31 INFO  : 'ps7_init' command is executed.
+19:13:31 INFO  : 'ps7_post_config' command is executed.
+19:13:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:13:32 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:13:32 INFO  : 'configparams force-mem-access 0' command is executed.
+19:13:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:13:32 INFO  : Memory regions updated for context APU
+19:13:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:13:32 INFO  : 'con' command is executed.
+19:13:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+19:13:32 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+19:16:08 INFO  : Disconnected from the channel tcfchan#9.
+19:16:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:16:09 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+19:16:09 INFO  : 'jtag frequency' command is executed.
+19:16:09 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+19:16:09 INFO  : Context for 'APU' is selected.
+19:16:09 INFO  : System reset is completed.
+19:16:12 INFO  : 'after 3000' command is executed.
+19:16:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+19:16:14 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+19:16:15 INFO  : Context for 'APU' is selected.
+19:16:16 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+19:16:16 INFO  : 'configparams force-mem-access 1' command is executed.
+19:16:16 INFO  : Context for 'APU' is selected.
+19:16:16 INFO  : 'ps7_init' command is executed.
+19:16:16 INFO  : 'ps7_post_config' command is executed.
+19:16:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:16:17 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:16:17 INFO  : 'configparams force-mem-access 0' command is executed.
+19:16:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:16:17 INFO  : Memory regions updated for context APU
+19:16:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:16:17 INFO  : 'con' command is executed.
+19:16:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+19:16:17 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+19:17:16 INFO  : Invoking Bootgen: bootgen -image lwip_enabled.bif -arch zynq -o C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\lwip_enabled\bootimage\BOOT.bin -w on
+19:17:17 INFO  : Bootgen command execution is done.
+19:17:21 INFO  : Disconnected from the channel tcfchan#10.
+20:48:25 INFO  : Registering command handlers for SDK TCF services
+20:48:26 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\temp_xsdb_launch_script.tcl
+20:48:28 INFO  : XSCT server has started successfully.
+20:48:28 INFO  : Successfully done setting XSCT server connection channel  
+20:48:28 INFO  : Successfully done setting SDK workspace  
+20:48:28 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+20:48:28 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.
+21:40:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+21:40:22 INFO  : 'fpga -state' command is executed.
+21:40:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:40:22 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+21:40:22 INFO  : 'jtag frequency' command is executed.
+21:40:22 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+21:40:22 INFO  : Context for 'APU' is selected.
+21:40:22 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+21:40:22 INFO  : 'configparams force-mem-access 1' command is executed.
+21:40:22 INFO  : Context for 'APU' is selected.
+21:40:22 INFO  : 'stop' command is executed.
+21:40:23 INFO  : 'ps7_init' command is executed.
+21:40:23 INFO  : 'ps7_post_config' command is executed.
+21:40:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:40:23 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:40:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:40:24 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:40:24 INFO  : 'configparams force-mem-access 0' command is executed.
+21:40:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:40:24 INFO  : Memory regions updated for context APU
+21:40:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:40:24 INFO  : 'con' command is executed.
+21:40:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+21:40:24 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+21:42:58 INFO  : Disconnected from the channel tcfchan#1.
+21:42:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+21:42:59 INFO  : 'fpga -state' command is executed.
+21:42:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:42:59 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+21:42:59 INFO  : 'jtag frequency' command is executed.
+21:42:59 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+21:42:59 INFO  : Context for 'APU' is selected.
+21:43:01 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+21:43:01 INFO  : 'configparams force-mem-access 1' command is executed.
+21:43:01 INFO  : Context for 'APU' is selected.
+21:43:01 INFO  : 'stop' command is executed.
+21:43:01 INFO  : 'ps7_init' command is executed.
+21:43:01 INFO  : 'ps7_post_config' command is executed.
+21:43:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:43:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:43:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:43:02 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:43:02 INFO  : 'configparams force-mem-access 0' command is executed.
+21:43:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:43:02 INFO  : Memory regions updated for context APU
+21:43:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:43:02 INFO  : 'con' command is executed.
+21:43:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+21:43:02 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+21:44:45 INFO  : Disconnected from the channel tcfchan#2.
+21:44:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+21:44:46 INFO  : 'fpga -state' command is executed.
+21:44:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:44:46 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+21:44:46 INFO  : 'jtag frequency' command is executed.
+21:44:46 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+21:44:46 INFO  : Context for 'APU' is selected.
+21:44:47 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+21:44:47 INFO  : 'configparams force-mem-access 1' command is executed.
+21:44:47 INFO  : Context for 'APU' is selected.
+21:44:47 INFO  : 'stop' command is executed.
+21:44:48 INFO  : 'ps7_init' command is executed.
+21:44:48 INFO  : 'ps7_post_config' command is executed.
+21:44:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:44:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:44:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:44:49 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:44:49 INFO  : 'configparams force-mem-access 0' command is executed.
+21:44:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:44:49 INFO  : Memory regions updated for context APU
+21:44:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:44:49 INFO  : 'con' command is executed.
+21:44:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+21:44:49 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+21:45:35 INFO  : Disconnected from the channel tcfchan#3.
+21:45:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+21:45:36 INFO  : 'fpga -state' command is executed.
+21:45:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:45:36 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+21:45:36 INFO  : 'jtag frequency' command is executed.
+21:45:36 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+21:45:36 INFO  : Context for 'APU' is selected.
+21:45:37 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+21:45:38 INFO  : 'configparams force-mem-access 1' command is executed.
+21:45:38 INFO  : Context for 'APU' is selected.
+21:45:38 INFO  : 'stop' command is executed.
+21:45:38 INFO  : 'ps7_init' command is executed.
+21:45:38 INFO  : 'ps7_post_config' command is executed.
+21:45:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:45:38 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:45:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:45:39 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:45:39 INFO  : 'configparams force-mem-access 0' command is executed.
+21:45:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:45:39 INFO  : Memory regions updated for context APU
+21:45:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:45:39 INFO  : 'con' command is executed.
+21:45:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+21:45:39 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+21:48:22 INFO  : Disconnected from the channel tcfchan#4.
+21:48:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+21:48:23 INFO  : 'fpga -state' command is executed.
+21:48:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:48:23 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+21:48:23 INFO  : 'jtag frequency' command is executed.
+21:48:23 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+21:48:23 INFO  : Context for 'APU' is selected.
+21:48:24 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+21:48:24 INFO  : 'configparams force-mem-access 1' command is executed.
+21:48:24 INFO  : Context for 'APU' is selected.
+21:48:25 INFO  : 'stop' command is executed.
+21:48:25 INFO  : 'ps7_init' command is executed.
+21:48:25 INFO  : 'ps7_post_config' command is executed.
+21:48:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:48:25 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:48:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:48:26 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:48:26 INFO  : 'configparams force-mem-access 0' command is executed.
+21:48:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:48:26 INFO  : Memory regions updated for context APU
+21:48:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:48:26 INFO  : 'con' command is executed.
+21:48:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+21:48:26 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+21:49:42 INFO  : Disconnected from the channel tcfchan#5.
+21:49:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+21:49:43 INFO  : 'fpga -state' command is executed.
+21:49:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:49:43 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+21:49:43 INFO  : 'jtag frequency' command is executed.
+21:49:43 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+21:49:43 INFO  : Context for 'APU' is selected.
+21:49:44 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+21:49:44 INFO  : 'configparams force-mem-access 1' command is executed.
+21:49:44 INFO  : Context for 'APU' is selected.
+21:49:44 INFO  : 'stop' command is executed.
+21:49:44 INFO  : 'ps7_init' command is executed.
+21:49:44 INFO  : 'ps7_post_config' command is executed.
+21:49:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:49:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:49:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:49:45 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:49:45 INFO  : 'configparams force-mem-access 0' command is executed.
+21:49:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:49:45 INFO  : Memory regions updated for context APU
+21:49:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:49:45 INFO  : 'con' command is executed.
+21:49:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+21:49:45 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+22:43:38 INFO  : Disconnected from the channel tcfchan#6.
+22:43:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+22:43:39 INFO  : 'fpga -state' command is executed.
+22:43:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:43:39 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+22:43:39 INFO  : 'jtag frequency' command is executed.
+22:43:39 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+22:43:39 INFO  : Context for 'APU' is selected.
+22:43:40 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+22:43:40 INFO  : 'configparams force-mem-access 1' command is executed.
+22:43:40 INFO  : Context for 'APU' is selected.
+22:43:41 INFO  : 'stop' command is executed.
+22:43:41 INFO  : 'ps7_init' command is executed.
+22:43:41 INFO  : 'ps7_post_config' command is executed.
+22:43:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:43:41 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:43:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:43:42 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:43:42 INFO  : 'configparams force-mem-access 0' command is executed.
+22:43:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:43:42 INFO  : Memory regions updated for context APU
+22:43:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:43:42 INFO  : 'con' command is executed.
+22:43:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+22:43:42 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+23:49:49 INFO  : Disconnected from the channel tcfchan#7.
+23:49:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+23:49:50 INFO  : 'fpga -state' command is executed.
+23:49:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:49:50 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+23:49:50 INFO  : 'jtag frequency' command is executed.
+23:49:50 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+23:49:50 INFO  : Context for 'APU' is selected.
+23:49:51 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+23:49:51 INFO  : 'configparams force-mem-access 1' command is executed.
+23:49:51 INFO  : Context for 'APU' is selected.
+23:49:51 INFO  : 'stop' command is executed.
+23:49:52 INFO  : 'ps7_init' command is executed.
+23:49:52 INFO  : 'ps7_post_config' command is executed.
+23:49:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:49:52 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:49:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:49:53 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:49:53 INFO  : 'configparams force-mem-access 0' command is executed.
+23:49:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:49:53 INFO  : Memory regions updated for context APU
+23:49:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:49:53 INFO  : 'con' command is executed.
+23:49:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+23:49:53 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+23:51:21 INFO  : Disconnected from the channel tcfchan#8.
+23:51:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+23:51:22 INFO  : 'fpga -state' command is executed.
+23:51:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:51:23 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+23:51:23 INFO  : 'jtag frequency' command is executed.
+23:51:23 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+23:51:23 INFO  : Context for 'APU' is selected.
+23:51:24 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+23:51:24 INFO  : 'configparams force-mem-access 1' command is executed.
+23:51:24 INFO  : Context for 'APU' is selected.
+23:51:24 INFO  : 'stop' command is executed.
+23:51:24 INFO  : 'ps7_init' command is executed.
+23:51:24 INFO  : 'ps7_post_config' command is executed.
+23:51:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:51:24 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:51:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:51:25 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:51:25 INFO  : 'configparams force-mem-access 0' command is executed.
+23:51:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:51:25 INFO  : Memory regions updated for context APU
+23:51:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:51:25 INFO  : 'con' command is executed.
+23:51:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+23:51:25 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+00:14:56 INFO  : Disconnected from the channel tcfchan#9.
+00:14:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+00:14:57 INFO  : 'fpga -state' command is executed.
+00:14:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:14:58 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+00:14:58 INFO  : 'jtag frequency' command is executed.
+00:14:58 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+00:14:58 INFO  : Context for 'APU' is selected.
+00:14:59 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+00:14:59 INFO  : 'configparams force-mem-access 1' command is executed.
+00:14:59 INFO  : Context for 'APU' is selected.
+00:14:59 INFO  : 'stop' command is executed.
+00:14:59 INFO  : 'ps7_init' command is executed.
+00:14:59 INFO  : 'ps7_post_config' command is executed.
+00:14:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:14:59 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:14:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:15:00 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:15:00 INFO  : 'configparams force-mem-access 0' command is executed.
+00:15:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:15:00 INFO  : Memory regions updated for context APU
+00:15:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:15:00 INFO  : 'con' command is executed.
+00:15:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+00:15:00 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+00:25:41 INFO  : Disconnected from the channel tcfchan#10.
+00:25:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+00:25:42 INFO  : 'fpga -state' command is executed.
+00:25:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:25:42 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+00:25:42 INFO  : 'jtag frequency' command is executed.
+00:25:42 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+00:25:42 INFO  : Context for 'APU' is selected.
+00:25:43 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+00:25:43 INFO  : 'configparams force-mem-access 1' command is executed.
+00:25:43 INFO  : Context for 'APU' is selected.
+00:25:43 INFO  : 'stop' command is executed.
+00:25:44 INFO  : 'ps7_init' command is executed.
+00:25:44 INFO  : 'ps7_post_config' command is executed.
+00:25:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:25:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:25:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:25:45 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:25:45 INFO  : 'configparams force-mem-access 0' command is executed.
+00:25:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:25:45 INFO  : Memory regions updated for context APU
+00:25:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:25:45 INFO  : 'con' command is executed.
+00:25:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+00:25:45 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+01:23:13 INFO  : Disconnected from the channel tcfchan#11.
+01:23:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+01:23:14 INFO  : 'fpga -state' command is executed.
+01:23:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:23:14 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+01:23:14 INFO  : 'jtag frequency' command is executed.
+01:23:14 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+01:23:14 INFO  : Context for 'APU' is selected.
+01:23:15 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+01:23:15 INFO  : 'configparams force-mem-access 1' command is executed.
+01:23:15 INFO  : Context for 'APU' is selected.
+01:23:15 INFO  : 'stop' command is executed.
+01:23:15 INFO  : 'ps7_init' command is executed.
+01:23:15 INFO  : 'ps7_post_config' command is executed.
+01:23:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:23:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:23:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:23:16 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:23:16 INFO  : 'configparams force-mem-access 0' command is executed.
+01:23:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:23:16 INFO  : Memory regions updated for context APU
+01:23:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:23:16 INFO  : 'con' command is executed.
+01:23:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+01:23:16 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+01:46:21 INFO  : Disconnected from the channel tcfchan#12.
+02:08:37 INFO  : Registering command handlers for SDK TCF services
+02:08:37 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\temp_xsdb_launch_script.tcl
+02:08:39 INFO  : XSCT server has started successfully.
+02:08:39 INFO  : Successfully done setting XSCT server connection channel  
+02:08:39 INFO  : Successfully done setting SDK workspace  
+02:08:39 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+02:08:39 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.
+02:08:41 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1649786885416,  Project:1649726126962
+02:08:41 INFO  : The hardware specification for project 'system_top_hw_platform_0' is different from C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+02:08:41 INFO  : Copied contents of C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf into \system_top_hw_platform_0\system.hdf.
+02:08:45 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+02:08:47 INFO  : 
+02:08:50 INFO  : 
+02:08:52 INFO  : 
+02:08:53 INFO  : Updating hardware inferred compiler options for fsbl.
+02:08:54 INFO  : Updating hardware inferred compiler options for lwip_enabled.
+02:08:55 INFO  : Updating hardware inferred compiler options for tcpdemo.
+02:08:55 INFO  : Clearing existing target manager status.
+02:08:55 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+02:08:58 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+02:16:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:17:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+02:17:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:17:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+02:17:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:17:34 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+02:17:34 INFO  : 'jtag frequency' command is executed.
+02:17:34 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+02:17:34 INFO  : Context for 'APU' is selected.
+02:17:34 INFO  : System reset is completed.
+02:17:37 INFO  : 'after 3000' command is executed.
+02:17:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+02:17:40 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+02:17:40 INFO  : Context for 'APU' is selected.
+02:17:40 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+02:17:40 INFO  : 'configparams force-mem-access 1' command is executed.
+02:17:40 INFO  : Context for 'APU' is selected.
+02:17:40 INFO  : 'ps7_init' command is executed.
+02:17:40 INFO  : 'ps7_post_config' command is executed.
+02:17:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:17:41 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:17:41 INFO  : 'configparams force-mem-access 0' command is executed.
+02:17:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:17:41 INFO  : Memory regions updated for context APU
+02:17:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:17:41 INFO  : 'con' command is executed.
+02:17:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+02:17:41 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+02:18:53 INFO  : Disconnected from the channel tcfchan#1.
+02:18:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:18:54 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+02:18:54 INFO  : 'jtag frequency' command is executed.
+02:18:54 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+02:18:54 INFO  : Context for 'APU' is selected.
+02:18:54 INFO  : System reset is completed.
+02:18:57 INFO  : 'after 3000' command is executed.
+02:18:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+02:18:59 INFO  : FPGA configured successfully with bitstream "C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit"
+02:18:59 INFO  : Context for 'APU' is selected.
+02:19:01 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+02:19:01 INFO  : 'configparams force-mem-access 1' command is executed.
+02:19:01 INFO  : Context for 'APU' is selected.
+02:19:01 INFO  : 'ps7_init' command is executed.
+02:19:01 INFO  : 'ps7_post_config' command is executed.
+02:19:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:19:02 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:19:02 INFO  : 'configparams force-mem-access 0' command is executed.
+02:19:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system_top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:19:02 INFO  : Memory regions updated for context APU
+02:19:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:19:02 INFO  : 'con' command is executed.
+02:19:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+02:19:02 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+02:36:15 INFO  : Disconnected from the channel tcfchan#2.
+02:36:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+02:36:16 INFO  : 'fpga -state' command is executed.
+02:36:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:36:16 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+02:36:16 INFO  : 'jtag frequency' command is executed.
+02:36:16 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+02:36:16 INFO  : Context for 'APU' is selected.
+02:36:16 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+02:36:16 INFO  : 'configparams force-mem-access 1' command is executed.
+02:36:16 INFO  : Context for 'APU' is selected.
+02:36:16 INFO  : 'stop' command is executed.
+02:36:17 INFO  : 'ps7_init' command is executed.
+02:36:17 INFO  : 'ps7_post_config' command is executed.
+02:36:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:36:17 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:36:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:36:18 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:36:18 INFO  : 'configparams force-mem-access 0' command is executed.
+02:36:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:36:18 INFO  : Memory regions updated for context APU
+02:36:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:36:18 INFO  : 'con' command is executed.
+02:36:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+02:36:18 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+02:39:35 INFO  : Disconnected from the channel tcfchan#3.
+02:39:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+02:39:36 INFO  : 'fpga -state' command is executed.
+02:39:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:39:36 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+02:39:36 INFO  : 'jtag frequency' command is executed.
+02:39:36 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+02:39:36 INFO  : Context for 'APU' is selected.
+02:39:36 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+02:39:36 INFO  : 'configparams force-mem-access 1' command is executed.
+02:39:36 INFO  : Context for 'APU' is selected.
+02:39:36 INFO  : 'stop' command is executed.
+02:39:37 INFO  : 'ps7_init' command is executed.
+02:39:37 INFO  : 'ps7_post_config' command is executed.
+02:39:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:39:37 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:39:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:39:37 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:39:37 INFO  : 'configparams force-mem-access 0' command is executed.
+02:39:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:39:37 INFO  : Memory regions updated for context APU
+02:39:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:39:38 INFO  : 'con' command is executed.
+02:39:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+02:39:38 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+02:40:14 INFO  : Disconnected from the channel tcfchan#4.
+02:40:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+02:40:15 INFO  : 'fpga -state' command is executed.
+02:40:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:40:15 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+02:40:15 INFO  : 'jtag frequency' command is executed.
+02:40:15 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+02:40:15 INFO  : Context for 'APU' is selected.
+02:40:15 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+02:40:15 INFO  : 'configparams force-mem-access 1' command is executed.
+02:40:15 INFO  : Context for 'APU' is selected.
+02:40:15 INFO  : 'stop' command is executed.
+02:40:15 INFO  : 'ps7_init' command is executed.
+02:40:15 INFO  : 'ps7_post_config' command is executed.
+02:40:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:40:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:40:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:40:16 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:40:16 INFO  : 'configparams force-mem-access 0' command is executed.
+02:40:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:40:16 INFO  : Memory regions updated for context APU
+02:40:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:40:16 INFO  : 'con' command is executed.
+02:40:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+02:40:16 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+02:40:51 INFO  : Disconnected from the channel tcfchan#5.
+02:40:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+02:40:52 INFO  : 'fpga -state' command is executed.
+02:40:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:40:52 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+02:40:53 INFO  : 'jtag frequency' command is executed.
+02:40:53 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+02:40:53 INFO  : Context for 'APU' is selected.
+02:40:53 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+02:40:53 INFO  : 'configparams force-mem-access 1' command is executed.
+02:40:53 INFO  : Context for 'APU' is selected.
+02:40:53 INFO  : 'stop' command is executed.
+02:40:53 INFO  : 'ps7_init' command is executed.
+02:40:53 INFO  : 'ps7_post_config' command is executed.
+02:40:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:40:53 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:40:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:40:54 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:40:54 INFO  : 'configparams force-mem-access 0' command is executed.
+02:40:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:40:54 INFO  : Memory regions updated for context APU
+02:40:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:40:54 INFO  : 'con' command is executed.
+02:40:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+02:40:54 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+02:41:31 INFO  : Disconnected from the channel tcfchan#6.
+02:41:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+02:41:32 INFO  : 'fpga -state' command is executed.
+02:41:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:41:32 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+02:41:32 INFO  : 'jtag frequency' command is executed.
+02:41:32 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+02:41:32 INFO  : Context for 'APU' is selected.
+02:41:32 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+02:41:32 INFO  : 'configparams force-mem-access 1' command is executed.
+02:41:32 INFO  : Context for 'APU' is selected.
+02:41:32 INFO  : 'stop' command is executed.
+02:41:33 INFO  : 'ps7_init' command is executed.
+02:41:33 INFO  : 'ps7_post_config' command is executed.
+02:41:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:41:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:41:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:41:33 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:41:33 INFO  : 'configparams force-mem-access 0' command is executed.
+02:41:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:41:33 INFO  : Memory regions updated for context APU
+02:41:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:41:34 INFO  : 'con' command is executed.
+02:41:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+02:41:34 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+02:42:42 INFO  : Disconnected from the channel tcfchan#7.
+02:42:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+02:42:43 INFO  : 'fpga -state' command is executed.
+02:42:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:42:43 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+02:42:43 INFO  : 'jtag frequency' command is executed.
+02:42:43 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+02:42:43 INFO  : Context for 'APU' is selected.
+02:42:43 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+02:42:43 INFO  : 'configparams force-mem-access 1' command is executed.
+02:42:43 INFO  : Context for 'APU' is selected.
+02:42:43 INFO  : 'stop' command is executed.
+02:42:44 INFO  : 'ps7_init' command is executed.
+02:42:44 INFO  : 'ps7_post_config' command is executed.
+02:42:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:42:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:42:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:42:44 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:42:44 INFO  : 'configparams force-mem-access 0' command is executed.
+02:42:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:42:44 INFO  : Memory regions updated for context APU
+02:42:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:42:44 INFO  : 'con' command is executed.
+02:42:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+02:42:44 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+02:43:39 INFO  : Disconnected from the channel tcfchan#8.
+02:43:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+02:43:40 INFO  : 'fpga -state' command is executed.
+02:43:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:43:40 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+02:43:40 INFO  : 'jtag frequency' command is executed.
+02:43:40 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+02:43:40 INFO  : Context for 'APU' is selected.
+02:43:40 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+02:43:40 INFO  : 'configparams force-mem-access 1' command is executed.
+02:43:40 INFO  : Context for 'APU' is selected.
+02:43:40 INFO  : 'stop' command is executed.
+02:43:40 INFO  : 'ps7_init' command is executed.
+02:43:40 INFO  : 'ps7_post_config' command is executed.
+02:43:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:43:40 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:43:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:43:41 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:43:41 INFO  : 'configparams force-mem-access 0' command is executed.
+02:43:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:43:41 INFO  : Memory regions updated for context APU
+02:43:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:43:41 INFO  : 'con' command is executed.
+02:43:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+02:43:41 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+03:05:15 INFO  : Disconnected from the channel tcfchan#9.
+03:05:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+03:05:16 INFO  : 'fpga -state' command is executed.
+03:05:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:05:16 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+03:05:16 INFO  : 'jtag frequency' command is executed.
+03:05:16 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+03:05:16 INFO  : Context for 'APU' is selected.
+03:05:16 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+03:05:16 INFO  : 'configparams force-mem-access 1' command is executed.
+03:05:16 INFO  : Context for 'APU' is selected.
+03:05:16 INFO  : 'stop' command is executed.
+03:05:16 INFO  : 'ps7_init' command is executed.
+03:05:16 INFO  : 'ps7_post_config' command is executed.
+03:05:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:05:16 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:05:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:05:17 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:05:17 INFO  : 'configparams force-mem-access 0' command is executed.
+03:05:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:05:17 INFO  : Memory regions updated for context APU
+03:05:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:05:17 INFO  : 'con' command is executed.
+03:05:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+03:05:17 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+03:12:26 INFO  : Disconnected from the channel tcfchan#10.
+03:12:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+03:12:27 INFO  : 'fpga -state' command is executed.
+03:12:29 INFO  : Memory regions updated for context APU
+03:12:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+03:12:40 INFO  : 'fpga -state' command is executed.
+03:12:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:12:40 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+03:12:40 INFO  : 'jtag frequency' command is executed.
+03:12:40 INFO  : Sourcing of 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl' is done.
+03:12:40 INFO  : Context for 'APU' is selected.
+03:12:40 INFO  : Hardware design information is loaded from 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf'.
+03:12:40 INFO  : 'configparams force-mem-access 1' command is executed.
+03:12:40 INFO  : Context for 'APU' is selected.
+03:12:40 INFO  : 'stop' command is executed.
+03:12:40 INFO  : 'ps7_init' command is executed.
+03:12:40 INFO  : 'ps7_post_config' command is executed.
+03:12:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:12:40 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:12:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:12:41 INFO  : The application 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:12:41 INFO  : 'configparams force-mem-access 0' command is executed.
+03:12:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/lwip_enabled/Debug/lwip_enabled.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:12:41 INFO  : Memory regions updated for context APU
+03:12:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:12:41 INFO  : 'con' command is executed.
+03:12:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+03:12:41 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+03:18:23 INFO  : Disconnected from the channel tcfchan#11.
+03:31:11 INFO  : Registering command handlers for SDK TCF services
+03:31:11 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\temp_xsdb_launch_script.tcl
+03:31:13 INFO  : XSCT server has started successfully.
+03:31:14 INFO  : Successfully done setting XSCT server connection channel  
+03:31:14 INFO  : Successfully done setting SDK workspace  
+03:31:14 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+03:31:14 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.
+03:31:55 INFO  : Registering command handlers for SDK TCF services
+03:31:56 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\temp_xsdb_launch_script.tcl
+03:31:58 INFO  : XSCT server has started successfully.
+03:31:58 INFO  : Successfully done setting XSCT server connection channel  
+03:31:58 INFO  : Successfully done setting SDK workspace  
+03:31:58 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+03:31:58 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.
+03:32:00 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1649791852982,  Project:1649786885416
+03:32:00 INFO  : The hardware specification for project 'system_top_hw_platform_0' is different from C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+03:32:00 INFO  : Copied contents of C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf into \system_top_hw_platform_0\system.hdf.
+03:32:18 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+03:32:21 INFO  : 
+03:32:25 INFO  : 
+03:32:28 INFO  : 
+03:32:51 INFO  : Updating hardware inferred compiler options for fsbl.
+03:32:52 INFO  : Updating hardware inferred compiler options for lwip_enabled.
+03:32:53 INFO  : Updating hardware inferred compiler options for tcpdemo.
+03:32:53 INFO  : Clearing existing target manager status.
+03:33:53 INFO  : Invoking Bootgen: bootgen -image lwip_enabled.bif -arch zynq -o C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\lwip_enabled\bootimage\BOOT.bin -w on
+03:33:54 INFO  : Bootgen command execution is done.

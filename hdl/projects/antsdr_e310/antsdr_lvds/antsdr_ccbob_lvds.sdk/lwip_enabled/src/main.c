@@ -205,11 +205,17 @@ int main(void)
 	while (1) {
 		if(get_adc_completed())
 		{
+			uint32_t delay = 0;
 			clear_adc_completed();
 			Xil_DCacheInvalidateRange((uint32_t)adc_buffer,
 					(128000+1280) * 4);
+			delay = Xil_In32(XPAR_AXI_DELAY_COUNTER_0_S00_AXI_BASEADDR);
+			xil_printf("Count: %d\r\n",delay);
 			/* start the application(udp connect)*/
-			prepare_tcp_data(adc_buffer,128000+1280);
+			if(delay>2)
+				prepare_tcp_data(adc_buffer,128000+1280);
+			else
+				prepare_tcp_data(adc_buffer+1,128000+1280);//add extra delay to ensure consistency
 			//send tcp here.
 		}
 		if (TcpFastTmrFlag) {

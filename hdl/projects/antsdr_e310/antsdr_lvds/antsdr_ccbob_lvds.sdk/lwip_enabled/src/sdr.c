@@ -102,8 +102,8 @@ AD9361_InitParam default_init_param = {
 	24,		//gc_low_power_thresh *** adi,gc-low-power-thresh
 	15,		//gc_max_dig_gain *** adi,gc-max-dig-gain
 	/* Gain MGC Control */
-	2,		//mgc_dec_gain_step *** adi,mgc-dec-gain-step
-	2,		//mgc_inc_gain_step *** adi,mgc-inc-gain-step
+	1,		//mgc_dec_gain_step *** adi,mgc-dec-gain-step
+	1,		//mgc_inc_gain_step *** adi,mgc-inc-gain-step
 	0,		//mgc_rx1_ctrl_inp_enable *** adi,mgc-rx1-ctrl-inp-enable
 	0,		//mgc_rx2_ctrl_inp_enable *** adi,mgc-rx2-ctrl-inp-enable
 	0,		//mgc_split_table_ctrl_inp_gain_mode *** adi,mgc-split-table-ctrl-inp-gain-mode
@@ -278,7 +278,7 @@ AD9361_InitParam default_init_param = {
 	NULL,	//(*ad9361_rfpll_ext_round_rate)()
 	NULL	//(*ad9361_rfpll_ext_set_rate)()
 };
-int32_t gain_rx=0;
+int32_t gain_rx=40;
 AD9361_RXFIRConfig rx_fir_config = {	// BPF PASSBAND 3/20 fs to 1/4 fs
 	3, // rx
 	0, // rx_gain
@@ -388,7 +388,8 @@ int sdr_init(void)
 	ad9361_init(&ad9361_phy, &default_init_param);
 	ad9361_set_tx_fir_config(ad9361_phy, tx_fir_config);
 	ad9361_set_rx_fir_config(ad9361_phy, rx_fir_config);
-//	ad9361_get_rx_rf_gain (ad9361_phy, 1, &gain_rx);
+    ad9361_set_rx_gain_control_mode(ad9361_phy, RX1, RF_GAIN_MGC);
+    ad9361_set_rx_rf_gain(ad9361_phy, RX1, 40);
 //	ad9361_set_tx_fir_en_dis(ad9361_phy,0);
 //	ad9361_set_rx_fir_en_dis(ad9361_phy,0);
 
@@ -413,6 +414,12 @@ int32_t sdr_receive(uint32_t size, uint32_t start_address)
 void sdr_transmit_2(uint32_t* buffer,uint32_t tx_count)
 {
 	dac_transmit_presetup_2(ad9361_phy,buffer,tx_count);
+}
+void sdr_setrxgain(int8_t gain)
+{
+    ad9361_set_rx_gain_control_mode(ad9361_phy, RX1, RF_GAIN_MGC);
+    ad9361_set_rx_rf_gain(ad9361_phy, RX1, gain);
+    xil_printf("rx gain set to %d\r\n",gain);
 }
 
 // NOTE: To prevent unwanted data loss, it's recommended to invalidate

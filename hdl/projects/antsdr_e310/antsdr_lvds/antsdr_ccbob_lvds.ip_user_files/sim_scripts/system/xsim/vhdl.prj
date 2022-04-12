@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../bd/system/ip/system_axi_iic_main_0/sim/system_axi_iic_main_0.vhd" \
+"../../../bd/system/ip/system_sys_rstgen_0/sim/system_sys_rstgen_0.vhd" \
+"../../../bd/system/ip/system_axi_hp1_interconnect_0/bd_0/ip/ip_1/sim/bd_31bd_psr_aclk_0.vhd" \
+"../../../bd/system/ip/system_axi_hp2_interconnect_0/bd_0/ip/ip_1/sim/bd_c0fd_psr_aclk_0.vhd" \
+
+nosort

@@ -38,7 +38,7 @@ uint32_t *send_buf = NULL;
 uint32_t buf_size = 0;
 uint32_t transfered_size = 0;
 volatile bool finished = 1;
-
+void sdr_setrxgain(int8_t gain);
 bool dac_buffer_complete=0;
 volatile ip_addr_t computer_addr;
 volatile u16_t computer_port;
@@ -193,11 +193,15 @@ void process_byte(uint8_t data)
 	    {
 	      recv_state=2;
 	    }
-	    else if(data==0xAE)
+	    else if(data==0xAE)//close connection
 	    {
 	      tcp_server_close(c_pcb);
 	      c_pcb = NULL;
 	      recv_state=0;
+	    }
+	    else if(data==0xAD)//set gain
+	    {
+	      recv_state=4;
 	    }
 	    else recv_state=0;
 	  }
@@ -233,6 +237,11 @@ void process_byte(uint8_t data)
 		dac_buffer_complete=0;
 		j=0;
 	   }
+	  }
+	  else if(recv_state==4)
+	  {
+		  sdr_setrxgain((int8_t)data);
+		  recv_state=0;
 	  }
 }
 

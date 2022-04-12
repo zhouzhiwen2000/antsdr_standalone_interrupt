@@ -37,3 +37,4 @@ set_property PACKAGE_PIN G17 [get_ports iic_sda]
 set_property IOSTANDARD LVCMOS33 [get_ports iic_sda]
 set_property PULLUP true [get_ports iic_sda]
 
+

@@ -2440,3 +2440,16 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/zhouzhi
 
 !ENTRY com.xilinx.sdk.utils 1 0 2022-04-13 05:41:19.668
 !MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.tcf 4 0 2022-04-13 06:27:45.188
+!MESSAGE TCF channel terminated
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:185)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:327)

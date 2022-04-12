@@ -16814,3 +16814,4 @@ con
 ----------------End of Script----------------
 
 09:12:47 INFO  : Launch script is exported to file 'C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lwip_enabled.elf_on_local.tcl'
+09:14:54 INFO  : Disconnected from the channel tcfchan#4.

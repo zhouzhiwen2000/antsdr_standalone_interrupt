@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Apr 12 04:27:45 2022
-# Process ID: 7656
+# Start of session at: Tue Apr 12 09:04:27 2022
+# Process ID: 23680
 # Current directory: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1
 # Command line: vivado.exe -log system_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_top.tcl
 # Log file: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/system_top.vds
@@ -23,9 +23,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 33972 
+INFO: Helper process launched with PID 28260 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 460.520 ; gain = 132.406
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 459.246 ; gain = 132.000
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-2048] function gpo_bit_used does not always return a value [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:1139]
 INFO: [Synth 8-6157] synthesizing module 'system_top' [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:38]
@@ -51,7 +51,7 @@ INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant' (3#
 INFO: [Synth 8-6155] done synthesizing module 'system_GND_1_0' (4#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_GND_1_0/synth/system_GND_1_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'system_axi_ad9361_0' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_0/synth/system_axi_ad9361_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'axi_ad9361' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/dc36/axi_ad9361.v:38]
-	Parameter ID bound to: 0 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
 	Parameter MODE_1R1T bound to: 0 - type: integer 
 	Parameter FPGA_TECHNOLOGY bound to: 1 - type: integer 
 	Parameter FPGA_FAMILY bound to: 4 - type: integer 
@@ -260,7 +260,7 @@ INFO: [Synth 8-6155] done synthesizing module 'ad_addsub' (22#1) [c:/Users/zhouz
 INFO: [Synth 8-6155] done synthesizing module 'ad_tdd_control' (23#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/common/ad_tdd_control.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'axi_ad9361_tdd' (24#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/dc36/axi_ad9361_tdd.v:38]
 INFO: [Synth 8-6157] synthesizing module 'axi_ad9361_rx' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/dc36/axi_ad9361_rx.v:39]
-	Parameter ID bound to: 0 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
 	Parameter FPGA_TECHNOLOGY bound to: 1 - type: integer 
 	Parameter FPGA_FAMILY bound to: 4 - type: integer 
 	Parameter SPEED_GRADE bound to: 20 - type: integer 
@@ -490,7 +490,7 @@ INFO: [Synth 8-6157] synthesizing module 'up_adc_channel__parameterized2' [c:/Us
 INFO: [Synth 8-6155] done synthesizing module 'up_adc_channel__parameterized2' (35#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/common/up_adc_channel.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'axi_ad9361_rx_channel__parameterized2' (35#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/dc36/axi_ad9361_rx_channel.v:38]
 INFO: [Synth 8-6157] synthesizing module 'up_adc_common' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/common/up_adc_common.v:38]
-	Parameter ID bound to: 0 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
 	Parameter FPGA_TECHNOLOGY bound to: 1 - type: integer 
 	Parameter FPGA_FAMILY bound to: 4 - type: integer 
 	Parameter SPEED_GRADE bound to: 20 - type: integer 
@@ -519,7 +519,7 @@ INFO: [Synth 8-6157] synthesizing module 'up_delay_cntrl' [c:/Users/zhouzhiwen/D
 INFO: [Synth 8-6155] done synthesizing module 'up_delay_cntrl' (39#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/common/up_delay_cntrl.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'axi_ad9361_rx' (40#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/dc36/axi_ad9361_rx.v:39]
 INFO: [Synth 8-6157] synthesizing module 'axi_ad9361_tx' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/dc36/axi_ad9361_tx.v:38]
-	Parameter ID bound to: 0 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
 	Parameter FPGA_TECHNOLOGY bound to: 1 - type: integer 
 	Parameter FPGA_FAMILY bound to: 4 - type: integer 
 	Parameter SPEED_GRADE bound to: 20 - type: integer 
@@ -774,7 +774,7 @@ INFO: [Synth 8-6157] synthesizing module 'up_dac_channel__parameterized2' [c:/Us
 INFO: [Synth 8-6155] done synthesizing module 'up_dac_channel__parameterized2' (47#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/common/up_dac_channel.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'axi_ad9361_tx_channel__parameterized2' (47#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/dc36/axi_ad9361_tx_channel.v:38]
 INFO: [Synth 8-6157] synthesizing module 'up_dac_common' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/common/up_dac_common.v:38]
-	Parameter ID bound to: 0 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
 	Parameter FPGA_TECHNOLOGY bound to: 1 - type: integer 
 	Parameter FPGA_FAMILY bound to: 4 - type: integer 
 	Parameter SPEED_GRADE bound to: 20 - type: integer 
@@ -809,7 +809,7 @@ INFO: [Synth 8-6157] synthesizing module 'up_axi' [c:/Users/zhouzhiwen/Desktop/a
 INFO: [Synth 8-6155] done synthesizing module 'up_axi' (50#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/common/up_axi.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'axi_ad9361' (51#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/dc36/axi_ad9361.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'system_axi_ad9361_0' (52#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_0/synth/system_axi_ad9361_0.v:57]
-WARNING: [Synth 8-350] instance 'axi_ad9361' of module 'system_axi_ad9361_0' requires 79 connections, but only 70 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:1707]
+WARNING: [Synth 8-350] instance 'axi_ad9361' of module 'system_axi_ad9361_0' requires 79 connections, but only 70 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:1708]
 INFO: [Synth 8-6157] synthesizing module 'system_axi_ad9361_adc_dma_0' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/synth/system_axi_ad9361_adc_dma_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'axi_dmac' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/a45c/axi_dmac.v:38]
 	Parameter ID bound to: 0 - type: integer 
@@ -1095,7 +1095,7 @@ WARNING: [Synth 8-350] instance 'i_data_mover' of module 'dmac_data_mover' requi
 	Parameter ASYNC_CLK bound to: 1'b0 
 	Parameter ADDRESS_WIDTH bound to: 0 - type: integer 
 	Parameter S_AXIS_REGISTERED bound to: 1 - type: integer 
-WARNING: [Synth 8-350] instance 'axi_ad9361_adc_dma' of module 'system_axi_ad9361_adc_dma_0' requires 46 connections, but only 45 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:1778]
+WARNING: [Synth 8-350] instance 'axi_ad9361_adc_dma' of module 'system_axi_ad9361_adc_dma_0' requires 46 connections, but only 45 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:1779]
 	Parameter ID bound to: 0 - type: integer 
 	Parameter DMA_DATA_WIDTH_SRC bound to: 64 - type: integer 
 	Parameter DMA_DATA_WIDTH_DEST bound to: 64 - type: integer 
@@ -1274,7 +1274,7 @@ INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/zhou
 	Parameter ASYNC_CLK bound to: 1'b1 
 	Parameter ADDRESS_WIDTH bound to: 0 - type: integer 
 	Parameter S_AXIS_REGISTERED bound to: 1 - type: integer 
-WARNING: [Synth 8-350] instance 'axi_ad9361_dac_dma' of module 'system_axi_ad9361_dac_dma_0' requires 48 connections, but only 41 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:1824]
+WARNING: [Synth 8-350] instance 'axi_ad9361_dac_dma' of module 'system_axi_ad9361_dac_dma_0' requires 48 connections, but only 41 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:1825]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_M_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_S_AXI_PROTOCOL bound to: 1 - type: integer 
@@ -2197,7 +2197,7 @@ WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_r_be
 	Parameter PCORE_VERSION bound to: 262243 - type: integer 
 	Parameter BUF_ENABLE bound to: 256'b0000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
 	Parameter ID bound to: 16 - type: integer 
-WARNING: [Synth 8-350] instance 'axi_gpreg' of module 'system_axi_gpreg_0' requires 24 connections, but only 23 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2033]
+WARNING: [Synth 8-350] instance 'axi_gpreg' of module 'system_axi_gpreg_0' requires 24 connections, but only 23 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2034]
 	Parameter CONST_VAL bound to: 1 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'bd_31bd_psr_aclk_0' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/ip/ip_1/synth/bd_31bd_psr_aclk_0.vhd:74]
@@ -3055,7 +3055,7 @@ INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO__parameterized0' (209#1) 
 INFO: [Synth 8-256] done synthesizing module 'iic' (210#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:6187]
 INFO: [Synth 8-256] done synthesizing module 'axi_iic' (211#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:6870]
 INFO: [Synth 8-256] done synthesizing module 'system_axi_iic_main_0' (212#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_iic_main_0/synth/system_axi_iic_main_0.vhd:91]
-WARNING: [Synth 8-350] instance 'axi_iic_main' of module 'system_axi_iic_main_0' requires 27 connections, but only 26 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2129]
+WARNING: [Synth 8-350] instance 'axi_iic_main' of module 'system_axi_iic_main_0' requires 27 connections, but only 26 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2130]
 	Parameter ROM_WIDTH bound to: 32 - type: integer 
 	Parameter ROM_ADDR_BITS bound to: 9 - type: integer 
 	Parameter AXI_ADDRESS_WIDTH bound to: 12 - type: integer 
@@ -3161,7 +3161,7 @@ INFO: [Synth 8-3876] $readmem data file 'c:/Users/zhouzhiwen/Desktop/antsdr_stan
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_sys_ps7_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1348]
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_sys_ps7_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1349]
 WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_sys_ps7_0/synth/system_sys_ps7_0.v:746]
-WARNING: [Synth 8-350] instance 'sys_ps7' of module 'system_sys_ps7_0' requires 202 connections, but only 163 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2211]
+WARNING: [Synth 8-350] instance 'sys_ps7' of module 'system_sys_ps7_0' requires 202 connections, but only 163 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2213]
 INFO: [Synth 8-638] synthesizing module 'system_sys_rstgen_0' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_sys_rstgen_0/synth/system_sys_rstgen_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 1 - type: integer 
@@ -3217,7 +3217,7 @@ INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2018.3/scripts
 INFO: [Synth 8-256] done synthesizing module 'lpf__parameterized0' (226#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset__parameterized2' (226#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
 INFO: [Synth 8-256] done synthesizing module 'system_sys_rstgen_0' (227#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_sys_rstgen_0/synth/system_sys_rstgen_0.vhd:74]
-WARNING: [Synth 8-350] instance 'sys_rstgen' of module 'system_sys_rstgen_0' requires 10 connections, but only 7 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2375]
+WARNING: [Synth 8-350] instance 'sys_rstgen' of module 'system_sys_rstgen_0' requires 10 connections, but only 7 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2377]
 	Parameter NUM_OF_CHANNELS bound to: 4 - type: integer 
 	Parameter SAMPLES_PER_CHANNEL bound to: 1 - type: integer 
 	Parameter SAMPLE_DATA_WIDTH bound to: 16 - type: integer 
@@ -3261,7 +3261,7 @@ WARNING: [Synth 8-350] instance 'sys_rstgen' of module 'system_sys_rstgen_0' req
 	Parameter NUM_GROUPS bound to: 1 - type: integer 
 	Parameter WORDS_PER_GROUP bound to: 4 - type: integer 
 	Parameter WORD_WIDTH bound to: 16 - type: integer 
-WARNING: [Synth 8-350] instance 'util_ad9361_adc_pack' of module 'system_util_ad9361_adc_pack_0' requires 16 connections, but only 15 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2383]
+WARNING: [Synth 8-350] instance 'util_ad9361_adc_pack' of module 'system_util_ad9361_adc_pack_0' requires 16 connections, but only 15 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2385]
 	Parameter NUM_OF_CHANNELS bound to: 4 - type: integer 
 	Parameter SAMPLES_PER_CHANNEL bound to: 1 - type: integer 
 	Parameter SAMPLE_DATA_WIDTH bound to: 16 - type: integer 
@@ -3327,11 +3327,11 @@ WARNING: [Synth 8-350] instance 'util_ad9361_adc_pack' of module 'system_util_ad
 	Parameter NUM_GROUPS bound to: 2 - type: integer 
 	Parameter WORDS_PER_GROUP bound to: 2 - type: integer 
 	Parameter WORD_WIDTH bound to: 16 - type: integer 
-WARNING: [Synth 8-350] instance 'util_ad9361_dac_upack' of module 'system_util_ad9361_dac_upack_0' requires 16 connections, but only 15 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2399]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2415]
+WARNING: [Synth 8-350] instance 'util_ad9361_dac_upack' of module 'system_util_ad9361_dac_upack_0' requires 16 connections, but only 15 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2401]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2417]
 	Parameter C_OPERATION bound to: and - type: string 
 	Parameter C_SIZE bound to: 2 - type: integer 
-WARNING: [Synth 8-350] instance 'util_ad9361_divclk_sel' of module 'system_util_ad9361_divclk_sel_0' requires 2 connections, but only 1 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2415]
+WARNING: [Synth 8-350] instance 'util_ad9361_divclk_sel' of module 'system_util_ad9361_divclk_sel_0' requires 2 connections, but only 1 given [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2417]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
 	Parameter IN1_WIDTH bound to: 1 - type: integer 
 	Parameter IN2_WIDTH bound to: 1 - type: integer 
@@ -3490,7 +3490,7 @@ INFO: [Synth 8-3331] design util_cpack2 has unconnected port enable_19
 INFO: [Synth 8-3331] design util_cpack2 has unconnected port enable_20
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 860.629 ; gain = 532.516
+Finished RTL Elaboration : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 858.117 ; gain = 530.871
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3531,10 +3531,10 @@ WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[0] to consta
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 860.629 ; gain = 532.516
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 858.117 ; gain = 530.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 860.629 ; gain = 532.516
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 858.117 ; gain = 530.871
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 153 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -3647,7 +3647,7 @@ Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/ant
 Finished Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/xilinx/common/ad_rst_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_up_adc_common/i_core_rst_reg'
 Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/xilinx/common/ad_rst_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_delay_cntrl/i_delay_rst_reg'
 Finished Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/xilinx/common/ad_rst_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst/i_rx/i_delay_cntrl/i_delay_rst_reg'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1790.477 ; gain = 1.039
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1790.969 ; gain = 0.961
 Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/antsdr_constr.xdc]
 Finished Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/antsdr_constr.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/antsdr_constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
@@ -3664,7 +3664,7 @@ Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/ant
 Finished Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1793.664 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1794.867 ; gain = 0.000
 Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_0/system_axi_ad9361_0_pps_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst'
 Finished Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_0/system_axi_ad9361_0_pps_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst'
 Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361_adc_dma/inst'
@@ -3692,10 +3692,10 @@ WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SU
 Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'i_system_wrapper/system_i/axi_hp2_interconnect/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1793.664 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1794.867 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1797.367 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1797.637 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 106 instances were transformed.
   DSP48E => DSP48E1: 24 instances
@@ -3707,17 +3707,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 8 instances
   SRL16 => SRL16E: 3 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1797.367 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.291 . Memory (MB): peak = 1797.367 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1797.637 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.273 . Memory (MB): peak = 1797.637 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:14 ; elapsed = 00:01:14 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished Constraint Validation : Time (s): cpu = 00:01:12 ; elapsed = 00:01:12 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:14 ; elapsed = 00:01:14 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:12 ; elapsed = 00:01:12 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -4147,7 +4147,7 @@ Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_hp1_int
 Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_hp1_interconnect/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_hp2_interconnect/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:15 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "adc_valid_p" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "adc_data_p" won't be mapped to RAM because it is too sparse
@@ -4314,8 +4314,8 @@ INFO: [Synth 8-5544] ROM "buffer_Full" won't be mapped to Block RAM because addr
 INFO: [Synth 8-5546] ROM "lut_rom" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "gen_pack.gen_output_buffer.sync" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'inst'. This will prevent further optimization [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_util_ad9361_adc_pack_0/synth/system_util_ad9361_adc_pack_0.v:105]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'util_ad9361_adc_pack'. This will prevent further optimization [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2383]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'util_ad9361_dac_upack'. This will prevent further optimization [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2399]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'util_ad9361_adc_pack'. This will prevent further optimization [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2385]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'util_ad9361_dac_upack'. This will prevent further optimization [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/synth/system.v:2401]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'inst'. This will prevent further optimization [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_util_ad9361_dac_upack_0/synth/system_util_ad9361_dac_upack_0.v:105]
 INFO: [Synth 8-5545] ROM "end_of_period_s" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------------------------
@@ -4394,7 +4394,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'scl_state_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'iic_control'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4409,8 +4409,8 @@ Report RTL Partitions:
 |6     |axi_ad9361_tx_channel__parameterized0__GC0 |           1|      2649|
 |7     |axi_ad9361_tx_channel__parameterized1__GC0 |           1|      2649|
 |8     |axi_ad9361_tx_channel__parameterized2__GC0 |           1|      2706|
-|9     |axi_ad9361_tx__GC0                         |           1|      2565|
-|10    |axi_ad9361__GC0                            |           1|     26049|
+|9     |axi_ad9361_tx__GC0                         |           1|      2568|
+|10    |axi_ad9361__GC0                            |           1|     26050|
 |11    |sc_util_v1_0_4_axi_reg_stall               |          24|      6610|
 |12    |sc_exit_v1_0_8_axi3_conv__GC0              |           1|      4812|
 |13    |sc_exit_v1_0_8_splitter__GC0               |           1|        18|
@@ -4422,7 +4422,7 @@ Report RTL Partitions:
 |19    |sc_mmu_v1_0_7_top__parameterized0__GC0     |           1|      1745|
 |20    |s00_entry_pipeline_imp_A6NOOV__GC0         |           1|       202|
 |21    |bd_c0fd__GC0                               |           1|      1230|
-|22    |system__GC0                                |           1|     19845|
+|22    |system__GC0                                |           1|     19846|
 |23    |system_top__GC0                            |           1|        54|
 +------+-------------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -4509,7 +4509,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 121   
 	                3 Bit    Registers := 59    
 	                2 Bit    Registers := 63    
-	                1 Bit    Registers := 1245  
+	                1 Bit    Registers := 1246  
 +---RAMs : 
 	               8K Bit         RAMs := 2     
 	              104 Bit         RAMs := 2     
@@ -7836,6 +7836,7 @@ Detailed RTL Component Info :
 	   2 Input     16 Bit       Adders := 1     
 +---Registers : 
 	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
@@ -8279,7 +8280,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_system
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_system_wrapper/system_i /axi_hp2_interconnect/\inst/m00_exit_pipeline/m00_exit/inst /\gen_axi3.splitter_insti_1 /\gen_wsplitter.s_awroute_d_reg[43] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:14 ; elapsed = 00:02:15 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:16 ; elapsed = 00:02:18 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -8334,8 +8335,8 @@ Report RTL Partitions:
 |6     |axi_ad9361_tx_channel__parameterized0__GC0 |           1|      1954|
 |7     |axi_ad9361_tx_channel__parameterized1__GC0 |           1|      1954|
 |8     |axi_ad9361_tx_channel__parameterized2__GC0 |           1|      1983|
-|9     |axi_ad9361_tx__GC0                         |           1|      1455|
-|10    |axi_ad9361__GC0                            |           1|     15834|
+|9     |axi_ad9361_tx__GC0                         |           1|      1480|
+|10    |axi_ad9361__GC0                            |           1|     15919|
 |11    |sc_util_v1_0_4_axi_reg_stall               |           1|        30|
 |12    |sc_exit_v1_0_8_axi3_conv__GC0              |           1|       403|
 |13    |sc_exit_v1_0_8_splitter__GC0               |           1|        19|
@@ -8347,7 +8348,7 @@ Report RTL Partitions:
 |19    |sc_mmu_v1_0_7_top__parameterized0__GC0     |           1|       156|
 |20    |s00_entry_pipeline_imp_A6NOOV__GC0         |           1|        18|
 |21    |bd_c0fd__GC0                               |           1|      1000|
-|22    |system__GC0                                |           1|     12902|
+|22    |system__GC0                                |           1|     12905|
 |23    |system_top__GC0                            |           1|        54|
 |24    |sc_exit_v1_0_8_axi3_conv__GC0__1           |           1|       558|
 |25    |sc_util_v1_0_4_axi_reg_stall__1            |           1|       377|
@@ -8374,13 +8375,13 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 69 of c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc:69]
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 74 of c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc:74]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:23 ; elapsed = 00:02:25 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:26 ; elapsed = 00:02:27 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:28 ; elapsed = 00:02:29 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished Timing Optimization : Time (s): cpu = 00:02:31 ; elapsed = 00:02:32 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -8431,8 +8432,8 @@ Report RTL Partitions:
 |6     |axi_ad9361_tx_channel__parameterized0__GC0 |           1|      1954|
 |7     |axi_ad9361_tx_channel__parameterized1__GC0 |           1|      1954|
 |8     |axi_ad9361_tx_channel__parameterized2__GC0 |           1|      1983|
-|9     |axi_ad9361_tx__GC0                         |           1|      1455|
-|10    |axi_ad9361__GC0                            |           1|     15834|
+|9     |axi_ad9361_tx__GC0                         |           1|      1480|
+|10    |axi_ad9361__GC0                            |           1|     15919|
 |11    |sc_util_v1_0_4_axi_reg_stall               |           1|        30|
 |12    |sc_exit_v1_0_8_axi3_conv__GC0              |           1|       403|
 |13    |sc_exit_v1_0_8_splitter__GC0               |           1|        19|
@@ -8444,7 +8445,7 @@ Report RTL Partitions:
 |19    |sc_mmu_v1_0_7_top__parameterized0__GC0     |           1|       156|
 |20    |s00_entry_pipeline_imp_A6NOOV__GC0         |           1|        18|
 |21    |bd_c0fd__GC0                               |           1|      1000|
-|22    |system__GC0                                |           1|     12902|
+|22    |system__GC0                                |           1|     12905|
 |23    |system_top__GC0                            |           1|        54|
 |24    |sc_exit_v1_0_8_axi3_conv__GC0__1           |           1|       558|
 |25    |sc_util_v1_0_4_axi_reg_stall__1            |           1|       377|
@@ -8474,7 +8475,7 @@ INFO: [Synth 8-3332] Sequential element (gen_endpoint.decerr_slave_inst/FSM_oneh
 INFO: [Synth 8-6837] The timing for the instance i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_transfer/i_request_arb/i_store_and_forward/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_transfer/i_request_arb/i_store_and_forward/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:38 ; elapsed = 00:02:40 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished Technology Mapping : Time (s): cpu = 00:02:41 ; elapsed = 00:02:43 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -8504,7 +8505,7 @@ INFO: [Synth 8-5365] Flop inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:40 ; elapsed = 00:02:42 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished IO Insertion : Time (s): cpu = 00:02:43 ; elapsed = 00:02:44 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -8517,7 +8518,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:40 ; elapsed = 00:02:42 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:43 ; elapsed = 00:02:45 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -8529,25 +8530,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:44 ; elapsed = 00:02:46 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:46 ; elapsed = 00:02:48 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:44 ; elapsed = 00:02:46 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:46 ; elapsed = 00:02:48 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:44 ; elapsed = 00:02:46 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:47 ; elapsed = 00:02:48 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:45 ; elapsed = 00:02:46 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:47 ; elapsed = 00:02:49 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -8654,14 +8655,14 @@ Report Cell Usage:
 |29    |IDDR       |     7|
 |30    |IDELAYCTRL |     1|
 |31    |IDELAYE2   |     7|
-|32    |LUT1       |  2125|
+|32    |LUT1       |  2122|
 |33    |LUT2       |  1910|
-|34    |LUT3       |  6016|
-|35    |LUT4       |  1048|
-|36    |LUT5       |  1121|
-|37    |LUT6       |  2928|
+|34    |LUT3       |  6009|
+|35    |LUT4       |  1056|
+|36    |LUT5       |  1119|
+|37    |LUT6       |  2948|
 |38    |MUXCY_L    |     9|
-|39    |MUXF7      |   105|
+|39    |MUXF7      |   101|
 |40    |MUXF8      |     4|
 |41    |ODDR       |    10|
 |42    |PS7        |     1|
@@ -8672,11 +8673,11 @@ Report Cell Usage:
 |47    |SRL16E     |   711|
 |48    |SRLC32E    |    47|
 |49    |XORCY      |    12|
-|50    |FDCE       |  4090|
+|50    |FDCE       |  4091|
 |51    |FDPE       |    74|
 |52    |FDR        |    27|
-|53    |FDRE       | 15868|
-|54    |FDSE       |   302|
+|53    |FDRE       | 15846|
+|54    |FDSE       |   330|
 |55    |IBUF       |     2|
 |56    |IBUFDS     |     7|
 |57    |IBUFGDS    |     1|
@@ -8689,11 +8690,11 @@ Report Instance Areas:
 +------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
 |      |Instance                                                                                              |Module                                                         |Cells |
 +------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
-|1     |top                                                                                                   |                                                               | 42046|
-|2     |  i_system_wrapper                                                                                    |system_wrapper                                                 | 42013|
-|3     |    system_i                                                                                          |system                                                         | 42011|
-|4     |      axi_ad9361                                                                                      |system_axi_ad9361_0                                            | 31407|
-|5     |        inst                                                                                          |axi_ad9361                                                     | 31407|
+|1     |top                                                                                                   |                                                               | 42065|
+|2     |  i_system_wrapper                                                                                    |system_wrapper                                                 | 42032|
+|3     |    system_i                                                                                          |system                                                         | 42030|
+|4     |      axi_ad9361                                                                                      |system_axi_ad9361_0                                            | 31421|
+|5     |        inst                                                                                          |axi_ad9361                                                     | 31421|
 |6     |          i_dev_if                                                                                    |axi_ad9361_lvds_if                                             |   295|
 |7     |            \g_rx_data[0].i_rx_data                                                                   |ad_data_in                                                     |     3|
 |8     |            \g_rx_data[1].i_rx_data                                                                   |ad_data_in_273                                                 |     3|
@@ -8713,10 +8714,10 @@ Report Instance Areas:
 |22    |            i_tx_clk                                                                                  |ad_data_out_283                                                |     2|
 |23    |            i_tx_frame                                                                                |ad_data_out_284                                                |     2|
 |24    |            i_txnrx                                                                                   |ad_data_out__parameterized0_285                                |     2|
-|25    |          i_rx                                                                                        |axi_ad9361_rx                                                  |  6505|
-|26    |            i_delay_cntrl                                                                             |up_delay_cntrl                                                 |    75|
+|25    |          i_rx                                                                                        |axi_ad9361_rx                                                  |  6503|
+|26    |            i_delay_cntrl                                                                             |up_delay_cntrl                                                 |    74|
 |27    |              i_delay_rst_reg                                                                         |ad_rst                                                         |     6|
-|28    |            i_rx_channel_0                                                                            |axi_ad9361_rx_channel                                          |  1445|
+|28    |            i_rx_channel_0                                                                            |axi_ad9361_rx_channel                                          |  1442|
 |29    |              i_ad_datafmt                                                                            |ad_datafmt_265                                                 |    13|
 |30    |              i_ad_dcfilter                                                                           |ad_dcfilter_266                                                |   233|
 |31    |              i_ad_iqcor                                                                              |ad_iqcor_267                                                   |   460|
@@ -8726,10 +8727,10 @@ Report Instance Areas:
 |35    |                  i_mult_macro                                                                        |MULT_MACRO_271                                                 |   154|
 |36    |              i_rx_pnmon                                                                              |axi_ad9361_rx_pnmon                                            |   213|
 |37    |                i_pnmon                                                                               |ad_pnmon_268                                                   |    83|
-|38    |              i_up_adc_channel                                                                        |up_adc_channel                                                 |   526|
+|38    |              i_up_adc_channel                                                                        |up_adc_channel                                                 |   523|
 |39    |                i_xfer_cntrl                                                                          |up_xfer_cntrl__parameterized1__xdcDup__1                       |   183|
 |40    |                i_xfer_status                                                                         |up_xfer_status__parameterized0__xdcDup__1                      |    39|
-|41    |            i_rx_channel_1                                                                            |axi_ad9361_rx_channel__parameterized0                          |  1474|
+|41    |            i_rx_channel_1                                                                            |axi_ad9361_rx_channel__parameterized0                          |  1472|
 |42    |              i_ad_datafmt                                                                            |ad_datafmt_257                                                 |    13|
 |43    |              i_ad_dcfilter                                                                           |ad_dcfilter_258                                                |   233|
 |44    |              i_ad_iqcor                                                                              |ad_iqcor__parameterized0_259                                   |   458|
@@ -8739,7 +8740,7 @@ Report Instance Areas:
 |48    |                  i_mult_macro                                                                        |MULT_MACRO_263                                                 |   154|
 |49    |              i_rx_pnmon                                                                              |axi_ad9361_rx_pnmon__parameterized0                            |   245|
 |50    |                i_pnmon                                                                               |ad_pnmon_260                                                   |    83|
-|51    |              i_up_adc_channel                                                                        |up_adc_channel__parameterized0                                 |   525|
+|51    |              i_up_adc_channel                                                                        |up_adc_channel__parameterized0                                 |   523|
 |52    |                i_xfer_cntrl                                                                          |up_xfer_cntrl__parameterized1__xdcDup__2                       |   183|
 |53    |                i_xfer_status                                                                         |up_xfer_status__parameterized0__xdcDup__2                      |    39|
 |54    |            i_rx_channel_2                                                                            |axi_ad9361_rx_channel__parameterized1                          |  1468|
@@ -8768,7 +8769,7 @@ Report Instance Areas:
 |77    |              i_up_adc_channel                                                                        |up_adc_channel__parameterized2                                 |   526|
 |78    |                i_xfer_cntrl                                                                          |up_xfer_cntrl__parameterized1                                  |   183|
 |79    |                i_xfer_status                                                                         |up_xfer_status__parameterized0__xdcDup__4                      |    39|
-|80    |            i_up_adc_common                                                                           |up_adc_common                                                  |   490|
+|80    |            i_up_adc_common                                                                           |up_adc_common                                                  |   494|
 |81    |              i_mmcm_rst_reg                                                                          |ad_rst__xdcDup__1                                              |     6|
 |82    |              i_core_rst_reg                                                                          |ad_rst__xdcDup__4                                              |     6|
 |83    |              i_xfer_cntrl                                                                            |up_xfer_cntrl__parameterized2                                  |   101|
@@ -8801,7 +8802,7 @@ Report Instance Areas:
 |110   |              i_xfer_tdd_counter_values                                                               |up_xfer_cntrl__parameterized0                                  |  1275|
 |111   |              i_xfer_tdd_status                                                                       |up_xfer_status                                                 |    57|
 |112   |          i_tdd_if                                                                                    |axi_ad9361_tdd_if                                              |     2|
-|113   |          i_tx                                                                                        |axi_ad9361_tx                                                  | 19478|
+|113   |          i_tx                                                                                        |axi_ad9361_tx                                                  | 19476|
 |114   |            i_tx_channel_0                                                                            |axi_ad9361_tx_channel                                          |  4757|
 |115   |              i_ad_iqcor                                                                              |ad_iqcor_186                                                   |   440|
 |116   |                i_mul_i                                                                               |ad_mul__parameterized0_221                                     |   166|
@@ -8970,13 +8971,13 @@ Report Instance Areas:
 |279   |                      \rotation[9].pipe                                                               |ad_dds_cordic_pipe__parameterized8                             |    66|
 |280   |              i_up_dac_channel                                                                        |up_dac_channel__parameterized2                                 |   846|
 |281   |                i_xfer_cntrl                                                                          |up_xfer_cntrl__parameterized3                                  |   361|
-|282   |            i_up_dac_common                                                                           |up_dac_common                                                  |   497|
+|282   |            i_up_dac_common                                                                           |up_dac_common                                                  |   495|
 |283   |              i_mmcm_rst_reg                                                                          |ad_rst__xdcDup__2                                              |     6|
 |284   |              i_core_rst_reg                                                                          |ad_rst__xdcDup__3                                              |     6|
 |285   |              i_xfer_cntrl                                                                            |up_xfer_cntrl__parameterized4                                  |    73|
 |286   |              i_xfer_status                                                                           |up_xfer_status__parameterized1                                 |    35|
 |287   |              i_clock_mon                                                                             |up_clock_mon                                                   |   146|
-|288   |          i_up_axi                                                                                    |up_axi_91                                                      |  1281|
+|288   |          i_up_axi                                                                                    |up_axi_91                                                      |  1300|
 |289   |      axi_hp1_interconnect                                                                            |system_axi_hp1_interconnect_0                                  |  2088|
 |290   |        inst                                                                                          |bd_31bd                                                        |  2088|
 |291   |          clk_map                                                                                     |clk_map_imp_1V0WYD2                                            |    41|
@@ -9269,8 +9270,8 @@ Report Instance Areas:
 |578   |          i_up_axi                                                                                    |up_axi__parameterized1                                         |   261|
 |579   |      rom_sys_0                                                                                       |system_rom_sys_0_0                                             |   117|
 |580   |        inst                                                                                          |sysid_rom                                                      |   117|
-|581   |      sync_gen_0                                                                                      |system_sync_gen_0_0                                            |    55|
-|582   |        inst                                                                                          |sync_gen                                                       |    55|
+|581   |      sync_gen_0                                                                                      |system_sync_gen_0_0                                            |    60|
+|582   |        inst                                                                                          |sync_gen                                                       |    60|
 |583   |      sys_concat_intc                                                                                 |system_sys_concat_intc_0                                       |     0|
 |584   |      sys_logic_inv                                                                                   |system_sys_logic_inv_0                                         |     1|
 |585   |      sys_ps7                                                                                         |system_sys_ps7_0                                               |   268|
@@ -9301,17 +9302,17 @@ Report Instance Areas:
 |610   |      util_vector_logic_0                                                                             |system_util_vector_logic_0_0                                   |     1|
 +------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:45 ; elapsed = 00:02:46 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:47 ; elapsed = 00:02:49 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6327 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:33 ; elapsed = 00:02:12 . Memory (MB): peak = 1798.605 ; gain = 532.516
-Synthesis Optimization Complete : Time (s): cpu = 00:02:45 ; elapsed = 00:02:47 . Memory (MB): peak = 1798.605 ; gain = 1470.492
+Synthesis finished with 0 errors, 0 critical warnings and 6326 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:38 ; elapsed = 00:02:16 . Memory (MB): peak = 1798.875 ; gain = 530.871
+Synthesis Optimization Complete : Time (s): cpu = 00:02:47 ; elapsed = 00:02:49 . Memory (MB): peak = 1798.875 ; gain = 1471.629
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1990 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1986 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1798.605 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1798.875 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 201 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 3 instances
@@ -9327,10 +9328,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 1090 Infos, 89 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:54 ; elapsed = 00:02:56 . Memory (MB): peak = 1798.605 ; gain = 1483.281
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1798.605 ; gain = 0.000
+synth_design: Time (s): cpu = 00:02:56 ; elapsed = 00:02:58 . Memory (MB): peak = 1798.875 ; gain = 1483.816
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1798.875 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/system_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_top_utilization_synth.rpt -pb system_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 12 04:30:53 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 12 09:07:37 2022...

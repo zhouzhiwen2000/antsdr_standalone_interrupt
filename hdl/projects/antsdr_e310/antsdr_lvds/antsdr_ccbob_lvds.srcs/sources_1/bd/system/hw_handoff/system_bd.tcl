@@ -234,7 +234,7 @@ proc create_root_design { parentCell } {
    CONFIG.DAC_IODELAY_ENABLE {0} \
    CONFIG.DAC_IQCORRECTION_DISABLE {0} \
    CONFIG.DAC_USERPORTS_DISABLE {0} \
-   CONFIG.ID {0} \
+   CONFIG.ID {1} \
    CONFIG.MODE_1R1T {0} \
    CONFIG.TDD_DISABLE {0} \
  ] $axi_ad9361
@@ -887,6 +887,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net spi1_csn_i_1 [get_bd_ports spi1_csn_i] [get_bd_pins sys_ps7/SPI1_SS_I]
   connect_bd_net -net spi1_sdi_i_1 [get_bd_ports spi1_sdi_i] [get_bd_pins sys_ps7/SPI1_MISO_I]
   connect_bd_net -net spi1_sdo_i_1 [get_bd_ports spi1_sdo_i] [get_bd_pins sys_ps7/SPI1_MOSI_I]
+  connect_bd_net -net sync_gen_0_dac_sync [get_bd_pins axi_ad9361/dac_sync_in] [get_bd_pins sync_gen_0/dac_sync]
   connect_bd_net -net sync_gen_0_sync_out [get_bd_pins axi_ad9361_adc_dma/fifo_wr_sync] [get_bd_pins sync_gen_0/sync_out]
   connect_bd_net -net sys_200m_clk [get_bd_pins axi_ad9361/delay_clk] [get_bd_pins sys_ps7/FCLK_CLK1]
   connect_bd_net -net sys_concat_intc_dout [get_bd_pins sys_concat_intc/dout] [get_bd_pins sys_ps7/IRQ_F2P]

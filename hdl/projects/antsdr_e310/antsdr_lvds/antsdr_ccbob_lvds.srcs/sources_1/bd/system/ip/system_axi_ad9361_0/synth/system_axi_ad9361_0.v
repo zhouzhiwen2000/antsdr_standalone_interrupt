@@ -252,7 +252,7 @@ input wire [31 : 0] up_adc_gpio_in;
 output wire [31 : 0] up_adc_gpio_out;
 
   axi_ad9361 #(
-    .ID(0),
+    .ID(1),
     .MODE_1R1T(0),
     .FPGA_TECHNOLOGY(1),
     .FPGA_FAMILY(4),

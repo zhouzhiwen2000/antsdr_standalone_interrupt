@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Apr 12 04:30:53 2022
+| Date         : Tue Apr 12 09:07:37 2022
 | Host         : Home-PC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file system_top_utilization_synth.rpt -pb system_top_utilization_synth.pb
 | Design       : system_top
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 14563 |     0 |     53200 | 27.37 |
-|   LUT as Logic             | 13390 |     0 |     53200 | 25.17 |
+| Slice LUTs*                | 14590 |     0 |     53200 | 27.42 |
+|   LUT as Logic             | 13417 |     0 |     53200 | 25.22 |
 |   LUT as Memory            |  1173 |     0 |     17400 |  6.74 |
 |     LUT as Distributed RAM |   412 |     0 |           |       |
 |     LUT as Shift Register  |   761 |     0 |           |       |
-| Slice Registers            | 20361 |     0 |    106400 | 19.14 |
-|   Register as Flip Flop    | 20361 |     0 |    106400 | 19.14 |
+| Slice Registers            | 20368 |     0 |    106400 | 19.14 |
+|   Register as Flip Flop    | 20368 |     0 |    106400 | 19.14 |
 |   Register as Latch        |     0 |     0 |    106400 |  0.00 |
-| F7 Muxes                   |   105 |     0 |     26600 |  0.39 |
+| F7 Muxes                   |   101 |     0 |     26600 |  0.38 |
 | F8 Muxes                   |     4 |     0 |     13300 |  0.03 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -57,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 74    |          Yes |           - |          Set |
-| 4090  |          Yes |           - |        Reset |
-| 302   |          Yes |         Set |            - |
-| 15895 |          Yes |       Reset |            - |
+| 4091  |          Yes |           - |        Reset |
+| 330   |          Yes |         Set |            - |
+| 15873 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -153,21 +153,21 @@ Table of Contents
 +------------+-------+----------------------+
 |  Ref Name  |  Used |  Functional Category |
 +------------+-------+----------------------+
-| FDRE       | 15895 |         Flop & Latch |
-| LUT3       |  6016 |                  LUT |
-| FDCE       |  4090 |         Flop & Latch |
-| LUT6       |  2928 |                  LUT |
-| LUT1       |  2125 |                  LUT |
+| FDRE       | 15873 |         Flop & Latch |
+| LUT3       |  6009 |                  LUT |
+| FDCE       |  4091 |         Flop & Latch |
+| LUT6       |  2948 |                  LUT |
+| LUT1       |  2122 |                  LUT |
 | LUT2       |  1910 |                  LUT |
 | CARRY4     |  1628 |           CarryLogic |
-| LUT5       |  1121 |                  LUT |
-| LUT4       |  1048 |                  LUT |
+| LUT5       |  1119 |                  LUT |
+| LUT4       |  1056 |                  LUT |
 | SRL16E     |   714 |   Distributed Memory |
 | RAMD32     |   612 |   Distributed Memory |
-| FDSE       |   302 |         Flop & Latch |
+| FDSE       |   330 |         Flop & Latch |
 | RAMS32     |   200 |   Distributed Memory |
 | BIBUF      |   130 |                   IO |
-| MUXF7      |   105 |                MuxFx |
+| MUXF7      |   101 |                MuxFx |
 | FDPE       |    74 |         Flop & Latch |
 | SRLC32E    |    47 |   Distributed Memory |
 | IBUF       |    31 |                   IO |

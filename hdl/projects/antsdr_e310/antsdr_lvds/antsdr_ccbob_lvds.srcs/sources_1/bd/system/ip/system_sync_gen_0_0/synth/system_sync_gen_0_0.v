@@ -59,7 +59,8 @@ module system_sync_gen_0_0 (
   dac_sot,
   clk,
   reset,
-  sync_out
+  sync_out,
+  dac_sync
 );
 
 input wire dac_sot;
@@ -70,11 +71,14 @@ input wire clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
 input wire reset;
 output wire sync_out;
+(* X_INTERFACE_INFO = "analog.com:interface:fifo_wr:1.0 dac SYNC" *)
+output wire dac_sync;
 
   sync_gen inst (
     .dac_sot(dac_sot),
     .clk(clk),
     .reset(reset),
-    .sync_out(sync_out)
+    .sync_out(sync_out),
+    .dac_sync(dac_sync)
   );
 endmodule

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sun Apr 10 07:53:03 2022
+//Date        : Tue Apr 12 09:04:16 2022
 //Host        : Home-PC running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -1593,6 +1593,7 @@ module system
   wire spi1_csn_i_1;
   wire spi1_sdi_i_1;
   wire spi1_sdo_i_1;
+  wire sync_gen_0_dac_sync;
   wire sync_gen_0_sync_out;
   wire sys_200m_clk;
   wire [15:0]sys_concat_intc_dout;
@@ -1727,7 +1728,7 @@ module system
         .dac_enable_q0(axi_ad9361_dac_enable_q0),
         .dac_enable_q1(axi_ad9361_dac_enable_q1),
         .dac_r1_mode(axi_ad9361_dac_r1_mode),
-        .dac_sync_in(1'b0),
+        .dac_sync_in(sync_gen_0_dac_sync),
         .dac_valid_i0(axi_ad9361_dac_valid_i0),
         .delay_clk(sys_200m_clk),
         .enable(axi_ad9361_enable),
@@ -2185,6 +2186,7 @@ module system
   system_sync_gen_0_0 sync_gen_0
        (.clk(axi_ad9361_l_clk),
         .dac_sot(util_vector_logic_0_Res),
+        .dac_sync(sync_gen_0_dac_sync),
         .reset(util_ad9361_divclk_reset_peripheral_reset),
         .sync_out(sync_gen_0_sync_out));
   system_sys_concat_intc_0 sys_concat_intc

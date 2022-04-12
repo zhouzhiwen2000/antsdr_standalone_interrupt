@@ -18,14 +18,15 @@ If this directory should no longer be in your list of user repositories, go to t
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.cache/ip 
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 358.418 ; gain = 72.172
 Command: synth_design -top system_top -part xc7z020clg400-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13040 
+INFO: Helper process launched with PID 18424 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 514.871 ; gain = 155.199
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 514.461 ; gain = 154.309
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-2048] function gpo_bit_used does not always return a value [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:1139]
 INFO: [Synth 8-6157] synthesizing module 'system_top' [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:38]
@@ -33,8 +34,11 @@ INFO: [Synth 8-6157] synthesizing module 'ad_iobuf' [C:/Users/zhouzhiwen/Desktop
 	Parameter DATA_WIDTH bound to: 11 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'ad_iobuf' (1#1) [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/xilinx/common/ad_iobuf.v:38]
 INFO: [Synth 8-6157] synthesizing module 'ad_iobuf__parameterized0' [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/xilinx/common/ad_iobuf.v:38]
-	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'ad_iobuf__parameterized0' (1#1) [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/xilinx/common/ad_iobuf.v:38]
+INFO: [Synth 8-6157] synthesizing module 'ad_iobuf__parameterized1' [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/xilinx/common/ad_iobuf.v:38]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ad_iobuf__parameterized1' (1#1) [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/library/xilinx/common/ad_iobuf.v:38]
 INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/imports/hdl/system_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
 	Parameter DRIVE bound to: 12 - type: integer 
@@ -858,6 +862,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_dmac' [c:/Users/zhouzhiwen/Desktop
 	Parameter DMA_LENGTH_ALIGN bound to: 3 - type: integer 
 	Parameter BYTES_PER_BURST_WIDTH bound to: 7 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'axi_dmac_regmap' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/a45c/axi_dmac_regmap.v:38]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter ID bound to: 0 - type: integer 
 	Parameter DISABLE_DEBUG_REGISTERS bound to: 1'b0 
 	Parameter BYTES_PER_BEAT_WIDTH_DEST bound to: 3 - type: integer 
@@ -873,8 +878,6 @@ INFO: [Synth 8-6157] synthesizing module 'axi_dmac_regmap' [c:/Users/zhouzhiwen/
 	Parameter SYNC_TRANSFER_START bound to: 1'b1 
 	Parameter PCORE_VERSION bound to: 262754 - type: integer 
 INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/a45c/axi_dmac_regmap.v:178]
-INFO: [Synth 8-6157] synthesizing module 'axi_dmac_regmap_request' [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/a45c/axi_dmac_regmap_request.v:38]
-INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter DISABLE_DEBUG_REGISTERS bound to: 1'b0 
 	Parameter BYTES_PER_BEAT_WIDTH_DEST bound to: 3 - type: integer 
 	Parameter BYTES_PER_BEAT_WIDTH_SRC bound to: 3 - type: integer 
@@ -938,10 +941,9 @@ INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/zhou
 	Parameter NUM_OF_BITS bound to: 1 - type: integer 
 	Parameter ASYNC_CLK bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'sync_bits' (57#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/2b57/sync_bits.v:46]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter NUM_OF_BITS bound to: 1 - type: integer 
 	Parameter ASYNC_CLK bound to: 1'b1 
-INFO: [Synth 8-6155] done synthesizing module 'sync_bits__parameterized0' (57#1) [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/2b57/sync_bits.v:46]
-INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter DMA_DATA_WIDTH_SRC bound to: 64 - type: integer 
 	Parameter DMA_DATA_WIDTH_DEST bound to: 64 - type: integer 
 	Parameter DMA_LENGTH_WIDTH bound to: 24 - type: integer 
@@ -3472,7 +3474,7 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-WARNING: [Synth 8-3848] Net gp_in in module/entity system_top does not have driver. [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:109]
+WARNING: [Synth 8-3848] Net gp_in in module/entity system_top does not have driver. [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:118]
 INFO: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In2[0]
 INFO: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In3[0]
 INFO: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In4[0]
@@ -3575,7 +3577,7 @@ INFO: [Synth 8-3331] design util_cpack2 has unconnected port enable_19
 INFO: [Synth 8-3331] design util_cpack2 has unconnected port enable_20
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 1229.094 ; gain = 869.422
+Finished RTL Elaboration : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 1231.496 ; gain = 871.344
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3623,42 +3625,42 @@ INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[1] to constant 0 [c:/User
 INFO: [Synth 8-3295] tying undriven pin inst:sl_iport0[0] to constant 0 [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_ila_0_1/synth/system_ila_0_1.v:3223]
 INFO: [Synth 8-3295] tying undriven pin inst:trig_in to constant 0 [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_ila_0_1/synth/system_ila_0_1.v:3223]
 INFO: [Synth 8-3295] tying undriven pin inst:trig_out_ack to constant 0 [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_ila_0_1/synth/system_ila_0_1.v:3223]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[27] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[26] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[25] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[24] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[23] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[22] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[21] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[20] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[19] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[18] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[17] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[16] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[15] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[14] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[13] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[12] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[11] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[10] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[9] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[8] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[7] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[6] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[5] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[4] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[3] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[2] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[1] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
-WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[0] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:146]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[27] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[26] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[25] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[24] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[23] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[22] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[21] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[20] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[19] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[18] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[17] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[16] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[15] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[14] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[13] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[12] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[11] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[10] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[9] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[8] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[7] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[6] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[5] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[4] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[3] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[2] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[1] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
+WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[0] to constant 0 [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:170]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 1229.094 ; gain = 869.422
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 1231.496 ; gain = 871.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 1229.094 ; gain = 869.422
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 1231.496 ; gain = 871.344
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 703 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -3780,7 +3782,7 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_p
 Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_ila_0_1/ila_v6_2/constraints/ila.xdc] for cell 'i_system_wrapper/system_i/ila_0/inst'
 Finished Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_ila_0_1/ila_v6_2/constraints/ila.xdc] for cell 'i_system_wrapper/system_i/ila_0/inst'
 INFO: [Timing 38-2] Deriving generated clocks
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1942.480 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1942.344 ; gain = 0.000
 Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/antsdr_constr.xdc]
 Finished Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/antsdr_constr.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/antsdr_constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
@@ -3797,7 +3799,7 @@ Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/ant
 Finished Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1951.461 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1950.965 ; gain = 0.000
 Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_0/system_axi_ad9361_0_pps_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst'
 Finished Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_0/system_axi_ad9361_0_pps_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst'
 Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361_adc_dma/inst'
@@ -3827,10 +3829,10 @@ WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SU
 Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'i_system_wrapper/system_i/axi_hp2_interconnect/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1951.461 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1950.965 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1952.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1952.438 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 511 instances were transformed.
   BUFGCE => BUFGCTRL: 1 instances
@@ -3845,17 +3847,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 8 instances
   SRL16 => SRL16E: 3 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1952.953 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.360 . Memory (MB): peak = 1952.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1952.438 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.366 . Memory (MB): peak = 1952.438 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished Constraint Validation : Time (s): cpu = 00:02:07 ; elapsed = 00:02:08 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:07 ; elapsed = 00:02:08 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -4284,7 +4286,7 @@ Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_hp1_int
 Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_hp1_interconnect/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for i_system_wrapper/system_i/axi_hp2_interconnect/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:05 ; elapsed = 00:02:06 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:09 ; elapsed = 00:02:09 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "adc_valid_p" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "adc_data_p" won't be mapped to RAM because it is too sparse
@@ -5141,7 +5143,7 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in m
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized50'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:15 ; elapsed = 00:02:17 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:19 ; elapsed = 00:02:21 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -5172,7 +5174,7 @@ Report RTL Partitions:
 |22    |system_clk_wiz_0_1_clk_wiz__GC0            |           1|        12|
 |23    |system__GCB0                               |           1|     24669|
 |24    |system__GCB1                               |           1|     20658|
-|25    |system_top__GC0                            |           1|        54|
+|25    |system_top__GC0                            |           1|        70|
 +------+-------------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -11235,7 +11237,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_system
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_system_wrapper/system_i /i_1/axi_delay_counter_0/\inst/axi_delay_counter_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:47 ; elapsed = 00:03:50 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:57 ; elapsed = 00:03:59 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -11307,7 +11309,7 @@ Report RTL Partitions:
 |22    |system_clk_wiz_0_1_clk_wiz__GC0            |           1|        12|
 |23    |system__GCB0                               |           1|     13312|
 |24    |system__GCB1                               |           1|     13319|
-|25    |system_top__GC0                            |           1|        54|
+|25    |system_top__GC0                            |           1|        70|
 |26    |sc_exit_v1_0_8_axi3_conv__GC0__1           |           1|       558|
 |27    |sc_util_v1_0_4_axi_reg_stall__1            |           1|       377|
 |28    |sc_util_v1_0_4_axi_reg_stall__2            |           2|        28|
@@ -11335,13 +11337,13 @@ WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 69
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 74 of c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc:74]
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:59 ; elapsed = 00:04:01 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:08 ; elapsed = 00:04:11 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:02 ; elapsed = 00:04:05 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished Timing Optimization : Time (s): cpu = 00:04:12 ; elapsed = 00:04:14 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -11409,7 +11411,7 @@ Report RTL Partitions:
 |22    |system_clk_wiz_0_1_clk_wiz__GC0            |           1|        12|
 |23    |system__GCB0                               |           1|     13312|
 |24    |system__GCB1                               |           1|     13319|
-|25    |system_top__GC0                            |           1|        54|
+|25    |system_top__GC0                            |           1|        70|
 |26    |sc_exit_v1_0_8_axi3_conv__GC0__1           |           1|       558|
 |27    |sc_util_v1_0_4_axi_reg_stall__1            |           1|       377|
 |28    |sc_util_v1_0_4_axi_reg_stall__2            |           2|        28|
@@ -11438,7 +11440,7 @@ INFO: [Synth 8-3332] Sequential element (gen_endpoint.decerr_slave_inst/FSM_oneh
 INFO: [Synth 8-6837] The timing for the instance i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_transfer/i_request_arb/i_store_and_forward/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_transfer/i_request_arb/i_store_and_forward/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:14 ; elapsed = 00:04:17 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished Technology Mapping : Time (s): cpu = 00:04:24 ; elapsed = 00:04:27 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11502,7 +11504,7 @@ WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[6] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[5] to constant 0
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:16 ; elapsed = 00:04:19 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished IO Insertion : Time (s): cpu = 00:04:26 ; elapsed = 00:04:29 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -11515,7 +11517,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:16 ; elapsed = 00:04:19 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:26 ; elapsed = 00:04:29 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11527,25 +11529,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:20 ; elapsed = 00:04:23 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:30 ; elapsed = 00:04:33 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:20 ; elapsed = 00:04:23 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:30 ; elapsed = 00:04:33 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:21 ; elapsed = 00:04:24 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:31 ; elapsed = 00:04:33 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:21 ; elapsed = 00:04:24 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:31 ; elapsed = 00:04:34 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -11690,7 +11692,7 @@ Report Cell Usage:
 |62    |IBUF       |     3|
 |63    |IBUFDS     |     7|
 |64    |IBUFGDS    |     1|
-|65    |IOBUF      |    29|
+|65    |IOBUF      |    37|
 |66    |OBUF       |     6|
 |67    |OBUFDS     |     8|
 +------+-----------+------+
@@ -11699,7 +11701,7 @@ Report Instance Areas:
 +------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
 |      |Instance                                                                                              |Module                                                         |Cells |
 +------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
-|1     |top                                                                                                   |                                                               | 49592|
+|1     |top                                                                                                   |                                                               | 49600|
 |2     |  i_system_wrapper                                                                                    |system_wrapper                                                 | 49559|
 |3     |    system_i                                                                                          |system                                                         | 49557|
 |4     |      axi_ad9361                                                                                      |system_axi_ad9361_0                                            | 31407|
@@ -12716,22 +12718,22 @@ Report Instance Areas:
 |1015  |      GND_1                                                                                           |system_GND_1_0                                                 |     0|
 +------+------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:21 ; elapsed = 00:04:24 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:31 ; elapsed = 00:04:34 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6366 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:20 ; elapsed = 00:03:45 . Memory (MB): peak = 1954.156 ; gain = 869.422
-Synthesis Optimization Complete : Time (s): cpu = 00:04:21 ; elapsed = 00:04:24 . Memory (MB): peak = 1954.156 ; gain = 1594.484
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:26 ; elapsed = 00:03:53 . Memory (MB): peak = 1953.688 ; gain = 871.344
+Synthesis Optimization Complete : Time (s): cpu = 00:04:31 ; elapsed = 00:04:34 . Memory (MB): peak = 1953.688 ; gain = 1593.535
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 2740 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 2748 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. i_system_wrapper/system_i/clk_wiz_0/inst/clkin1_ibufg 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 INFO: [Chipscope 16-324] Core: i_system_wrapper/system_i/ila_0 UUID: f1f9ed16-5813-5c08-b893-b9c7b010f192 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1954.156 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1953.688 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 638 instances were transformed.
+  A total of 646 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 3 instances
   BUFGCE => BUFGCTRL: 1 instances
   CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 352 instances
@@ -12739,7 +12741,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   DSP48E => DSP48E1: 24 instances
   FDR => FDRE: 27 instances
   IBUFGDS => IBUFDS: 1 instances
-  IOBUF => IOBUF (IBUF, OBUFT): 29 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 37 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 8 instances
   RAM16X1D => RAM32X1D (RAMD32, RAMD32): 6 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 100 instances
@@ -12749,13 +12751,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 1272 Infos, 126 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:33 ; elapsed = 00:04:36 . Memory (MB): peak = 1954.156 ; gain = 1596.184
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1954.156 ; gain = 0.000
+synth_design: Time (s): cpu = 00:04:43 ; elapsed = 00:04:46 . Memory (MB): peak = 1953.688 ; gain = 1595.270
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1953.688 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/system_top.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1954.156 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1953.688 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file system_top_utilization_synth.rpt -pb system_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 13 03:26:56 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 13 05:20:33 2022...

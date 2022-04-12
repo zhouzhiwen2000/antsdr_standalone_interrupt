@@ -453,14 +453,14 @@ void rf_switch_init()
 	gpio_direction(GPIO_TX2_BAND_SEL_H   ,1);
 	gpio_direction(GPIO_TX2_BAND_SEL_L   ,1);
 
-	gpio_set_value(GPIO_RX1_BAND_SEL_H   ,1);
-	gpio_set_value(GPIO_RX1_BAND_SEL_L   ,0);
-	gpio_set_value(GPIO_TX1_BAND_SEL_H   ,1);
-	gpio_set_value(GPIO_TX1_BAND_SEL_L   ,0);
-	gpio_set_value(GPIO_RX2_BAND_SEL_H   ,1);
-	gpio_set_value(GPIO_RX2_BAND_SEL_L   ,0);
-	gpio_set_value(GPIO_TX2_BAND_SEL_H   ,1);
-	gpio_set_value(GPIO_TX2_BAND_SEL_L   ,0);
+	gpio_set_value(GPIO_RX1_BAND_SEL_H   ,0);
+	gpio_set_value(GPIO_RX1_BAND_SEL_L   ,1);
+	gpio_set_value(GPIO_TX1_BAND_SEL_H   ,0);
+	gpio_set_value(GPIO_TX1_BAND_SEL_L   ,1);
+	gpio_set_value(GPIO_RX2_BAND_SEL_H   ,0);
+	gpio_set_value(GPIO_RX2_BAND_SEL_L   ,1);
+	gpio_set_value(GPIO_TX2_BAND_SEL_H   ,0);
+	gpio_set_value(GPIO_TX2_BAND_SEL_L   ,1);
 }
 
 /***************************************************************************//**

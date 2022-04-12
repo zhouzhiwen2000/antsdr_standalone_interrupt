@@ -109,14 +109,14 @@
 #define GPIO_CTL3_PIN				97
 
 /* RF switch define */
-#define GPIO_RX1_BAND_SEL_H				54
-#define GPIO_RX1_BAND_SEL_L				55
-#define GPIO_TX1_BAND_SEL_H				56
-#define GPIO_TX1_BAND_SEL_L				57
-#define GPIO_RX2_BAND_SEL_H				58
-#define GPIO_RX2_BAND_SEL_L				59
-#define GPIO_TX2_BAND_SEL_H				60
-#define GPIO_TX2_BAND_SEL_L				61
+#define GPIO_RX1_BAND_SEL_H				71
+#define GPIO_RX1_BAND_SEL_L				72
+#define GPIO_TX1_BAND_SEL_H				73
+#define GPIO_TX1_BAND_SEL_L				74
+#define GPIO_RX2_BAND_SEL_H				75
+#define GPIO_RX2_BAND_SEL_L				76
+#define GPIO_TX2_BAND_SEL_H				77
+#define GPIO_TX2_BAND_SEL_L				78
 
 
 

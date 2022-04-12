@@ -1,4 +1,4 @@
-03:32:28 **** Build of project lwip_enabled_bsp ****
+05:32:27 **** Auto Build of project lwip_enabled_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/axi_delay_counter_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/axi_delay_counter_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -149,5 +149,5 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Compiling xadcps"
 'Finished building libraries'
 
-03:32:50 Build Finished (took 21s.858ms)
+05:32:51 Build Finished (took 23s.714ms)
 

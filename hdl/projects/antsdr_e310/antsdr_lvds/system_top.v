@@ -64,7 +64,16 @@ module system_top (
   inout           iic_sda,
 
   inout   [10:0]  gpio_bd,
-
+  
+  inout          VCRX1_H,
+  inout          VCRX1_L,
+  inout          VCTX1_H,
+  inout          VCTX1_L,
+  inout          VCRX2_H,
+  inout          VCRX2_L,
+  inout          VCTX2_H,
+  inout          VCTX2_L,
+  
   input           rx_clk_in_p,
   input           rx_clk_in_n,
   input           rx_frame_in_p,
@@ -117,13 +126,28 @@ module system_top (
 
   // board gpio - 31-0
 
-  assign gpio_i[31:11] = gpio_o[31:11];
-
+  assign gpio_i[31:25] = gpio_o[31:25];
+  assign gpio_i[16:11] = gpio_o[16:11];
+  
   ad_iobuf #(.DATA_WIDTH(11)) i_iobuf_bd (
     .dio_t (gpio_t[10:0]),
     .dio_i (gpio_o[10:0]),
     .dio_o (gpio_i[10:0]),
     .dio_p (gpio_bd));
+    
+  ad_iobuf #(.DATA_WIDTH(8)) i_iobuf_rfswitch (
+    .dio_t (gpio_t[24:17]),
+    .dio_i (gpio_o[24:17]),
+    .dio_o (gpio_i[24:17]),
+    .dio_p ({VCTX2_L,       //24
+            VCTX2_H,        //23
+            VCRX2_L,        //22
+            VCRX2_H,        //21
+            VCTX1_L,        //20
+            VCTX1_H,        //19
+            VCRX1_L,        //18
+            VCRX1_H         //17
+    }));
 
   // ad9361 gpio - 63-32
 

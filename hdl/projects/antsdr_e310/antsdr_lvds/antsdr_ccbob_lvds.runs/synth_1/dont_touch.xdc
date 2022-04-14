@@ -157,8 +157,137 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_ila_0_1 
 # IP: bd/system/ip/system_axi_delay_counter_0_0/system_axi_delay_counter_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_delay_counter_0_0 || ORIG_REF_NAME==system_axi_delay_counter_0_0} -quiet] -quiet
 
+# IP: bd/system/ip/system_xfft_0_0/system_xfft_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xfft_0_0 || ORIG_REF_NAME==system_xfft_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_dma_0_0 || ORIG_REF_NAME==system_axi_dma_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_smartconnect_0_0/system_smartconnect_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_smartconnect_0_0 || ORIG_REF_NAME==system_smartconnect_0_0} -quiet] -quiet
+
+# Block Designs: bd/system/ip/system_smartconnect_0_0/bd_0/bd_919a.bd
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_0/bd_919a_one_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_1/bd_919a_psr_aclk_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_2/bd_919a_arsw_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_3/bd_919a_rsw_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_4/bd_919a_awsw_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_5/bd_919a_wsw_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_6/bd_919a_bsw_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_7/bd_919a_s00mmu_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_8/bd_919a_s00tr_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_9/bd_919a_s00sic_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_10/bd_919a_s00a2s_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_11/bd_919a_sarn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_12/bd_919a_srn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_13/bd_919a_s01mmu_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_14/bd_919a_s01tr_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_15/bd_919a_s01sic_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_16/bd_919a_s01a2s_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_17/bd_919a_sawn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_18/bd_919a_swn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_19/bd_919a_sbn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_20/bd_919a_s02mmu_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_21/bd_919a_s02tr_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_22/bd_919a_s02sic_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_23/bd_919a_s02a2s_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_24/bd_919a_sarn_1.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_25/bd_919a_srn_1.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_26/bd_919a_m00s2a_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_27/bd_919a_m00arn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_28/bd_919a_m00rn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_29/bd_919a_m00awn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_30/bd_919a_m00wn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_31/bd_919a_m00bn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_32/bd_919a_m00e_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: bd/system/ip/system_axi_dma_1_0/system_axi_dma_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_dma_1_0 || ORIG_REF_NAME==system_axi_dma_1_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_rst_sys_ps7_200M_0/system_rst_sys_ps7_200M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_rst_sys_ps7_200M_0 || ORIG_REF_NAME==system_rst_sys_ps7_200M_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_xbar_2/system_xbar_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xbar_2 || ORIG_REF_NAME==system_xbar_2} -quiet] -quiet
+
+# IP: bd/system/ip/system_axi_interconnect_0_0/system_axi_interconnect_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_interconnect_0_0 || ORIG_REF_NAME==system_axi_interconnect_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_xlslice_0_0/system_xlslice_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xlslice_0_0 || ORIG_REF_NAME==system_xlslice_0_0} -quiet] -quiet
+
 # IP: bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_0 || ORIG_REF_NAME==system_auto_pc_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_auto_pc_1/system_auto_pc_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_1 || ORIG_REF_NAME==system_auto_pc_1} -quiet] -quiet
 
 # XDC: bd/system/ip/system_sys_ps7_0/system_sys_ps7_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_sys_ps7_0 || ORIG_REF_NAME==system_sys_ps7_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
@@ -257,6 +386,86 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/system/ip/system_ila_0_1/system_ila_0_1_ooc.xdc
 
+# XDC: bd/system/ip/system_xfft_0_0/system_xfft_0_0_ooc.xdc
+
+# XDC: bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0_ooc.xdc
+
+# XDC: bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_dma_0_0 || ORIG_REF_NAME==system_axi_dma_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0_clocks.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_dma_0_0 || ORIG_REF_NAME==system_axi_dma_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_1/bd_919a_psr_aclk_0_board.xdc
+# DONT_TOUCH constraint suppressed by parent sub-design file.
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_1/bd_919a_psr_aclk_0.xdc
+# DONT_TOUCH constraint suppressed by parent sub-design file.
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_2/bd_919a_arsw_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_3/bd_919a_rsw_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_4/bd_919a_awsw_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_5/bd_919a_wsw_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_6/bd_919a_bsw_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_10/bd_919a_s00a2s_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_11/bd_919a_sarn_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_12/bd_919a_srn_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_16/bd_919a_s01a2s_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_17/bd_919a_sawn_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_18/bd_919a_swn_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_19/bd_919a_sbn_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_23/bd_919a_s02a2s_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_24/bd_919a_sarn_1_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_25/bd_919a_srn_1_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_26/bd_919a_m00s2a_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_27/bd_919a_m00arn_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_28/bd_919a_m00rn_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_29/bd_919a_m00awn_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_30/bd_919a_m00wn_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_31/bd_919a_m00bn_0_ooc.xdc
+
+# XDC: bd/system/ip/system_smartconnect_0_0/ooc.xdc
+
+# XDC: bd/system/ip/system_axi_dma_1_0/system_axi_dma_1_0_ooc.xdc
+
+# XDC: bd/system/ip/system_axi_dma_1_0/system_axi_dma_1_0.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_dma_1_0 || ORIG_REF_NAME==system_axi_dma_1_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/system/ip/system_axi_dma_1_0/system_axi_dma_1_0_clocks.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_dma_1_0 || ORIG_REF_NAME==system_axi_dma_1_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/system/ip/system_rst_sys_ps7_200M_0/system_rst_sys_ps7_200M_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_rst_sys_ps7_200M_0 || ORIG_REF_NAME==system_rst_sys_ps7_200M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/system/ip/system_rst_sys_ps7_200M_0/system_rst_sys_ps7_200M_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_rst_sys_ps7_200M_0 || ORIG_REF_NAME==system_rst_sys_ps7_200M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/system/ip/system_rst_sys_ps7_200M_0/system_rst_sys_ps7_200M_0_ooc.xdc
+
+# XDC: bd/system/ip/system_xbar_2/system_xbar_2_ooc.xdc
+
 # XDC: bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc
+
+# XDC: bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc
 
 # XDC: bd/system/system_ooc.xdc

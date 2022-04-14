@@ -18445,3 +18445,28 @@ con
 05:39:23 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.
 05:41:19 INFO  : Invoking Bootgen: bootgen -image lwip_enabled.bif -arch zynq -o C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\lwip_enabled\bootimage\BOOT.bin -w on
 05:41:20 INFO  : Bootgen command execution is done.
+11:11:23 INFO  : Registering command handlers for SDK TCF services
+11:11:23 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\temp_xsdb_launch_script.tcl
+11:11:25 INFO  : XSCT server has started successfully.
+11:11:27 INFO  : Successfully done setting XSCT server connection channel  
+11:11:27 INFO  : Successfully done setting SDK workspace  
+11:11:27 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+11:11:27 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.
+11:11:30 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1649905545571,  Project:1649798675967
+11:11:30 INFO  : The hardware specification for project 'system_top_hw_platform_0' is different from C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+11:11:30 INFO  : Copied contents of C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf into \system_top_hw_platform_0\system.hdf.
+11:11:36 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+11:11:39 INFO  : 
+11:11:43 INFO  : 
+11:11:46 INFO  : 
+11:11:47 INFO  : Updating hardware inferred compiler options for fsbl.
+11:11:48 INFO  : Updating hardware inferred compiler options for lwip_enabled.
+11:11:48 INFO  : Updating hardware inferred compiler options for tcpdemo.
+11:11:48 INFO  : Clearing existing target manager status.
+11:12:52 INFO  : Registering command handlers for SDK TCF services
+11:12:53 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\temp_xsdb_launch_script.tcl
+11:12:55 INFO  : XSCT server has started successfully.
+11:12:55 INFO  : Successfully done setting XSCT server connection channel  
+11:12:55 INFO  : Successfully done setting SDK workspace  
+11:12:55 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+11:12:55 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.

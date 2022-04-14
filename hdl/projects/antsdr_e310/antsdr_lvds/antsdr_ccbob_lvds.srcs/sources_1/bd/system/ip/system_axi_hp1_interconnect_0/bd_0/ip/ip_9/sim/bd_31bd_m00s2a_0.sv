@@ -105,7 +105,7 @@ output wire m_sc_b_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_B RECV" *)
 input wire m_sc_b_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_B PAYLD" *)
-output wire [4 : 0] m_sc_b_payld;
+output wire [6 : 0] m_sc_b_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AW REQ" *)
 input wire s_sc_aw_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AW INFO" *)
@@ -115,7 +115,7 @@ input wire s_sc_aw_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AW RECV" *)
 output wire s_sc_aw_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AW PAYLD" *)
-input wire [135 : 0] s_sc_aw_payld;
+input wire [139 : 0] s_sc_aw_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_W REQ" *)
 input wire s_sc_w_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_W INFO" *)
@@ -127,7 +127,7 @@ output wire s_sc_w_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_W PAYLD" *)
 input wire [87 : 0] s_sc_w_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWID" *)
-output wire [0 : 0] m_axi_awid;
+output wire [2 : 0] m_axi_awid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWADDR" *)
 output wire [29 : 0] m_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWLEN" *)
@@ -159,25 +159,25 @@ output wire m_axi_wvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI WREADY" *)
 input wire m_axi_wready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BID" *)
-input wire [0 : 0] m_axi_bid;
+input wire [2 : 0] m_axi_bid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BRESP" *)
 input wire [1 : 0] m_axi_bresp;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BUSER" *)
 input wire [1023 : 0] m_axi_buser;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BVALID" *)
 input wire m_axi_bvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 1, ADDR_WIDTH 30, AWUSER_WIDTH 1024, ARUSER_WIDTH 0, WUSER_WIDTH 1024, RUSER_WIDTH 0, BUSER_WIDTH 1024, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.000, CLK_DOMAIN system_sys_ps7_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 3, ADDR_WIDTH 30, AWUSER_WIDTH 1024, ARUSER_WIDTH 0, WUSER_WIDTH 1024, RUSER_WIDTH 0, BUSER_WIDTH 1024, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.000, CLK_DOMAIN system_sys_ps7_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM\
 _WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BREADY" *)
 output wire m_axi_bready;
 
   sc_sc2axi_v1_0_7_top #(
     .C_AXI_ADDR_WIDTH(30),
-    .C_AXI_ID_WIDTH(1),
+    .C_AXI_ID_WIDTH(3),
     .C_AXI_RDATA_WIDTH(64),
     .C_AXI_WDATA_WIDTH(64),
     .C_SC_ADDR_WIDTH(30),
-    .C_SC_ID_WIDTH(1),
+    .C_SC_ID_WIDTH(3),
     .C_SC_RDATA_WIDTH(64),
     .C_SC_WDATA_WIDTH(64),
     .C_SC_RUSER_BITS_PER_BYTE(0),
@@ -187,11 +187,11 @@ output wire m_axi_bready;
     .C_SC_BUSER_WIDTH(0),
     .C_MSC_ROUTE_WIDTH(1),
     .C_SSC_ROUTE_WIDTH(1),
-    .C_AWPAYLD_WIDTH(136),
-    .C_ARPAYLD_WIDTH(136),
+    .C_AWPAYLD_WIDTH(140),
+    .C_ARPAYLD_WIDTH(140),
     .C_WPAYLD_WIDTH(88),
-    .C_RPAYLD_WIDTH(83),
-    .C_BPAYLD_WIDTH(5)
+    .C_RPAYLD_WIDTH(85),
+    .C_BPAYLD_WIDTH(7)
   ) inst (
     .aclk(aclk),
     .m_sc_r_req(),
@@ -208,7 +208,7 @@ output wire m_axi_bready;
     .s_sc_ar_info(1'D0),
     .s_sc_ar_send(1'D0),
     .s_sc_ar_recv(),
-    .s_sc_ar_payld(136'D0),
+    .s_sc_ar_payld(140'D0),
     .s_sc_aw_req(s_sc_aw_req),
     .s_sc_aw_info(s_sc_aw_info),
     .s_sc_aw_send(s_sc_aw_send),
@@ -250,7 +250,7 @@ output wire m_axi_bready;
     .m_axi_aruser(),
     .m_axi_arvalid(),
     .m_axi_arready(1'H0),
-    .m_axi_rid(1'H0),
+    .m_axi_rid(3'H0),
     .m_axi_rdata(64'H0000000000000000),
     .m_axi_rresp(2'H0),
     .m_axi_rlast(1'H1),

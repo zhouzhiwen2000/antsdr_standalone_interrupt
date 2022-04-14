@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 13 02:48:37 2022" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 14 10:48:06 2022" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="bd_c0fd" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -22,81 +22,6 @@
     <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="External_Ports_aresetn">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="aux_reset_in"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="31" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_araddr">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_araddr"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="M00_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arlen">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arlen"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="2" NAME="M00_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arsize">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arsize"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="1" NAME="M00_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arburst">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arburst"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="1" NAME="M00_AXI_arlock" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arlock">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arlock"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="M00_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arcache">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arcache"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="2" NAME="M00_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arprot">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arprot"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="M00_AXI_arqos" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arqos">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arqos"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arvalid">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arvalid"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="M00_AXI_arready" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arready">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arready"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="63" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_rdata">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_rdata"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_rresp">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_rresp"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="M00_AXI_rlast" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_rlast">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_rlast"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="M00_AXI_rvalid" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_rvalid">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_rvalid"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_rready">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_rready"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="29" NAME="S00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_s_axi_araddr">
@@ -172,6 +97,81 @@
     <PORT DIR="I" NAME="S00_AXI_rready" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_s_axi_rready">
       <CONNECTIONS>
         <CONNECTION INSTANCE="s00_entry_pipeline_s00_mmu" PORT="s_axi_rready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_araddr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_araddr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="M00_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arlen">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arlen"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="M00_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arsize">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arsize"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="M00_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arburst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arburst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="M00_AXI_arlock" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arlock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arlock"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="M00_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arcache">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arcache"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="M00_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arprot">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arprot"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="M00_AXI_arqos" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arqos">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arqos"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="M00_AXI_arready" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_arready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_arready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="63" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_rdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_rdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_rresp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_rresp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="M00_AXI_rlast" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_rlast">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_rlast"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="M00_AXI_rvalid" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_rvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_rvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_rready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="m_axi_rready"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -364,8 +364,8 @@
         <PARAMETER NAME="C_ENABLE_PIPELINING" VALUE="0x1"/>
         <PARAMETER NAME="C_IS_CASCADED" VALUE="0"/>
         <PARAMETER NAME="C_SSC_ROUTE_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_MEP_IDENTIFIER_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_SSC_ROUTE_ARRAY" VALUE="0b10"/>
+        <PARAMETER NAME="C_MEP_IDENTIFIER_WIDTH" VALUE="3"/>
+        <PARAMETER NAME="C_SSC_ROUTE_ARRAY" VALUE="0b00000010"/>
         <PARAMETER NAME="C_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_M_RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -377,7 +377,7 @@
         <PARAMETER NAME="C_M_RUSER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="C_M_WUSER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="C_M_BUSER_WIDTH" VALUE="0"/>
-        <PARAMETER NAME="C_S_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_M_ID_WIDTH" VALUE="0"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M_PROTOCOL" VALUE="1"/>
@@ -394,7 +394,7 @@
         <PARAMETER NAME="ENABLE_PIPELINING" VALUE="0x1"/>
         <PARAMETER NAME="IS_CASCADED" VALUE="0"/>
         <PARAMETER NAME="SSC_ROUTE_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="MEP_IDENTIFIER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="MEP_IDENTIFIER_WIDTH" VALUE="3"/>
         <PARAMETER NAME="RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="M_RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -406,7 +406,7 @@
         <PARAMETER NAME="M_RUSER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M_WUSER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M_BUSER_WIDTH" VALUE="0"/>
-        <PARAMETER NAME="S_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="M_ID_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M_MAX_BURST_LENGTH" VALUE="16"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
@@ -422,12 +422,12 @@
         <PARAMETER NAME="SINGLE_ISSUING" VALUE="0"/>
         <PARAMETER NAME="SSC000_ROUTE" VALUE="0b0"/>
         <PARAMETER NAME="SSC001_ROUTE" VALUE="0b1"/>
-        <PARAMETER NAME="SSC002_ROUTE" VALUE="0x1"/>
-        <PARAMETER NAME="SSC003_ROUTE" VALUE="0x1"/>
-        <PARAMETER NAME="SSC004_ROUTE" VALUE="0x1"/>
-        <PARAMETER NAME="SSC005_ROUTE" VALUE="0x1"/>
-        <PARAMETER NAME="SSC006_ROUTE" VALUE="0x1"/>
-        <PARAMETER NAME="SSC007_ROUTE" VALUE="0x1"/>
+        <PARAMETER NAME="SSC002_ROUTE" VALUE="0b0"/>
+        <PARAMETER NAME="SSC003_ROUTE" VALUE="0b0"/>
+        <PARAMETER NAME="SSC004_ROUTE" VALUE="0b0"/>
+        <PARAMETER NAME="SSC005_ROUTE" VALUE="0b0"/>
+        <PARAMETER NAME="SSC006_ROUTE" VALUE="0b0"/>
+        <PARAMETER NAME="SSC007_ROUTE" VALUE="0b0"/>
         <PARAMETER NAME="SSC008_ROUTE" VALUE="0x1"/>
         <PARAMETER NAME="SSC009_ROUTE" VALUE="0x1"/>
         <PARAMETER NAME="SSC010_ROUTE" VALUE="0x1"/>
@@ -690,7 +690,7 @@
             <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="s_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_s_axi_arid">
+        <PORT DIR="I" LEFT="2" NAME="s_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_s_axi_arid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="m00_sc2axi" PORT="m_axi_arid"/>
           </CONNECTIONS>
@@ -740,7 +740,7 @@
             <CONNECTION INSTANCE="m00_sc2axi" PORT="m_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="s_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_s_axi_rid">
+        <PORT DIR="O" LEFT="2" NAME="s_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_s_axi_rid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="m00_sc2axi" PORT="m_axi_rid"/>
           </CONNECTIONS>
@@ -856,7 +856,7 @@
           <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="3"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="1024"/>
@@ -962,11 +962,11 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_AXI_ADDR_WIDTH" VALUE="30"/>
-        <PARAMETER NAME="C_AXI_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_AXI_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_AXI_WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_SC_ADDR_WIDTH" VALUE="30"/>
-        <PARAMETER NAME="C_SC_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_SC_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_SC_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_SC_WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_SC_RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -976,18 +976,18 @@
         <PARAMETER NAME="C_SC_BUSER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="C_MSC_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SSC_ROUTE_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_AWPAYLD_WIDTH" VALUE="136"/>
-        <PARAMETER NAME="C_ARPAYLD_WIDTH" VALUE="136"/>
+        <PARAMETER NAME="C_AWPAYLD_WIDTH" VALUE="140"/>
+        <PARAMETER NAME="C_ARPAYLD_WIDTH" VALUE="140"/>
         <PARAMETER NAME="C_WPAYLD_WIDTH" VALUE="88"/>
-        <PARAMETER NAME="C_RPAYLD_WIDTH" VALUE="83"/>
-        <PARAMETER NAME="C_BPAYLD_WIDTH" VALUE="5"/>
+        <PARAMETER NAME="C_RPAYLD_WIDTH" VALUE="85"/>
+        <PARAMETER NAME="C_BPAYLD_WIDTH" VALUE="7"/>
         <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_ONLY"/>
         <PARAMETER NAME="AXI_ADDR_WIDTH" VALUE="30"/>
-        <PARAMETER NAME="AXI_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="AXI_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="AXI_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="AXI_WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="SC_ADDR_WIDTH" VALUE="30"/>
-        <PARAMETER NAME="SC_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="SC_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="SC_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="SC_WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="SC_ARUSER_WIDTH" VALUE="0"/>
@@ -1026,7 +1026,7 @@
             <CONNECTION INSTANCE="s00_nodes_s00_r_node" PORT="s_sc_recv"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="82" NAME="m_sc_r_payld" RIGHT="0" SIGIS="undef" SIGNAME="m00_sc2axi_m_sc_r_payld">
+        <PORT DIR="O" LEFT="84" NAME="m_sc_r_payld" RIGHT="0" SIGIS="undef" SIGNAME="m00_sc2axi_m_sc_r_payld">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_nodes_s00_r_node" PORT="s_sc_payld"/>
           </CONNECTIONS>
@@ -1051,12 +1051,12 @@
             <CONNECTION INSTANCE="s00_nodes_s00_ar_node" PORT="m_sc_recv"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="135" NAME="s_sc_ar_payld" RIGHT="0" SIGIS="undef" SIGNAME="m00_sc2axi_s_sc_ar_payld">
+        <PORT DIR="I" LEFT="139" NAME="s_sc_ar_payld" RIGHT="0" SIGIS="undef" SIGNAME="m00_sc2axi_s_sc_ar_payld">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_nodes_s00_ar_node" PORT="m_sc_payld"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_s_axi_arid">
+        <PORT DIR="O" LEFT="2" NAME="m_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_s_axi_arid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="s_axi_arid"/>
           </CONNECTIONS>
@@ -1106,7 +1106,7 @@
             <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="m_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_s_axi_rid">
+        <PORT DIR="I" LEFT="2" NAME="m_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_s_axi_rid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="s_axi_rid"/>
           </CONNECTIONS>
@@ -1165,7 +1165,7 @@
           <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="3"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="30"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="1024"/>
@@ -1221,11 +1221,11 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_AXI_ADDR_WIDTH" VALUE="30"/>
-        <PARAMETER NAME="C_AXI_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_AXI_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_AXI_WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_SC_ADDR_WIDTH" VALUE="30"/>
-        <PARAMETER NAME="C_SC_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_SC_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_SC_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_SC_WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_SC_RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -1235,18 +1235,18 @@
         <PARAMETER NAME="C_SC_BUSER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="C_MSC_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SSC_ROUTE_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_AWPAYLD_WIDTH" VALUE="136"/>
-        <PARAMETER NAME="C_ARPAYLD_WIDTH" VALUE="136"/>
+        <PARAMETER NAME="C_AWPAYLD_WIDTH" VALUE="140"/>
+        <PARAMETER NAME="C_ARPAYLD_WIDTH" VALUE="140"/>
         <PARAMETER NAME="C_WPAYLD_WIDTH" VALUE="88"/>
-        <PARAMETER NAME="C_RPAYLD_WIDTH" VALUE="83"/>
-        <PARAMETER NAME="C_BPAYLD_WIDTH" VALUE="5"/>
+        <PARAMETER NAME="C_RPAYLD_WIDTH" VALUE="85"/>
+        <PARAMETER NAME="C_BPAYLD_WIDTH" VALUE="7"/>
         <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_ONLY"/>
         <PARAMETER NAME="AXI_ADDR_WIDTH" VALUE="30"/>
-        <PARAMETER NAME="AXI_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="AXI_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="AXI_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="AXI_WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="SC_ADDR_WIDTH" VALUE="30"/>
-        <PARAMETER NAME="SC_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="SC_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="SC_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="SC_WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="SC_ARUSER_WIDTH" VALUE="0"/>
@@ -1285,7 +1285,7 @@
             <CONNECTION INSTANCE="s00_nodes_s00_r_node" PORT="m_sc_recv"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="82" NAME="s_sc_r_payld" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_sc_r_payld">
+        <PORT DIR="I" LEFT="84" NAME="s_sc_r_payld" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_sc_r_payld">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_nodes_s00_r_node" PORT="m_sc_payld"/>
           </CONNECTIONS>
@@ -1310,12 +1310,12 @@
             <CONNECTION INSTANCE="s00_nodes_s00_ar_node" PORT="s_sc_recv"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="135" NAME="m_sc_ar_payld" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_m_sc_ar_payld">
+        <PORT DIR="O" LEFT="139" NAME="m_sc_ar_payld" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_m_sc_ar_payld">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_nodes_s00_ar_node" PORT="s_sc_payld"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="s_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_axi_arid">
+        <PORT DIR="I" LEFT="2" NAME="s_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_axi_arid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_si_converter" PORT="m_axi_arid"/>
           </CONNECTIONS>
@@ -1365,7 +1365,7 @@
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_si_converter" PORT="m_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="s_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_axi_rid">
+        <PORT DIR="O" LEFT="2" NAME="s_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_axi_rid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_si_converter" PORT="m_axi_rid"/>
           </CONNECTIONS>
@@ -1424,7 +1424,7 @@
           <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="3"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="30"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="1024"/>
@@ -3687,7 +3687,7 @@
         <PARAMETER NAME="C_IS_CASCADED" VALUE="0"/>
         <PARAMETER NAME="C_NUM_WRITE_THREADS" VALUE="1"/>
         <PARAMETER NAME="C_NUM_READ_THREADS" VALUE="1"/>
-        <PARAMETER NAME="C_MEP_IDENTIFIER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_MEP_IDENTIFIER_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_SUPPORTS_NARROW" VALUE="0"/>
         <PARAMETER NAME="C_HAS_BURST" VALUE="0"/>
         <PARAMETER NAME="C_NUM_SEG" VALUE="1"/>
@@ -3698,7 +3698,7 @@
         <PARAMETER NAME="C_MSC_WDATA_WIDTH_ARRAY" VALUE="0x00000040"/>
         <PARAMETER NAME="C_MSC_RDATA_WIDTH_ARRAY" VALUE="0x00000040"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="30"/>
-        <PARAMETER NAME="C_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_S_WUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -3719,12 +3719,12 @@
         <PARAMETER NAME="IS_CASCADED" VALUE="0"/>
         <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
         <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
-        <PARAMETER NAME="MEP_IDENTIFIER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="MEP_IDENTIFIER_WIDTH" VALUE="3"/>
         <PARAMETER NAME="SUPPORTS_NARROW" VALUE="0"/>
         <PARAMETER NAME="HAS_BURST" VALUE="0"/>
         <PARAMETER NAME="NUM_SEG" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="30"/>
-        <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="NUM_MSC" VALUE="1"/>
@@ -4648,7 +4648,7 @@
             <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="s_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_si_converter_s_axi_arid">
+        <PORT DIR="I" LEFT="2" NAME="s_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_si_converter_s_axi_arid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_transaction_regulator" PORT="m_axi_arid"/>
           </CONNECTIONS>
@@ -4698,7 +4698,7 @@
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_transaction_regulator" PORT="m_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="s_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_si_converter_s_axi_rid">
+        <PORT DIR="O" LEFT="2" NAME="s_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_si_converter_s_axi_rid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_transaction_regulator" PORT="m_axi_rid"/>
           </CONNECTIONS>
@@ -4733,7 +4733,7 @@
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_transaction_regulator" PORT="m_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_axi_arid">
+        <PORT DIR="O" LEFT="2" NAME="m_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_axi_arid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_axi2sc" PORT="s_axi_arid"/>
           </CONNECTIONS>
@@ -4783,7 +4783,7 @@
             <CONNECTION INSTANCE="s00_axi2sc" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="m_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_axi_rid">
+        <PORT DIR="I" LEFT="2" NAME="m_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_axi_rid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_axi2sc" PORT="s_axi_rid"/>
           </CONNECTIONS>
@@ -4825,7 +4825,7 @@
           <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="3"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="30"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="1024"/>
@@ -4877,7 +4877,7 @@
           <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="3"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="30"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="1024"/>
@@ -4937,13 +4937,13 @@
         <PARAMETER NAME="C_ENABLE_PIPELINING" VALUE="0x1"/>
         <PARAMETER NAME="C_NUM_READ_THREADS" VALUE="1"/>
         <PARAMETER NAME="C_NUM_WRITE_THREADS" VALUE="1"/>
-        <PARAMETER NAME="C_MEP_IDENTIFIER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_MEP_IDENTIFIER_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_MEP_IDENTIFIER" VALUE="1"/>
         <PARAMETER NAME="C_SEP_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_S_ID_WIDTH" VALUE="0"/>
-        <PARAMETER NAME="C_M_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="30"/>
         <PARAMETER NAME="C_SUPPORTS_READ_DEADLOCK" VALUE="0"/>
         <PARAMETER NAME="C_SUPPORTS_WRITE_DEADLOCK" VALUE="0"/>
@@ -4958,10 +4958,10 @@
         <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
         <PARAMETER NAME="ENABLE_PIPELINING" VALUE="0x1"/>
         <PARAMETER NAME="MEP_IDENTIFIER" VALUE="1"/>
-        <PARAMETER NAME="MEP_IDENTIFIER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="MEP_IDENTIFIER_WIDTH" VALUE="3"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="30"/>
         <PARAMETER NAME="S_ID_WIDTH" VALUE="0"/>
-        <PARAMETER NAME="M_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="SEP_ROUTE_WIDTH" VALUE="1"/>
@@ -5072,7 +5072,7 @@
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_mmu" PORT="m_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_si_converter_s_axi_arid">
+        <PORT DIR="O" LEFT="2" NAME="m_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_si_converter_s_axi_arid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_si_converter" PORT="s_axi_arid"/>
           </CONNECTIONS>
@@ -5124,7 +5124,7 @@
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_si_converter" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="m_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_si_converter_s_axi_rid">
+        <PORT DIR="I" LEFT="2" NAME="m_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_si_converter_s_axi_rid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_si_converter" PORT="s_axi_rid"/>
           </CONNECTIONS>
@@ -5218,7 +5218,7 @@
           <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="3"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="30"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="1024"/>
@@ -5286,13 +5286,13 @@
         <PARAMETER NAME="C_NUM_SI" VALUE="1"/>
         <PARAMETER NAME="C_NUM_MI" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="2"/>
-        <PARAMETER NAME="C_PAYLD_WIDTH" VALUE="136"/>
+        <PARAMETER NAME="C_PAYLD_WIDTH" VALUE="140"/>
         <PARAMETER NAME="C_S_NUM_BYTES_ARRAY" VALUE="0x00000008"/>
         <PARAMETER NAME="C_M_NUM_BYTES_ARRAY" VALUE="0x00000008"/>
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_SC_ROUTE_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="30"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="C_MAX_PAYLD_BYTES" VALUE="8"/>
@@ -5317,8 +5317,8 @@
         <PARAMETER NAME="MAX_PAYLD_BYTES" VALUE="8"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="SC_ROUTE_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="PAYLD_WIDTH" VALUE="136"/>
+        <PARAMETER NAME="ID_WIDTH" VALUE="3"/>
+        <PARAMETER NAME="PAYLD_WIDTH" VALUE="140"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="30"/>
         <PARAMETER NAME="USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="S_PIPELINE" VALUE="0"/>
@@ -5394,7 +5394,7 @@
             <CONNECTION INSTANCE="s00_axi2sc" PORT="m_sc_ar_recv"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="135" NAME="s_sc_payld" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_m_sc_ar_payld">
+        <PORT DIR="I" LEFT="139" NAME="s_sc_payld" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_m_sc_ar_payld">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_axi2sc" PORT="m_sc_ar_payld"/>
           </CONNECTIONS>
@@ -5429,7 +5429,7 @@
             <CONNECTION INSTANCE="m00_sc2axi" PORT="s_sc_ar_info"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="135" NAME="m_sc_payld" RIGHT="0" SIGIS="undef" SIGNAME="m00_sc2axi_s_sc_ar_payld">
+        <PORT DIR="O" LEFT="139" NAME="m_sc_payld" RIGHT="0" SIGIS="undef" SIGNAME="m00_sc2axi_s_sc_ar_payld">
           <CONNECTIONS>
             <CONNECTION INSTANCE="m00_sc2axi" PORT="s_sc_ar_payld"/>
           </CONNECTIONS>
@@ -5472,13 +5472,13 @@
         <PARAMETER NAME="C_NUM_SI" VALUE="1"/>
         <PARAMETER NAME="C_NUM_MI" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="0"/>
-        <PARAMETER NAME="C_PAYLD_WIDTH" VALUE="83"/>
+        <PARAMETER NAME="C_PAYLD_WIDTH" VALUE="85"/>
         <PARAMETER NAME="C_S_NUM_BYTES_ARRAY" VALUE="0x00000008"/>
         <PARAMETER NAME="C_M_NUM_BYTES_ARRAY" VALUE="0x00000008"/>
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_SC_ROUTE_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_ID_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="30"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="512"/>
         <PARAMETER NAME="C_MAX_PAYLD_BYTES" VALUE="8"/>
@@ -5503,8 +5503,8 @@
         <PARAMETER NAME="MAX_PAYLD_BYTES" VALUE="8"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="SC_ROUTE_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="PAYLD_WIDTH" VALUE="83"/>
+        <PARAMETER NAME="ID_WIDTH" VALUE="3"/>
+        <PARAMETER NAME="PAYLD_WIDTH" VALUE="85"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="30"/>
         <PARAMETER NAME="USER_WIDTH" VALUE="512"/>
         <PARAMETER NAME="S_PIPELINE" VALUE="0"/>
@@ -5580,7 +5580,7 @@
             <CONNECTION INSTANCE="m00_sc2axi" PORT="m_sc_r_recv"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="82" NAME="s_sc_payld" RIGHT="0" SIGIS="undef" SIGNAME="m00_sc2axi_m_sc_r_payld">
+        <PORT DIR="I" LEFT="84" NAME="s_sc_payld" RIGHT="0" SIGIS="undef" SIGNAME="m00_sc2axi_m_sc_r_payld">
           <CONNECTIONS>
             <CONNECTION INSTANCE="m00_sc2axi" PORT="m_sc_r_payld"/>
           </CONNECTIONS>
@@ -5615,7 +5615,7 @@
             <CONNECTION INSTANCE="s00_axi2sc" PORT="s_sc_r_info"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="82" NAME="m_sc_payld" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_sc_r_payld">
+        <PORT DIR="O" LEFT="84" NAME="m_sc_payld" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_sc_r_payld">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_axi2sc" PORT="s_sc_r_payld"/>
           </CONNECTIONS>

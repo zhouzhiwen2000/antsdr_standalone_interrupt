@@ -96,7 +96,7 @@ input wire s_sc_r_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_R RECV" *)
 output wire s_sc_r_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_R PAYLD" *)
-input wire [82 : 0] s_sc_r_payld;
+input wire [84 : 0] s_sc_r_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AR REQ" *)
 output wire m_sc_ar_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AR INFO" *)
@@ -106,9 +106,9 @@ output wire m_sc_ar_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AR RECV" *)
 input wire m_sc_ar_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AR PAYLD" *)
-output wire [135 : 0] m_sc_ar_payld;
+output wire [139 : 0] m_sc_ar_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARID" *)
-input wire [0 : 0] s_axi_arid;
+input wire [2 : 0] s_axi_arid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *)
 input wire [29 : 0] s_axi_araddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARLEN" *)
@@ -128,7 +128,7 @@ input wire s_axi_arvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *)
 output wire s_axi_arready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RID" *)
-output wire [0 : 0] s_axi_rid;
+output wire [2 : 0] s_axi_rid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *)
 output wire [63 : 0] s_axi_rdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *)
@@ -139,18 +139,18 @@ output wire s_axi_rlast;
 output wire [1023 : 0] s_axi_ruser;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *)
 output wire s_axi_rvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 1, ADDR_WIDTH 30, AWUSER_WIDTH 0, ARUSER_WIDTH 1024, WUSER_WIDTH 0, RUSER_WIDTH 1024, BUSER_WIDTH 0, READ_WRITE_MODE READ_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 0, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.000, CLK_DOMAIN system_sys_ps7_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRI\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 3, ADDR_WIDTH 30, AWUSER_WIDTH 0, ARUSER_WIDTH 1024, WUSER_WIDTH 0, RUSER_WIDTH 1024, BUSER_WIDTH 0, READ_WRITE_MODE READ_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 0, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.000, CLK_DOMAIN system_sys_ps7_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRI\
 TE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *)
 input wire s_axi_rready;
 
   sc_axi2sc_v1_0_7_top #(
     .C_AXI_ADDR_WIDTH(30),
-    .C_AXI_ID_WIDTH(1),
+    .C_AXI_ID_WIDTH(3),
     .C_AXI_RDATA_WIDTH(64),
     .C_AXI_WDATA_WIDTH(64),
     .C_SC_ADDR_WIDTH(30),
-    .C_SC_ID_WIDTH(1),
+    .C_SC_ID_WIDTH(3),
     .C_SC_RDATA_WIDTH(64),
     .C_SC_WDATA_WIDTH(64),
     .C_SC_RUSER_BITS_PER_BYTE(0),
@@ -160,11 +160,11 @@ input wire s_axi_rready;
     .C_SC_BUSER_WIDTH(0),
     .C_MSC_ROUTE_WIDTH(1),
     .C_SSC_ROUTE_WIDTH(1),
-    .C_AWPAYLD_WIDTH(136),
-    .C_ARPAYLD_WIDTH(136),
+    .C_AWPAYLD_WIDTH(140),
+    .C_ARPAYLD_WIDTH(140),
     .C_WPAYLD_WIDTH(88),
-    .C_RPAYLD_WIDTH(83),
-    .C_BPAYLD_WIDTH(5)
+    .C_RPAYLD_WIDTH(85),
+    .C_BPAYLD_WIDTH(7)
   ) inst (
     .aclk(aclk),
     .s_sc_r_req(s_sc_r_req),
@@ -176,7 +176,7 @@ input wire s_axi_rready;
     .s_sc_b_info(1'D0),
     .s_sc_b_send(1'D0),
     .s_sc_b_recv(),
-    .s_sc_b_payld(5'D0),
+    .s_sc_b_payld(7'D0),
     .m_sc_ar_req(m_sc_ar_req),
     .m_sc_ar_info(m_sc_ar_info),
     .m_sc_ar_send(m_sc_ar_send),
@@ -192,7 +192,7 @@ input wire s_axi_rready;
     .m_sc_w_send(),
     .m_sc_w_recv(1'D0),
     .m_sc_w_payld(),
-    .s_axi_awid(1'H0),
+    .s_axi_awid(3'H0),
     .s_axi_awaddr(30'H00000000),
     .s_axi_awlen(8'H0),
     .s_axi_awlock(1'H0),

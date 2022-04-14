@@ -2,10 +2,10 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Apr 13 04:31:11 2022
-# Process ID: 40612
+# Start of session at: Thu Apr 14 09:13:59 2022
+# Process ID: 34704
 # Current directory: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12740 C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3192 C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.xpr
 # Log file: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/vivado.log
 # Journal file: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds\vivado.jou
 #-----------------------------------------------------------
@@ -13,20 +13,247 @@ start_gui
 open_project C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.xpr
 update_compile_order -fileset sources_1
 open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
-open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
-get_ports {gpio_bd[0]}
-open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
-get_ports {gpio_bd[0]}
-open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
-open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
-open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xfft:9.1 xfft_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:lte_fft:2.0 lte_fft_0
+endgroup
+delete_bd_objs [get_bd_cells lte_fft_0]
+set_property -dict [list CONFIG.implementation_options {automatically_select} CONFIG.target_data_throughput {50} CONFIG.run_time_configurable_transform_length {true} CONFIG.aresetn {false} CONFIG.output_ordering {natural_order} CONFIG.cyclic_prefix_insertion {true} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0}] [get_bd_cells xfft_0]
+set_property location {6 2813 2998} [get_bd_cells xfft_0]
+set_property location {6 2680 2963} [get_bd_cells xfft_0]
+startgroup
+create_bd_cell -type ip -vlnv analog.com:user:axi_dmac:1.0 axi_dmac_0
+endgroup
+set_property location {6 2552 2943} [get_bd_cells axi_dmac_0]
+set_property -dict [list CONFIG.DMA_DATA_WIDTH_DEST {32} CONFIG.DMA_TYPE_DEST {1} CONFIG.DMA_TYPE_SRC {0}] [get_bd_cells axi_dmac_0]
+connect_bd_intf_net [get_bd_intf_pins axi_dmac_0/m_axis] [get_bd_intf_pins xfft_0/S_AXIS_DATA]
+set_property location {6 2533 2923} [get_bd_cells axi_dmac_0]
+set_property location {6 2566 2917} [get_bd_cells axi_dmac_0]
+set_property location {6 2557 2900} [get_bd_cells axi_dmac_0]
+set_property location {6 2568 2914} [get_bd_cells axi_dmac_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+set_property location {7 3076 3344} [get_bd_cells axi_dma_0]
+set_property -dict [list CONFIG.c_include_sg {0} CONFIG.c_enable_multi_channel {0} CONFIG.c_sg_include_stscntrl_strm {0} CONFIG.c_micro_dma {0}] [get_bd_cells axi_dma_0]
+delete_bd_objs [get_bd_intf_nets axi_dmac_0_m_axis] [get_bd_cells axi_dmac_0]
+set_property location {5.5 2570 2953} [get_bd_cells axi_dma_0]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins xfft_0/S_AXIS_DATA]
+connect_bd_intf_net [get_bd_intf_pins xfft_0/M_AXIS_DATA] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+set_property location {7 2993 3172} [get_bd_cells axi_dma_0]
+set_property location {5.5 2648 2945} [get_bd_cells axi_dma_0]
+set_property location {6 2600 2936} [get_bd_cells axi_dma_0]
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells sys_ps7]
+endgroup
+connect_bd_net [get_bd_pins sys_ps7/S_AXI_HP0_ACLK] [get_bd_pins sys_ps7/FCLK_CLK0]
+copy_bd_objs /  [get_bd_cells {axi_hp2_interconnect}]
+set_property location {7 2898 2717} [get_bd_cells axi_hp2_interconnect1]
+delete_bd_objs [get_bd_cells axi_hp2_interconnect1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 smartconnect_0
+endgroup
+set_property -dict [list CONFIG.NUM_SI {1}] [get_bd_cells smartconnect_0]
+connect_bd_intf_net [get_bd_intf_pins smartconnect_0/S00_AXI] [get_bd_intf_pins axi_dma_0/M_AXI_MM2S]
+startgroup
+set_property -dict [list CONFIG.NUM_SI {2}] [get_bd_cells smartconnect_0]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] [get_bd_intf_pins smartconnect_0/S01_AXI]
+connect_bd_net [get_bd_pins smartconnect_0/aclk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk]
+connect_bd_net [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins smartconnect_0/aclk]
+connect_bd_net [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins smartconnect_0/aclk]
+connect_bd_net [get_bd_pins xfft_0/aclk] [get_bd_pins smartconnect_0/aclk]
+connect_bd_net [get_bd_pins smartconnect_0/aresetn] [get_bd_pins axi_dma_0/axi_resetn]
+connect_bd_intf_net [get_bd_intf_pins smartconnect_0/M00_AXI] [get_bd_intf_pins sys_ps7/S_AXI_HP0]
+save_bd_design
+startgroup
+set_property -dict [list CONFIG.NUM_MI {8}] [get_bd_cells axi_cpu_interconnect]
+endgroup
+connect_bd_net [get_bd_pins axi_cpu_interconnect/M07_ACLK] [get_bd_pins sys_ps7/FCLK_CLK0]
+connect_bd_net [get_bd_pins axi_cpu_interconnect/M07_ARESETN] [get_bd_pins sys_rstgen/peripheral_aresetn]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_cpu_interconnect/M07_AXI] [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
+save_bd_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_interconnect:2.1 axis_interconnect_0
+endgroup
+delete_bd_objs [get_bd_cells axis_interconnect_0]
+save_bd_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_1
+endgroup
+set_property location {6 2691 3216} [get_bd_cells axi_dma_1]
+set_property -dict [list CONFIG.c_include_sg {0} CONFIG.c_sg_include_stscntrl_strm {0} CONFIG.c_micro_dma {1} CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_include_s2mm {0}] [get_bd_cells axi_dma_1]
+connect_bd_net [get_bd_pins axi_dma_1/s_axi_lite_aclk] [get_bd_pins axi_dma_1/m_axi_mm2s_aclk]
+delete_bd_objs [get_bd_nets Net3]
+startgroup
+set_property -dict [list CONFIG.NUM_SI {3}] [get_bd_cells smartconnect_0]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axi_dma_1/M_AXI_MM2S] [get_bd_intf_pins smartconnect_0/S02_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_1/M_AXIS_MM2S] [get_bd_intf_pins xfft_0/S_AXIS_CONFIG]
+set_property location {6 2647 3130} [get_bd_cells axi_dma_1]
+startgroup
+endgroup
+startgroup
+set_property -dict [list CONFIG.NUM_MI {9}] [get_bd_cells axi_cpu_interconnect]
+endgroup
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_cpu_interconnect/M08_AXI] [get_bd_intf_pins axi_dma_1/S_AXI_LITE]
+connect_bd_net [get_bd_pins axi_dma_1/s_axi_lite_aclk] [get_bd_pins smartconnect_0/aclk]
+connect_bd_net [get_bd_pins axi_dma_1/m_axi_mm2s_aclk] [get_bd_pins smartconnect_0/aclk]
+connect_bd_net [get_bd_pins axi_dma_1/axi_resetn] [get_bd_pins smartconnect_0/aresetn]
+save_bd_design
+disconnect_bd_net /GND_1_dout [get_bd_pins sys_concat_intc/In10]
+disconnect_bd_net /GND_1_dout [get_bd_pins sys_concat_intc/In9]
+connect_bd_net [get_bd_pins sys_concat_intc/In10] [get_bd_pins axi_dma_0/mm2s_introut]
+connect_bd_net [get_bd_pins sys_concat_intc/In9] [get_bd_pins axi_dma_0/s2mm_introut]
+save_bd_design
+connect_bd_net [get_bd_pins axi_cpu_interconnect/M08_ACLK] [get_bd_pins sys_ps7/FCLK_CLK0]
+connect_bd_net [get_bd_pins axi_cpu_interconnect/M08_ARESETN] [get_bd_pins sys_rstgen/peripheral_aresetn]
+save_bd_design
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/sys_ps7/FCLK_CLK0 (100 MHz)" }  [get_bd_pins axi_dma_0/s_axi_lite_aclk]
+endgroup
+save_bd_design
+disconnect_bd_net /sys_cpu_clk [get_bd_pins axi_dma_0/s_axi_lite_aclk]
+disconnect_bd_net /sys_cpu_clk [get_bd_pins axi_dma_0/m_axi_mm2s_aclk]
+disconnect_bd_net /sys_cpu_clk [get_bd_pins axi_dma_0/m_axi_s2mm_aclk]
+disconnect_bd_net /sys_cpu_clk [get_bd_pins axi_dma_1/s_axi_lite_aclk]
+disconnect_bd_net /sys_cpu_clk [get_bd_pins axi_dma_1/m_axi_mm2s_aclk]
+disconnect_bd_net /sys_cpu_resetn [get_bd_pins axi_dma_0/axi_resetn]
+disconnect_bd_net /sys_cpu_resetn [get_bd_pins axi_dma_1/axi_resetn]
+disconnect_bd_net /sys_cpu_clk [get_bd_pins smartconnect_0/aclk]
+disconnect_bd_net /sys_cpu_resetn [get_bd_pins smartconnect_0/aresetn]
+disconnect_bd_net /sys_cpu_clk [get_bd_pins xfft_0/aclk]
+save_bd_design
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/sys_ps7/FCLK_CLK2 (200 MHz)" }  [get_bd_pins xfft_0/aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/sys_ps7/FCLK_CLK2 (200 MHz)" }  [get_bd_pins axi_dma_0/s_axi_lite_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/sys_ps7/FCLK_CLK2 (200 MHz)" }  [get_bd_pins axi_dma_1/s_axi_lite_aclk]
+endgroup
+connect_bd_net [get_bd_pins smartconnect_0/aclk] [get_bd_pins sys_ps7/FCLK_CLK2]
+connect_bd_net [get_bd_pins smartconnect_0/aresetn] [get_bd_pins rst_sys_ps7_200M/peripheral_aresetn]
+save_bd_design
+disconnect_bd_net /sys_cpu_clk [get_bd_pins sys_ps7/S_AXI_HP0_ACLK]
+save_bd_design
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/sys_ps7/FCLK_CLK2 (200 MHz)" }  [get_bd_pins sys_ps7/S_AXI_HP0_ACLK]
+save_bd_design
+startgroup
+set_property -dict [list CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {250.0}] [get_bd_cells sys_ps7]
+endgroup
+startgroup
+set_property -dict [list CONFIG.implementation_options {automatically_select} CONFIG.target_data_throughput {125} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {3}] [get_bd_cells xfft_0]
+endgroup
+save_bd_design
 reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+startgroup
+set_property -dict [list CONFIG.NUM_MI {8}] [get_bd_cells axi_cpu_interconnect]
+delete_bd_objs [get_bd_intf_nets axi_cpu_interconnect_M08_AXI]
+endgroup
+save_bd_design
+startgroup
+set_property -dict [list CONFIG.PCW_USE_M_AXI_GP1 {1}] [get_bd_cells sys_ps7]
+endgroup
+copy_bd_objs /  [get_bd_cells {smartconnect_0}]
+set_property location {9 3946 2508} [get_bd_cells smartconnect_1]
+set_property -dict [list CONFIG.NUM_MI {3} CONFIG.NUM_SI {1}] [get_bd_cells smartconnect_1]
+set_property -dict [list CONFIG.NUM_MI {1}] [get_bd_cells smartconnect_1]
+connect_bd_intf_net [get_bd_intf_pins sys_ps7/M_AXI_GP1] [get_bd_intf_pins smartconnect_1/S00_AXI]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0
+endgroup
+set_property location {9 4101 2439} [get_bd_cells axi_interconnect_0]
+connect_bd_net [get_bd_pins smartconnect_1/aclk] [get_bd_pins axi_interconnect_0/ACLK]
+undo
+delete_bd_objs [get_bd_intf_nets sys_ps7_M_AXI_GP1]
+delete_bd_objs [get_bd_cells smartconnect_1]
+set_property -dict [list CONFIG.NUM_MI {1}] [get_bd_cells axi_interconnect_0]
+connect_bd_net [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] -boundary_type upper
+connect_bd_net [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] -boundary_type upper
+undo
+undo
+connect_bd_net [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins sys_ps7/FCLK_CLK2]
+connect_bd_net [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins sys_ps7/FCLK_CLK2]
+connect_bd_net [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] -boundary_type upper
+undo
+connect_bd_net [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins sys_ps7/FCLK_CLK2]
+connect_bd_net [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins rst_sys_ps7_200M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins rst_sys_ps7_200M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins rst_sys_ps7_200M/peripheral_aresetn]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_0/S00_AXI] [get_bd_intf_pins sys_ps7/M_AXI_GP1]
+startgroup
+set_property -dict [list CONFIG.NUM_MI {2}] [get_bd_cells axi_interconnect_0]
+endgroup
+set_property location {8 4019 2438} [get_bd_cells axi_interconnect_0]
+connect_bd_net [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins sys_ps7/FCLK_CLK2]
+connect_bd_net [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins rst_sys_ps7_200M/peripheral_aresetn]
+delete_bd_objs [get_bd_intf_nets axi_cpu_interconnect_M07_AXI]
+startgroup
+set_property -dict [list CONFIG.NUM_MI {7}] [get_bd_cells axi_cpu_interconnect]
+endgroup
+set_property location {6 2706 2911} [get_bd_cells axi_dma_0]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/S_AXI_LITE] -boundary_type upper [get_bd_intf_pins axi_interconnect_0/M00_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_0/M01_AXI] [get_bd_intf_pins axi_dma_1/S_AXI_LITE]
+save_bd_design
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/sys_ps7/FCLK_CLK2 (250 MHz)" }  [get_bd_pins sys_ps7/M_AXI_GP1_ACLK]
+save_bd_design
+assign_bd_address [get_bd_addr_segs {sys_ps7/S_AXI_HP0/HP0_DDR_LOWOCM }]
+assign_bd_address
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_dwidth_converter:1.1 axis_dwidth_converter_0
+endgroup
+set_property location {7.5 3017 3225} [get_bd_cells axis_dwidth_converter_0]
+delete_bd_objs [get_bd_intf_nets axi_dma_1_M_AXIS_MM2S]
+connect_bd_intf_net [get_bd_intf_pins axis_dwidth_converter_0/S_AXIS] [get_bd_intf_pins axi_dma_1/M_AXIS_MM2S]
+connect_bd_intf_net [get_bd_intf_pins axis_dwidth_converter_0/M_AXIS] [get_bd_intf_pins xfft_0/S_AXIS_CONFIG]
+reset_run synth_1
+connect_bd_net [get_bd_pins axis_dwidth_converter_0/aclk] [get_bd_pins sys_ps7/FCLK_CLK2]
+connect_bd_net [get_bd_pins axis_dwidth_converter_0/aresetn] [get_bd_pins rst_sys_ps7_200M/peripheral_aresetn]
+startgroup
+set_property -dict [list CONFIG.M_TDATA_NUM_BYTES {5}] [get_bd_cells axis_dwidth_converter_0]
+endgroup
+startgroup
+endgroup
+delete_bd_objs [get_bd_intf_nets axis_dwidth_converter_0_M_AXIS] [get_bd_intf_nets axi_dma_1_M_AXIS_MM2S] [get_bd_cells axis_dwidth_converter_0]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_1/M_AXIS_MM2S] [get_bd_intf_pins xfft_0/S_AXIS_CONFIG]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property location {7.5 2936 3318} [get_bd_cells xlslice_0]
+set_property -dict [list CONFIG.DIN_WIDTH {64} CONFIG.DOUT_WIDTH {40} CONFIG.DIN_TO {0} CONFIG.DIN_FROM {0}] [get_bd_cells xlslice_0]
+set_property -dict [list CONFIG.DIN_TO {0} CONFIG.DIN_FROM {39} CONFIG.DOUT_WIDTH {40}] [get_bd_cells xlslice_0]
+connect_bd_net [get_bd_pins xlslice_0/Din] [get_bd_pins axi_dma_1/m_axis_mm2s_tdata]
+connect_bd_net [get_bd_pins xlslice_0/Dout] [get_bd_pins xfft_0/s_axis_config_tdata]
+save_bd_design
 launch_runs impl_1 -to_step write_bitstream -jobs 8
 wait_on_run impl_1
 reset_run synth_1
+connect_bd_net [get_bd_pins xfft_0/s_axis_config_tready] [get_bd_pins axi_dma_1/m_axis_mm2s_tready]
+connect_bd_net [get_bd_pins axi_dma_1/m_axis_mm2s_tvalid] [get_bd_pins xfft_0/s_axis_config_tvalid]
+delete_bd_objs [get_bd_intf_nets axi_dma_1_M_AXIS_MM2S]
+save_bd_design
 launch_runs impl_1 -to_step write_bitstream -jobs 8
 wait_on_run impl_1
-launch_sdk -workspace C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf
+open_run impl_1
+open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
+open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
+startgroup
+set_property -dict [list CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {200.0}] [get_bd_cells sys_ps7]
+endgroup
+startgroup
+set_property -dict [list CONFIG.target_clock_frequency {200} CONFIG.target_data_throughput {100} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {3}] [get_bd_cells xfft_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+refresh_design
+close_design
 file copy -force C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/impl_1/system_top.sysdef C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf
 
 launch_sdk -workspace C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf

@@ -901,7 +901,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.aresetn {false} \
    CONFIG.cyclic_prefix_insertion {true} \
-   CONFIG.implementation_options {automatically_select} \
+   CONFIG.implementation_options {pipelined_streaming_io} \
    CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {3} \
    CONFIG.output_ordering {natural_order} \
    CONFIG.run_time_configurable_transform_length {true} \

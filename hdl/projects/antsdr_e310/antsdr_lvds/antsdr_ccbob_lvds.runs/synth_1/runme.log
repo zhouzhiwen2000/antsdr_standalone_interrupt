@@ -18,15 +18,15 @@ If this directory should no longer be in your list of user repositories, go to t
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.cache/ip 
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 371.828 ; gain = 85.520
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 372.418 ; gain = 85.879
 Command: synth_design -top system_top -part xc7z020clg400-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 24604 
+INFO: Helper process launched with PID 27344 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 546.066 ; gain = 167.355
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 546.406 ; gain = 167.098
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-2048] function gpo_bit_used does not always return a value [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:1139]
 INFO: [Synth 8-6157] synthesizing module 'system_top' [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/system_top.v:38]
@@ -6412,7 +6412,7 @@ INFO: [Synth 8-3331] design shift_ram__parameterized23 has unconnected port COMB
 INFO: [Synth 8-3331] design shift_ram__parameterized23 has unconnected port DEPTHx2
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:05:44 ; elapsed = 00:05:48 . Memory (MB): peak = 2785.918 ; gain = 2407.207
+Finished RTL Elaboration : Time (s): cpu = 00:05:43 ; elapsed = 00:05:46 . Memory (MB): peak = 2784.797 ; gain = 2405.488
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -6500,13 +6500,13 @@ WARNING: [Synth 8-3295] tying undriven pin i_system_wrapper:gp_in_0[0] to consta
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:05:47 ; elapsed = 00:05:52 . Memory (MB): peak = 2785.918 ; gain = 2407.207
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:46 ; elapsed = 00:05:50 . Memory (MB): peak = 2784.797 ; gain = 2405.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:05:47 ; elapsed = 00:05:52 . Memory (MB): peak = 2785.918 ; gain = 2407.207
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:05:46 ; elapsed = 00:05:50 . Memory (MB): peak = 2784.797 ; gain = 2405.488
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 3306 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -6637,7 +6637,7 @@ Finished Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/pro
 Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_rst_sys_ps7_200M_0/system_rst_sys_ps7_200M_0.xdc] for cell 'i_system_wrapper/system_i/rst_sys_ps7_200M/U0'
 Finished Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_rst_sys_ps7_200M_0/system_rst_sys_ps7_200M_0.xdc] for cell 'i_system_wrapper/system_i/rst_sys_ps7_200M/U0'
 INFO: [Timing 38-2] Deriving generated clocks
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 3034.992 ; gain = 2.105
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 3036.297 ; gain = 2.105
 Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/antsdr_constr.xdc]
 Finished Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/antsdr_constr.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/common/antsdr_constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
@@ -6654,7 +6654,7 @@ Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/ant
 Finished Parsing XDC File [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 3043.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 3045.785 ; gain = 0.000
 Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_0/system_axi_ad9361_0_pps_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst'
 Finished Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_0/system_axi_ad9361_0_pps_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361/inst'
 Parsing XDC File [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc] for cell 'i_system_wrapper/system_i/axi_ad9361_adc_dma/inst'
@@ -6777,10 +6777,10 @@ WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SU
 Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'i_system_wrapper/system_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 3043.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 3045.785 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 3047.047 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 3048.355 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1108 instances were transformed.
   BUFGCE => BUFGCTRL: 1 instances
@@ -6798,17 +6798,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAMB18 => RAMB18E1: 2 instances
   SRL16 => SRL16E: 5 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 3047.047 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.700 . Memory (MB): peak = 3047.047 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 3048.355 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.735 . Memory (MB): peak = 3048.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:07:13 ; elapsed = 00:07:14 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished Constraint Validation : Time (s): cpu = 00:07:14 ; elapsed = 00:07:13 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
----------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "adc_valid_p" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "adc_data_p" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "up_xfer_done_int0" won't be mapped to RAM because it is too sparse
@@ -7883,7 +7882,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.gen_write.write_cs
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.gen_write.write_cs_reg' using encoding 'one-hot' in module 'sc_mmu_v1_0_7_decerr_slave__parameterized2'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:07:37 ; elapsed = 00:07:39 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:07:37 ; elapsed = 00:07:38 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'i_system_wrapper/system_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.delay_reset_3/tc_compare' (logic_gate__parameterized3) to 'i_system_wrapper/system_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.delay_reset_3/tc_compare1'
 INFO: [Synth 8-223] decloning instance 'i_system_wrapper/system_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.delay_reset_7/tc_compare' (logic_gate__parameterized4) to 'i_system_wrapper/system_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.delay_reset_7/tc_compare1'
@@ -8452,7 +8451,7 @@ INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instan
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:09:40 ; elapsed = 00:09:43 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:09:44 ; elapsed = 00:09:46 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -8540,7 +8539,7 @@ WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 69
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 74 of c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc. [c:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc:74]
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:09:54 ; elapsed = 00:09:58 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:09:58 ; elapsed = 00:10:01 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -8548,7 +8547,7 @@ Start Timing Optimization
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:10:19 ; elapsed = 00:10:23 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished Timing Optimization : Time (s): cpu = 00:10:25 ; elapsed = 00:10:28 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -8629,7 +8628,7 @@ Warning: Parallel synthesis criteria is not met
 INFO: [Synth 8-6837] The timing for the instance i_system_wrapper/system_i/axi_ad9361_dac_dma/inst/i_transfer/i_request_arb/i_store_and_forward/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance i_system_wrapper/system_i/axi_ad9361_adc_dma/inst/i_transfer/i_request_arb/i_store_and_forward/i_mem/m_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:10:41 ; elapsed = 00:10:46 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished Technology Mapping : Time (s): cpu = 00:10:47 ; elapsed = 00:10:51 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -8716,7 +8715,7 @@ WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[14] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[13] to constant 0
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:10:43 ; elapsed = 00:10:48 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished IO Insertion : Time (s): cpu = 00:10:50 ; elapsed = 00:10:54 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -8729,7 +8728,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:10:44 ; elapsed = 00:10:49 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished Renaming Generated Instances : Time (s): cpu = 00:10:50 ; elapsed = 00:10:54 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -8741,25 +8740,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:10:50 ; elapsed = 00:10:55 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:10:57 ; elapsed = 00:11:01 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:10:51 ; elapsed = 00:10:55 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished Renaming Generated Ports : Time (s): cpu = 00:10:57 ; elapsed = 00:11:01 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:10:52 ; elapsed = 00:10:56 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished Handling Custom Attributes : Time (s): cpu = 00:10:58 ; elapsed = 00:11:02 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:10:52 ; elapsed = 00:10:57 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished Renaming Generated Nets : Time (s): cpu = 00:10:59 ; elapsed = 00:11:02 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -8856,11 +8855,11 @@ Report Cell Usage:
 |78    |OBUFDS     |     8|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:10:52 ; elapsed = 00:10:57 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Finished Writing Synthesis Report : Time (s): cpu = 00:10:59 ; elapsed = 00:11:02 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 13592 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:43 ; elapsed = 00:09:39 . Memory (MB): peak = 3049.984 ; gain = 2407.207
-Synthesis Optimization Complete : Time (s): cpu = 00:10:52 ; elapsed = 00:10:57 . Memory (MB): peak = 3049.984 ; gain = 2671.273
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:49 ; elapsed = 00:09:44 . Memory (MB): peak = 3051.180 ; gain = 2405.488
+Synthesis Optimization Complete : Time (s): cpu = 00:10:59 ; elapsed = 00:11:03 . Memory (MB): peak = 3051.180 ; gain = 2671.871
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 5742 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -8869,7 +8868,7 @@ WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a t
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 INFO: [Chipscope 16-324] Core: i_system_wrapper/system_i/ila_0 UUID: f1f9ed16-5813-5c08-b893-b9c7b010f192 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 3049.984 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 3051.180 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1775 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 328 instances
@@ -8894,11 +8893,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 1973 Infos, 338 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:11:11 ; elapsed = 00:11:16 . Memory (MB): peak = 3049.984 ; gain = 2678.156
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 3049.984 ; gain = 0.000
+synth_design: Time (s): cpu = 00:11:18 ; elapsed = 00:11:22 . Memory (MB): peak = 3051.180 ; gain = 2678.762
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 3051.180 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.runs/synth_1/system_top.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 3049.984 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 3051.180 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file system_top_utilization_synth.rpt -pb system_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 14 10:59:58 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 14 11:56:59 2022...

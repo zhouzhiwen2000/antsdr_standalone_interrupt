@@ -18470,3 +18470,30 @@ con
 11:12:55 INFO  : Successfully done setting SDK workspace  
 11:12:55 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
 11:12:55 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.
+12:09:27 INFO  : Registering command handlers for SDK TCF services
+12:09:27 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\temp_xsdb_launch_script.tcl
+12:09:29 INFO  : XSCT server has started successfully.
+12:09:29 INFO  : Successfully done setting XSCT server connection channel  
+12:09:29 INFO  : Successfully done setting SDK workspace  
+12:09:29 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+12:09:29 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.
+12:09:31 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1649908972607,  Project:1649905545571
+12:09:31 INFO  : The hardware specification for project 'system_top_hw_platform_0' is different from C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+12:09:32 INFO  : Copied contents of C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf into \system_top_hw_platform_0\system.hdf.
+12:09:36 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:09:39 INFO  : 
+12:09:42 INFO  : 
+12:09:46 INFO  : 
+12:09:47 INFO  : Updating hardware inferred compiler options for fsbl.
+12:09:47 INFO  : Updating hardware inferred compiler options for lwip_enabled.
+12:09:48 INFO  : Updating hardware inferred compiler options for tcpdemo.
+12:09:48 INFO  : Clearing existing target manager status.
+12:09:48 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+12:09:52 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+12:11:40 INFO  : Registering command handlers for SDK TCF services
+12:11:40 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.sdk\temp_xsdb_launch_script.tcl
+12:11:42 INFO  : XSCT server has started successfully.
+12:11:43 INFO  : Successfully done setting XSCT server connection channel  
+12:11:43 INFO  : Successfully done setting SDK workspace  
+12:11:43 INFO  : Processing command line option -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf.
+12:11:43 INFO  : Checking for hwspec changes in the project system_top_hw_platform_0.

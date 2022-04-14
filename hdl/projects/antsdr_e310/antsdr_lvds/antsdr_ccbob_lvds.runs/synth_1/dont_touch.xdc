@@ -396,6 +396,8 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0_clocks.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_dma_0_0 || ORIG_REF_NAME==system_axi_dma_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
+# XDC: bd/system/ip/system_smartconnect_0_0/ooc.xdc
+
 # XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_1/bd_919a_psr_aclk_0_board.xdc
 # DONT_TOUCH constraint suppressed by parent sub-design file.
 
@@ -443,8 +445,6 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_30/bd_919a_m00wn_0_ooc.xdc
 
 # XDC: bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_31/bd_919a_m00bn_0_ooc.xdc
-
-# XDC: bd/system/ip/system_smartconnect_0_0/ooc.xdc
 
 # XDC: bd/system/ip/system_axi_dma_1_0/system_axi_dma_1_0_ooc.xdc
 

@@ -2030,11 +2030,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 14 02:21:18 UTC 2022</spirit:value>
+            <spirit:value>Thu Apr 14 02:47:44 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:46e969b3</spirit:value>
+            <spirit:value>9:7288dce4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3656,7 +3656,6 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>AXI SmartConnect</xilinx:displayName>
-      <xilinx:supportsDeferredElaboration>true</xilinx:supportsDeferredElaboration>
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>

@@ -45,7 +45,7 @@ AD9361_InitParam default_init_param = {
 	40000000UL,	//reference_clk_rate
 	/* Base Configuration */
 	0,		//two_rx_two_tx_mode_enable *** adi,2rx-2tx-mode-enable
-	1,		//one_rx_one_tx_mode_use_rx_num *** adi,1rx-1tx-mode-use-rx-num
+	2,		//one_rx_one_tx_mode_use_rx_num *** adi,1rx-1tx-mode-use-rx-num
 	1,		//one_rx_one_tx_mode_use_tx_num *** adi,1rx-1tx-mode-use-tx-num
 	1,		//frequency_division_duplex_mode_enable *** adi,frequency-division-duplex-mode-enable
 	0,		//frequency_division_duplex_independent_mode_enable *** adi,frequency-division-duplex-independent-mode-enable
@@ -69,8 +69,8 @@ AD9361_InitParam default_init_param = {
 	0,		//ensm_enable_pin_pulse_mode_enable *** adi,ensm-enable-pin-pulse-mode-enable
 	0,		//ensm_enable_txnrx_control_enable *** adi,ensm-enable-txnrx-control-enable
 	/* LO Control */
-	2000000000UL,	//rx_synthesizer_frequency_hz *** adi,rx-synthesizer-frequency-hz
-	2000000000UL,	//tx_synthesizer_frequency_hz *** adi,tx-synthesizer-frequency-hz
+	2300000000UL,	//rx_synthesizer_frequency_hz *** adi,rx-synthesizer-frequency-hz
+	2300000000UL,	//tx_synthesizer_frequency_hz *** adi,tx-synthesizer-frequency-hz
 	1,				//tx_lo_powerdown_managed_enable *** adi,tx-lo-powerdown-managed-enable
 	/* Rate & BW Control */
 	{983040000, 245760000, 122880000, 61440000, 61440000, 61440000},// rx_path_clock_frequencies[6] *** adi,rx-path-clock-frequencies
@@ -80,18 +80,18 @@ AD9361_InitParam default_init_param = {
 	61440000,//rf_rx_bandwidth_hz *** adi,rf-rx-bandwidth-hz
 	61440000,//rf_tx_bandwidth_hz *** adi,rf-tx-bandwidth-hz
 	/* RF Port Control */
-	0,		//rx_rf_port_input_select *** adi,rx-rf-port-input-select
-	0,		//tx_rf_port_input_select *** adi,tx-rf-port-input-select
+	1,		//rx_rf_port_input_select *** adi,rx-rf-port-input-select
+	1,		//tx_rf_port_input_select *** adi,tx-rf-port-input-select
 	/* TX Attenuation Control */
-	45000,	//tx_attenuation_mdB *** adi,tx-attenuation-mdB
+	0,	//tx_attenuation_mdB *** adi,tx-attenuation-mdB
 	0,		//update_tx_gain_in_alert_enable *** adi,update-tx-gain-in-alert-enable
 	/* Reference Clock Control */
 	0,		//xo_disable_use_ext_refclk_enable *** adi,xo-disable-use-ext-refclk-enable
 	{8, 5920},	//dcxo_coarse_and_fine_tune[2] *** adi,dcxo-coarse-and-fine-tune
 	CLKOUT_DISABLE,	//clk_output_mode_select *** adi,clk-output-mode-select
 	/* Gain Control */
-	0,		//gc_rx1_mode *** adi,gc-rx1-mode
-	0,		//gc_rx2_mode *** adi,gc-rx2-mode
+	1,		//gc_rx1_mode *** adi,gc-rx1-mode
+	1,		//gc_rx2_mode *** adi,gc-rx2-mode
 	58,		//gc_adc_large_overload_thresh *** adi,gc-adc-large-overload-thresh
 	4,		//gc_adc_ovr_sample_size *** adi,gc-adc-ovr-sample-size
 	47,		//gc_adc_small_overload_thresh *** adi,gc-adc-small-overload-thresh
@@ -102,8 +102,8 @@ AD9361_InitParam default_init_param = {
 	24,		//gc_low_power_thresh *** adi,gc-low-power-thresh
 	15,		//gc_max_dig_gain *** adi,gc-max-dig-gain
 	/* Gain MGC Control */
-	2,		//mgc_dec_gain_step *** adi,mgc-dec-gain-step
-	2,		//mgc_inc_gain_step *** adi,mgc-inc-gain-step
+	1,		//mgc_dec_gain_step *** adi,mgc-dec-gain-step
+	1,		//mgc_inc_gain_step *** adi,mgc-inc-gain-step
 	0,		//mgc_rx1_ctrl_inp_enable *** adi,mgc-rx1-ctrl-inp-enable
 	0,		//mgc_rx2_ctrl_inp_enable *** adi,mgc-rx2-ctrl-inp-enable
 	0,		//mgc_split_table_ctrl_inp_gain_mode *** adi,mgc-split-table-ctrl-inp-gain-mode
@@ -278,7 +278,7 @@ AD9361_InitParam default_init_param = {
 	NULL,	//(*ad9361_rfpll_ext_round_rate)()
 	NULL	//(*ad9361_rfpll_ext_set_rate)()
 };
-
+int32_t gain_rx=40;
 AD9361_RXFIRConfig rx_fir_config = {	// BPF PASSBAND 3/20 fs to 1/4 fs
 	3, // rx
 	0, // rx_gain
@@ -388,8 +388,10 @@ int sdr_init(void)
 	ad9361_init(&ad9361_phy, &default_init_param);
 	ad9361_set_tx_fir_config(ad9361_phy, tx_fir_config);
 	ad9361_set_rx_fir_config(ad9361_phy, rx_fir_config);
-	ad9361_set_tx_fir_en_dis(ad9361_phy,0);
-	ad9361_set_rx_fir_en_dis(ad9361_phy,0);
+    ad9361_set_rx_gain_control_mode(ad9361_phy, RX1, RF_GAIN_MGC);
+    ad9361_set_rx_rf_gain(ad9361_phy, RX1, 40);
+//	ad9361_set_tx_fir_en_dis(ad9361_phy,0);
+//	ad9361_set_rx_fir_en_dis(ad9361_phy,0);
 
 /*AD9361 INIT DONE*/
 
@@ -407,5 +409,25 @@ void sdr_transmit(uint32_t* buffer,uint32_t tx_count,bool cyclic)
 int32_t sdr_receive(uint32_t size, uint32_t start_address)
 {
 	int32_t ret=adc_capture_presetup(size,start_address);
+	return ret;
+}
+void sdr_transmit_2(uint32_t* buffer,uint32_t tx_count)
+{
+	dac_transmit_presetup_2(ad9361_phy,buffer,tx_count);
+}
+void sdr_setrxgain(int8_t gain)
+{
+    ad9361_set_rx_gain_control_mode(ad9361_phy, RX1, RF_GAIN_MGC);
+    ad9361_set_rx_rf_gain(ad9361_phy, RX1, gain);
+    xil_printf("rx gain set to %d\r\n",gain);
+}
+
+// NOTE: To prevent unwanted data loss, it's recommended to invalidate
+// cache after each adc_capture() call, keeping in mind that the
+// size of the invalidated area and the start address must be aligned to the size
+// of the cache line(32 BYTES).
+int32_t sdr_receive_2(uint32_t size, uint32_t start_address)
+{
+	int32_t ret=adc_capture_presetup_2(size,start_address);
 	return ret;
 }

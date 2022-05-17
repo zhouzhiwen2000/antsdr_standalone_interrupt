@@ -176,12 +176,7 @@ void adc_dma_isr(void *instance)
 		dma_start_address += ADC_DMA_TRANSFER_SIZE;//next to queue
 		if(dma_start_address<dma_end_address)
 		{
-			volatile uint32_t ret=0;
-			adc_dma_read(AXI_DMAC_REG_START_TRANSFER,&ret);
-			while(ret!=0)
-			{
-				adc_dma_read(AXI_DMAC_REG_START_TRANSFER,&ret);//wait for queue to clear.
-			}
+			while(adc_dma_read(AXI_DMAC_REG_START_TRANSFER))
 			adc_dma_write(AXI_DMAC_REG_DEST_ADDRESS, dma_start_address);
 			/* The current transfer was started and a new one is queued. */
 			adc_dma_write(AXI_DMAC_REG_START_TRANSFER, 0x1);

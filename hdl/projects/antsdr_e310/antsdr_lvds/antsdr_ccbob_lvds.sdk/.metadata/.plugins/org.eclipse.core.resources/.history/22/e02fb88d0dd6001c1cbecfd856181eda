@@ -675,10 +675,10 @@ void dac_dma_isr(void *instance)
 	if(reg_val & IRQ_TRANSFER_QUEUED)
 	{
 		volatile uint32_t ret=0;
-		dac_dma_read(AXI_DMAC_REG_START_TRANSFER,&ret);
+		adc_dma_read(AXI_DMAC_REG_START_TRANSFER,&ret);
 		while(ret!=0)
 		{
-			dac_dma_read(AXI_DMAC_REG_START_TRANSFER,&ret);//wait for queue to clear.
+			adc_dma_read(AXI_DMAC_REG_START_TRANSFER,&ret);
 		}
 		dac_dma_start_address += DAC_DMA_TRANSFER_SIZE;//next to queue
 		if(dac_dma_start_address < dac_dma_end_address)

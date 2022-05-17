@@ -180,7 +180,7 @@ void adc_dma_isr(void *instance)
 			adc_dma_read(AXI_DMAC_REG_START_TRANSFER,&ret);
 			while(ret!=0)
 			{
-				adc_dma_read(AXI_DMAC_REG_START_TRANSFER,&ret);//wait for queue to clear.
+				adc_dma_read(AXI_DMAC_REG_START_TRANSFER,&ret);
 			}
 			adc_dma_write(AXI_DMAC_REG_DEST_ADDRESS, dma_start_address);
 			/* The current transfer was started and a new one is queued. */

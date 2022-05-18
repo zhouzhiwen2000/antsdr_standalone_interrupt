@@ -42,7 +42,7 @@ void sdr_setrxgain(int8_t gain);
 bool dac_buffer_complete=0;
 volatile ip_addr_t computer_addr;
 volatile u16_t computer_port;
-extern uint32_t __attribute__((aligned(32))) dac_buffer[128000+32768];
+extern uint32_t __attribute__((aligned(32))) dac_buffer[1280000+32768];
 //static void udp_recv_perf_traffic(void *arg, struct udp_pcb *tpcb,
 //		struct pbuf *p, const ip_addr_t *addr, u16_t port)
 //{

@@ -2,10 +2,10 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed May 18 01:37:26 2022
-# Process ID: 38420
+# Start of session at: Wed May 18 21:39:03 2022
+# Process ID: 28952
 # Current directory: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35200 C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent40636 C:\Users\zhouzhiwen\Desktop\antsdr_standalone\hdl\projects\antsdr_e310\antsdr_lvds\antsdr_ccbob_lvds.xpr
 # Log file: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/vivado.log
 # Journal file: C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds\vivado.jou
 #-----------------------------------------------------------
@@ -23,41 +23,9 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/zhouzhiwen/Desktop/a
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/zhouzhiwen/Desktop/antsdr_standalone/ghdl/library'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 801.617 ; gain = 191.305
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 827.363 ; gain = 198.324
 update_compile_order -fileset sources_1
 launch_sdk -workspace C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf
 INFO: [Vivado 12-393] Launching SDK...
 INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk -hwspec C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.sdk/system_top.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
-open_bd_design {C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd}
-Adding cell -- xilinx.com:ip:processing_system7:5.5 - sys_ps7
-Adding cell -- xilinx.com:ip:axi_iic:2.0 - axi_iic_main
-Adding cell -- xilinx.com:ip:xlconcat:2.1 - sys_concat_intc
-Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - sys_rstgen
-Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - sys_logic_inv
-Adding cell -- analog.com:user:axi_sysid:1.0 - axi_sysid_0
-Adding cell -- analog.com:user:sysid_rom:1.0 - rom_sys_0
-Adding cell -- xilinx.com:ip:xlconstant:1.1 - GND_1
-Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - axi_cpu_interconnect
-Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
-Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
-Adding cell -- analog.com:user:axi_ad9361:1.0 - axi_ad9361
-Adding cell -- analog.com:user:util_tdd_sync:1.0 - util_ad9361_tdd_sync
-Adding cell -- xilinx.com:ip:xlconcat:2.1 - util_ad9361_divclk_sel_concat
-Adding cell -- xilinx.com:ip:util_reduced_logic:2.0 - util_ad9361_divclk_sel
-Adding cell -- analog.com:user:axi_dmac:1.0 - axi_ad9361_adc_dma
-Adding cell -- analog.com:user:axi_dmac:1.0 - axi_ad9361_dac_dma
-Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_hp1_interconnect
-Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_hp2_interconnect
-Adding cell -- analog.com:user:axi_gpreg:1.0 - axi_gpreg
-Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
-Adding cell -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
-Adding cell -- xilinx.com:ip:ila:6.2 - ila_0
-INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
-Adding cell -- xilinx.com:module_ref:sync_gen:1.0 - sync_gen_0
-Adding cell -- analog.com:user:util_cpack2:1.0 - util_ad9361_adc_pack
-Adding cell -- analog.com:user:util_upack2:1.0 - util_ad9361_dac_upack
-Adding cell -- xilinx.com:user:axi_delay_counter:1.0 - axi_delay_counter_0
-Successfully read diagram <system> from BD file <C:/Users/zhouzhiwen/Desktop/antsdr_standalone/hdl/projects/antsdr_e310/antsdr_lvds/antsdr_ccbob_lvds.srcs/sources_1/bd/system/system.bd>
-exit
-INFO: [Common 17-206] Exiting Vivado at Wed May 18 02:19:02 2022...

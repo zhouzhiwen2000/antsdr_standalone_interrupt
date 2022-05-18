@@ -73,8 +73,8 @@ AD9361_InitParam default_init_param = {
 	2300000000UL,	//tx_synthesizer_frequency_hz *** adi,tx-synthesizer-frequency-hz
 	1,				//tx_lo_powerdown_managed_enable *** adi,tx-lo-powerdown-managed-enable
 	/* Rate & BW Control */
-	{983040000, 245760000, 122880000, 61440000, 61440000, 61440000},// rx_path_clock_frequencies[6] *** adi,rx-path-clock-frequencies
-	{983040000, 245760000, 122880000, 61440000, 61440000, 61440000},// tx_path_clock_frequencies[6] *** adi,tx-path-clock-frequencies
+	{896000000, 224000000, 112000000, 56000000, 56000000, 56000000},// rx_path_clock_frequencies[6] *** adi,rx-path-clock-frequencies
+	{896000000, 224000000, 112000000, 56000000, 56000000, 56000000},// tx_path_clock_frequencies[6] *** adi,tx-path-clock-frequencies
 	//{160000000, 80000000, 40000000, 20000000, 10000000, 10000000},// rx_path_clock_frequencies[6] *** adi,rx-path-clock-frequencies
 	//{160000000, 40000000, 40000000, 20000000, 10000000, 10000000},// tx_path_clock_frequencies[6] *** adi,tx-path-clock-frequencies
 	61440000,//rf_rx_bandwidth_hz *** adi,rf-rx-bandwidth-hz
@@ -390,8 +390,8 @@ int sdr_init(void)
 	ad9361_set_rx_fir_config(ad9361_phy, rx_fir_config);
     ad9361_set_rx_gain_control_mode(ad9361_phy, RX1, RF_GAIN_MGC);
     ad9361_set_rx_rf_gain(ad9361_phy, RX1, 40);
-//	ad9361_set_tx_fir_en_dis(ad9361_phy,0);
-//	ad9361_set_rx_fir_en_dis(ad9361_phy,0);
+	ad9361_set_tx_fir_en_dis(ad9361_phy,0);
+	ad9361_set_rx_fir_en_dis(ad9361_phy,0);
 
 /*AD9361 INIT DONE*/
 

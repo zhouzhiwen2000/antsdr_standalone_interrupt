@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="COUNT" key="selection"/>
+		<item value="1280" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="1280"/>
+			<item value="1280000"/>
+			<item value="128000"/>
 			<item value="count"/>
 			<item value="sync"/>
 			<item value="dac_sync"/>
 			<item value="dac_start_sync"/>
 			<item value="dac_stop"/>
-			<item value="c_pcb"/>
-			<item value="apiflags"/>
-			<item value="start_application"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
